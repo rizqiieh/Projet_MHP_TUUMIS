@@ -1,0 +1,15 @@
+/* Detail visual tambahan di luar utilitas Tailwind. */
+:root { color-scheme: light; }
+html { scroll-behavior: smooth; }
+body { min-width: 320px; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20; vertical-align: middle; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #fff8f1; }
+::-webkit-scrollbar-thumb { background: #c8c0b3; border: 2px solid #fff8f1; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #8f998d; }
+#sidebar-overlay.is-visible { display: block; opacity: 1; }
+@keyframes rise-in { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+main > section { animation: rise-in .38s ease-out both; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
