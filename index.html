@@ -429,15 +429,18 @@
           </span>
           <div>
             <p class="text-xs font-bold text-forest-dark">Standar Layanan &amp; SLA CRM TUUMIS <span class="ml-1 rounded-full bg-gold/20 px-2 py-0.5 text-[10px] font-semibold text-amber-900">Simulasi Demo</span></p>
-            <p class="text-[11px] text-muted">Respons awal ditargetkan <strong class="text-forest-dark">&le; 30 menit</strong> &amp; penyelesaian keluhan ditargetkan <strong class="text-forest-dark">&le; 120 menit</strong>. Pelanggan terdampak keterlambatan berhak atas voucher pemulihan <strong class="text-amber-800">PEMULIHAN10</strong>.</p>
+            <p class="text-[11px] text-muted">SLA otomatis per prioritas: <strong class="text-forest-dark">Tinggi 15/120 mnt · Sedang 30/240 mnt · Rendah 60/1440 mnt</strong> (respons/penyelesaian). Pelanggan terdampak keterlambatan berhak atas voucher pemulihan <strong class="text-amber-800">PEMULIHAN10</strong>.</p>
           </div>
         </div>
         <div class="flex flex-wrap items-center gap-2 text-[11px]">
           <span class="inline-flex items-center gap-1 rounded-full bg-white px-2.5 py-1 font-semibold text-forest-dark shadow-sm border border-line">
-            <span class="h-2 w-2 rounded-full bg-emerald-500"></span>Target Respons &le; 30 mnt
+            <span class="h-2 w-2 rounded-full bg-rose-500"></span>Tinggi 15/120 mnt
           </span>
           <span class="inline-flex items-center gap-1 rounded-full bg-white px-2.5 py-1 font-semibold text-forest-dark shadow-sm border border-line">
-            <span class="h-2 w-2 rounded-full bg-emerald-500"></span>Target Resolusi &le; 120 mnt
+            <span class="h-2 w-2 rounded-full bg-amber-500"></span>Sedang 30/240 mnt
+          </span>
+          <span class="inline-flex items-center gap-1 rounded-full bg-white px-2.5 py-1 font-semibold text-forest-dark shadow-sm border border-line">
+            <span class="h-2 w-2 rounded-full bg-emerald-500"></span>Rendah 60/1440 mnt
           </span>
         </div>
       </div>
@@ -500,9 +503,77 @@
           <p id="crm-kpi-sla-rate" class="mt-3 font-display text-3xl font-bold text-emerald-700">0%</p>
           <div class="mt-1 flex items-center justify-between text-[11px]">
             <span id="crm-kpi-sla-eval-note" class="font-semibold text-emerald-800">0 dari 0 tiket dievaluasi</span>
-            <span class="text-muted">Standar &le; 120 mnt</span>
+            <span class="text-muted">Standar per prioritas</span>
           </div>
         </article>
+      </section>
+
+      <!-- Section 4.5: Enam KPI Strategis Layanan (Laporan UTS) -->
+      <section class="mb-6 rounded-2xl border border-line bg-white p-5 shadow-card">
+        <div class="mb-4 flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h2 class="font-display text-lg font-semibold text-forest-dark">Enam KPI Strategis Layanan (Laporan UTS)</h2>
+            <p class="text-xs text-muted">Terukur langsung dari data CRM: tiket keluhan, database pelanggan, dan pencatatan penukaran voucher.</p>
+          </div>
+          <span class="rounded-full bg-sage px-3 py-1 text-[10px] font-bold text-forest-dark border border-line">Update otomatis</span>
+        </div>
+        <div class="grid grid-cols-1 gap-3.5 sm:grid-cols-2 xl:grid-cols-3">
+          <article class="rounded-2xl border border-line bg-cream/40 p-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="text-[11px] font-bold text-ink">KPI-01 · Waktu Tunggu Rush Hour</span>
+              <span id="kpi6-wait-chip" class="inline-flex rounded-full border border-stone-300 bg-stone-100 px-2 py-0.5 text-[10px] font-bold text-stone-600">Data Belum Tersedia</span>
+            </div>
+            <p id="kpi6-wait" class="mt-2 font-display text-2xl font-bold text-forest-dark">-</p>
+            <p class="text-[10px] font-semibold text-muted">Target ≤ 15 menit</p>
+            <p id="kpi6-wait-note" class="mt-1 text-[10px] text-muted">Proksi dari tiket antrean rush hour</p>
+          </article>
+          <article class="rounded-2xl border border-line bg-cream/40 p-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="text-[11px] font-bold text-ink">KPI-02 · Order Accuracy</span>
+              <span id="kpi6-accuracy-chip" class="inline-flex rounded-full border border-stone-300 bg-stone-100 px-2 py-0.5 text-[10px] font-bold text-stone-600">Data Belum Tersedia</span>
+            </div>
+            <p id="kpi6-accuracy" class="mt-2 font-display text-2xl font-bold text-forest-dark">-</p>
+            <p class="text-[10px] font-semibold text-muted">Target ≥ 95%</p>
+            <p id="kpi6-accuracy-note" class="mt-1 text-[10px] text-muted">Proksi dari pesanan unik vs tiket kesalahan</p>
+          </article>
+          <article class="rounded-2xl border border-line bg-cream/40 p-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="text-[11px] font-bold text-ink">KPI-03 · Waktu Respons Admin</span>
+              <span id="kpi6-response-chip" class="inline-flex rounded-full border border-stone-300 bg-stone-100 px-2 py-0.5 text-[10px] font-bold text-stone-600">Data Belum Tersedia</span>
+            </div>
+            <p id="kpi6-response" class="mt-2 font-display text-2xl font-bold text-forest-dark">-</p>
+            <p class="text-[10px] font-semibold text-muted">Target ≤ 30 menit</p>
+            <p id="kpi6-response-note" class="mt-1 text-[10px] text-muted">Rata-rata respons awal seluruh tiket</p>
+          </article>
+          <article class="rounded-2xl border border-line bg-cream/40 p-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="text-[11px] font-bold text-ink">KPI-04 · FCR (First Contact Resolution)</span>
+              <span id="kpi6-fcr-chip" class="inline-flex rounded-full border border-stone-300 bg-stone-100 px-2 py-0.5 text-[10px] font-bold text-stone-600">Data Belum Tersedia</span>
+            </div>
+            <p id="kpi6-fcr" class="mt-2 font-display text-2xl font-bold text-forest-dark">-</p>
+            <p class="text-[10px] font-semibold text-muted">Target ≥ 70% (dari 50%)</p>
+            <p id="kpi6-fcr-note" class="mt-1 text-[10px] text-muted">Dikonfirmasi di modal tiket yang selesai</p>
+          </article>
+          <article class="rounded-2xl border border-line bg-cream/40 p-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="text-[11px] font-bold text-ink">KPI-05 · Voucher Redemption</span>
+              <span id="kpi6-redemption-chip" class="inline-flex rounded-full border border-stone-300 bg-stone-100 px-2 py-0.5 text-[10px] font-bold text-stone-600">Data Belum Tersedia</span>
+            </div>
+            <p id="kpi6-redemption" class="mt-2 font-display text-2xl font-bold text-forest-dark">-</p>
+            <p class="text-[10px] font-semibold text-muted">Target ≥ 25%</p>
+            <p id="kpi6-redemption-note" class="mt-1 text-[10px] text-muted">Dari tombol "Catat Penukaran" per kupon</p>
+          </article>
+          <article class="rounded-2xl border border-line bg-cream/40 p-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="text-[11px] font-bold text-ink">KPI-06 · CSat Kepuasan Pelanggan</span>
+              <span id="kpi6-csat-chip" class="inline-flex rounded-full border border-stone-300 bg-stone-100 px-2 py-0.5 text-[10px] font-bold text-stone-600">Data Belum Tersedia</span>
+            </div>
+            <p id="kpi6-csat" class="mt-2 font-display text-2xl font-bold text-forest-dark">-</p>
+            <p class="text-[10px] font-semibold text-muted">Target ≥ 80%</p>
+            <p id="kpi6-csat-note" class="mt-1 text-[10px] text-muted">Konfirmasi pelanggan pasca keluhan selesai</p>
+          </article>
+        </div>
+        <p class="mt-3 text-[10px] text-muted">Catatan metodologi: KPI-01 &amp; KPI-02 dihitung sebagai proksi dari data simulasi yang tersedia (waktu respons tiket antrean rush hour, dan rasio tiket kesalahan pesanan terhadap pesanan unik). KPI-03 s.d. KPI-06 dihitung langsung dari modul ticketing &amp; kupon CRM.</p>
       </section>
 
       <!-- Section 5: Grafik & Visualisasi -->
@@ -697,6 +768,36 @@
           </div>
         </article>
       </section>
+
+      <!-- Section 7: Sasaran Win-Back Otomatis (Pasif > 21 Hari — WS1 B.2) -->
+      <section class="mb-6 rounded-2xl border border-rose-200 bg-white p-5 shadow-card">
+        <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2.5">
+            <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-rose-50 text-rose-700">
+              <span class="material-symbols-outlined text-[20px]">campaign</span>
+            </span>
+            <div>
+              <h2 class="font-display text-lg font-semibold text-forest-dark">Sasaran Win-Back Otomatis (Pasif &gt; 21 Hari)</h2>
+              <p class="text-xs text-muted">Terdeteksi otomatis dari tanggal order terakhir (ambang 21 hari sesuai WS1 B.2). Klik "Sapa Win-Back" untuk memuat template WhatsApp retensi.</p>
+            </div>
+          </div>
+          <span id="wb-count" class="rounded-full bg-rose-50 px-3 py-1 text-[11px] font-bold text-rose-700 border border-rose-300">0 pelanggan</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="min-w-[640px] w-full border-collapse text-left text-xs">
+            <thead class="bg-cream/70 text-[10px] uppercase tracking-wider text-muted">
+              <tr>
+                <th class="px-4 py-2.5 font-bold">ID</th>
+                <th class="px-4 py-2.5 font-bold">Nama &amp; WhatsApp</th>
+                <th class="px-4 py-2.5 font-bold">Kondisi</th>
+                <th class="px-4 py-2.5 font-bold">Segmen · Status</th>
+                <th class="px-4 py-2.5 text-right font-bold">Aksi Retensi</th>
+              </tr>
+            </thead>
+            <tbody id="wb-rows" class="divide-y divide-line/70"></tbody>
+          </table>
+        </div>
+      </section>
     </section>
 
     <!-- ==================== VIEW 2: DATA PELANGGAN (CRM) ==================== -->
@@ -713,8 +814,9 @@
       </div>
 
       <form id="form-add-customer" class="mb-6 hidden rounded-2xl border border-forest/30 bg-white p-5 shadow-card">
+        <input type="hidden" id="cust-edit-id" value="" />
         <div class="mb-4 flex items-center justify-between">
-          <h2 class="font-display text-lg font-semibold text-forest-dark">Registrasi Pelanggan Baru</h2>
+          <h2 id="cust-form-title" class="font-display text-lg font-semibold text-forest-dark">Registrasi Pelanggan Baru</h2>
           <button type="button" id="cancel-customer-form" class="text-xs font-semibold text-muted hover:text-ink">Tutup</button>
         </div>
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -729,7 +831,7 @@
           </label>
         </div>
         <div class="mt-4 flex justify-end gap-2">
-          <button type="submit" class="inline-flex h-10 items-center gap-2 rounded-xl bg-forest px-5 text-xs font-semibold text-white hover:bg-forest-dark"><span class="material-symbols-outlined text-[17px]">save</span>Simpan ke Database</button>
+          <button type="submit" id="cust-form-submit" class="inline-flex h-10 items-center gap-2 rounded-xl bg-forest px-5 text-xs font-semibold text-white hover:bg-forest-dark"><span class="material-symbols-outlined text-[17px]">save</span>Simpan ke Database</button>
         </div>
       </form>
 
@@ -745,9 +847,9 @@
           <p class="mt-1 text-[11px] text-muted">Berhak atas kupon diskon member ST1</p>
         </div>
         <div class="rounded-2xl border border-line bg-white p-4 shadow-card">
-          <p class="text-xs font-semibold text-muted">Pelanggan Tidak Aktif (&gt;14 Hari)</p>
+          <p class="text-xs font-semibold text-muted">Pelanggan Pasif Otomatis (&gt;21 Hari)</p>
           <p id="kpi-cust-inactive" class="mt-2 font-display text-2xl font-bold text-rose-700">0</p>
-          <p class="mt-1 text-[11px] text-muted">Target kampanye win-back WhatsApp</p>
+          <p class="mt-1 text-[11px] text-muted">Terdeteksi otomatis dari tanggal order terakhir — target kampanye win-back WhatsApp</p>
         </div>
       </div>
 
@@ -790,7 +892,7 @@
         <div>
           <div class="mb-2 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[.16em] text-forest"><span class="h-px w-6 bg-gold"></span>Layanan &amp; Retensi · Gap Empathy &amp; Responsiveness</div>
           <h1 class="font-display text-[28px] font-semibold text-forest-dark sm:text-4xl">Ticketing Keluhan &amp; Monitoring SLA</h1>
-          <p class="mt-2 max-w-2xl text-sm text-muted">Pencatatan keluhan terpusat dengan indikator warna batas waktu (SLA ≤ 30 menit respons awal, ≤ 120 menit penyelesaian) serta pelacakan tindak lanjut.</p>
+          <p class="mt-2 max-w-2xl text-sm text-muted">Pencatatan keluhan terpusat dengan indikator warna SLA otomatis per prioritas (Tinggi 15/120 mnt · Sedang 30/240 mnt · Rendah 60/1440 mnt) serta pelacakan tindak lanjut.</p>
         </div>
         <button id="toggle-ticket-form" type="button" class="inline-flex h-11 items-center gap-2 rounded-xl bg-forest px-4 text-xs font-semibold text-white shadow-sm transition hover:bg-forest-dark">
           <span class="material-symbols-outlined text-[18px]">add_alert</span>Buat Tiket Keluhan Baru
@@ -826,7 +928,13 @@
           <button type="button" id="cancel-ticket-form" class="text-xs font-semibold text-muted hover:text-ink">Tutup</button>
         </div>
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <label class="block"><span class="mb-1 block text-xs font-semibold text-muted">Nama Pelanggan *</span><input id="tkt-customer" type="text" required placeholder="Nama pelanggan" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-sm outline-none focus:border-forest" /></label>
+          <label class="block"><span class="mb-1 block text-xs font-semibold text-muted">Pelanggan Terdaftar *</span>
+            <select id="tkt-customer-id" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest">
+              <option value="">— Pilih pelanggan terdaftar —</option>
+              <option value="UMUM">Pelanggan umum (belum terdaftar)</option>
+            </select>
+          </label>
+          <label class="block hidden" id="tkt-customer-name-wrap"><span class="mb-1 block text-xs font-semibold text-muted">Nama Pelanggan Umum *</span><input id="tkt-customer-name" type="text" placeholder="Nama pelanggan walk-in" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-sm outline-none focus:border-forest" /></label>
           <label class="block"><span class="mb-1 block text-xs font-semibold text-muted">Kategori Keluhan *</span>
             <select id="tkt-category" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest">
               <option value="Antrean Rush Hour">Antrean Rush Hour (&gt;15 menit)</option>
@@ -853,13 +961,9 @@
           </label>
         </div>
         <div class="mt-3 grid gap-4 sm:grid-cols-2">
-          <label class="block"><span class="mb-1 block text-xs font-semibold text-muted">Status Waktu SLA *</span>
-            <select id="tkt-sla-state" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest">
-              <option value="Aman">Hijau — Dalam Batas SLA (Baru masuk)</option>
-              <option value="Mendekati Batas">Kuning — Mendekati Batas (22 mnt)</option>
-              <option value="Melewati SLA">Merah — Melewati Batas SLA (&gt;30 mnt)</option>
-            </select>
-          </label>
+          <div class="rounded-xl border border-emerald-200 bg-emerald-50/60 p-3" id="tkt-sla-info">
+            Target dihitung otomatis dari prioritas <strong class="text-forest-dark">Sedang</strong>: respons ≤ <strong class="text-forest-dark">30 mnt</strong> &amp; penyelesaian ≤ <strong class="text-forest-dark">240 mnt</strong>. Waktu masuk memakai jam nyata &amp; kondisi SLA (hijau/kuning/merah) diperbarui otomatis.
+          </div>
           <label class="block"><span class="mb-1 block text-xs font-semibold text-muted">Rencana Tindak Lanjut *</span><input id="tkt-followup" type="text" required placeholder="Contoh: Kirim voucher Rp5.000 via WA" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-sm outline-none focus:border-forest" /></label>
         </div>
         <div class="mt-3">
@@ -959,8 +1063,9 @@
       </div>
 
       <form id="form-add-coupon" class="mb-6 hidden rounded-2xl border border-forest/30 bg-white p-5 shadow-card">
+        <input type="hidden" id="cpn-edit-id" value="" />
         <div class="mb-4 flex items-center justify-between">
-          <h2 class="font-display text-lg font-semibold text-forest-dark">Tambah Program Kupon Baru</h2>
+          <h2 id="cpn-form-title" class="font-display text-lg font-semibold text-forest-dark">Tambah Program Kupon Baru</h2>
           <button type="button" id="cancel-coupon-form" class="text-xs font-semibold text-muted hover:text-ink">Tutup</button>
         </div>
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -969,12 +1074,31 @@
           <label class="block"><span class="mb-1 block text-xs font-semibold text-muted">Nominal / Potongan *</span><input id="cpn-discount" type="text" required placeholder="Diskon 15% (Maks. Rp5.000)" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-sm outline-none focus:border-forest" /></label>
           <label class="block"><span class="mb-1 block text-xs font-semibold text-muted">Periode Berlaku *</span><input id="cpn-period" type="text" required placeholder="1 Nov – 30 Nov 2026" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-sm outline-none focus:border-forest" /></label>
         </div>
+        <div class="mt-3 grid gap-4 sm:grid-cols-3">
+          <label class="block"><span class="mb-1 block text-xs font-semibold text-muted">Minimal Transaksi (Rp) *</span><input id="cpn-minorder" type="number" required min="0" step="1000" value="15000" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-sm outline-none focus:border-forest" /></label>
+          <label class="block"><span class="mb-1 block text-xs font-semibold text-muted">Segmen Sasaran *</span>
+            <select id="cpn-segment" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest">
+              <option value="Semua Member">Semua Member</option>
+              <option value="Khusus Member Loyal">Khusus Member Loyal</option>
+              <option value="Segmen Mahasiswa">Segmen Mahasiswa</option>
+              <option value="Segmen Pekerja">Segmen Pekerja</option>
+              <option value="Pelanggan Terdampak Keluhan">Pelanggan Terdampak Keluhan</option>
+              <option value="Semua Pelanggan">Semua Pelanggan</option>
+            </select>
+          </label>
+          <label class="block"><span class="mb-1 block text-xs font-semibold text-muted">Status Kupon *</span>
+            <select id="cpn-status" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest">
+              <option value="Aktif" selected>Aktif</option>
+              <option value="Nonaktif">Nonaktif (kedaluwarsa / dijeda)</option>
+            </select>
+          </label>
+        </div>
         <div class="mt-3 grid gap-4 sm:grid-cols-2">
           <label class="block"><span class="mb-1 block text-xs font-semibold text-muted">Syarat &amp; Ketentuan Penggunaan *</span><input id="cpn-terms" type="text" required placeholder="Minimal pembelian Rp25.000, berlaku untuk Member Loyal." class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-sm outline-none focus:border-forest" /></label>
           <label class="block"><span class="mb-1 block text-xs font-semibold text-muted">Petunjuk Pemakaian Pelanggan *</span><input id="cpn-guide" type="text" required placeholder="Tunjukkan kode ke kasir atau ketik saat pre-order WA." class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-sm outline-none focus:border-forest" /></label>
         </div>
         <div class="mt-4 flex justify-end">
-          <button type="submit" class="inline-flex h-10 items-center gap-2 rounded-xl bg-forest px-5 text-xs font-semibold text-white hover:bg-forest-dark"><span class="material-symbols-outlined text-[17px]">loyalty</span>Terbitkan Kupon</button>
+          <button type="submit" id="cpn-form-submit" class="inline-flex h-10 items-center gap-2 rounded-xl bg-forest px-5 text-xs font-semibold text-white hover:bg-forest-dark"><span class="material-symbols-outlined text-[17px]">loyalty</span>Terbitkan Kupon</button>
         </div>
       </form>
 
@@ -2064,6 +2188,7 @@
               <p id="modal-tkt-wa" class="font-mono text-ink">0812****7801</p>
             </div>
           </div>
+          <p id="modal-tkt-custlink" class="rounded-lg bg-sage/50 px-2.5 py-1.5 text-[10px] font-semibold text-forest-dark">Terhubung ke database CRM</p>
         </div>
 
         <!-- Detail Keluhan -->
@@ -2081,6 +2206,7 @@
           <h4 class="font-semibold text-forest-dark flex items-center gap-1.5">
             <span class="material-symbols-outlined text-[16px] text-forest">timer</span>Waktu Layanan &amp; SLA
           </h4>
+          <p id="modal-tkt-target" class="rounded-lg bg-cream/50 px-2.5 py-1.5 text-[10px] font-semibold text-muted">Prioritas Sedang → Target respons ≤ 30 mnt · penyelesaian ≤ 240 mnt</p>
           <div class="grid grid-cols-3 gap-2 pt-1 text-center">
             <div class="rounded-lg bg-cream/50 p-2 border border-line/50">
               <span class="text-[10px] text-muted block">Waktu Masuk</span>
@@ -2095,6 +2221,68 @@
               <span id="modal-tkt-resolution" class="mt-0.5 block font-semibold text-ink">45 mnt (Target &le; 120)</span>
             </div>
           </div>
+        </div>
+
+        <!-- Kelola Tiket: koreksi PIC & prioritas (target SLA menyesuaikan otomatis) -->
+        <div id="modal-tkt-edit-card" class="rounded-xl border border-amber-200 bg-amber-50/50 p-3.5 space-y-2">
+          <h4 class="font-semibold text-forest-dark flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px] text-amber-700">tune</span>Kelola Tiket (Koreksi PIC &amp; Prioritas)
+          </h4>
+          <div class="grid grid-cols-2 gap-3 pt-1">
+            <label class="block"><span class="text-muted block text-[10px] mb-1">Petugas PIC</span>
+              <select id="modal-tkt-pic-edit" class="h-9 w-full rounded-lg border border-line bg-white px-2.5 text-xs outline-none focus:border-forest">
+                <option value="Admin WA CS">Admin WA CS</option>
+                <option value="Admin Dapur Sentral">Admin Dapur Sentral</option>
+                <option value="Kasir Dine-in">Kasir Dine-in</option>
+                <option value="Supervisor Layanan">Supervisor Layanan</option>
+              </select>
+            </label>
+            <label class="block"><span class="text-muted block text-[10px] mb-1">Prioritas (SLA otomatis)</span>
+              <select id="modal-tkt-priority-edit" class="h-9 w-full rounded-lg border border-line bg-white px-2.5 text-xs outline-none focus:border-forest">
+                <option value="Tinggi">Tinggi (15/120 mnt)</option>
+                <option value="Sedang">Sedang (30/240 mnt)</option>
+                <option value="Rendah">Rendah (60/1440 mnt)</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <!-- Catatan Penanganan Bertahap -->
+        <div class="rounded-xl border border-line p-3.5 space-y-2">
+          <h4 class="font-semibold text-forest-dark flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px] text-forest">history_edu</span>Catatan Penanganan Bertahap
+          </h4>
+          <ul id="modal-tkt-notes-list" class="space-y-1.5 text-[11px]"></ul>
+          <div class="flex gap-2 pt-1">
+            <input id="modal-tkt-note-input" type="text" placeholder="Tambahkan catatan kronologis penanganan..." class="h-9 flex-1 rounded-lg border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest" />
+            <button id="modal-btn-add-note" type="button" class="inline-flex h-9 items-center gap-1 rounded-lg bg-forest px-3 text-[11px] font-semibold text-white transition hover:bg-forest-dark">
+              <span class="material-symbols-outlined text-[14px]">add</span>Catat
+            </button>
+          </div>
+        </div>
+
+        <!-- Konfirmasi Layanan: FCR & Kepuasan Pelanggan (KPI-04 & KPI-06) -->
+        <div id="modal-tkt-service-card" class="rounded-xl border border-emerald-200 bg-emerald-50/50 p-3.5 space-y-2">
+          <h4 class="font-semibold text-forest-dark flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px] text-emerald-700">fact_check</span>Konfirmasi Layanan (FCR &amp; Kepuasan Pelanggan)
+          </h4>
+          <div class="grid grid-cols-2 gap-3 pt-1">
+            <label class="block"><span class="text-muted block text-[10px] mb-1">FCR — tuntas pada kontak pertama?</span>
+              <select id="modal-tkt-fcr" class="h-9 w-full rounded-lg border border-line bg-white px-2.5 text-xs outline-none focus:border-forest">
+                <option value="">— Pilih —</option>
+                <option value="Ya">Ya (First Contact Resolution)</option>
+                <option value="Tidak">Tidak (terjadi eskalasi)</option>
+              </select>
+            </label>
+            <label class="block"><span class="text-muted block text-[10px] mb-1">Konfirmasi kepuasan pelanggan</span>
+              <select id="modal-tkt-satisfaction" class="h-9 w-full rounded-lg border border-line bg-white px-2.5 text-xs outline-none focus:border-forest">
+                <option value="">— Belum dikonfirmasi —</option>
+                <option value="Puas">Puas</option>
+                <option value="Belum Puas">Belum Puas</option>
+              </select>
+            </label>
+          </div>
+          <p class="text-[10px] text-muted">Data ini menghitung KPI-04 (FCR ≥ 70%) dan KPI-06 (CSat ≥ 80%) pada Dashboard CRM.</p>
         </div>
 
         <!-- Rencana Tindak Lanjut -->
@@ -2120,11 +2308,130 @@
           <button id="modal-btn-sapa-wa" type="button" class="inline-flex items-center gap-1 rounded-xl border border-forest bg-sage px-3 py-2 font-semibold text-forest-dark transition hover:bg-forest hover:text-white">
             <span class="material-symbols-outlined text-[16px]">chat</span>Hubungi WA
           </button>
+          <button id="modal-btn-delete-ticket" type="button" class="inline-flex items-center gap-1 rounded-xl border border-rose-300 bg-rose-50 px-3 py-2 font-semibold text-rose-700 transition hover:bg-rose-600 hover:text-white">
+            <span class="material-symbols-outlined text-[16px]">delete</span>Hapus Tiket
+          </button>
         </div>
         <button id="modal-btn-close-action" type="button" class="rounded-xl border border-line bg-white px-4 py-2 font-semibold text-muted hover:bg-cream hover:text-ink">
           Tutup
         </button>
       </div>
+    </div>
+  </div>
+
+  <!-- Modal Detail Pelanggan (Single Customer View) -->
+  <div id="modal-customer-detail" class="fixed inset-0 z-50 hidden items-center justify-center p-4 modal-backdrop" aria-modal="true" role="dialog">
+    <div class="relative w-full max-w-2xl rounded-2xl border border-line bg-white shadow-2xl overflow-hidden animate-[rise-in_0.25s_ease-out]">
+      <div class="flex items-center justify-between border-b border-line bg-forest-dark px-5 py-4 text-white">
+        <div class="flex items-center gap-2.5">
+          <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-forest text-gold">
+            <span class="material-symbols-outlined text-[18px]">contact_page</span>
+          </span>
+          <div>
+            <h3 id="cust-detail-name" class="font-display text-lg font-bold leading-none tracking-wide text-white">Nama Pelanggan</h3>
+            <span id="cust-detail-id" class="mt-0.5 inline-block text-[11px] font-medium text-white/70">CUST-000</span>
+          </div>
+        </div>
+        <button id="btn-cust-detail-close" type="button" class="rounded-lg p-1.5 text-white/70 hover:bg-white/10 hover:text-white" aria-label="Tutup modal">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <div class="max-h-[75vh] overflow-y-auto p-5 space-y-4 text-xs">
+        <div class="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <div class="rounded-xl border border-line bg-cream/50 p-3">
+            <span class="text-muted block text-[10px]">WhatsApp</span>
+            <p id="cust-detail-wa" class="mt-0.5 font-mono font-semibold text-ink">-</p>
+          </div>
+          <div class="rounded-xl border border-line bg-cream/50 p-3">
+            <span class="text-muted block text-[10px]">Email</span>
+            <p id="cust-detail-email" class="mt-0.5 truncate font-semibold text-ink">-</p>
+          </div>
+          <div class="rounded-xl border border-line bg-cream/50 p-3">
+            <span class="text-muted block text-[10px]">Segmen · Status</span>
+            <p id="cust-detail-segment" class="mt-0.5 font-semibold text-ink">-</p>
+          </div>
+          <div class="rounded-xl border border-line bg-cream/50 p-3">
+            <span class="text-muted block text-[10px]">Terdaftar Sejak</span>
+            <p id="cust-detail-joined" class="mt-0.5 font-semibold text-ink">-</p>
+          </div>
+          <div class="rounded-xl border border-line bg-cream/50 p-3">
+            <span class="text-muted block text-[10px]">Frekuensi Pesanan</span>
+            <p id="cust-detail-orders" class="mt-0.5 font-semibold text-ink">-</p>
+          </div>
+          <div class="rounded-xl border border-line bg-cream/50 p-3">
+            <span class="text-muted block text-[10px]">Order Terakhir</span>
+            <p id="cust-detail-last" class="mt-0.5 font-semibold text-ink">-</p>
+          </div>
+          <div class="rounded-xl border border-line bg-cream/50 p-3 col-span-2">
+            <span class="text-muted block text-[10px]">Hari Sejak Order Terakhir</span>
+            <p id="cust-detail-inactive" class="mt-0.5 font-bold text-emerald-700">-</p>
+            <p class="mt-0.5 text-[10px] text-muted">Ambang win-back otomatis: &gt; 21 hari (WS1 B.2)</p>
+          </div>
+        </div>
+
+        <div class="rounded-xl border border-line p-3.5 space-y-2">
+          <h4 class="font-semibold text-forest-dark flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px] text-forest">support_agent</span>Riwayat Layanan (Ticketing Keluhan) — <span id="cust-detail-ticket-count">0 tiket</span>
+          </h4>
+          <div class="overflow-x-auto">
+            <table class="min-w-[420px] w-full border-collapse text-left text-[11px]">
+              <thead class="bg-cream/70 text-[10px] uppercase tracking-wider text-muted">
+                <tr>
+                  <th class="px-3 py-2 font-bold">ID Tiket</th>
+                  <th class="px-3 py-2 font-bold">Tanggal</th>
+                  <th class="px-3 py-2 font-bold">Kategori</th>
+                  <th class="px-3 py-2 font-bold">Kondisi SLA</th>
+                </tr>
+              </thead>
+              <tbody id="cust-detail-ticket-rows" class="divide-y divide-line/70"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-between gap-2 border-t border-line bg-cream/30 px-5 py-3.5 text-xs">
+        <button id="btn-cust-detail-wa" type="button" class="inline-flex items-center gap-1 rounded-xl bg-forest px-3 py-2 font-semibold text-white transition hover:bg-forest-dark">
+          <span class="material-symbols-outlined text-[16px]">chat</span>Sapa WA Pelanggan Ini
+        </button>
+        <button id="btn-cust-detail-close-action" type="button" class="rounded-xl border border-line bg-white px-4 py-2 font-semibold text-muted hover:bg-cream hover:text-ink">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Catat Penukaran Kupon (KPI-05 Voucher Redemption) -->
+  <div id="modal-coupon-redemption" class="fixed inset-0 z-50 hidden items-center justify-center p-4 modal-backdrop" aria-modal="true" role="dialog">
+    <div class="relative w-full max-w-md rounded-2xl border border-line bg-white shadow-2xl overflow-hidden animate-[rise-in_0.25s_ease-out]">
+      <div class="flex items-center justify-between border-b border-line bg-forest-dark px-5 py-4 text-white">
+        <div class="flex items-center gap-2.5">
+          <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-forest text-gold">
+            <span class="material-symbols-outlined text-[18px]">verified</span>
+          </span>
+          <div>
+            <h3 class="font-display text-lg font-bold leading-none tracking-wide text-white">Catat Penukaran Kupon</h3>
+            <span id="red-coupon-code" class="mt-0.5 inline-block font-mono text-[11px] font-bold text-gold">MEMBER15</span>
+          </div>
+        </div>
+        <button id="btn-red-close" type="button" class="rounded-lg p-1.5 text-white/70 hover:bg-white/10 hover:text-white" aria-label="Tutup modal">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+      <form id="form-coupon-redemption" class="p-5 space-y-3 text-xs">
+        <p id="red-coupon-info" class="rounded-lg bg-sage/50 px-3 py-2 font-semibold text-forest-dark">-</p>
+        <label class="block"><span class="mb-1 block font-semibold text-muted">Nama Pelanggan Penukar *</span>
+          <input id="red-customer-name" type="text" required list="red-customer-list" placeholder="Pilih atau ketik nama pelanggan" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-sm outline-none focus:border-forest" />
+          <datalist id="red-customer-list"></datalist>
+        </label>
+        <label class="block"><span class="mb-1 block font-semibold text-muted">Nilai Transaksi (Rp) *</span>
+          <input id="red-amount" type="number" required min="0" step="1000" value="25000" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-sm outline-none focus:border-forest" />
+        </label>
+        <div id="red-form-error" class="hidden rounded-xl border border-rose-300 bg-rose-50 p-2.5 font-semibold text-rose-700"></div>
+        <p class="text-[10px] text-muted">Penukaran tervalidasi otomatis terhadap status kupon &amp; minimal transaksi, lalu dihitung ke KPI-05 (voucher redemption ≥ 25%) di Dashboard CRM.</p>
+        <div class="flex justify-end gap-2 pt-1">
+          <button id="btn-red-cancel" type="button" class="rounded-xl border border-line bg-white px-4 py-2 font-semibold text-muted hover:bg-cream hover:text-ink">Batal</button>
+          <button type="submit" class="inline-flex h-10 items-center gap-2 rounded-xl bg-forest px-5 font-semibold text-white hover:bg-forest-dark"><span class="material-symbols-outlined text-[17px]">save</span>Simpan Penukaran</button>
+        </div>
+      </form>
     </div>
   </div>
 </body>

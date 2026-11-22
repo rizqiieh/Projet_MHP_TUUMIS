@@ -3066,13 +3066,26 @@ const TOWS_MAPPINGS = [
 
 /* ==================== DATA DEFAULT CRM TUUMIS ==================== */
 const DEFAULT_CUSTOMERS = [
-  { id: 'CUST-001', name: 'Nadia Putri Maharani', wa: '6281234567801', email: 'nadia.putri@mhs.ac.id', joined: '2026-09-12', segment: 'Mahasiswa', status: 'Member Loyal', orders: 14, lastOrder: '2026-10-31' },
-  { id: 'CUST-002', name: 'Dimas Arya Pratama', wa: '6281234567802', email: 'dimas.arya@gmail.com', joined: '2026-09-18', segment: 'Pekerja', status: 'Member Loyal', orders: 11, lastOrder: '2026-10-30' },
-  { id: 'CUST-003', name: 'Salsabila Khairunnisa', wa: '6281234567803', email: 'salsa.kh@mhs.ac.id', joined: '2026-09-25', segment: 'Mahasiswa', status: 'Reguler', orders: 5, lastOrder: '2026-10-29' },
+  { id: 'CUST-001', name: 'Nadia Putri Maharani', wa: '6281234567801', email: 'nadia.putri@mhs.ac.id', joined: '2026-09-12', segment: 'Mahasiswa', status: 'Member Loyal', orders: 14, lastOrder: '2026-11-19' },
+  { id: 'CUST-002', name: 'Dimas Arya Pratama', wa: '6281234567802', email: 'dimas.arya@gmail.com', joined: '2026-09-18', segment: 'Pekerja', status: 'Member Loyal', orders: 11, lastOrder: '2026-11-18' },
+  { id: 'CUST-003', name: 'Salsabila Khairunnisa', wa: '6281234567803', email: 'salsa.kh@mhs.ac.id', joined: '2026-09-25', segment: 'Mahasiswa', status: 'Reguler', orders: 5, lastOrder: '2026-11-19' },
   { id: 'CUST-004', name: 'Bagas Kurniawan', wa: '6281234567804', email: 'bagas.k@gmail.com', joined: '2026-08-20', segment: 'Pekerja', status: 'Tidak Aktif', orders: 7, lastOrder: '2026-10-08' },
-  { id: 'CUST-005', name: 'Aulia Rahmawati', wa: '6281234567805', email: 'aulia.rahma@mhs.ac.id', joined: '2026-10-02', segment: 'Mahasiswa', status: 'Member Loyal', orders: 9, lastOrder: '2026-10-31' },
+  { id: 'CUST-005', name: 'Aulia Rahmawati', wa: '6281234567805', email: 'aulia.rahma@mhs.ac.id', joined: '2026-10-02', segment: 'Mahasiswa', status: 'Member Loyal', orders: 9, lastOrder: '2026-11-18' },
   { id: 'CUST-006', name: 'Reza Firmansyah', wa: '6281234567806', email: 'reza.f@mhs.ac.id', joined: '2026-09-05', segment: 'Mahasiswa', status: 'Tidak Aktif', orders: 4, lastOrder: '2026-10-05' },
-  { id: 'CUST-007', name: 'Fitri Handayani', wa: '6281234567807', email: 'fitri.h@gmail.com', joined: '2026-10-10', segment: 'Pekerja', status: 'Reguler', orders: 3, lastOrder: '2026-10-28' }
+  { id: 'CUST-007', name: 'Fitri Handayani', wa: '6281234567807', email: 'fitri.h@gmail.com', joined: '2026-10-10', segment: 'Pekerja', status: 'Reguler', orders: 3, lastOrder: '2026-11-17' },
+  { id: 'CUST-008', name: 'Raka Aditya Nugroho', wa: '6281234567808', email: 'raka.aditya@mhs.ac.id', joined: '2026-10-14', segment: 'Mahasiswa', status: 'Reguler', orders: 6, lastOrder: '2026-11-15' },
+  { id: 'CUST-009', name: 'Devita Anggraini', wa: '6281234567809', email: 'devita.angg@gmail.com', joined: '2026-10-16', segment: 'Pekerja', status: 'Member Loyal', orders: 10, lastOrder: '2026-11-19' },
+  { id: 'CUST-010', name: 'Yusuf Maulana Ibrahim', wa: '6281234567810', email: 'yusuf.mib@mhs.ac.id', joined: '2026-10-18', segment: 'Mahasiswa', status: 'Reguler', orders: 4, lastOrder: '2026-11-16' },
+  { id: 'CUST-011', name: 'Gita Permata Sari', wa: '6281234567811', email: 'gita.permata@gmail.com', joined: '2026-10-21', segment: 'Pekerja', status: 'Reguler', orders: 5, lastOrder: '2026-11-14' },
+  { id: 'CUST-012', name: 'Hendra Wijaya Kusuma', wa: '6281234567812', email: 'hendra.wk@gmail.com', joined: '2026-10-23', segment: 'Pekerja', status: 'Tidak Aktif', orders: 8, lastOrder: '2026-10-20' },
+  { id: 'CUST-013', name: 'Laras Ayu Wulandari', wa: '6281234567813', email: 'laras.ayu@mhs.ac.id', joined: '2026-10-25', segment: 'Mahasiswa', status: 'Reguler', orders: 2, lastOrder: '2026-11-12' },
+  { id: 'CUST-014', name: 'Farhan Abdillah', wa: '6281234567814', email: 'farhan.abd@mhs.ac.id', joined: '2026-10-27', segment: 'Mahasiswa', status: 'Tidak Aktif', orders: 3, lastOrder: '2026-10-15' },
+  { id: 'CUST-015', name: 'Nayla Putri Andini', wa: '6281234567815', email: 'nayla.putri@gmail.com', joined: '2026-10-29', segment: 'Pekerja', status: 'Member Loyal', orders: 12, lastOrder: '2026-11-20' },
+  { id: 'CUST-016', name: 'Bayu Segara Pratama', wa: '6281234567816', email: 'bayu.segara@gmail.com', joined: '2026-11-02', segment: 'Pekerja', status: 'Reguler', orders: 6, lastOrder: '2026-11-17' },
+  { id: 'CUST-017', name: 'Kirana Melati Sukma', wa: '6281234567817', email: 'kirana.melati@mhs.ac.id', joined: '2026-11-05', segment: 'Mahasiswa', status: 'Reguler', orders: 3, lastOrder: '2026-11-18' },
+  { id: 'CUST-018', name: 'Adnan Hakim Rivai', wa: '6281234567818', email: 'adnan.hakim@gmail.com', joined: '2026-11-08', segment: 'Pekerja', status: 'Tidak Aktif', orders: 5, lastOrder: '2026-10-25' },
+  { id: 'CUST-019', name: 'Sekar Kinasih Dewi', wa: '6281234567819', email: 'sekar.kinasih@mhs.ac.id', joined: '2026-11-14', segment: 'Mahasiswa', status: 'Reguler', orders: 2, lastOrder: '2026-11-20' },
+  { id: 'CUST-020', name: 'Ibrahim Al Ghifari', wa: '6281234567820', email: 'ibrahim.ghif@gmail.com', joined: '2026-11-18', segment: 'Pekerja', status: 'Reguler', orders: 1, lastOrder: '2026-11-20' }
 ];
 
 const DEFAULT_TICKETS = [
@@ -3357,7 +3370,7 @@ const WA_TEMPLATES = [
     id: 'wa-winback',
     tag: 'Retensi Pelanggan',
     title: 'Sapaan Pelanggan Tidak Aktif (Win-Back)',
-    desc: 'Mengajak kembali pelanggan yang belum memesan selama >14 hari.',
+    desc: 'Mengajak kembali pelanggan yang belum memesan selama >21 hari (terdeteksi otomatis).',
     text: 'Halo {NAMA}, sudah lama nih belum mampir ke *TUUMIS Nusantara*! \n\nKangen aroma *wok-hei* Nasi Goreng Spesial kami? Khusus untuk Anda minggu ini, gunakan kode *MEMBER15* untuk potongan 15% semua menu utama. Ditunggu kehadirannya ya!'
   },
   {
@@ -3378,7 +3391,15 @@ const DEFAULT_COUPONS = [
     period: '1 Okt – 30 Nov 2026',
     segment: 'Khusus Member Loyal',
     terms: 'Minimal pembelian Rp25.000 untuk kategori Main Course. Berlaku 1x transaksi per hari dan tidak dapat digabung promo ojol.',
-    guide: 'Sebutkan nomor WA terdaftar di kasir (Dine-in/Takeaway) atau ketik kode MEMBER15 saat konfirmasi Pre-Order WhatsApp.'
+    guide: 'Sebutkan nomor WA terdaftar di kasir (Dine-in/Takeaway) atau ketik kode MEMBER15 saat konfirmasi Pre-Order WhatsApp.',
+    issued: 120,
+    active: true,
+    redemptions: [
+      { date: '2026-11-15', name: 'Nadia Putri Maharani', amount: 48000 },
+      { date: '2026-11-17', name: 'Devita Anggraini', amount: 52000 },
+      { date: '2026-11-19', name: 'Nayla Putri Andini', amount: 45000 }
+    ],
+    redeemedBase: 35
   },
   {
     code: 'AKHIRBULAN9K',
@@ -3388,7 +3409,14 @@ const DEFAULT_COUPONS = [
     period: 'Tanggal 25 – 31 Setiap Bulan',
     segment: 'Segmen Mahasiswa',
     terms: 'Minimal belanja Rp15.000 dengan menunjukkan Kartu Tanda Mahasiswa (KTM) aktif pada pukul 14.00–17.00 WIB.',
-    guide: 'Tunjukkan KTM dan kode kupon AKHIRBULAN9K sebelum melakukan pembayaran QRIS/Tunai di kasir.'
+    guide: 'Tunjukkan KTM dan kode kupon AKHIRBULAN9K sebelum melakukan pembayaran QRIS/Tunai di kasir.',
+    issued: 150,
+    active: true,
+    redemptions: [
+      { date: '2026-10-30', name: 'Raka Aditya Nugroho', amount: 18000 },
+      { date: '2026-10-31', name: 'Yusuf Maulana Ibrahim', amount: 22000 }
+    ],
+    redeemedBase: 50
   },
   {
     code: 'PEMULIHAN10',
@@ -3398,7 +3426,14 @@ const DEFAULT_COUPONS = [
     period: 'Berlaku 14 Hari Sejak Diterbitkan',
     segment: 'Pelanggan Terdampak Keluhan',
     terms: 'Diberikan khusus bagi pelanggan yang mengalami keterlambatan SLA atau kesalahan add-on. Minimal transaksi Rp10.000.',
-    guide: 'Tunjukkan pesan WhatsApp resmi dari admin TUUMIS yang memuat kode PEMULIHAN10 saat memesan kembali.'
+    guide: 'Tunjukkan pesan WhatsApp resmi dari admin TUUMIS yang memuat kode PEMULIHAN10 saat memesan kembali.',
+    issued: 40,
+    active: true,
+    redemptions: [
+      { date: '2026-11-04', name: 'Dimas Arya Pratama', amount: 25000 },
+      { date: '2026-11-18', name: 'Aulia Rahmawati', amount: 30000 }
+    ],
+    redeemedBase: 10
   }
 ];
 
@@ -3414,15 +3449,85 @@ const charts = {};
 let visibleRows = SALES_DATA;
 
 const STORAGE_KEYS = {
-  customers: 'tuumis_crm_customers_v1',
-  tickets: 'tuumis_crm_tickets_v1',
-  coupons: 'tuumis_crm_coupons_v1',
-  activities: 'tuumis_crm_activities_v1',
-  menus: 'tuumis_crm_menus_v1',
-  preorders: 'tuumis_crm_preorders_v1',
-  ugc: 'tuumis_crm_ugc_v1',
-  campaign: 'tuumis_crm_campaign_v1',
-  towsStatus: 'tuumis_crm_tows_status_v1'
+  customers: 'tuumis_crm_customers_v2',
+  tickets: 'tuumis_crm_tickets_v2',
+  coupons: 'tuumis_crm_coupons_v2',
+  activities: 'tuumis_crm_activities_v2',
+  menus: 'tuumis_crm_menus_v2',
+  preorders: 'tuumis_crm_preorders_v2',
+  ugc: 'tuumis_crm_ugc_v2',
+  campaign: 'tuumis_crm_campaign_v2',
+  towsStatus: 'tuumis_crm_tows_status_v2'
+};
+
+/* ==================== WAKTU NYATA & SLA OTOMATIS ==================== */
+// Standar SLA per prioritas (Tabel 4.3 laporan UTS): Tinggi 15/120, Sedang 30/240, Rendah 60/1440 (menit)
+const SLA_POLICY = {
+  'Tinggi': { resp: 15, resol: 120 },
+  'Sedang': { resp: 30, resol: 240 },
+  'Rendah': { resp: 60, resol: 1440 }
+};
+// Ambang pelanggan pasif untuk kampanye win-back otomatis (WS1 B.2)
+const PASSIVE_AFTER_DAYS = 21;
+
+function fmtStamp(date = new Date()) {
+  const p = (n) => String(n).padStart(2, '0');
+  return `${date.getFullYear()}-${p(date.getMonth() + 1)}-${p(date.getDate())} ${p(date.getHours())}:${p(date.getMinutes())}`;
+}
+function todayStr() {
+  const p = (n) => String(n).padStart(2, '0');
+  const now = new Date();
+  return `${now.getFullYear()}-${p(now.getMonth() + 1)}-${p(now.getDate())}`;
+}
+function minutesSince(ts) {
+  return Math.max(0, Math.round((Date.now() - Number(ts || 0)) / 60000));
+}
+function slaStateForElapsed(elapsedMin, targetRespMin) {
+  if (elapsedMin <= targetRespMin * 0.6) return 'Aman';
+  if (elapsedMin <= targetRespMin) return 'Mendekati Batas';
+  return 'Melewati SLA';
+}
+// Hitung ulang kondisi SLA tiket yang dibuat pada sesi berjalan (jam nyata)
+function refreshLiveTicket(t) {
+  if (!t.live || t.status === 'Selesai' || !t.createdAtTs) return false;
+  const elapsedMin = minutesSince(t.createdAtTs);
+  const before = `${t.elapsed}|${t.slaState}`;
+  t.elapsed = `${elapsedMin} mnt (Batas ${t.targetResponseMin} mnt)`;
+  t.slaState = slaStateForElapsed(elapsedMin, t.targetResponseMin);
+  return before !== `${t.elapsed}|${t.slaState}`;
+}
+function tickLiveTickets() {
+  let changed = false;
+  crmTickets.forEach((t) => { if (refreshLiveTicket(t)) changed = true; });
+  if (changed) saveState(STORAGE_KEYS.tickets, crmTickets);
+  return changed;
+}
+function daysSinceDate(dateStr) {
+  if (!dateStr) return null;
+  const [y, m, d] = String(dateStr).slice(0, 10).split('-').map(Number);
+  if (!y || !m || !d) return null;
+  const then = new Date(y, m - 1, d);
+  return Math.floor((Date.now() - then.getTime()) / 86400000);
+}
+function passiveCustomers() {
+  return crmCustomers
+    .map((c) => ({ ...c, inactiveDays: daysSinceDate(c.lastOrder) }))
+    .filter((c) => c.inactiveDays !== null && c.inactiveDays > PASSIVE_AFTER_DAYS)
+    .sort((a, b) => b.inactiveDays - a.inactiveDays);
+}
+function couponRedeemedTotal(c) {
+  return Number(c.redeemedBase || 0) + (Array.isArray(c.redemptions) ? c.redemptions.length : 0);
+}
+
+// Penanda layanan (FCR & kepuasan) untuk tiket simulasi awal — diisi hasil verifikasi WhatsApp admin
+const SEED_SERVICE_FLAGS = {
+  'TKT-204': { firstContact: 'Ya', satisfaction: 'Puas' },
+  'TKT-205': { firstContact: 'Ya', satisfaction: 'Puas' },
+  'TKT-206': { firstContact: 'Ya', satisfaction: 'Belum Puas' },
+  'TKT-207': { firstContact: 'Ya', satisfaction: 'Puas' },
+  'TKT-208': { firstContact: 'Ya', satisfaction: 'Puas' },
+  'TKT-209': { firstContact: 'Tidak', satisfaction: 'Puas' },
+  'TKT-210': { firstContact: 'Ya', satisfaction: 'Puas' }
 };
 
 function normalizeTicket(t, index) {
@@ -3432,25 +3537,31 @@ function normalizeTicket(t, index) {
   const resolMinutes = typeof t.resolutionTimeMin === 'number'
     ? t.resolutionTimeMin
     : (t.status === 'Selesai' ? (t.slaState === 'Melewati SLA' ? 145 : 45) : null);
+  const seedFlag = SEED_SERVICE_FLAGS[t.id] || {};
 
   return {
     id: t.id || `TKT-${201 + index}`,
-    customerId: t.customerId || 'CUST-001',
+    customerId: t.customerId || null,
     customer: t.customer || 'Pelanggan TUUMIS',
     category: t.category || 'Antrean Rush Hour',
     priority: t.priority || 'Sedang',
     pic: t.pic || 'Admin WA CS',
     desc: t.desc || '',
     createdAt: t.createdAt || '2026-11-19 12:00',
-    targetResponseMin: Number(t.targetResponseMin || 30),
-    targetResolutionMin: Number(t.targetResolutionMin || 120),
+    createdAtTs: t.createdAtTs || null,
+    live: !!t.live,
+    targetResponseMin: Number(t.targetResponseMin || (SLA_POLICY[t.priority] || SLA_POLICY.Sedang).resp),
+    targetResolutionMin: Number(t.targetResolutionMin || (SLA_POLICY[t.priority] || SLA_POLICY.Sedang).resol),
     responseTimeMin: respMinutes,
     resolutionTimeMin: resolMinutes,
     resolvedAt: t.resolvedAt || (t.status === 'Selesai' ? '2026-11-19 12:45' : null),
     elapsed: t.elapsed || 'Baru masuk',
     slaState: t.slaState || (t.status === 'Selesai' ? 'Selesai' : 'Aman'),
     status: t.status || 'Baru',
-    followup: t.followup || '-'
+    followup: t.followup || '-',
+    firstContact: t.firstContact || seedFlag.firstContact || null,
+    satisfaction: t.satisfaction || seedFlag.satisfaction || null,
+    notes: Array.isArray(t.notes) ? t.notes : []
   };
 }
 
@@ -3481,7 +3592,7 @@ function logActivity(type, title, desc, icon = 'info', color = 'forest') {
     title,
     desc,
     time: 'Baru saja',
-    timestamp: '2026-11-19 ' + new Intl.DateTimeFormat('id-ID', { hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date())
+    timestamp: fmtStamp()
   };
   crmActivities.unshift(newAct);
   if (crmActivities.length > 40) crmActivities.pop();
@@ -3764,9 +3875,10 @@ function renderCustomers() {
     return matchStatus && matchText;
   });
 
+  const pasifList = passiveCustomers();
   byId('kpi-cust-total').textContent = INTEGER.format(crmCustomers.length);
   byId('kpi-cust-member').textContent = INTEGER.format(crmCustomers.filter((c) => c.status === 'Member Loyal').length);
-  byId('kpi-cust-inactive').textContent = INTEGER.format(crmCustomers.filter((c) => c.status === 'Tidak Aktif').length);
+  byId('kpi-cust-inactive').textContent = INTEGER.format(pasifList.length);
   byId('badge-customers').textContent = crmCustomers.length;
   byId('cust-table-count').textContent = `${filtered.length} pelanggan`;
 
@@ -3776,7 +3888,10 @@ function renderCustomers() {
     return 'bg-sage text-forest-dark border-emerald-200';
   };
 
-  byId('customer-rows').innerHTML = filtered.map((c) => `
+  byId('customer-rows').innerHTML = filtered.map((c) => {
+    const inactiveDays = daysSinceDate(c.lastOrder);
+    const isPasif = inactiveDays !== null && inactiveDays > PASSIVE_AFTER_DAYS;
+    return `
     <tr class="transition hover:bg-cream/60">
       <td class="whitespace-nowrap px-5 py-3.5 font-bold text-forest-dark">${escapeHTML(c.id)}</td>
       <td class="px-4 py-3.5">
@@ -3787,17 +3902,35 @@ function renderCustomers() {
       <td class="whitespace-nowrap px-4 py-3.5">${escapeHTML(c.segment)}</td>
       <td class="whitespace-nowrap px-4 py-3.5">
         <span class="inline-flex rounded-full border px-2.5 py-0.5 text-[10px] font-semibold ${statusBadge(c.status)}">${escapeHTML(c.status)}</span>
+        ${isPasif ? `<span class="mt-1 inline-flex rounded-full border border-rose-300 bg-rose-50 px-2 py-0.5 text-[9px] font-bold text-rose-700">Pasif ${inactiveDays} hari</span>` : ''}
       </td>
       <td class="px-4 py-3.5 text-center font-semibold">${INTEGER.format(c.orders)}x</td>
       <td class="whitespace-nowrap px-4 py-3.5 text-muted">${escapeHTML(c.lastOrder)}</td>
       <td class="whitespace-nowrap px-5 py-3.5 text-right">
-        <button type="button" data-wa-name="${escapeHTML(c.name)}" data-wa-phone="${escapeHTML(c.wa)}" class="btn-quick-wa inline-flex items-center gap-1 rounded-lg bg-sage px-2.5 py-1.5 text-[11px] font-semibold text-forest-dark transition hover:bg-forest hover:text-white">
-          <span class="material-symbols-outlined text-[15px]">chat</span>Sapa WA
-        </button>
+        <div class="flex items-center justify-end gap-1.5">
+          <button type="button" data-cust-detail="${escapeHTML(c.id)}" title="Detail pelanggan (Single Customer View)" class="btn-cust-detail inline-flex h-8 w-8 items-center justify-center rounded-lg border border-line bg-white text-forest-dark transition hover:bg-sage">
+            <span class="material-symbols-outlined text-[15px]">contact_page</span>
+          </button>
+          <button type="button" data-cust-edit="${escapeHTML(c.id)}" title="Edit data pelanggan" class="btn-cust-edit inline-flex h-8 w-8 items-center justify-center rounded-lg border border-line bg-white text-forest-dark transition hover:bg-sage">
+            <span class="material-symbols-outlined text-[15px]">edit</span>
+          </button>
+          <button type="button" data-cust-delete="${escapeHTML(c.id)}" title="Hapus pelanggan" class="btn-cust-delete inline-flex h-8 w-8 items-center justify-center rounded-lg border border-rose-200 bg-rose-50 text-rose-700 transition hover:bg-rose-600 hover:text-white">
+            <span class="material-symbols-outlined text-[15px]">delete</span>
+          </button>
+          <button type="button" data-wa-name="${escapeHTML(c.name)}" data-wa-phone="${escapeHTML(c.wa)}" title="Sapa via WhatsApp" class="btn-quick-wa inline-flex h-8 items-center gap-1 rounded-lg bg-sage px-2.5 text-[11px] font-semibold text-forest-dark transition hover:bg-forest hover:text-white">
+            <span class="material-symbols-outlined text-[15px]">chat</span>Sapa WA
+          </button>
+        </div>
       </td>
     </tr>
-  `).join('');
+  `;}).join('');
 
+  bindCustomerRowEvents();
+  // Jaga agar dropdown pelanggan pada form tiket selalu sinkron dengan database
+  populateTicketCustomerSelect();
+}
+
+function bindCustomerRowEvents() {
   document.querySelectorAll('.btn-quick-wa').forEach((btn) => {
     btn.addEventListener('click', () => {
       byId('wa-target-name').value = `Kak ${btn.dataset.waName.split(' ')[0]}`;
@@ -3807,9 +3940,137 @@ function renderCustomers() {
       showToast(`Kontak ${btn.dataset.waName} dimuat ke Template WA`);
     });
   });
+
+  document.querySelectorAll('.btn-cust-detail').forEach((btn) => {
+    btn.addEventListener('click', () => openCustomerDetail(btn.dataset.custDetail));
+  });
+
+  document.querySelectorAll('.btn-cust-edit').forEach((btn) => {
+    btn.addEventListener('click', () => openCustomerEdit(btn.dataset.custEdit));
+  });
+
+  document.querySelectorAll('.btn-cust-delete').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const target = crmCustomers.find((c) => c.id === btn.dataset.custDelete);
+      if (!target) return;
+      const linked = crmTickets.filter((t) => t.customerId === target.id || t.customer === target.name).length;
+      const warn = linked > 0 ? ` Terdapat ${linked} tiket keluhan yang terhubung (riwayat tiket tetap tersimpan).` : '';
+      if (confirm(`Hapus pelanggan "${target.name}" (${target.id}) dari database CRM?${warn}`)) {
+        crmCustomers = crmCustomers.filter((c) => c.id !== target.id);
+        saveState(STORAGE_KEYS.customers, crmCustomers);
+        logActivity('customer_deleted', 'Pelanggan Dihapus', `${target.name} (${target.id}) dihapus dari database CRM.`, 'delete', 'rose');
+        renderCustomers();
+        populateTicketCustomerSelect();
+        if (typeof renderCrmDashboard === 'function') renderCrmDashboard();
+        showToast(`Pelanggan ${target.name} dihapus dari database`);
+      }
+    });
+  });
+}
+
+function openCustomerEdit(customerId) {
+  const c = crmCustomers.find((item) => item.id === customerId);
+  if (!c) return;
+  byId('cust-edit-id').value = c.id;
+  byId('cust-name').value = c.name;
+  byId('cust-wa').value = c.wa;
+  byId('cust-email').value = c.email || '';
+  byId('cust-segment').value = c.segment || 'Mahasiswa';
+  byId('cust-status').value = c.status || 'Reguler';
+  byId('cust-form-title').textContent = `Edit Data Pelanggan — ${c.id}`;
+  byId('cust-form-submit').innerHTML = '<span class="material-symbols-outlined text-[17px]">save</span>Perbarui Data Pelanggan';
+  byId('form-add-customer').classList.remove('hidden');
+  byId('cust-name').focus();
+}
+
+function resetCustomerFormMode() {
+  byId('cust-edit-id').value = '';
+  byId('cust-form-title').textContent = 'Registrasi Pelanggan Baru';
+  byId('cust-form-submit').innerHTML = '<span class="material-symbols-outlined text-[17px]">save</span>Simpan ke Database';
+}
+
+function openCustomerDetail(customerId) {
+  const c = crmCustomers.find((item) => item.id === customerId);
+  if (!c) return;
+  const inactiveDays = daysSinceDate(c.lastOrder);
+  const isPasif = inactiveDays !== null && inactiveDays > PASSIVE_AFTER_DAYS;
+
+  byId('cust-detail-id').textContent = c.id;
+  byId('cust-detail-name').textContent = c.name;
+  byId('cust-detail-wa').textContent = c.wa;
+  byId('cust-detail-email').textContent = c.email || '-';
+  byId('cust-detail-segment').textContent = `${c.segment} · ${c.status}`;
+  byId('cust-detail-joined').textContent = c.joined || '-';
+  byId('cust-detail-orders').textContent = `${INTEGER.format(c.orders)}x`;
+  byId('cust-detail-last').textContent = c.lastOrder || '-';
+  byId('cust-detail-inactive').textContent = inactiveDays === null ? '-' : `${inactiveDays} hari`;
+  byId('cust-detail-inactive').className = inactiveDays !== null && inactiveDays > PASSIVE_AFTER_DAYS
+    ? 'font-bold text-rose-700'
+    : 'font-bold text-emerald-700';
+
+  // Riwayat layanan: tiket keluhan terhubung via ID pelanggan atau kecocokan nama
+  const linkedTickets = crmTickets.filter((t) => t.customerId === c.id || t.customer === c.name);
+  byId('cust-detail-ticket-count').textContent = `${linkedTickets.length} tiket`;
+  const rowsEl = byId('cust-detail-ticket-rows');
+  if (!linkedTickets.length) {
+    rowsEl.innerHTML = '<tr><td colspan="4" class="px-3 py-4 text-center text-muted">Belum ada keluhan tercatat untuk pelanggan ini.</td></tr>';
+  } else {
+    rowsEl.innerHTML = linkedTickets.map((t) => {
+      const slaLabel = t.status === 'Selesai' ? (t.slaState === 'Melewati SLA' ? 'Terlambat SLA' : 'Memenuhi SLA') : t.slaState;
+      const slaClass = t.status === 'Selesai'
+        ? (t.slaState === 'Melewati SLA' ? 'bg-rose-50 text-rose-700 border-rose-300' : 'bg-emerald-50 text-emerald-700 border-emerald-300')
+        : (t.slaState === 'Melewati SLA' ? 'bg-rose-100 text-rose-800 border-rose-300' : t.slaState === 'Mendekati Batas' ? 'bg-amber-100 text-amber-800 border-amber-300' : 'bg-teal-50 text-teal-700 border-teal-300');
+      return `
+        <tr>
+          <td class="px-3 py-2 font-bold text-forest-dark">${escapeHTML(t.id)}</td>
+          <td class="px-3 py-2 text-muted">${escapeHTML((t.createdAt || '').slice(0, 10))}</td>
+          <td class="px-3 py-2 text-ink">${escapeHTML(t.category)}</td>
+          <td class="px-3 py-2"><span class="inline-flex rounded-full border px-2 py-0.5 text-[10px] font-semibold ${slaClass}">${escapeHTML(slaLabel)}</span></td>
+        </tr>`;
+    }).join('');
+  }
+
+  byId('btn-cust-detail-wa').onclick = () => {
+    byId('wa-target-name').value = `Kak ${c.name.split(' ')[0]}`;
+    byId('wa-target-phone').value = c.wa;
+    updateWaPreview();
+    closeCustomerDetail();
+    switchView('whatsapp');
+    showToast(`Kontak ${c.name} dimuat ke Template WA`);
+  };
+
+  const modal = byId('modal-customer-detail');
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+}
+
+function closeCustomerDetail() {
+  const modal = byId('modal-customer-detail');
+  modal.classList.add('hidden');
+  modal.classList.remove('flex');
 }
 
 /* ==================== MODUL 3: TICKETING KELUHAN & MONITORING SLA ==================== */
+// Isi dropdown tiket dengan pelanggan terdaftar (Single Customer View)
+function populateTicketCustomerSelect() {
+  const sel = byId('tkt-customer-id');
+  if (!sel) return;
+  const prev = sel.value;
+  sel.innerHTML = '<option value="">— Pilih pelanggan terdaftar —</option>' +
+    crmCustomers.map((c) => `<option value="${escapeHTML(c.id)}">${escapeHTML(c.id)} · ${escapeHTML(c.name)} (${escapeHTML(c.segment)})</option>`).join('') +
+    '<option value="UMUM">Pelanggan umum (belum terdaftar)</option>';
+  if (prev && [...sel.options].some((o) => o.value === prev)) sel.value = prev;
+}
+
+// Panel target SLA otomatis di form tiket (mengikuti prioritas — Tabel 4.3 UTS)
+function updateTicketSlaInfo() {
+  const info = byId('tkt-sla-info');
+  if (!info) return;
+  const priority = byId('tkt-priority')?.value || 'Sedang';
+  const policy = SLA_POLICY[priority] || SLA_POLICY.Sedang;
+  info.innerHTML = `Target dihitung otomatis dari prioritas <strong class="text-forest-dark">${escapeHTML(priority)}</strong>: respons ≤ <strong class="text-forest-dark">${policy.resp} mnt</strong> &amp; penyelesaian ≤ <strong class="text-forest-dark">${policy.resol} mnt</strong>. Waktu masuk memakai jam nyata &amp; kondisi SLA (hijau/kuning/merah) diperbarui otomatis.`;
+}
+
 function renderTickets() {
   const filterSla = byId('tkt-filter-sla').value;
 
@@ -3861,23 +4122,37 @@ function renderTickets() {
       </td>
       <td class="max-w-xs px-4 py-3.5 text-[11px] leading-4 text-ink">${escapeHTML(t.followup)}</td>
       <td class="whitespace-nowrap px-5 py-3.5 text-right">
-        ${t.status !== 'Selesai'
-          ? `<button type="button" data-resolve-id="${escapeHTML(t.id)}" class="btn-resolve-tkt inline-flex items-center gap-1 rounded-lg bg-forest px-3 py-1.5 text-[11px] font-semibold text-white hover:bg-forest-dark"><span class="material-symbols-outlined text-[15px]">check</span>Tandai Selesai</button>`
-          : `<span class="text-[11px] font-semibold text-forest">Tuntas</span>`
-        }
+        <div class="flex items-center justify-end gap-1.5">
+          <button type="button" data-open-detail="${escapeHTML(t.id)}" class="btn-open-detail inline-flex items-center gap-1 rounded-lg border border-line bg-white px-2.5 py-1.5 text-[11px] font-semibold text-forest-dark transition hover:bg-sage">
+            <span class="material-symbols-outlined text-[14px]">visibility</span>Detail
+          </button>
+          ${t.status !== 'Selesai'
+            ? `<button type="button" data-resolve-id="${escapeHTML(t.id)}" class="btn-resolve-tkt inline-flex items-center gap-1 rounded-lg bg-forest px-3 py-1.5 text-[11px] font-semibold text-white hover:bg-forest-dark"><span class="material-symbols-outlined text-[15px]">check</span>Tandai Selesai</button>`
+            : `<span class="text-[11px] font-semibold text-forest">Tuntas</span>`
+          }
+        </div>
       </td>
     </tr>
   `).join('');
+
+  document.querySelectorAll('.btn-open-detail').forEach((btn) => {
+    btn.addEventListener('click', () => openTicketDetail(btn.dataset.openDetail));
+  });
 
   document.querySelectorAll('.btn-resolve-tkt').forEach((btn) => {
     btn.addEventListener('click', () => {
       const target = crmTickets.find((item) => item.id === btn.dataset.resolveId);
       if (target) {
         target.status = 'Selesai';
-        target.resolvedAt = '2026-11-19 13:10';
-        target.resolutionTimeMin = target.resolutionTimeMin || (target.slaState === 'Melewati SLA' ? 145 : 35);
+        target.resolvedAt = fmtStamp();
+        if (target.live && target.createdAtTs) {
+          target.resolutionTimeMin = minutesSince(target.createdAtTs);
+        } else {
+          target.resolutionTimeMin = target.resolutionTimeMin || (target.slaState === 'Melewati SLA' ? 145 : 35);
+        }
         target.slaState = (target.resolutionTimeMin <= target.targetResolutionMin && target.slaState !== 'Melewati SLA') ? 'Selesai' : 'Melewati SLA';
         target.elapsed = `Selesai (${target.resolutionTimeMin} mnt)`;
+        if (!target.firstContact) target.firstContact = 'Ya';
         saveState(STORAGE_KEYS.tickets, crmTickets);
         logActivity('ticket_resolved', 'Tiket Keluhan Selesai', `Tiket ${target.id} (${target.customer}) ditandai Selesai.`, 'task_alt', 'emerald');
         renderTickets();
@@ -3928,29 +4203,59 @@ function updateWaPreview() {
 
 /* ==================== MODUL 5: PROGRAM KUPON MEMBER ==================== */
 function renderCoupons() {
-  byId('coupon-grid').innerHTML = crmCoupons.map((c) => `
-    <article class="flex flex-col justify-between rounded-2xl border border-line bg-white p-5 shadow-card">
+  byId('coupon-grid').innerHTML = crmCoupons.map((c) => {
+    const redeemed = couponRedeemedTotal(c);
+    const issued = Number(c.issued || 0);
+    const rate = issued > 0 ? Math.round((redeemed / issued) * 100) : 0;
+    const isActive = c.active !== false;
+    return `
+    <article class="flex flex-col justify-between rounded-2xl border border-line bg-white p-5 shadow-card ${isActive ? '' : 'opacity-75'}">
       <div>
         <div class="flex items-center justify-between gap-2">
           <span class="rounded-lg border border-dashed border-forest bg-sage px-3 py-1 font-mono text-xs font-bold tracking-wider text-forest-dark">${escapeHTML(c.code)}</span>
-          <span class="rounded-full bg-amber-50 px-2.5 py-0.5 text-[10px] font-semibold text-amber-800">${escapeHTML(c.segment)}</span>
+          <span class="rounded-full ${isActive ? 'bg-emerald-50 text-emerald-700 border border-emerald-300' : 'bg-rose-50 text-rose-700 border border-rose-300'} px-2.5 py-0.5 text-[10px] font-bold">${isActive ? 'AKTIF' : 'NONAKTIF'}</span>
         </div>
         <h3 class="mt-3 font-display text-lg font-semibold text-forest-dark">${escapeHTML(c.title)}</h3>
         <p class="mt-1 text-sm font-bold text-forest">${escapeHTML(c.discount)}</p>
 
         <div class="mt-4 space-y-2 rounded-xl bg-cream/80 p-3 text-xs">
+          <div><strong class="text-ink">Minimal Transaksi:</strong> <span class="text-muted">${money(c.minOrder)}</span></div>
+          <div><strong class="text-ink">Segmen Sasaran:</strong> <span class="text-muted">${escapeHTML(c.segment)}</span></div>
           <div><strong class="text-ink">Periode Promo:</strong> <span class="text-muted">${escapeHTML(c.period)}</span></div>
           <div><strong class="text-ink">Syarat Penggunaan:</strong> <span class="text-muted">${escapeHTML(c.terms)}</span></div>
           <div><strong class="text-ink">Petunjuk Pemakaian:</strong> <span class="text-muted">${escapeHTML(c.guide)}</span></div>
+          <div><strong class="text-ink">Penukaran:</strong> <span class="text-muted">${INTEGER.format(redeemed)} dari ${INTEGER.format(issued)} voucher (${rate}%)${Array.isArray(c.redemptions) && c.redemptions.length ? ` · terakhir: ${escapeHTML(c.redemptions[0].name)} (${escapeHTML(c.redemptions[0].date)})` : ''}</span></div>
         </div>
       </div>
 
-      <button type="button" data-copy-code="${escapeHTML(c.code)}" class="btn-copy-coupon mt-4 inline-flex h-9 w-full items-center justify-center gap-1.5 rounded-xl border border-line bg-white text-xs font-semibold text-forest-dark transition hover:bg-sage">
-        <span class="material-symbols-outlined text-[16px]">content_copy</span>Salin Kode Kupon
-      </button>
+      <div class="mt-4 space-y-2">
+        <div class="flex gap-2">
+          <button type="button" data-copy-code="${escapeHTML(c.code)}" class="btn-copy-coupon inline-flex h-9 flex-1 items-center justify-center gap-1.5 rounded-xl border border-line bg-white text-xs font-semibold text-forest-dark transition hover:bg-sage">
+            <span class="material-symbols-outlined text-[16px]">content_copy</span>Salin Kode
+          </button>
+          <button type="button" data-redeem-code="${escapeHTML(c.code)}" class="btn-redeem-coupon inline-flex h-9 flex-1 items-center justify-center gap-1.5 rounded-xl bg-forest text-xs font-semibold text-white transition hover:bg-forest-dark">
+            <span class="material-symbols-outlined text-[16px]">verified</span>Catat Penukaran
+          </button>
+        </div>
+        <div class="flex gap-2">
+          <button type="button" data-cpn-edit="${escapeHTML(c.code)}" class="btn-cpn-edit inline-flex h-8 flex-1 items-center justify-center gap-1 rounded-xl border border-line bg-white text-[11px] font-semibold text-forest-dark transition hover:bg-sage">
+            <span class="material-symbols-outlined text-[14px]">edit</span>Edit
+          </button>
+          <button type="button" data-cpn-toggle="${escapeHTML(c.code)}" class="btn-cpn-toggle inline-flex h-8 flex-1 items-center justify-center gap-1 rounded-xl border border-line bg-white text-[11px] font-semibold text-forest-dark transition hover:bg-sage">
+            <span class="material-symbols-outlined text-[14px]">${isActive ? 'pause_circle' : 'play_circle'}</span>${isActive ? 'Nonaktifkan' : 'Aktifkan'}
+          </button>
+          <button type="button" data-cpn-delete="${escapeHTML(c.code)}" class="btn-cpn-delete inline-flex h-8 flex-1 items-center justify-center gap-1 rounded-xl border border-rose-200 bg-rose-50 text-[11px] font-semibold text-rose-700 transition hover:bg-rose-600 hover:text-white">
+            <span class="material-symbols-outlined text-[14px]">delete</span>Hapus
+          </button>
+        </div>
+      </div>
     </article>
-  `).join('');
+  `;}).join('');
 
+  bindCouponEvents();
+}
+
+function bindCouponEvents() {
   document.querySelectorAll('.btn-copy-coupon').forEach((btn) => {
     btn.addEventListener('click', () => {
       navigator.clipboard?.writeText(btn.dataset.copyCode);
@@ -3958,6 +4263,92 @@ function renderCoupons() {
       showToast(`Kode kupon ${btn.dataset.copyCode} disalin`);
     });
   });
+
+  document.querySelectorAll('.btn-redeem-coupon').forEach((btn) => {
+    btn.addEventListener('click', () => openRedemptionModal(btn.dataset.redeemCode));
+  });
+
+  document.querySelectorAll('.btn-cpn-edit').forEach((btn) => {
+    btn.addEventListener('click', () => openCouponEdit(btn.dataset.cpnEdit));
+  });
+
+  document.querySelectorAll('.btn-cpn-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const target = crmCoupons.find((c) => c.code === btn.dataset.cpnToggle);
+      if (!target) return;
+      target.active = target.active === false;
+      saveState(STORAGE_KEYS.coupons, crmCoupons);
+      logActivity('coupon_toggled', target.active ? 'Kupon Diaktifkan' : 'Kupon Dinonaktifkan', `Kupon ${target.code} kini ${target.active ? 'aktif' : 'nonaktif'}.`, 'loyalty', target.active ? 'emerald' : 'amber');
+      renderCoupons();
+      showToast(`Kupon ${target.code} ${target.active ? 'diaktifkan' : 'dinonaktifkan'}`);
+    });
+  });
+
+  document.querySelectorAll('.btn-cpn-delete').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const target = crmCoupons.find((c) => c.code === btn.dataset.cpnDelete);
+      if (!target) return;
+      if (confirm(`Hapus program kupon "${target.code}" dari daftar promo?`)) {
+        crmCoupons = crmCoupons.filter((c) => c.code !== target.code);
+        saveState(STORAGE_KEYS.coupons, crmCoupons);
+        logActivity('coupon_deleted', 'Kupon Dihapus', `Program kupon ${target.code} dihapus dari daftar promo.`, 'delete', 'rose');
+        renderCoupons();
+        if (typeof renderCrmDashboard === 'function') renderCrmDashboard();
+        showToast(`Kupon ${target.code} dihapus`);
+      }
+    });
+  });
+}
+
+function openCouponEdit(code) {
+  const c = crmCoupons.find((item) => item.code === code);
+  if (!c) return;
+  byId('cpn-edit-id').value = c.code;
+  byId('cpn-code').value = c.code;
+  byId('cpn-title').value = c.title;
+  byId('cpn-discount').value = c.discount;
+  byId('cpn-minorder').value = c.minOrder || 0;
+  byId('cpn-segment').value = c.segment || 'Semua Member';
+  byId('cpn-period').value = c.period;
+  byId('cpn-terms').value = c.terms;
+  byId('cpn-guide').value = c.guide;
+  byId('cpn-status').value = c.active === false ? 'Nonaktif' : 'Aktif';
+  byId('cpn-form-title').textContent = `Edit Program Kupon — ${c.code}`;
+  byId('cpn-form-submit').innerHTML = '<span class="material-symbols-outlined text-[17px]">loyalty</span>Simpan Perubahan';
+  byId('form-add-coupon').classList.remove('hidden');
+}
+
+function resetCouponFormMode() {
+  byId('cpn-edit-id').value = '';
+  byId('cpn-form-title').textContent = 'Tambah Program Kupon Baru';
+  byId('cpn-form-submit').innerHTML = '<span class="material-symbols-outlined text-[17px]">loyalty</span>Terbitkan Kupon';
+}
+
+function openRedemptionModal(code) {
+  const c = crmCoupons.find((item) => item.code === code);
+  if (!c) return;
+  if (c.active === false) {
+    showToast(`Kupon ${c.code} sedang nonaktif — aktifkan dulu sebelum mencatat penukaran`);
+    return;
+  }
+  byId('red-coupon-code').value = c.code;
+  byId('red-coupon-info').textContent = `${c.discount} · Minimal ${money(c.minOrder)}`;
+  byId('red-customer-name').value = '';
+  byId('red-amount').value = c.minOrder || 0;
+  byId('red-form-error').classList.add('hidden');
+  const dataList = byId('red-customer-list');
+  if (dataList) {
+    dataList.innerHTML = crmCustomers.map((cust) => `<option value="${escapeHTML(cust.name)}">${escapeHTML(cust.id)} · ${escapeHTML(cust.wa)}</option>`).join('');
+  }
+  const modal = byId('modal-coupon-redemption');
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+}
+
+function closeRedemptionModal() {
+  const modal = byId('modal-coupon-redemption');
+  modal.classList.add('hidden');
+  modal.classList.remove('flex');
 }
 
 function validateCouponSimulation() {
@@ -3972,13 +4363,18 @@ function validateCouponSimulation() {
     resBox.textContent = `Kode kupon "${inputCode || '-'}" tidak ditemukan. Periksa kembali penulisan kode promo.`;
     return;
   }
+  if (found.active === false) {
+    resBox.classList.add('bg-rose-50', 'text-rose-800');
+    resBox.textContent = `Kupon ${found.code} sedang NONAKTIF / kedaluwarsa sehingga tidak dapat digunakan. Aktifkan kembali di panel Program Kupon bila periode promo diperpanjang.`;
+    return;
+  }
   if (amount < Number(found.minOrder || 0)) {
     resBox.classList.add('bg-rose-50', 'text-rose-800');
     resBox.textContent = `Belum memenuhi syarat: Total belanja ${money(amount)} masih di bawah minimal transaksi ${money(found.minOrder)} untuk kupon ${found.code}.`;
     return;
   }
   resBox.classList.add('bg-emerald-50', 'text-emerald-800');
-  resBox.textContent = `VALID! Kupon ${found.code} (${found.discount}) berhasil diterapkan pada transaksi senilai ${money(amount)}.`;
+  resBox.textContent = `VALID! Kupon ${found.code} (${found.discount}) berhasil diterapkan pada transaksi senilai ${money(amount)}. Catat penukaran via tombol "Catat Penukaran" agar terhitung di KPI voucher redemption.`;
 }
 
 /* ==================== MODUL DASHBOARD CRM & MONITORING SLA ==================== */
@@ -4012,6 +4408,18 @@ function calculateSlaMetrics(tickets = crmTickets || []) {
     ? (resolved.reduce((acc, t) => acc + t.resolutionTimeMin, 0) / resolved.length).toFixed(1)
     : null;
 
+  // FCR (First Contact Resolution): keluhan tuntas tanpa eskalasi pada penanganan pertama
+  const fcrEvaluated = safeTickets.filter(t => t.status === 'Selesai' && (t.firstContact === 'Ya' || t.firstContact === 'Tidak'));
+  const fcrRate = fcrEvaluated.length > 0
+    ? Math.round((fcrEvaluated.filter(t => t.firstContact === 'Ya').length / fcrEvaluated.length) * 100)
+    : null;
+
+  // CSat: kepuasan pelanggan terkonfirmasi pasca penyelesaian keluhan
+  const satEvaluated = safeTickets.filter(t => t.status === 'Selesai' && (t.satisfaction === 'Puas' || t.satisfaction === 'Belum Puas'));
+  const csatRate = satEvaluated.length > 0
+    ? Math.round((satEvaluated.filter(t => t.satisfaction === 'Puas').length / satEvaluated.length) * 100)
+    : null;
+
   return {
     total,
     newCount,
@@ -4023,19 +4431,27 @@ function calculateSlaMetrics(tickets = crmTickets || []) {
     breachedCount,
     slaRate,
     avgResponse,
-    avgResolution
+    avgResolution,
+    fcrEvaluated: fcrEvaluated.length,
+    fcrRate,
+    csatEvaluated: satEvaluated.length,
+    csatRate
   };
 }
 
 function filterCrmTicketsByPeriod(period = 'thisMonth') {
+  const today = todayStr();
+  const monthPrefix = today.slice(0, 7);
+  const weekAgo = new Date(Date.now() - 7 * 86400000);
+  const weekAgoStr = `${weekAgo.getFullYear()}-${String(weekAgo.getMonth() + 1).padStart(2, '0')}-${String(weekAgo.getDate()).padStart(2, '0')}`;
   if (period === 'today') {
-    return crmTickets.filter(t => t.createdAt && t.createdAt.startsWith('2026-11-19'));
+    return crmTickets.filter(t => t.createdAt && t.createdAt.slice(0, 10) === today);
   }
   if (period === '7days') {
-    return crmTickets.filter(t => t.createdAt && t.createdAt >= '2026-11-13' && t.createdAt <= '2026-11-19 23:59');
+    return crmTickets.filter(t => t.createdAt && t.createdAt.slice(0, 10) >= weekAgoStr && t.createdAt.slice(0, 10) <= today);
   }
   if (period === 'thisMonth') {
-    return crmTickets.filter(t => t.createdAt && t.createdAt.startsWith('2026-11'));
+    return crmTickets.filter(t => t.createdAt && t.createdAt.slice(0, 7) === monthPrefix);
   }
   return [...crmTickets];
 }
@@ -4397,6 +4813,7 @@ let currentDetailTicketId = null;
 function openTicketDetail(ticketId) {
   const t = crmTickets.find(item => item.id === ticketId);
   if (!t) return;
+  refreshLiveTicket(t);
   currentDetailTicketId = ticketId;
 
   byId('modal-tkt-id').textContent = t.id;
@@ -4414,8 +4831,11 @@ function openTicketDetail(ticketId) {
 
   const slaEl = byId('modal-tkt-sla');
   if (t.status === 'Selesai') {
-    slaEl.className = 'mt-0.5 inline-flex items-center gap-1 font-bold text-emerald-700';
-    slaEl.innerHTML = '<span class="material-symbols-outlined text-[15px]">check_circle</span>Memenuhi SLA';
+    const late = t.slaState === 'Melewati SLA' || (t.resolutionTimeMin && t.resolutionTimeMin > t.targetResolutionMin);
+    slaEl.className = `mt-0.5 inline-flex items-center gap-1 font-bold ${late ? 'text-rose-700' : 'text-emerald-700'}`;
+    slaEl.innerHTML = late
+      ? '<span class="material-symbols-outlined text-[15px]">error</span>Terlambat SLA'
+      : '<span class="material-symbols-outlined text-[15px]">check_circle</span>Memenuhi SLA';
   } else if (t.slaState === 'Melewati SLA') {
     slaEl.className = 'mt-0.5 inline-flex items-center gap-1 font-bold text-rose-700';
     slaEl.innerHTML = '<span class="material-symbols-outlined text-[15px]">error</span>Melewati SLA';
@@ -4432,9 +4852,11 @@ function openTicketDetail(ticketId) {
 
   const cust = crmCustomers.find(c => c.name === t.customer || c.id === t.customerId);
   byId('modal-tkt-wa').textContent = cust ? maskPhone(cust.wa) : '0812****';
+  byId('modal-tkt-custlink').textContent = cust ? `Terhubung ke database: ${cust.id} (${cust.segment} · ${cust.status})` : 'Pelanggan umum / belum terdaftar di CRM';
 
   byId('modal-tkt-desc').textContent = t.desc || '-';
-  byId('modal-tkt-created').textContent = t.createdAt || '19 Nov 12:00';
+  byId('modal-tkt-created').textContent = t.createdAt || '-';
+  byId('modal-tkt-target').textContent = `Prioritas ${t.priority || 'Sedang'} → Target respons ≤ ${t.targetResponseMin} mnt · penyelesaian ≤ ${t.targetResolutionMin} mnt`;
 
   byId('modal-tkt-response').textContent = typeof t.responseTimeMin === 'number'
     ? `${t.responseTimeMin} mnt (Target ≤ ${t.targetResponseMin} mnt)`
@@ -4446,8 +4868,37 @@ function openTicketDetail(ticketId) {
 
   byId('modal-tkt-followup').textContent = t.followup || '-';
 
+  // Panel kelola tiket: PIC & prioritas dapat dikoreksi setelah tiket dibuat
+  const picSel = byId('modal-tkt-pic-edit');
+  picSel.value = t.pic || 'Admin WA CS';
+  const priSel = byId('modal-tkt-priority-edit');
+  priSel.value = t.priority || 'Sedang';
+  byId('modal-tkt-edit-card').classList.toggle('hidden', t.status === 'Selesai');
+
+  // Catatan penanganan bertahap (log kronologis)
+  const notesEl = byId('modal-tkt-notes-list');
+  if (!Array.isArray(t.notes) || !t.notes.length) {
+    notesEl.innerHTML = '<li class="text-muted">Belum ada catatan penanganan.</li>';
+  } else {
+    notesEl.innerHTML = t.notes.map((n) => `
+      <li class="flex gap-2 rounded-lg bg-cream/50 border border-line/60 p-2">
+        <span class="shrink-0 font-mono text-[10px] text-muted">${escapeHTML((n.ts || '').slice(5, 16))}</span>
+        <span class="text-ink">${escapeHTML(n.text || '-')}</span>
+      </li>`).join('');
+  }
+  byId('modal-tkt-note-input').value = '';
+
+  // Konfirmasi layanan (FCR & kepuasan) — ditampilkan untuk tiket yang sudah selesai
+  const svcCard = byId('modal-tkt-service-card');
+  svcCard.classList.toggle('hidden', t.status !== 'Selesai');
+  if (t.status === 'Selesai') {
+    byId('modal-tkt-fcr').value = t.firstContact || '';
+    byId('modal-tkt-satisfaction').value = t.satisfaction || '';
+  }
+
   byId('modal-btn-process').classList.toggle('hidden', t.status !== 'Baru');
   byId('modal-btn-resolve').classList.toggle('hidden', t.status === 'Selesai');
+  byId('modal-btn-delete-ticket').classList.toggle('hidden', false);
 
   byId('crm-ticket-modal').classList.remove('hidden');
   byId('crm-ticket-modal').classList.add('flex');
@@ -4468,7 +4919,11 @@ function renderCrmDashboard() {
   const totalCust = crmCustomers.length;
   byId('crm-kpi-total-cust').textContent = INTEGER.format(totalCust);
   const loyalCount = crmCustomers.filter(c => c.status === 'Member Loyal').length;
-  byId('crm-kpi-cust-trend').textContent = `+2 baru bulan ini (${loyalCount} member loyal)`;
+  const monthPrefix = todayStr().slice(0, 7);
+  const newThisMonth = crmCustomers.filter(c => (c.joined || '').slice(0, 7) === monthPrefix).length;
+  byId('crm-kpi-cust-trend').textContent = newThisMonth > 0
+    ? `+${newThisMonth} pelanggan baru bulan ini (${loyalCount} member loyal)`
+    : `${loyalCount} member loyal · belum ada pendaftar baru bulan ini`;
 
   // Total Tiket Keluhan
   byId('crm-kpi-total-tickets').textContent = INTEGER.format(metrics.total);
@@ -4497,14 +4952,132 @@ function renderCrmDashboard() {
 
   byId('crm-trend-badge').textContent = `${metrics.total} keluhan tercatat`;
 
-  // 2. Grafik
+  // 2. KPI strategis layanan (6 KPI UTS) & sasaran win-back otomatis
+  renderServiceKpis(metrics);
+  renderWinBack();
+
+  // 3. Grafik
   updateCrmCharts(periodTickets);
 
-  // 3. Tabel Tiket
+  // 4. Tabel Tiket
   renderCrmTicketsTable(periodTickets);
 
-  // 4. Panel Aktivitas
+  // 5. Panel Aktivitas
   renderCrmActivities();
+}
+
+/* ==================== 6 KPI STRATEGIS LAYANAN (LAPORAN UTS) ==================== */
+function renderServiceKpis(metrics = null) {
+  const m = metrics || calculateSlaMetrics(crmTickets);
+  const uniqueOrders = new Set(SALES_DATA.map((row) => row.Order_ID)).size;
+  // Proksi terukur dari data simulasi yang tersedia (dilabeli jelas, tanpa angka fiktif)
+  const rushTickets = crmTickets.filter(t => t.category === 'Antrean Rush Hour' && typeof t.responseTimeMin === 'number');
+  const rushAvg = rushTickets.length
+    ? rushTickets.reduce((acc, t) => acc + t.responseTimeMin, 0) / rushTickets.length
+    : null;
+  const orderErrorCats = ['Add-on Terlewat / Tertukar', 'Suhu / Kualitas Makanan', 'Pelayanan Kasir'];
+  const orderErrorCount = crmTickets.filter(t => orderErrorCats.includes(t.category)).length;
+  const accuracy = uniqueOrders > 0 ? Math.max(0, Math.round((1 - orderErrorCount / uniqueOrders) * 1000) / 10) : null;
+  const totalIssued = crmCoupons.reduce((acc, c) => acc + Number(c.issued || 0), 0);
+  const totalRedeemed = crmCoupons.reduce((acc, c) => acc + couponRedeemedTotal(c), 0);
+  const redemptionRate = totalIssued > 0 ? Math.round((totalRedeemed / totalIssued) * 100) : null;
+
+  const setKpi = (id, value, target, met, note) => {
+    const valueEl = byId(`kpi6-${id}`);
+    const chipEl = byId(`kpi6-${id}-chip`);
+    if (!valueEl) return;
+    valueEl.textContent = value;
+    if (chipEl) {
+      if (met === null) {
+        chipEl.textContent = 'Data Belum Tersedia';
+        chipEl.className = 'inline-flex rounded-full border border-stone-300 bg-stone-100 px-2 py-0.5 text-[10px] font-bold text-stone-600';
+      } else if (met) {
+        chipEl.textContent = 'Tercapai';
+        chipEl.className = 'inline-flex rounded-full border border-emerald-300 bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-700';
+      } else {
+        chipEl.textContent = 'Belum Tercapai';
+        chipEl.className = 'inline-flex rounded-full border border-amber-300 bg-amber-50 px-2 py-0.5 text-[10px] font-bold text-amber-800';
+      }
+    }
+    const noteEl = byId(`kpi6-${id}-note`);
+    if (noteEl) noteEl.textContent = note;
+  };
+
+  setKpi('wait', rushAvg !== null ? `${rushAvg.toFixed(1)} mnt` : 'Belum tersedia', '≤ 15 mnt',
+    rushAvg === null ? null : rushAvg <= 15,
+    `Proksi: rata-rata waktu respons ${rushTickets.length} tiket antrean rush hour`);
+  setKpi('accuracy', accuracy !== null ? `${accuracy}%` : 'Belum tersedia', '≥ 95%',
+    accuracy === null ? null : accuracy >= 95,
+    `Proksi: 1 − (tiket kesalahan pesanan / ${INTEGER.format(uniqueOrders)} pesanan unik)`);
+  setKpi('response', m.avgResponse ? `${m.avgResponse} mnt` : 'Belum tersedia', '≤ 30 mnt',
+    m.avgResponse === null ? null : Number(m.avgResponse) <= 30,
+    'Rata-rata waktu respons awal seluruh tiket');
+  setKpi('fcr', m.fcrRate !== null ? `${m.fcrRate}%` : 'Belum tersedia', '≥ 70%',
+    m.fcrRate === null ? null : m.fcrRate >= 70,
+    `${m.fcrEvaluated} tiket selesai sudah diverifikasi FCR`);
+  setKpi('redemption', redemptionRate !== null ? `${redemptionRate}%` : 'Belum tersedia', '≥ 25%',
+    redemptionRate === null ? null : redemptionRate >= 25,
+    `${INTEGER.format(totalRedeemed)} dari ${INTEGER.format(totalIssued)} voucher terbit ditukarkan`);
+  setKpi('csat', m.csatRate !== null ? `${m.csatRate}%` : 'Belum tersedia', '≥ 80%',
+    m.csatRate === null ? null : m.csatRate >= 80,
+    `${m.csatEvaluated} tiket selesai sudah dikonfirmasi pelanggan`);
+}
+
+/* ==================== WIN-BACK OTOMATIS (PASIF > 21 HARI) ==================== */
+function renderWinBack() {
+  const pasifList = passiveCustomers();
+  byId('wb-count').textContent = `${pasifList.length} pelanggan`;
+  const wbBadge = byId('wb-badge');
+  if (wbBadge) wbBadge.textContent = pasifList.length;
+
+  const rowsEl = byId('wb-rows');
+  if (!rowsEl) return;
+  if (!pasifList.length) {
+    rowsEl.innerHTML = '<tr><td colspan="5" class="px-4 py-6 text-center text-muted">Tidak ada pelanggan pasif &gt; 21 hari. Retensi sedang sehat 🎉</td></tr>';
+    return;
+  }
+  rowsEl.innerHTML = pasifList.slice(0, 8).map((c) => `
+    <tr class="transition hover:bg-cream/50">
+      <td class="whitespace-nowrap px-4 py-2.5 font-bold text-forest-dark">${escapeHTML(c.id)}</td>
+      <td class="px-4 py-2.5">
+        <span class="block font-semibold text-ink">${escapeHTML(c.name)}</span>
+        <span class="block text-[10px] font-mono text-muted">${escapeHTML(maskPhone(c.wa))}</span>
+      </td>
+      <td class="whitespace-nowrap px-4 py-2.5">
+        <span class="inline-flex rounded-full border border-rose-300 bg-rose-50 px-2.5 py-0.5 text-[10px] font-bold text-rose-700">Pasif ${c.inactiveDays} hari</span>
+      </td>
+      <td class="whitespace-nowrap px-4 py-2.5 text-muted">${escapeHTML(c.segment)} · ${escapeHTML(c.status)}</td>
+      <td class="whitespace-nowrap px-4 py-2.5 text-right">
+        <button type="button" data-wb-name="${escapeHTML(c.name)}" data-wb-phone="${escapeHTML(c.wa)}" data-wb-days="${c.inactiveDays}" class="btn-winback-wa inline-flex items-center gap-1 rounded-lg bg-forest px-2.5 py-1.5 text-[11px] font-semibold text-white transition hover:bg-forest-dark">
+          <span class="material-symbols-outlined text-[14px]">campaign</span>Sapa Win-Back
+        </button>
+      </td>
+    </tr>`).join('');
+
+  document.querySelectorAll('.btn-winback-wa').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      selectedWaTemplate = WA_TEMPLATES.find((t) => t.id === 'wa-winback') || selectedWaTemplate;
+      renderWaTemplates();
+      byId('wa-target-name').value = `Kak ${btn.dataset.wbName.split(' ')[0]}`;
+      byId('wa-target-phone').value = btn.dataset.wbPhone;
+      updateWaPreview();
+      switchView('whatsapp');
+      showToast(`Template Win-Back dimuat untuk ${btn.dataset.wbName} (pasif ${btn.dataset.wbDays} hari)`);
+    });
+  });
+}
+
+/* ==================== LABEL PERIODE DINAMIS ==================== */
+function updateCrmPeriodLabels() {
+  const sel = byId('crm-filter-period');
+  if (!sel) return;
+  const now = new Date();
+  const dayLabel = new Intl.DateTimeFormat('id-ID', { day: 'numeric', month: 'short' }).format(now);
+  const monthLabel = new Intl.DateTimeFormat('id-ID', { month: 'short', year: 'numeric' }).format(now);
+  const todayOpt = sel.querySelector('option[value="today"]');
+  const monthOpt = sel.querySelector('option[value="thisMonth"]');
+  if (todayOpt) todayOpt.textContent = `Hari Ini (${dayLabel})`;
+  if (monthOpt) monthOpt.textContent = `Bulan Ini (${monthLabel})`;
 }
 
 function setupCrmDashboardEvents() {
@@ -4527,8 +5100,10 @@ function setupCrmDashboardEvents() {
 
   byId('crm-btn-quick-ticket')?.addEventListener('click', () => {
     switchView('tickets');
+    populateTicketCustomerSelect();
+    updateTicketSlaInfo();
     byId('form-add-ticket').classList.remove('hidden');
-    byId('tkt-customer').focus();
+    byId('tkt-customer-id').focus();
   });
 
   byId('crm-btn-goto-tickets')?.addEventListener('click', () => {
@@ -4581,8 +5156,16 @@ function setupCrmDashboardEvents() {
     const t = crmTickets.find(item => item.id === currentDetailTicketId);
     if (t) {
       t.status = 'Diproses';
-      t.slaState = t.slaState === 'Melewati SLA' ? 'Melewati SLA' : 'Aman';
-      t.responseTimeMin = t.responseTimeMin || 10;
+      if (t.live && t.createdAtTs) {
+        const elapsedMin = minutesSince(t.createdAtTs);
+        t.responseTimeMin = elapsedMin;
+        t.slaState = slaStateForElapsed(elapsedMin, t.targetResponseMin);
+      } else {
+        t.slaState = t.slaState === 'Melewati SLA' ? 'Melewati SLA' : 'Aman';
+        t.responseTimeMin = t.responseTimeMin || 10;
+      }
+      if (!Array.isArray(t.notes)) t.notes = [];
+      t.notes.push({ ts: fmtStamp(), text: `Direspons & diproses oleh ${t.pic || 'PIC'} (waktu respons ${t.responseTimeMin} mnt).` });
       saveState(STORAGE_KEYS.tickets, crmTickets);
       logActivity('status_changed', 'Status Tiket Diperbarui', `Tiket ${t.id} dialihkan ke status Diproses oleh PIC.`, 'sync', 'blue');
       renderTickets();
@@ -4597,16 +5180,103 @@ function setupCrmDashboardEvents() {
     const t = crmTickets.find(item => item.id === currentDetailTicketId);
     if (t) {
       t.status = 'Selesai';
-      t.resolvedAt = '2026-11-19 13:10';
-      t.resolutionTimeMin = t.resolutionTimeMin || (t.slaState === 'Melewati SLA' ? 145 : 35);
+      t.resolvedAt = fmtStamp();
+      if (t.live && t.createdAtTs) {
+        t.resolutionTimeMin = minutesSince(t.createdAtTs);
+      } else {
+        t.resolutionTimeMin = t.resolutionTimeMin || (t.slaState === 'Melewati SLA' ? 145 : 35);
+      }
       t.slaState = (t.resolutionTimeMin <= t.targetResolutionMin && t.slaState !== 'Melewati SLA') ? 'Selesai' : 'Melewati SLA';
       t.elapsed = `Selesai (${t.resolutionTimeMin} mnt)`;
+      if (!t.firstContact) t.firstContact = 'Ya';
+      if (!Array.isArray(t.notes)) t.notes = [];
+      t.notes.push({ ts: fmtStamp(), text: `Tiket dituntaskan (durasi penyelesaian ${t.resolutionTimeMin} mnt). Menunggu konfirmasi kepuasan pelanggan.` });
       saveState(STORAGE_KEYS.tickets, crmTickets);
-      logActivity('ticket_resolved', 'Tiket Keluhan Selesai', `Tiket ${t.id} (${t.customer}) tuntas diselesaikan.`, 'task_alt', 'emerald');
+      logActivity('ticket_resolved', 'Tiket Keluhan Selesai', `Tiket ${t.id} (${t.customer}) tuntas diselesaikan dalam ${t.resolutionTimeMin} mnt.`, 'task_alt', 'emerald');
       renderTickets();
       renderCrmDashboard();
       openTicketDetail(t.id);
-      showToast(`Tiket ${t.id} ditandai Selesai`);
+      showToast(`Tiket ${t.id} ditandai Selesai — lengkapi konfirmasi FCR & kepuasan pelanggan`);
+    }
+  });
+
+  // Koreksi PIC & prioritas tiket langsung dari modal (prioritas mengubah target SLA otomatis)
+  byId('modal-tkt-pic-edit')?.addEventListener('change', () => {
+    const t = crmTickets.find(item => item.id === currentDetailTicketId);
+    if (!t) return;
+    t.pic = byId('modal-tkt-pic-edit').value;
+    saveState(STORAGE_KEYS.tickets, crmTickets);
+    logActivity('pic_assigned', 'Penugasan PIC Diperbarui', `${t.id} kini ditangani oleh ${t.pic}.`, 'assignment_ind', 'forest');
+    renderTickets();
+    openTicketDetail(t.id);
+    showToast(`PIC ${t.id} diperbarui ke ${t.pic}`);
+  });
+
+  byId('modal-tkt-priority-edit')?.addEventListener('change', () => {
+    const t = crmTickets.find(item => item.id === currentDetailTicketId);
+    if (!t) return;
+    t.priority = byId('modal-tkt-priority-edit').value;
+    const policy = SLA_POLICY[t.priority] || SLA_POLICY.Sedang;
+    t.targetResponseMin = policy.resp;
+    t.targetResolutionMin = policy.resol;
+    if (t.live && t.createdAtTs && t.status !== 'Selesai') refreshLiveTicket(t);
+    saveState(STORAGE_KEYS.tickets, crmTickets);
+    logActivity('priority_changed', 'Prioritas Tiket Diubah', `${t.id} menjadi prioritas ${t.priority} (SLA ${policy.resp}/${policy.resol} mnt).`, 'low_priority', 'amber');
+    renderTickets();
+    renderCrmDashboard();
+    openTicketDetail(t.id);
+    showToast(`Prioritas ${t.id} → ${t.priority} (target SLA otomatis ${policy.resp}/${policy.resol} mnt)`);
+  });
+
+  // Catatan penanganan bertahap
+  byId('modal-btn-add-note')?.addEventListener('click', () => {
+    const t = crmTickets.find(item => item.id === currentDetailTicketId);
+    const input = byId('modal-tkt-note-input');
+    if (!t) return;
+    const text = input.value.trim();
+    if (!text) {
+      showToast('Catatan penanganan tidak boleh kosong');
+      return;
+    }
+    if (!Array.isArray(t.notes)) t.notes = [];
+    t.notes.push({ ts: fmtStamp(), text });
+    saveState(STORAGE_KEYS.tickets, crmTickets);
+    input.value = '';
+    openTicketDetail(t.id);
+    showToast(`Catatan ditambahkan ke ${t.id}`);
+  });
+
+  // Konfirmasi FCR & kepuasan pelanggan (KPI-04 & KPI-06)
+  byId('modal-tkt-fcr')?.addEventListener('change', () => {
+    const t = crmTickets.find(item => item.id === currentDetailTicketId);
+    if (!t) return;
+    t.firstContact = byId('modal-tkt-fcr').value || null;
+    saveState(STORAGE_KEYS.tickets, crmTickets);
+    renderCrmDashboard();
+    showToast(`FCR ${t.id} diset: ${t.firstContact || 'belum ditentukan'}`);
+  });
+
+  byId('modal-tkt-satisfaction')?.addEventListener('change', () => {
+    const t = crmTickets.find(item => item.id === currentDetailTicketId);
+    if (!t) return;
+    t.satisfaction = byId('modal-tkt-satisfaction').value || null;
+    saveState(STORAGE_KEYS.tickets, crmTickets);
+    renderCrmDashboard();
+    showToast(`Kepuasan pelanggan ${t.id} diset: ${t.satisfaction || 'belum dikonfirmasi'}`);
+  });
+
+  // Hapus tiket keluhan
+  byId('modal-btn-delete-ticket')?.addEventListener('click', () => {
+    const t = crmTickets.find(item => item.id === currentDetailTicketId);
+    if (!t) return;
+    if (confirm(`Hapus tiket ${t.id} (${t.customer})? Tindakan ini tidak dapat dibatalkan.`)) {
+      crmTickets = crmTickets.filter(item => item.id !== t.id);
+      saveState(STORAGE_KEYS.tickets, crmTickets);
+      logActivity('ticket_deleted', 'Tiket Dihapus', `Tiket ${t.id} (${t.customer}) dihapus dari ticketing.`, 'delete', 'rose');
+      closeTicketDetail();
+      renderTickets();
+      renderCrmDashboard();
+      showToast(`Tiket ${t.id} dihapus`);
     }
   });
 
@@ -4672,87 +5342,143 @@ function setupNavigation() {
 }
 
 function setupCrmForms() {
-  // Pelanggan
-  byId('toggle-customer-form').addEventListener('click', () => byId('form-add-customer').classList.toggle('hidden'));
-  byId('cancel-customer-form').addEventListener('click', () => byId('form-add-customer').classList.add('hidden'));
+  // Pelanggan (tambah / edit)
+  byId('toggle-customer-form').addEventListener('click', () => {
+    resetCustomerFormMode();
+    byId('form-add-customer').classList.toggle('hidden');
+  });
+  byId('cancel-customer-form').addEventListener('click', () => {
+    resetCustomerFormMode();
+    byId('form-add-customer').classList.add('hidden');
+  });
   byId('form-add-customer').addEventListener('submit', (e) => {
     e.preventDefault();
-    const nextNum = String(crmCustomers.length + 1).padStart(3, '0');
+    const editId = byId('cust-edit-id').value;
     const custName = byId('cust-name').value.trim();
+    const custWa = byId('cust-wa').value.trim();
     const custSegment = byId('cust-segment').value;
-    const newCust = {
-      id: `CUST-${nextNum}`,
-      name: custName,
-      wa: byId('cust-wa').value.trim(),
-      email: byId('cust-email').value.trim(),
-      joined: '2026-11-19',
-      segment: custSegment,
-      status: byId('cust-status').value,
-      orders: 1,
-      lastOrder: '2026-11-19'
-    };
-    crmCustomers.unshift(newCust);
-    saveState(STORAGE_KEYS.customers, crmCustomers);
-    logActivity('customer_registered', 'Pelanggan Baru Terdaftar', `${custName} (${custSegment}) berhasil ditambahkan ke database CRM.`, 'person_add', 'forest');
-    renderCustomers();
-    if (typeof renderCrmDashboard === 'function') renderCrmDashboard();
+    const custStatus = byId('cust-status').value;
+
+    // Cegah nomor WhatsApp ganda di database pelanggan
+    const dup = crmCustomers.find((c) => c.wa === custWa && c.id !== editId);
+    if (dup) {
+      showToast(`Nomor WA sudah terdaftar atas nama ${dup.name} (${dup.id})`);
+      return;
+    }
+
+    if (editId) {
+      const target = crmCustomers.find((c) => c.id === editId);
+      if (target) {
+        target.name = custName;
+        target.wa = custWa;
+        target.email = byId('cust-email').value.trim();
+        target.segment = custSegment;
+        target.status = custStatus;
+        saveState(STORAGE_KEYS.customers, crmCustomers);
+        logActivity('customer_updated', 'Data Pelanggan Diperbarui', `Profil ${custName} (${target.id}) diperbarui oleh admin.`, 'edit', 'blue');
+        renderCustomers();
+        populateTicketCustomerSelect();
+        if (typeof renderCrmDashboard === 'function') renderCrmDashboard();
+        showToast(`Data pelanggan ${custName} berhasil diperbarui`);
+      }
+    } else {
+      const nextNum = String(crmCustomers.reduce((max, c) => Math.max(max, Number((c.id || '').replace('CUST-', '')) || 0), 0) + 1).padStart(3, '0');
+      const today = todayStr();
+      crmCustomers.unshift({
+        id: `CUST-${nextNum}`,
+        name: custName,
+        wa: custWa,
+        email: byId('cust-email').value.trim(),
+        joined: today,
+        segment: custSegment,
+        status: custStatus,
+        orders: 1,
+        lastOrder: today
+      });
+      saveState(STORAGE_KEYS.customers, crmCustomers);
+      logActivity('customer_registered', 'Pelanggan Baru Terdaftar', `${custName} (${custSegment}) berhasil ditambahkan ke database CRM.`, 'person_add', 'forest');
+      renderCustomers();
+      populateTicketCustomerSelect();
+      if (typeof renderCrmDashboard === 'function') renderCrmDashboard();
+      showToast('Pelanggan baru berhasil ditambahkan ke database');
+    }
     e.target.reset();
+    resetCustomerFormMode();
     byId('form-add-customer').classList.add('hidden');
-    showToast('Pelanggan baru berhasil ditambahkan ke database');
   });
   byId('cust-search').addEventListener('input', renderCustomers);
   byId('cust-filter-status').addEventListener('change', renderCustomers);
 
   // Ticketing & SLA
-  byId('toggle-ticket-form').addEventListener('click', () => byId('form-add-ticket').classList.toggle('hidden'));
+  byId('toggle-ticket-form').addEventListener('click', () => {
+    populateTicketCustomerSelect();
+    updateTicketSlaInfo();
+    byId('form-add-ticket').classList.toggle('hidden');
+  });
   byId('cancel-ticket-form').addEventListener('click', () => byId('form-add-ticket').classList.add('hidden'));
+  byId('tkt-customer-id')?.addEventListener('change', () => {
+    const isUmum = byId('tkt-customer-id').value === 'UMUM';
+    byId('tkt-customer-name-wrap').classList.toggle('hidden', !isUmum);
+  });
+  byId('tkt-priority')?.addEventListener('change', updateTicketSlaInfo);
   byId('form-add-ticket').addEventListener('submit', (e) => {
     e.preventDefault();
-    const slaState = byId('tkt-sla-state').value;
     const priority = byId('tkt-priority')?.value || 'Sedang';
     const pic = byId('tkt-pic')?.value || 'Admin WA CS';
-    const customer = byId('tkt-customer').value.trim();
     const category = byId('tkt-category').value;
     const desc = byId('tkt-desc').value.trim();
     const followup = byId('tkt-followup').value.trim();
-    const elapsedMap = {
-      'Aman': '3 mnt (Batas 30 mnt)',
-      'Mendekati Batas': '23 mnt (Batas 30 mnt)',
-      'Melewati SLA': '35 mnt (Batas 30 mnt)'
-    };
-    const respTimeMap = {
-      'Aman': 5,
-      'Mendekati Batas': 23,
-      'Melewati SLA': 35
-    };
-    const nextId = `TKT-${201 + crmTickets.length}`;
+
+    // Pelanggan terhubung ke database CRM (dropdown) atau pelanggan umum
+    const custSel = byId('tkt-customer-id')?.value;
+    let customerId = null;
+    let customer = 'Pelanggan Umum';
+    if (custSel && custSel !== 'UMUM') {
+      const found = crmCustomers.find((c) => c.id === custSel);
+      customerId = custSel;
+      customer = found ? found.name : 'Pelanggan TUUMIS';
+    } else {
+      customer = byId('tkt-customer-name')?.value.trim() || 'Pelanggan Umum';
+    }
+
+    // SLA otomatis mengikuti prioritas (Tabel 4.3 UTS) & waktu masuk jam nyata
+    const policy = SLA_POLICY[priority] || SLA_POLICY.Sedang;
+    const nowTs = Date.now();
+    const nextNum = crmTickets.reduce((max, t) => Math.max(max, Number((t.id || '').replace('TKT-', '')) || 0), 200) + 1;
+    const nextId = `TKT-${nextNum}`;
     const newTicket = {
       id: nextId,
-      customerId: 'CUST-001',
+      customerId,
       customer,
       category,
       priority,
       pic,
       desc,
-      createdAt: '2026-11-19 13:00',
-      targetResponseMin: 30,
-      targetResolutionMin: 120,
-      responseTimeMin: respTimeMap[slaState] || 8,
+      createdAt: fmtStamp(new Date(nowTs)),
+      createdAtTs: nowTs,
+      live: true,
+      targetResponseMin: policy.resp,
+      targetResolutionMin: policy.resol,
+      responseTimeMin: null,
       resolutionTimeMin: null,
       resolvedAt: null,
-      elapsed: elapsedMap[slaState] || 'Baru masuk',
-      slaState,
+      elapsed: `0 mnt (Batas ${policy.resp} mnt)`,
+      slaState: 'Aman',
       status: 'Baru',
-      followup
+      followup,
+      firstContact: null,
+      satisfaction: null,
+      notes: [{ ts: fmtStamp(new Date(nowTs)), text: 'Tiket dibuat & masuk antrean penanganan.' }]
     };
     crmTickets.unshift(newTicket);
     saveState(STORAGE_KEYS.tickets, crmTickets);
-    logActivity('ticket_created', 'Tiket Baru Dibuat', `Tiket ${nextId} (${category}) diajukan untuk ${customer}.`, 'add_alert', 'amber');
+    logActivity('ticket_created', 'Tiket Baru Dibuat', `Tiket ${nextId} (${category}, prioritas ${priority}, SLA ${policy.resp}/${policy.resol} mnt) diajukan untuk ${customer}.`, 'add_alert', 'amber');
     renderTickets();
     if (typeof renderCrmDashboard === 'function') renderCrmDashboard();
     e.target.reset();
+    byId('tkt-customer-name-wrap')?.classList.add('hidden');
     byId('form-add-ticket').classList.add('hidden');
-    showToast(`Tiket keluhan ${nextId} berhasil dibuat`);
+    showToast(`Tiket keluhan ${nextId} berhasil dibuat (SLA respons ≤ ${policy.resp} mnt)`);
   });
   byId('tkt-filter-sla').addEventListener('change', renderTickets);
 
@@ -4764,28 +5490,106 @@ function setupCrmForms() {
     showToast('Template pesan WhatsApp berhasil disalin');
   });
 
-  // Kupon Member
-  byId('toggle-coupon-form').addEventListener('click', () => byId('form-add-coupon').classList.toggle('hidden'));
-  byId('cancel-coupon-form').addEventListener('click', () => byId('form-add-coupon').classList.add('hidden'));
+  // Kupon Member (tambah / edit)
+  byId('toggle-coupon-form').addEventListener('click', () => {
+    resetCouponFormMode();
+    byId('form-add-coupon').classList.toggle('hidden');
+  });
+  byId('cancel-coupon-form').addEventListener('click', () => {
+    resetCouponFormMode();
+    byId('form-add-coupon').classList.add('hidden');
+  });
   byId('form-add-coupon').addEventListener('submit', (e) => {
     e.preventDefault();
-    crmCoupons.unshift({
+    const editId = byId('cpn-edit-id').value;
+    const payload = {
       code: byId('cpn-code').value.trim().toUpperCase(),
       title: byId('cpn-title').value.trim(),
       discount: byId('cpn-discount').value.trim(),
-      minOrder: 15000,
+      minOrder: Number(byId('cpn-minorder').value || 0),
       period: byId('cpn-period').value.trim(),
-      segment: 'Semua Member',
+      segment: byId('cpn-segment').value,
       terms: byId('cpn-terms').value.trim(),
-      guide: byId('cpn-guide').value.trim()
-    });
-    saveState(STORAGE_KEYS.coupons, crmCoupons);
-    renderCoupons();
+      guide: byId('cpn-guide').value.trim(),
+      active: byId('cpn-status').value === 'Aktif'
+    };
+    const dup = crmCoupons.find((c) => c.code === payload.code && c.code !== editId);
+    if (dup) {
+      showToast(`Kode kupon ${payload.code} sudah dipakai program lain`);
+      return;
+    }
+    if (editId) {
+      const target = crmCoupons.find((c) => c.code === editId);
+      if (target) {
+        Object.assign(target, payload);
+        saveState(STORAGE_KEYS.coupons, crmCoupons);
+        logActivity('coupon_updated', 'Program Kupon Diperbarui', `Kupon ${target.code} diperbarui (minimal ${money(target.minOrder)}, segmen ${target.segment}).`, 'edit', 'blue');
+        renderCoupons();
+        if (typeof renderCrmDashboard === 'function') renderCrmDashboard();
+        showToast(`Program kupon ${target.code} berhasil diperbarui`);
+      }
+    } else {
+      crmCoupons.unshift({
+        ...payload,
+        issued: 100,
+        redemptions: []
+      });
+      saveState(STORAGE_KEYS.coupons, crmCoupons);
+      logActivity('coupon_created', 'Program Kupon Diterbitkan', `Kupon ${payload.code} diterbitkan (minimal ${money(payload.minOrder)}, segmen ${payload.segment}).`, 'loyalty', 'emerald');
+      renderCoupons();
+      if (typeof renderCrmDashboard === 'function') renderCrmDashboard();
+      showToast('Program kupon baru berhasil diterbitkan');
+    }
     e.target.reset();
+    resetCouponFormMode();
     byId('form-add-coupon').classList.add('hidden');
-    showToast('Program kupon baru berhasil diterbitkan');
   });
   byId('btn-validate-coupon').addEventListener('click', validateCouponSimulation);
+
+  // Modal detail pelanggan & penukaran kupon
+  byId('btn-cust-detail-close')?.addEventListener('click', closeCustomerDetail);
+  byId('btn-cust-detail-close-action')?.addEventListener('click', closeCustomerDetail);
+  byId('modal-customer-detail')?.addEventListener('click', (e) => {
+    if (e.target === byId('modal-customer-detail')) closeCustomerDetail();
+  });
+  byId('btn-red-close')?.addEventListener('click', closeRedemptionModal);
+  byId('btn-red-cancel')?.addEventListener('click', closeRedemptionModal);
+  byId('modal-coupon-redemption')?.addEventListener('click', (e) => {
+    if (e.target === byId('modal-coupon-redemption')) closeRedemptionModal();
+  });
+  byId('form-coupon-redemption')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const code = byId('red-coupon-code').value;
+    const target = crmCoupons.find((c) => c.code === code);
+    const errBox = byId('red-form-error');
+    errBox.classList.add('hidden');
+    if (!target) return;
+    const name = byId('red-customer-name').value.trim();
+    const amount = Number(byId('red-amount').value || 0);
+    if (!name) {
+      errBox.textContent = 'Nama pelanggan yang menukar kupon wajib diisi.';
+      errBox.classList.remove('hidden');
+      return;
+    }
+    if (target.active === false) {
+      errBox.textContent = `Kupon ${target.code} sedang nonaktif dan tidak dapat ditukarkan.`;
+      errBox.classList.remove('hidden');
+      return;
+    }
+    if (amount < Number(target.minOrder || 0)) {
+      errBox.textContent = `Nilai transaksi ${money(amount)} di bawah minimal ${money(target.minOrder)} — penukaran tidak sah.`;
+      errBox.classList.remove('hidden');
+      return;
+    }
+    if (!Array.isArray(target.redemptions)) target.redemptions = [];
+    target.redemptions.unshift({ date: todayStr(), name, amount });
+    saveState(STORAGE_KEYS.coupons, crmCoupons);
+    logActivity('coupon_redeemed', 'Voucher Ditukarkan', `${name} menukarkan kupon ${target.code} pada transaksi ${money(amount)}.`, 'verified', 'emerald');
+    renderCoupons();
+    if (typeof renderCrmDashboard === 'function') renderCrmDashboard();
+    closeRedemptionModal();
+    showToast(`Penukaran kupon ${target.code} oleh ${name} tercatat`);
+  });
 
   // Reset simulasi CRM
   byId('reset-crm-demo').addEventListener('click', () => {
@@ -4847,6 +5651,17 @@ function initializeDashboard() {
   renderWaTemplates();
   updateWaPreview();
   renderCoupons();
+
+  // Label periode filter dinamis mengikuti tanggal berjalan
+  updateCrmPeriodLabels();
+
+  // Jam nyata: kondisi SLA tiket berjalan diperbarui otomatis tiap 60 detik
+  setInterval(() => {
+    const changed = tickLiveTickets();
+    if (!changed) return;
+    if (!byId('view-tickets').classList.contains('hidden')) renderTickets();
+    if (!byId('view-crm-dashboard').classList.contains('hidden')) renderCrmDashboard();
+  }, 60000);
 
   // Inisialisasi 3 Halaman Baru
   setupMenuCatalogEvents();
