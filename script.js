@@ -2616,9 +2616,18 @@ const DEFAULT_CUSTOMERS = [
 const DEFAULT_TICKETS = [
   {
     id: 'TKT-201',
+    customerId: 'CUST-001',
     customer: 'Nadia Putri Maharani',
     category: 'Add-on Terlewat / Tertukar',
+    priority: 'Tinggi',
+    pic: 'Admin WA CS',
     desc: 'Pesan Nasi Goreng Wok-hei + Telur Ceplok via GoFood, namun telur ceplok tertinggal.',
+    createdAt: '2026-11-19 12:35',
+    targetResponseMin: 30,
+    targetResolutionMin: 120,
+    responseTimeMin: 38,
+    resolutionTimeMin: null,
+    resolvedAt: null,
     elapsed: '38 mnt (Batas 30 mnt)',
     slaState: 'Melewati SLA',
     status: 'Diproses',
@@ -2626,9 +2635,18 @@ const DEFAULT_TICKETS = [
   },
   {
     id: 'TKT-202',
+    customerId: 'CUST-002',
     customer: 'Dimas Arya Pratama',
     category: 'Antrean Rush Hour',
+    priority: 'Tinggi',
+    pic: 'Admin Dapur Sentral',
     desc: 'Menunggu pesanan takeaway lebih dari 25 menit saat jam makan siang.',
+    createdAt: '2026-11-19 12:50',
+    targetResponseMin: 30,
+    targetResolutionMin: 120,
+    responseTimeMin: null,
+    resolutionTimeMin: null,
+    resolvedAt: null,
     elapsed: '24 mnt (Batas 30 mnt)',
     slaState: 'Mendekati Batas',
     status: 'Baru',
@@ -2636,9 +2654,18 @@ const DEFAULT_TICKETS = [
   },
   {
     id: 'TKT-203',
+    customerId: 'CUST-003',
     customer: 'Salsabila Khairunnisa',
     category: 'Respons Chat Lambat',
+    priority: 'Sedang',
+    pic: 'Admin WA CS',
     desc: 'Menanyakan ketersediaan paket katering Jumat melalui WhatsApp Business.',
+    createdAt: '2026-11-19 10:15',
+    targetResponseMin: 30,
+    targetResolutionMin: 120,
+    responseTimeMin: 11,
+    resolutionTimeMin: null,
+    resolvedAt: null,
     elapsed: '11 mnt (Batas 30 mnt)',
     slaState: 'Aman',
     status: 'Diproses',
@@ -2646,13 +2673,199 @@ const DEFAULT_TICKETS = [
   },
   {
     id: 'TKT-204',
+    customerId: 'CUST-005',
     customer: 'Aulia Rahmawati',
     category: 'Suhu / Kualitas Makanan',
+    priority: 'Sedang',
+    pic: 'Supervisor Layanan',
     desc: 'Kemasan paper bowl sedikit penyok saat diterima kurir.',
+    createdAt: '2026-11-18 17:20',
+    targetResponseMin: 30,
+    targetResolutionMin: 120,
+    responseTimeMin: 8,
+    resolutionTimeMin: 18,
+    resolvedAt: '2026-11-18 17:38',
     elapsed: 'Selesai dalam 18 mnt',
     slaState: 'Selesai',
     status: 'Selesai',
     followup: 'Evaluasi seal kemasan dapur & pelanggan telah menerima kode kupon PEMULIHAN10.'
+  },
+  {
+    id: 'TKT-205',
+    customerId: 'CUST-004',
+    customer: 'Bagas Kurniawan',
+    category: 'Antrean Rush Hour',
+    priority: 'Sedang',
+    pic: 'Kasir Dine-in',
+    desc: 'Pesanan Dine-in meja #6 terlewat dari display antrean dapur saat malam minggu.',
+    createdAt: '2026-11-17 19:10',
+    targetResponseMin: 30,
+    targetResolutionMin: 120,
+    responseTimeMin: 14,
+    resolutionTimeMin: 45,
+    resolvedAt: '2026-11-17 19:55',
+    elapsed: 'Selesai dalam 45 mnt',
+    slaState: 'Selesai',
+    status: 'Selesai',
+    followup: 'Kasir memberikan complimentary es teh manis dan diskon langsung di meja.'
+  },
+  {
+    id: 'TKT-206',
+    customerId: 'CUST-007',
+    customer: 'Fitri Handayani',
+    category: 'Suhu / Kualitas Makanan',
+    priority: 'Tinggi',
+    pic: 'Admin Dapur Sentral',
+    desc: 'Kwetiau goreng kuah agak dingin saat tiba via pengiriman instan ojol.',
+    createdAt: '2026-11-15 19:40',
+    targetResponseMin: 30,
+    targetResolutionMin: 120,
+    responseTimeMin: 12,
+    resolutionTimeMin: 65,
+    resolvedAt: '2026-11-15 20:45',
+    elapsed: 'Selesai dalam 65 mnt',
+    slaState: 'Selesai',
+    status: 'Selesai',
+    followup: 'Penggantian wadah thermal bag untuk pengantaran ojol dan kupon pemulihan.'
+  },
+  {
+    id: 'TKT-207',
+    customerId: 'CUST-006',
+    customer: 'Reza Firmansyah',
+    category: 'Respons Chat Lambat',
+    priority: 'Rendah',
+    pic: 'Admin WA CS',
+    desc: 'Chat menanyakan promo mahasiswa akhir bulan baru dibalas setelah 22 menit.',
+    createdAt: '2026-11-12 11:30',
+    targetResponseMin: 30,
+    targetResolutionMin: 120,
+    responseTimeMin: 22,
+    resolutionTimeMin: 75,
+    resolvedAt: '2026-11-12 12:45',
+    elapsed: 'Selesai dalam 75 mnt',
+    slaState: 'Selesai',
+    status: 'Selesai',
+    followup: 'Template respons cepat WhatsApp disiapkan dan voucher AKHIRBULAN9K dikirimkan.'
+  },
+  {
+    id: 'TKT-208',
+    customerId: 'CUST-001',
+    customer: 'Nadia Putri Maharani',
+    category: 'Add-on Terlewat / Tertukar',
+    priority: 'Tinggi',
+    pic: 'Admin Dapur Sentral',
+    desc: 'Nasi Gila level pedas ekstra tidak sesuai pesanan, terkirim level sedang.',
+    createdAt: '2026-11-08 14:15',
+    targetResponseMin: 30,
+    targetResolutionMin: 120,
+    responseTimeMin: 10,
+    resolutionTimeMin: 50,
+    resolvedAt: '2026-11-08 15:05',
+    elapsed: 'Selesai dalam 50 mnt',
+    slaState: 'Selesai',
+    status: 'Selesai',
+    followup: 'Dapur mengirim ulang porsi baru gratis dan konfirmasi langsung via telepon.'
+  },
+  {
+    id: 'TKT-209',
+    customerId: 'CUST-002',
+    customer: 'Dimas Arya Pratama',
+    category: 'Antrean Rush Hour',
+    priority: 'Sedang',
+    pic: 'Kasir Dine-in',
+    desc: 'Waktu tunggu takeaway mencapai 40 menit saat hujan lebat dan antrean ojol menumpuk.',
+    createdAt: '2026-11-04 18:25',
+    targetResponseMin: 30,
+    targetResolutionMin: 120,
+    responseTimeMin: 36,
+    resolutionTimeMin: 145,
+    resolvedAt: '2026-11-04 20:50',
+    elapsed: 'Selesai 145 mnt (Melewati SLA)',
+    slaState: 'Melewati SLA',
+    status: 'Selesai',
+    followup: 'Eskalasi ke Supervisor. Pelanggan menerima voucher kompensasi Rp10.000 (PEMULIHAN10).'
+  },
+  {
+    id: 'TKT-210',
+    customerId: 'CUST-003',
+    customer: 'Salsabila Khairunnisa',
+    category: 'Pelayanan Kasir',
+    priority: 'Rendah',
+    pic: 'Supervisor Layanan',
+    desc: 'Salah input nama member di struk kasir saat menggunakan metode pembayaran QRIS.',
+    createdAt: '2026-10-29 16:50',
+    targetResponseMin: 30,
+    targetResolutionMin: 120,
+    responseTimeMin: 15,
+    resolutionTimeMin: 40,
+    resolvedAt: '2026-10-29 17:30',
+    elapsed: 'Selesai dalam 40 mnt',
+    slaState: 'Selesai',
+    status: 'Selesai',
+    followup: 'Kasir mengoreksi poin member di sistem POS manual dan meminta maaf kepada pelanggan.'
+  }
+];
+
+const DEFAULT_ACTIVITIES = [
+  {
+    id: 'ACT-001',
+    type: 'ticket_created',
+    icon: 'add_alert',
+    color: 'amber',
+    title: 'Tiket Baru Dibuat',
+    desc: 'Tiket TKT-202 antrean rush hour diajukan untuk Dimas Arya Pratama.',
+    time: '25 mnt lalu',
+    timestamp: '2026-11-19 12:50'
+  },
+  {
+    id: 'ACT-002',
+    type: 'status_changed',
+    icon: 'sync',
+    color: 'blue',
+    title: 'Status Tiket Diperbarui',
+    desc: 'Tiket TKT-201 dialihkan ke status "Diproses" oleh Admin WA CS.',
+    time: '45 mnt lalu',
+    timestamp: '2026-11-19 12:35'
+  },
+  {
+    id: 'ACT-003',
+    type: 'pic_assigned',
+    icon: 'assignment_ind',
+    color: 'forest',
+    title: 'Penugasan PIC Layanan',
+    desc: 'TKT-203 ditugaskan kepada Admin WA CS untuk klarifikasi paket katering.',
+    time: '2 jam lalu',
+    timestamp: '2026-11-19 10:15'
+  },
+  {
+    id: 'ACT-004',
+    type: 'ticket_resolved',
+    icon: 'task_alt',
+    color: 'emerald',
+    title: 'Tiket Keluhan Selesai',
+    desc: 'TKT-204 ditandai selesai. Pelanggan Aulia menerima voucher pemulihan.',
+    time: 'Kemarin, 17:38',
+    timestamp: '2026-11-18 17:38'
+  },
+  {
+    id: 'ACT-005',
+    type: 'ticket_resolved',
+    icon: 'task_alt',
+    color: 'emerald',
+    title: 'Tiket Keluhan Selesai',
+    desc: 'TKT-205 diselesaikan oleh Kasir Dine-in dengan complimentary es teh.',
+    time: '17 Nov 2026',
+    timestamp: '2026-11-17 19:55'
+  },
+  {
+    id: 'ACT-006',
+    type: 'customer_registered',
+    icon: 'person_add',
+    color: 'forest',
+    title: 'Pelanggan Baru Terdaftar',
+    desc: 'Fitri Handayani terdaftar sebagai pelanggan baru segmen Pekerja.',
+    time: '10 Nov 2026',
+    timestamp: '2026-11-10 10:10'
   }
 ];
 
@@ -2741,13 +2954,70 @@ let visibleRows = SALES_DATA;
 const STORAGE_KEYS = {
   customers: 'tuumis_crm_customers_v1',
   tickets: 'tuumis_crm_tickets_v1',
-  coupons: 'tuumis_crm_coupons_v1'
+  coupons: 'tuumis_crm_coupons_v1',
+  activities: 'tuumis_crm_activities_v1'
 };
 
+function normalizeTicket(t, index) {
+  const respMinutes = typeof t.responseTimeMin === 'number'
+    ? t.responseTimeMin
+    : (t.slaState === 'Aman' ? 12 : t.slaState === 'Mendekati Batas' ? 24 : t.slaState === 'Melewati SLA' ? 38 : null);
+  const resolMinutes = typeof t.resolutionTimeMin === 'number'
+    ? t.resolutionTimeMin
+    : (t.status === 'Selesai' ? (t.slaState === 'Melewati SLA' ? 145 : 45) : null);
+
+  return {
+    id: t.id || `TKT-${201 + index}`,
+    customerId: t.customerId || 'CUST-001',
+    customer: t.customer || 'Pelanggan TUUMIS',
+    category: t.category || 'Antrean Rush Hour',
+    priority: t.priority || 'Sedang',
+    pic: t.pic || 'Admin WA CS',
+    desc: t.desc || '',
+    createdAt: t.createdAt || '2026-11-19 12:00',
+    targetResponseMin: Number(t.targetResponseMin || 30),
+    targetResolutionMin: Number(t.targetResolutionMin || 120),
+    responseTimeMin: respMinutes,
+    resolutionTimeMin: resolMinutes,
+    resolvedAt: t.resolvedAt || (t.status === 'Selesai' ? '2026-11-19 12:45' : null),
+    elapsed: t.elapsed || 'Baru masuk',
+    slaState: t.slaState || (t.status === 'Selesai' ? 'Selesai' : 'Aman'),
+    status: t.status || 'Baru',
+    followup: t.followup || '-'
+  };
+}
+
 let crmCustomers = loadState(STORAGE_KEYS.customers, DEFAULT_CUSTOMERS);
-let crmTickets = loadState(STORAGE_KEYS.tickets, DEFAULT_TICKETS);
+let crmTickets = loadState(STORAGE_KEYS.tickets, DEFAULT_TICKETS).map((t, idx) => normalizeTicket(t, idx));
 let crmCoupons = loadState(STORAGE_KEYS.coupons, DEFAULT_COUPONS);
+let crmActivities = loadState(STORAGE_KEYS.activities, DEFAULT_ACTIVITIES);
 let selectedWaTemplate = WA_TEMPLATES[0];
+
+function logActivity(type, title, desc, icon = 'info', color = 'forest') {
+  const newAct = {
+    id: `ACT-${Date.now().toString().slice(-4)}`,
+    type,
+    icon,
+    color,
+    title,
+    desc,
+    time: 'Baru saja',
+    timestamp: '2026-11-19 ' + new Intl.DateTimeFormat('id-ID', { hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date())
+  };
+  crmActivities.unshift(newAct);
+  if (crmActivities.length > 40) crmActivities.pop();
+  saveState(STORAGE_KEYS.activities, crmActivities);
+  if (typeof renderCrmActivities === 'function') {
+    renderCrmActivities();
+  }
+}
+
+function maskPhone(phone) {
+  if (!phone) return '-';
+  const str = String(phone).replace(/\D/g, '');
+  if (str.length < 8) return str;
+  return str.slice(0, 4) + '****' + str.slice(-4);
+}
 
 const byId = (id) => document.getElementById(id);
 const money = (value) => CURRENCY.format(Number(value || 0)).replace(/\u00a0/g, ' ');
@@ -2784,6 +3054,7 @@ function showToast(message) {
 /* ==================== NAVIGASI MULTI-MODUL ==================== */
 const VIEW_TITLES = {
   analytics: 'Laporan & Analitik',
+  'crm-dashboard': 'Dashboard CRM & Monitoring SLA',
   customers: 'Data & Profil Pelanggan',
   tickets: 'Ticketing Keluhan & Monitoring SLA',
   whatsapp: 'Template WhatsApp Business',
@@ -2816,6 +3087,10 @@ function switchView(viewName, clickedEl) {
       item.classList.add('text-white/80');
     }
   });
+
+  if (viewName === 'crm-dashboard') {
+    renderCrmDashboard();
+  }
 
   if (!isAnalytics) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -3117,10 +3392,16 @@ function renderTickets() {
       const target = crmTickets.find((item) => item.id === btn.dataset.resolveId);
       if (target) {
         target.status = 'Selesai';
-        target.slaState = 'Selesai';
-        target.elapsed = 'Selesai diverifikasi';
+        target.resolvedAt = '2026-11-19 13:10';
+        target.resolutionTimeMin = target.resolutionTimeMin || (target.slaState === 'Melewati SLA' ? 145 : 35);
+        target.slaState = (target.resolutionTimeMin <= target.targetResolutionMin && target.slaState !== 'Melewati SLA') ? 'Selesai' : 'Melewati SLA';
+        target.elapsed = `Selesai (${target.resolutionTimeMin} mnt)`;
         saveState(STORAGE_KEYS.tickets, crmTickets);
+        logActivity('ticket_resolved', 'Tiket Keluhan Selesai', `Tiket ${target.id} (${target.customer}) ditandai Selesai.`, 'task_alt', 'emerald');
         renderTickets();
+        if (typeof renderCrmDashboard === 'function') {
+          renderCrmDashboard();
+        }
         showToast(`Tiket ${target.id} ditandai Selesai`);
       }
     });
@@ -3218,6 +3499,651 @@ function validateCouponSimulation() {
   resBox.textContent = `VALID! Kupon ${found.code} (${found.discount}) berhasil diterapkan pada transaksi senilai ${money(amount)}.`;
 }
 
+/* ==================== MODUL DASHBOARD CRM & MONITORING SLA ==================== */
+function calculateSlaMetrics(tickets = crmTickets || []) {
+  const safeTickets = Array.isArray(tickets) ? tickets : [];
+  const total = safeTickets.length;
+  const newCount = safeTickets.filter(t => t.status === 'Baru').length;
+  const inProgressCount = safeTickets.filter(t => t.status === 'Diproses').length;
+  const unresolvedCount = newCount + inProgressCount;
+  const resolvedCount = safeTickets.filter(t => t.status === 'Selesai').length;
+
+  // Tiket yang dapat dievaluasi SLA: tiket yang sudah Selesai ATAU tiket aktif yang sudah Melewati SLA
+  const evaluatedTickets = safeTickets.filter(t => t.status === 'Selesai' || t.slaState === 'Melewati SLA');
+  const metTickets = evaluatedTickets.filter(t => t.status === 'Selesai' && t.slaState !== 'Melewati SLA');
+  const breachedTickets = evaluatedTickets.filter(t => t.slaState === 'Melewati SLA');
+
+  const evaluatedCount = evaluatedTickets.length;
+  const metCount = metTickets.length;
+  const breachedCount = breachedTickets.length;
+  const slaRate = evaluatedCount > 0 ? Math.round((metCount / evaluatedCount) * 100) : 100;
+
+  // Rata-rata waktu respons (dari tiket yang tercatat responseTimeMin)
+  const responded = safeTickets.filter(t => typeof t.responseTimeMin === 'number' && !isNaN(t.responseTimeMin));
+  const avgResponse = responded.length > 0
+    ? (responded.reduce((acc, t) => acc + t.responseTimeMin, 0) / responded.length).toFixed(1)
+    : null;
+
+  // Rata-rata waktu penyelesaian (dari tiket selesai yang tercatat resolutionTimeMin)
+  const resolved = safeTickets.filter(t => t.status === 'Selesai' && typeof t.resolutionTimeMin === 'number' && !isNaN(t.resolutionTimeMin));
+  const avgResolution = resolved.length > 0
+    ? (resolved.reduce((acc, t) => acc + t.resolutionTimeMin, 0) / resolved.length).toFixed(1)
+    : null;
+
+  return {
+    total,
+    newCount,
+    inProgressCount,
+    unresolvedCount,
+    resolvedCount,
+    evaluatedCount,
+    metCount,
+    breachedCount,
+    slaRate,
+    avgResponse,
+    avgResolution
+  };
+}
+
+function filterCrmTicketsByPeriod(period = 'thisMonth') {
+  if (period === 'today') {
+    return crmTickets.filter(t => t.createdAt && t.createdAt.startsWith('2026-11-19'));
+  }
+  if (period === '7days') {
+    return crmTickets.filter(t => t.createdAt && t.createdAt >= '2026-11-13' && t.createdAt <= '2026-11-19 23:59');
+  }
+  if (period === 'thisMonth') {
+    return crmTickets.filter(t => t.createdAt && t.createdAt.startsWith('2026-11'));
+  }
+  return [...crmTickets];
+}
+
+function initializeCrmCharts() {
+  if (!window.Chart || !byId('crm-complaint-trend-chart')) return;
+  const base = getChartDefaults();
+
+  // 1. Tren Keluhan Pelanggan
+  charts.crmTrend = new Chart(byId('crm-complaint-trend-chart'), {
+    type: 'line',
+    data: {
+      labels: [],
+      datasets: [{
+        label: 'Tiket Keluhan',
+        data: [],
+        borderColor: '#257149',
+        backgroundColor: 'rgba(37, 113, 73, 0.12)',
+        fill: true,
+        tension: 0.35,
+        borderWidth: 2.5,
+        pointBackgroundColor: '#257149',
+        pointRadius: 3,
+        pointHoverRadius: 6
+      }]
+    },
+    options: {
+      ...base,
+      plugins: {
+        ...base.plugins,
+        legend: { display: false },
+        tooltip: {
+          ...base.plugins.tooltip,
+          callbacks: { label: (item) => ` ${item.raw} keluhan masuk` }
+        }
+      },
+      scales: {
+        x: { ...axisBase(), grid: { display: false } },
+        y: { ...axisBase(), beginAtZero: true, ticks: { ...axisBase().ticks, stepSize: 1, precision: 0 } }
+      }
+    }
+  });
+
+  // 2. Distribusi Status Tiket
+  charts.crmStatus = new Chart(byId('crm-status-chart'), {
+    type: 'doughnut',
+    data: {
+      labels: ['Baru', 'Diproses', 'Selesai'],
+      datasets: [{
+        data: [0, 0, 0],
+        backgroundColor: ['#D5A43C', '#3B82F6', '#257149'],
+        borderColor: '#ffffff',
+        borderWidth: 3,
+        hoverOffset: 6
+      }]
+    },
+    options: {
+      ...base,
+      cutout: '65%',
+      plugins: {
+        ...base.plugins,
+        legend: { display: false },
+        tooltip: {
+          ...base.plugins.tooltip,
+          callbacks: { label: (item) => ` ${item.label}: ${item.raw} tiket` }
+        }
+      }
+    }
+  });
+
+  // 3. Kategori Keluhan
+  charts.crmCategory = new Chart(byId('crm-category-chart'), {
+    type: 'bar',
+    data: {
+      labels: [],
+      datasets: [{
+        label: 'Jumlah Kasus',
+        data: [],
+        backgroundColor: '#257149',
+        borderRadius: 6,
+        maxBarThickness: 32
+      }]
+    },
+    options: {
+      ...base,
+      indexAxis: 'y',
+      plugins: {
+        ...base.plugins,
+        legend: { display: false },
+        tooltip: {
+          ...base.plugins.tooltip,
+          callbacks: { label: (item) => ` ${item.raw} keluhan` }
+        }
+      },
+      scales: {
+        x: { ...axisBase(), beginAtZero: true, ticks: { ...axisBase().ticks, stepSize: 1, precision: 0 } },
+        y: { ...axisBase(), grid: { display: false } }
+      }
+    }
+  });
+
+  // 4. Ringkasan SLA
+  charts.crmSla = new Chart(byId('crm-sla-chart'), {
+    type: 'bar',
+    data: {
+      labels: ['Waktu Respons (Mnt)', 'Waktu Resolusi (Mnt)'],
+      datasets: [
+        {
+          label: 'Realisasi Rata-rata',
+          data: [0, 0],
+          backgroundColor: '#257149',
+          borderRadius: 6,
+          barThickness: 26
+        },
+        {
+          label: 'Target Maksimal SLA',
+          data: [30, 120],
+          backgroundColor: '#D5A43C',
+          borderRadius: 6,
+          barThickness: 26
+        }
+      ]
+    },
+    options: {
+      ...base,
+      plugins: {
+        ...base.plugins,
+        legend: { position: 'bottom', labels: base.plugins.legend.labels },
+        tooltip: {
+          ...base.plugins.tooltip,
+          callbacks: { label: (item) => ` ${item.dataset.label}: ${item.raw} mnt` }
+        }
+      },
+      scales: {
+        x: { ...axisBase(), grid: { display: false } },
+        y: {
+          ...axisBase(),
+          beginAtZero: true,
+          ticks: { ...axisBase().ticks, callback: (v) => `${v} mnt` }
+        }
+      }
+    }
+  });
+}
+
+function updateCrmCharts(tickets) {
+  if (!charts.crmTrend) return;
+
+  // A. Tren Keluhan
+  const dailyCounts = new Map();
+  tickets.forEach(t => {
+    const d = t.createdAt ? t.createdAt.slice(0, 10) : '2026-11-19';
+    dailyCounts.set(d, (dailyCounts.get(d) || 0) + 1);
+  });
+  const sortedDays = [...dailyCounts.keys()].sort();
+  charts.crmTrend.data.labels = sortedDays.map(d => {
+    const parts = d.split('-');
+    return `${parts[2]}/${parts[1]}`;
+  });
+  charts.crmTrend.data.datasets[0].data = sortedDays.map(d => dailyCounts.get(d));
+  charts.crmTrend.update('none');
+
+  // B. Distribusi Status Tiket
+  const baru = tickets.filter(t => t.status === 'Baru').length;
+  const diproses = tickets.filter(t => t.status === 'Diproses').length;
+  const selesai = tickets.filter(t => t.status === 'Selesai').length;
+  charts.crmStatus.data.datasets[0].data = [baru, diproses, selesai];
+  charts.crmStatus.update('none');
+
+  // C. Kategori Keluhan
+  const catMap = new Map();
+  tickets.forEach(t => {
+    const cat = t.category || 'Lainnya';
+    catMap.set(cat, (catMap.get(cat) || 0) + 1);
+  });
+  const sortedCats = [...catMap.entries()].sort((a, b) => b[1] - a[1]);
+  charts.crmCategory.data.labels = sortedCats.map(c => c[0]);
+  charts.crmCategory.data.datasets[0].data = sortedCats.map(c => c[1]);
+  charts.crmCategory.update('none');
+
+  // D. Ringkasan SLA
+  const metrics = calculateSlaMetrics(tickets);
+  const avgRespNum = metrics.avgResponse ? parseFloat(metrics.avgResponse) : 0;
+  const avgResolNum = metrics.avgResolution ? parseFloat(metrics.avgResolution) : 0;
+  charts.crmSla.data.datasets[0].data = [avgRespNum, avgResolNum];
+  charts.crmSla.update('none');
+}
+
+let crmCurrentPage = 1;
+const CRM_PAGE_SIZE = 5;
+
+function renderCrmTicketsTable(periodTickets) {
+  const query = (byId('crm-ticket-search')?.value || '').trim().toLowerCase();
+  const filterStatus = byId('crm-filter-status')?.value || 'all';
+  const filterPriority = byId('crm-filter-priority')?.value || 'all';
+  const filterSlaBadge = byId('crm-filter-sla-badge')?.value || 'all';
+
+  let list = periodTickets.filter(t => {
+    const matchStatus = filterStatus === 'all' || t.status === filterStatus;
+    const matchPriority = filterPriority === 'all' || t.priority === filterPriority;
+    const matchSla = filterSlaBadge === 'all'
+      || (filterSlaBadge === 'Memenuhi SLA' && (t.status === 'Selesai' && t.slaState !== 'Melewati SLA'))
+      || (filterSlaBadge === 'Mendekati Batas' && t.slaState === 'Mendekati Batas')
+      || (filterSlaBadge === 'Melewati SLA' && t.slaState === 'Melewati SLA');
+    const matchSearch = !query || `${t.id} ${t.customer} ${t.category} ${t.pic || ''}`.toLowerCase().includes(query);
+    return matchStatus && matchPriority && matchSla && matchSearch;
+  });
+
+  const totalFiltered = list.length;
+  byId('crm-table-badge').textContent = `${totalFiltered} tiket`;
+
+  const totalPages = Math.max(1, Math.ceil(totalFiltered / CRM_PAGE_SIZE));
+  if (crmCurrentPage > totalPages) crmCurrentPage = totalPages;
+  if (crmCurrentPage < 1) crmCurrentPage = 1;
+
+  const startIdx = (crmCurrentPage - 1) * CRM_PAGE_SIZE;
+  const pageItems = list.slice(startIdx, startIdx + CRM_PAGE_SIZE);
+
+  byId('crm-pagination-info').textContent = totalFiltered > 0
+    ? `Menampilkan ${startIdx + 1}–${Math.min(startIdx + CRM_PAGE_SIZE, totalFiltered)} dari ${totalFiltered} tiket`
+    : `Menampilkan 0 tiket`;
+  byId('crm-page-number').textContent = `${crmCurrentPage} / ${totalPages}`;
+  byId('crm-prev-page').disabled = crmCurrentPage <= 1;
+  byId('crm-next-page').disabled = crmCurrentPage >= totalPages;
+
+  const emptyEl = byId('crm-ticket-empty');
+  const tbodyEl = byId('crm-ticket-rows');
+
+  if (pageItems.length === 0) {
+    emptyEl.classList.remove('hidden');
+    tbodyEl.classList.add('hidden');
+    tbodyEl.innerHTML = '';
+    return;
+  }
+
+  emptyEl.classList.add('hidden');
+  tbodyEl.classList.remove('hidden');
+
+  const priorityBadge = (p) => {
+    if (p === 'Tinggi') return 'bg-rose-100 text-rose-800 border-rose-200';
+    if (p === 'Sedang') return 'bg-amber-100 text-amber-800 border-amber-200';
+    return 'bg-slate-100 text-slate-700 border-slate-200';
+  };
+
+  const statusBadge = (s) => {
+    if (s === 'Baru') return 'bg-blue-100 text-blue-800 border-blue-200';
+    if (s === 'Diproses') return 'bg-amber-100 text-amber-800 border-amber-200';
+    return 'bg-emerald-100 text-emerald-800 border-emerald-200';
+  };
+
+  const slaBadge = (t) => {
+    if (t.status === 'Selesai') {
+      if (t.slaState === 'Melewati SLA' || (t.resolutionTimeMin && t.resolutionTimeMin > t.targetResolutionMin)) {
+        return `<span class="inline-flex items-center gap-1 rounded-full border border-rose-300 bg-rose-50 px-2 py-0.5 text-[10px] font-bold text-rose-700"><span class="h-1.5 w-1.5 rounded-full bg-rose-600"></span>Terlambat SLA</span>`;
+      }
+      return `<span class="inline-flex items-center gap-1 rounded-full border border-emerald-300 bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-700"><span class="material-symbols-outlined text-[13px]">check_circle</span>Memenuhi SLA</span>`;
+    }
+    if (t.slaState === 'Melewati SLA') {
+      return `<span class="inline-flex items-center gap-1 rounded-full border border-rose-300 bg-rose-100 px-2 py-0.5 text-[10px] font-bold text-rose-800"><span class="h-1.5 w-1.5 rounded-full bg-rose-600 animate-pulse"></span>Melewati SLA</span>`;
+    }
+    if (t.slaState === 'Mendekati Batas') {
+      return `<span class="inline-flex items-center gap-1 rounded-full border border-amber-300 bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-800"><span class="h-1.5 w-1.5 rounded-full bg-amber-500"></span>Mendekati Batas</span>`;
+    }
+    return `<span class="inline-flex items-center gap-1 rounded-full border border-teal-300 bg-teal-50 px-2 py-0.5 text-[10px] font-bold text-teal-700"><span class="h-1.5 w-1.5 rounded-full bg-teal-600"></span>Dalam Batas</span>`;
+  };
+
+  tbodyEl.innerHTML = pageItems.map(t => {
+    const cust = crmCustomers.find(c => c.name === t.customer || c.id === t.customerId);
+    const maskedWa = cust ? maskPhone(cust.wa) : '0812****';
+    const respText = typeof t.responseTimeMin === 'number' ? `${t.responseTimeMin} mnt` : '<span class="text-stone-400">Belum</span>';
+    const dateFormatted = t.createdAt ? t.createdAt.slice(5) : '-';
+
+    return `
+      <tr class="transition hover:bg-cream/50">
+        <td class="whitespace-nowrap px-4 py-3.5 font-bold text-forest-dark">${escapeHTML(t.id)}</td>
+        <td class="whitespace-nowrap px-3 py-3.5 text-muted">${escapeHTML(dateFormatted)}</td>
+        <td class="px-4 py-3.5">
+          <span class="block font-semibold text-ink">${escapeHTML(t.customer)}</span>
+          <span class="block text-[10px] font-mono text-muted">${escapeHTML(maskedWa)}</span>
+        </td>
+        <td class="whitespace-nowrap px-3 py-3.5 text-ink">${escapeHTML(t.category)}</td>
+        <td class="whitespace-nowrap px-3 py-3.5 text-center">
+          <span class="inline-flex rounded-full border px-2 py-0.5 text-[10px] font-semibold ${priorityBadge(t.priority)}">${escapeHTML(t.priority || 'Sedang')}</span>
+        </td>
+        <td class="whitespace-nowrap px-3 py-3.5 font-medium text-forest-dark">${escapeHTML(t.pic || 'Admin WA')}</td>
+        <td class="whitespace-nowrap px-3 py-3.5">
+          <span class="inline-flex rounded-full border px-2 py-0.5 text-[10px] font-semibold ${statusBadge(t.status)}">${escapeHTML(t.status)}</span>
+        </td>
+        <td class="whitespace-nowrap px-3 py-3.5 text-xs">${respText}</td>
+        <td class="whitespace-nowrap px-4 py-3.5">${slaBadge(t)}</td>
+        <td class="whitespace-nowrap px-4 py-3.5 text-right">
+          <div class="flex items-center justify-end gap-1.5">
+            <button type="button" data-modal-id="${escapeHTML(t.id)}" class="btn-tkt-detail inline-flex items-center gap-1 rounded-lg border border-line bg-white px-2 py-1 text-[11px] font-semibold text-forest-dark hover:bg-sage">
+              <span class="material-symbols-outlined text-[14px]">visibility</span>Detail
+            </button>
+            <button type="button" data-goto-id="${escapeHTML(t.id)}" class="btn-tkt-goto inline-flex items-center gap-1 rounded-lg bg-forest px-2 py-1 text-[11px] font-semibold text-white hover:bg-forest-dark">
+              <span class="material-symbols-outlined text-[14px]">edit_note</span>Kelola
+            </button>
+          </div>
+        </td>
+      </tr>
+    `;
+  }).join('');
+
+  document.querySelectorAll('.btn-tkt-detail').forEach(btn => {
+    btn.addEventListener('click', () => openTicketDetail(btn.dataset.modalId));
+  });
+
+  document.querySelectorAll('.btn-tkt-goto').forEach(btn => {
+    btn.addEventListener('click', () => {
+      switchView('tickets');
+      byId('tkt-filter-sla').value = 'all';
+      renderTickets();
+      showToast(`Membuka keluhan ${btn.dataset.gotoId} di modul Ticketing`);
+    });
+  });
+}
+
+function renderCrmActivities() {
+  const container = byId('crm-activity-list');
+  if (!container) return;
+
+  if (crmActivities.length === 0) {
+    container.innerHTML = `
+      <div class="p-6 text-center text-xs text-muted">
+        <span class="material-symbols-outlined text-3xl text-stone-300">history_toggle_off</span>
+        <p class="mt-2 font-medium">Belum ada aktivitas CRM yang tercatat</p>
+      </div>
+    `;
+    return;
+  }
+
+  const colorClasses = {
+    forest: 'bg-sage text-forest',
+    amber: 'bg-amber-100 text-amber-800',
+    blue: 'bg-blue-100 text-blue-800',
+    emerald: 'bg-emerald-100 text-emerald-800',
+    rose: 'bg-rose-100 text-rose-800'
+  };
+
+  container.innerHTML = crmActivities.slice(0, 7).map(act => `
+    <div class="flex items-start gap-3 p-3 transition hover:bg-cream/40 rounded-xl">
+      <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl text-[16px] font-bold ${colorClasses[act.color] || colorClasses.forest}">
+        <span class="material-symbols-outlined text-[17px]">${escapeHTML(act.icon || 'info')}</span>
+      </span>
+      <div class="flex-1 min-w-0">
+        <div class="flex items-center justify-between gap-2">
+          <p class="text-xs font-bold text-ink truncate">${escapeHTML(act.title)}</p>
+          <span class="whitespace-nowrap text-[10px] text-muted">${escapeHTML(act.time || act.timestamp || '')}</span>
+        </div>
+        <p class="mt-0.5 text-[11px] leading-snug text-muted">${escapeHTML(act.desc)}</p>
+      </div>
+    </div>
+  `).join('');
+}
+
+let currentDetailTicketId = null;
+
+function openTicketDetail(ticketId) {
+  const t = crmTickets.find(item => item.id === ticketId);
+  if (!t) return;
+  currentDetailTicketId = ticketId;
+
+  byId('modal-tkt-id').textContent = t.id;
+  byId('modal-tkt-category').textContent = t.category;
+
+  const statusEl = byId('modal-tkt-status');
+  statusEl.textContent = t.status;
+  statusEl.className = 'mt-0.5 inline-flex rounded-full px-2.5 py-0.5 font-bold ' +
+    (t.status === 'Baru' ? 'bg-blue-100 text-blue-800' : t.status === 'Diproses' ? 'bg-amber-100 text-amber-800' : 'bg-emerald-100 text-emerald-800');
+
+  const priorityEl = byId('modal-tkt-priority');
+  priorityEl.textContent = t.priority || 'Sedang';
+  priorityEl.className = 'mt-0.5 inline-flex rounded-full px-2.5 py-0.5 font-bold ' +
+    (t.priority === 'Tinggi' ? 'bg-rose-100 text-rose-800' : t.priority === 'Sedang' ? 'bg-amber-100 text-amber-800' : 'bg-slate-100 text-slate-700');
+
+  const slaEl = byId('modal-tkt-sla');
+  if (t.status === 'Selesai') {
+    slaEl.className = 'mt-0.5 inline-flex items-center gap-1 font-bold text-emerald-700';
+    slaEl.innerHTML = '<span class="material-symbols-outlined text-[15px]">check_circle</span>Memenuhi SLA';
+  } else if (t.slaState === 'Melewati SLA') {
+    slaEl.className = 'mt-0.5 inline-flex items-center gap-1 font-bold text-rose-700';
+    slaEl.innerHTML = '<span class="material-symbols-outlined text-[15px]">error</span>Melewati SLA';
+  } else if (t.slaState === 'Mendekati Batas') {
+    slaEl.className = 'mt-0.5 inline-flex items-center gap-1 font-bold text-amber-700';
+    slaEl.innerHTML = '<span class="material-symbols-outlined text-[15px]">warning</span>Mendekati Batas';
+  } else {
+    slaEl.className = 'mt-0.5 inline-flex items-center gap-1 font-bold text-forest';
+    slaEl.innerHTML = '<span class="material-symbols-outlined text-[15px]">schedule</span>Dalam Batas';
+  }
+
+  byId('modal-tkt-pic').textContent = t.pic || 'Admin WA CS';
+  byId('modal-tkt-customer').textContent = t.customer;
+
+  const cust = crmCustomers.find(c => c.name === t.customer || c.id === t.customerId);
+  byId('modal-tkt-wa').textContent = cust ? maskPhone(cust.wa) : '0812****';
+
+  byId('modal-tkt-desc').textContent = t.desc || '-';
+  byId('modal-tkt-created').textContent = t.createdAt || '19 Nov 12:00';
+
+  byId('modal-tkt-response').textContent = typeof t.responseTimeMin === 'number'
+    ? `${t.responseTimeMin} mnt (Target ≤ ${t.targetResponseMin} mnt)`
+    : 'Belum direspons';
+
+  byId('modal-tkt-resolution').textContent = typeof t.resolutionTimeMin === 'number'
+    ? `${t.resolutionTimeMin} mnt (Target ≤ ${t.targetResolutionMin} mnt)`
+    : (t.status === 'Selesai' ? 'Selesai diverifikasi' : 'Dalam proses berjalan');
+
+  byId('modal-tkt-followup').textContent = t.followup || '-';
+
+  byId('modal-btn-process').classList.toggle('hidden', t.status !== 'Baru');
+  byId('modal-btn-resolve').classList.toggle('hidden', t.status === 'Selesai');
+
+  byId('crm-ticket-modal').classList.remove('hidden');
+  byId('crm-ticket-modal').classList.add('flex');
+}
+
+function closeTicketDetail() {
+  byId('crm-ticket-modal').classList.add('hidden');
+  byId('crm-ticket-modal').classList.remove('flex');
+  currentDetailTicketId = null;
+}
+
+function renderCrmDashboard() {
+  const period = byId('crm-filter-period')?.value || 'thisMonth';
+  const periodTickets = filterCrmTicketsByPeriod(period);
+  const metrics = calculateSlaMetrics(periodTickets);
+
+  // 1. Kartu KPI Utama
+  const totalCust = crmCustomers.length;
+  byId('crm-kpi-total-cust').textContent = INTEGER.format(totalCust);
+  const loyalCount = crmCustomers.filter(c => c.status === 'Member Loyal').length;
+  byId('crm-kpi-cust-trend').textContent = `+2 baru bulan ini (${loyalCount} member loyal)`;
+
+  // Total Tiket Keluhan
+  byId('crm-kpi-total-tickets').textContent = INTEGER.format(metrics.total);
+  byId('crm-kpi-new-tickets-note').textContent = `${metrics.newCount} tiket baru belum ditangani`;
+
+  // Tiket Belum Selesai
+  byId('crm-kpi-unresolved-tickets').textContent = INTEGER.format(metrics.unresolvedCount);
+  byId('crm-kpi-unresolved-breakdown').textContent = `${metrics.newCount} Baru · ${metrics.inProgressCount} Diproses`;
+
+  // Pencapaian SLA
+  byId('crm-kpi-sla-rate').textContent = `${metrics.slaRate}%`;
+  byId('crm-kpi-sla-eval-note').textContent = `${metrics.metCount} dari ${metrics.evaluatedCount} tiket dievaluasi`;
+
+  // Badge SLA Sidebar
+  const sidebarBadge = byId('badge-crm-sla');
+  if (sidebarBadge) {
+    sidebarBadge.textContent = `${metrics.slaRate}%`;
+    sidebarBadge.className = `rounded-full px-2 py-0.5 text-[10px] font-bold text-white ${metrics.slaRate >= 80 ? 'bg-emerald-500/90' : 'bg-rose-500/90'}`;
+  }
+
+  // Micro KPI Box SLA
+  byId('crm-avg-response').textContent = metrics.avgResponse ? `${metrics.avgResponse} mnt` : 'Belum tersedia';
+  byId('crm-avg-resolution').textContent = metrics.avgResolution ? `${metrics.avgResolution} mnt` : 'Belum tersedia';
+  byId('crm-sla-met-count').textContent = `${metrics.metCount} Tiket`;
+  byId('crm-sla-breached-count').textContent = `${metrics.breachedCount} Tiket`;
+
+  byId('crm-trend-badge').textContent = `${metrics.total} keluhan tercatat`;
+
+  // 2. Grafik
+  updateCrmCharts(periodTickets);
+
+  // 3. Tabel Tiket
+  renderCrmTicketsTable(periodTickets);
+
+  // 4. Panel Aktivitas
+  renderCrmActivities();
+}
+
+function setupCrmDashboardEvents() {
+  byId('crm-filter-period')?.addEventListener('change', () => {
+    crmCurrentPage = 1;
+    renderCrmDashboard();
+    showToast(`Periode disaring: ${byId('crm-filter-period').selectedOptions[0].text}`);
+  });
+
+  byId('crm-btn-reset-filters')?.addEventListener('click', () => {
+    byId('crm-filter-period').value = 'thisMonth';
+    if (byId('crm-ticket-search')) byId('crm-ticket-search').value = '';
+    if (byId('crm-filter-status')) byId('crm-filter-status').value = 'all';
+    if (byId('crm-filter-priority')) byId('crm-filter-priority').value = 'all';
+    if (byId('crm-filter-sla-badge')) byId('crm-filter-sla-badge').value = 'all';
+    crmCurrentPage = 1;
+    renderCrmDashboard();
+    showToast('Filter Dashboard CRM diatur ulang');
+  });
+
+  byId('crm-btn-quick-ticket')?.addEventListener('click', () => {
+    switchView('tickets');
+    byId('form-add-ticket').classList.remove('hidden');
+    byId('tkt-customer').focus();
+  });
+
+  byId('crm-btn-goto-tickets')?.addEventListener('click', () => {
+    switchView('tickets');
+  });
+
+  const updateTableOnly = () => {
+    crmCurrentPage = 1;
+    const period = byId('crm-filter-period')?.value || 'thisMonth';
+    renderCrmTicketsTable(filterCrmTicketsByPeriod(period));
+  };
+
+  byId('crm-ticket-search')?.addEventListener('input', updateTableOnly);
+  byId('crm-filter-status')?.addEventListener('change', updateTableOnly);
+  byId('crm-filter-priority')?.addEventListener('change', updateTableOnly);
+  byId('crm-filter-sla-badge')?.addEventListener('change', updateTableOnly);
+
+  byId('crm-ticket-reset')?.addEventListener('click', () => {
+    byId('crm-ticket-search').value = '';
+    byId('crm-filter-status').value = 'all';
+    byId('crm-filter-priority').value = 'all';
+    byId('crm-filter-sla-badge').value = 'all';
+    crmCurrentPage = 1;
+    const period = byId('crm-filter-period')?.value || 'thisMonth';
+    renderCrmTicketsTable(filterCrmTicketsByPeriod(period));
+  });
+
+  byId('crm-prev-page')?.addEventListener('click', () => {
+    if (crmCurrentPage > 1) {
+      crmCurrentPage--;
+      const period = byId('crm-filter-period')?.value || 'thisMonth';
+      renderCrmTicketsTable(filterCrmTicketsByPeriod(period));
+    }
+  });
+
+  byId('crm-next-page')?.addEventListener('click', () => {
+    crmCurrentPage++;
+    const period = byId('crm-filter-period')?.value || 'thisMonth';
+    renderCrmTicketsTable(filterCrmTicketsByPeriod(period));
+  });
+
+  byId('modal-btn-close')?.addEventListener('click', closeTicketDetail);
+  byId('modal-btn-close-action')?.addEventListener('click', closeTicketDetail);
+  byId('crm-ticket-modal')?.addEventListener('click', (e) => {
+    if (e.target === byId('crm-ticket-modal')) closeTicketDetail();
+  });
+
+  byId('modal-btn-process')?.addEventListener('click', () => {
+    if (!currentDetailTicketId) return;
+    const t = crmTickets.find(item => item.id === currentDetailTicketId);
+    if (t) {
+      t.status = 'Diproses';
+      t.slaState = t.slaState === 'Melewati SLA' ? 'Melewati SLA' : 'Aman';
+      t.responseTimeMin = t.responseTimeMin || 10;
+      saveState(STORAGE_KEYS.tickets, crmTickets);
+      logActivity('status_changed', 'Status Tiket Diperbarui', `Tiket ${t.id} dialihkan ke status Diproses oleh PIC.`, 'sync', 'blue');
+      renderTickets();
+      renderCrmDashboard();
+      openTicketDetail(t.id);
+      showToast(`Tiket ${t.id} berstatus Diproses`);
+    }
+  });
+
+  byId('modal-btn-resolve')?.addEventListener('click', () => {
+    if (!currentDetailTicketId) return;
+    const t = crmTickets.find(item => item.id === currentDetailTicketId);
+    if (t) {
+      t.status = 'Selesai';
+      t.resolvedAt = '2026-11-19 13:10';
+      t.resolutionTimeMin = t.resolutionTimeMin || (t.slaState === 'Melewati SLA' ? 145 : 35);
+      t.slaState = (t.resolutionTimeMin <= t.targetResolutionMin && t.slaState !== 'Melewati SLA') ? 'Selesai' : 'Melewati SLA';
+      t.elapsed = `Selesai (${t.resolutionTimeMin} mnt)`;
+      saveState(STORAGE_KEYS.tickets, crmTickets);
+      logActivity('ticket_resolved', 'Tiket Keluhan Selesai', `Tiket ${t.id} (${t.customer}) tuntas diselesaikan.`, 'task_alt', 'emerald');
+      renderTickets();
+      renderCrmDashboard();
+      openTicketDetail(t.id);
+      showToast(`Tiket ${t.id} ditandai Selesai`);
+    }
+  });
+
+  byId('modal-btn-sapa-wa')?.addEventListener('click', () => {
+    if (!currentDetailTicketId) return;
+    const t = crmTickets.find(item => item.id === currentDetailTicketId);
+    if (t) {
+      const cust = crmCustomers.find(c => c.name === t.customer || c.id === t.customerId);
+      const phone = cust ? cust.wa : '6288228692190';
+      byId('wa-target-name').value = `Kak ${t.customer.split(' ')[0]}`;
+      byId('wa-target-phone').value = phone;
+      updateWaPreview();
+      closeTicketDetail();
+      switchView('whatsapp');
+      showToast(`Membuka Template WA untuk ${t.customer}`);
+    }
+  });
+}
+
 /* ==================== EKSPOR & INISIALISASI ==================== */
 function exportFile(content, fileName, mimeType) {
   const blob = new Blob([content], { type: `${mimeType};charset=utf-8` });
@@ -3270,19 +4196,24 @@ function setupCrmForms() {
   byId('form-add-customer').addEventListener('submit', (e) => {
     e.preventDefault();
     const nextNum = String(crmCustomers.length + 1).padStart(3, '0');
-    crmCustomers.unshift({
+    const custName = byId('cust-name').value.trim();
+    const custSegment = byId('cust-segment').value;
+    const newCust = {
       id: `CUST-${nextNum}`,
-      name: byId('cust-name').value.trim(),
+      name: custName,
       wa: byId('cust-wa').value.trim(),
       email: byId('cust-email').value.trim(),
       joined: '2026-11-19',
-      segment: byId('cust-segment').value,
+      segment: custSegment,
       status: byId('cust-status').value,
       orders: 1,
       lastOrder: '2026-11-19'
-    });
+    };
+    crmCustomers.unshift(newCust);
     saveState(STORAGE_KEYS.customers, crmCustomers);
+    logActivity('customer_registered', 'Pelanggan Baru Terdaftar', `${custName} (${custSegment}) berhasil ditambahkan ke database CRM.`, 'person_add', 'forest');
     renderCustomers();
+    if (typeof renderCrmDashboard === 'function') renderCrmDashboard();
     e.target.reset();
     byId('form-add-customer').classList.add('hidden');
     showToast('Pelanggan baru berhasil ditambahkan ke database');
@@ -3296,24 +4227,47 @@ function setupCrmForms() {
   byId('form-add-ticket').addEventListener('submit', (e) => {
     e.preventDefault();
     const slaState = byId('tkt-sla-state').value;
+    const priority = byId('tkt-priority')?.value || 'Sedang';
+    const pic = byId('tkt-pic')?.value || 'Admin WA CS';
+    const customer = byId('tkt-customer').value.trim();
+    const category = byId('tkt-category').value;
+    const desc = byId('tkt-desc').value.trim();
+    const followup = byId('tkt-followup').value.trim();
     const elapsedMap = {
       'Aman': '3 mnt (Batas 30 mnt)',
       'Mendekati Batas': '23 mnt (Batas 30 mnt)',
       'Melewati SLA': '35 mnt (Batas 30 mnt)'
     };
+    const respTimeMap = {
+      'Aman': 5,
+      'Mendekati Batas': 23,
+      'Melewati SLA': 35
+    };
     const nextId = `TKT-${201 + crmTickets.length}`;
-    crmTickets.unshift({
+    const newTicket = {
       id: nextId,
-      customer: byId('tkt-customer').value.trim(),
-      category: byId('tkt-category').value,
-      desc: byId('tkt-desc').value.trim(),
+      customerId: 'CUST-001',
+      customer,
+      category,
+      priority,
+      pic,
+      desc,
+      createdAt: '2026-11-19 13:00',
+      targetResponseMin: 30,
+      targetResolutionMin: 120,
+      responseTimeMin: respTimeMap[slaState] || 8,
+      resolutionTimeMin: null,
+      resolvedAt: null,
       elapsed: elapsedMap[slaState] || 'Baru masuk',
       slaState,
       status: 'Baru',
-      followup: byId('tkt-followup').value.trim()
-    });
+      followup
+    };
+    crmTickets.unshift(newTicket);
     saveState(STORAGE_KEYS.tickets, crmTickets);
+    logActivity('ticket_created', 'Tiket Baru Dibuat', `Tiket ${nextId} (${category}) diajukan untuk ${customer}.`, 'add_alert', 'amber');
     renderTickets();
+    if (typeof renderCrmDashboard === 'function') renderCrmDashboard();
     e.target.reset();
     byId('form-add-ticket').classList.add('hidden');
     showToast(`Tiket keluhan ${nextId} berhasil dibuat`);
@@ -3354,14 +4308,17 @@ function setupCrmForms() {
   // Reset simulasi CRM
   byId('reset-crm-demo').addEventListener('click', () => {
     crmCustomers = structuredClone(DEFAULT_CUSTOMERS);
-    crmTickets = structuredClone(DEFAULT_TICKETS);
+    crmTickets = structuredClone(DEFAULT_TICKETS).map((t, idx) => normalizeTicket(t, idx));
     crmCoupons = structuredClone(DEFAULT_COUPONS);
+    crmActivities = structuredClone(DEFAULT_ACTIVITIES);
     saveState(STORAGE_KEYS.customers, crmCustomers);
     saveState(STORAGE_KEYS.tickets, crmTickets);
     saveState(STORAGE_KEYS.coupons, crmCoupons);
+    saveState(STORAGE_KEYS.activities, crmActivities);
     renderCustomers();
     renderTickets();
     renderCoupons();
+    if (typeof renderCrmDashboard === 'function') renderCrmDashboard();
     showToast('Data simulasi CRM dikembalikan ke awal');
   });
 }
@@ -3376,7 +4333,12 @@ function initializeDashboard() {
   setupNavigation();
   setupCrmForms();
 
-  // Render awal semua modul CRM
+  // Inisialisasi Modul CRM Dashboard & SLA
+  initializeCrmCharts();
+  setupCrmDashboardEvents();
+  renderCrmDashboard();
+
+  // Render awal modul CRM lainnya
   renderCustomers();
   renderTickets();
   renderWaTemplates();
@@ -3394,6 +4356,12 @@ function initializeDashboard() {
   });
   byId('export-csv').addEventListener('click', exportCsv);
   byId('export-json').addEventListener('click', () => exportFile(JSON.stringify(visibleRows, null, 2), 'tuumis-penjualan-filter.json', 'application/json'));
+
+  // Dukungan buka langsung via URL hash (cth: index.html#crm-dashboard)
+  const initialHash = window.location.hash.replace('#', '');
+  if (['crm-dashboard', 'customers', 'tickets', 'whatsapp', 'coupons'].includes(initialHash)) {
+    switchView(initialHash);
+  }
 }
 
 document.addEventListener('DOMContentLoaded', initializeDashboard);

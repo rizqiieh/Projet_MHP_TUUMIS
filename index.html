@@ -88,6 +88,14 @@
       <div>
         <p class="mb-2 px-3 text-[10px] font-bold uppercase tracking-[.16em] text-white/45">CRM &amp; Layanan</p>
         <div class="space-y-1">
+          <button type="button" data-nav-view="crm-dashboard" class="nav-item flex w-full items-center justify-between rounded-xl px-3 py-2.5 text-left text-xs font-medium text-white/80 transition hover:bg-white/10 hover:text-white">
+            <span class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-[18px]">dashboard</span>
+              <span>Dashboard CRM</span>
+            </span>
+            <span id="badge-crm-sla" class="rounded-full bg-emerald-500/90 px-2 py-0.5 text-[10px] font-bold text-white">SLA</span>
+          </button>
+
           <button type="button" data-nav-view="customers" class="nav-item flex w-full items-center justify-between rounded-xl px-3 py-2.5 text-left text-xs font-medium text-white/80 transition hover:bg-white/10 hover:text-white">
             <span class="flex items-center gap-3">
               <span class="material-symbols-outlined text-[18px]">group</span>
@@ -361,6 +369,316 @@
       </section>
     </main>
 
+    <!-- ==================== VIEW BARU: DASHBOARD CRM & MONITORING SLA ==================== -->
+    <section id="view-crm-dashboard" class="view-section hidden mx-auto max-w-[1600px] px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
+      <!-- Header Dashboard CRM -->
+      <div class="mb-6 flex flex-col justify-between gap-4 lg:flex-row lg:items-end">
+        <div>
+          <div class="mb-2 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[.16em] text-forest">
+            <span class="h-px w-6 bg-gold"></span>Manajemen Hubungan Pelanggan (CRM) · Worksheet P11 &amp; P12
+          </div>
+          <h1 class="font-display text-[28px] font-semibold text-forest-dark sm:text-4xl">Dashboard CRM &amp; Monitoring SLA</h1>
+          <p class="mt-2 max-w-3xl text-sm text-muted">Pantau pelanggan, penanganan keluhan, dan pencapaian standar layanan TUUMIS dalam satu tampilan.</p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2.5">
+          <div class="inline-flex items-center gap-1.5 rounded-xl border border-line bg-white px-3 py-2 text-xs font-semibold shadow-card">
+            <span class="material-symbols-outlined text-[18px] text-forest">calendar_month</span>
+            <span class="text-muted">Periode:</span>
+            <select id="crm-filter-period" aria-label="Filter Periode CRM" class="bg-transparent font-semibold text-forest-dark outline-none cursor-pointer">
+              <option value="today">Hari Ini (19 Nov)</option>
+              <option value="7days">7 Hari Terakhir</option>
+              <option value="thisMonth" selected>Bulan Ini (Nov 2026)</option>
+              <option value="all">Semua Periode</option>
+            </select>
+          </div>
+          <button id="crm-btn-reset-filters" type="button" title="Atur ulang filter dashboard" class="inline-flex h-10 items-center gap-1.5 rounded-xl border border-line bg-white px-3 text-xs font-semibold text-muted shadow-card transition hover:bg-sage hover:text-forest-dark">
+            <span class="material-symbols-outlined text-[17px]">refresh</span>Reset
+          </button>
+          <button id="crm-btn-quick-ticket" type="button" class="inline-flex h-10 items-center gap-1.5 rounded-xl bg-forest px-4 text-xs font-semibold text-white shadow-sm transition hover:bg-forest-dark">
+            <span class="material-symbols-outlined text-[17px]">add_alert</span>Input Keluhan
+          </button>
+        </div>
+      </div>
+
+      <!-- Banner Info Standar Layanan SLA TUUMIS (Worksheet P11 & P12) -->
+      <div class="mb-6 flex flex-col gap-2 rounded-2xl border border-forest/20 bg-gradient-to-r from-forest/5 via-sage/40 to-amber-500/5 p-4 sm:flex-row sm:items-center sm:justify-between">
+        <div class="flex items-start gap-3">
+          <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-forest text-gold">
+            <span class="material-symbols-outlined text-[20px]">verified</span>
+          </span>
+          <div>
+            <p class="text-xs font-bold text-forest-dark">Standar Layanan &amp; SLA CRM TUUMIS <span class="ml-1 rounded-full bg-gold/20 px-2 py-0.5 text-[10px] font-semibold text-amber-900">Simulasi Demo</span></p>
+            <p class="text-[11px] text-muted">Respons awal ditargetkan <strong class="text-forest-dark">&le; 30 menit</strong> &amp; penyelesaian keluhan ditargetkan <strong class="text-forest-dark">&le; 120 menit</strong>. Pelanggan terdampak keterlambatan berhak atas voucher pemulihan <strong class="text-amber-800">PEMULIHAN10</strong>.</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-2 text-[11px]">
+          <span class="inline-flex items-center gap-1 rounded-full bg-white px-2.5 py-1 font-semibold text-forest-dark shadow-sm border border-line">
+            <span class="h-2 w-2 rounded-full bg-emerald-500"></span>Target Respons &le; 30 mnt
+          </span>
+          <span class="inline-flex items-center gap-1 rounded-full bg-white px-2.5 py-1 font-semibold text-forest-dark shadow-sm border border-line">
+            <span class="h-2 w-2 rounded-full bg-emerald-500"></span>Target Resolusi &le; 120 mnt
+          </span>
+        </div>
+      </div>
+
+      <!-- Section 4: Empat Kartu KPI Utama -->
+      <section class="mb-6 grid grid-cols-1 gap-3.5 sm:grid-cols-2 xl:grid-cols-4">
+        <!-- KPI 1: Total Pelanggan -->
+        <article class="rounded-2xl border border-line bg-white p-5 shadow-card transition hover:shadow-md">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-muted">Total Pelanggan Terdaftar</span>
+            <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-sage text-forest">
+              <span class="material-symbols-outlined text-[19px]">group</span>
+            </span>
+          </div>
+          <p id="crm-kpi-total-cust" class="mt-3 font-display text-3xl font-bold text-forest-dark">0</p>
+          <div class="mt-1 flex items-center justify-between text-[11px]">
+            <span id="crm-kpi-cust-trend" class="text-forest font-semibold">+2 pelanggan baru bulan ini</span>
+            <span class="text-muted">Basis data CRM</span>
+          </div>
+        </article>
+
+        <!-- KPI 2: Total Tiket Keluhan -->
+        <article class="rounded-2xl border border-line bg-white p-5 shadow-card transition hover:shadow-md">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-muted">Total Tiket Keluhan</span>
+            <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-amber-50 text-amber-700">
+              <span class="material-symbols-outlined text-[19px]">support_agent</span>
+            </span>
+          </div>
+          <p id="crm-kpi-total-tickets" class="mt-3 font-display text-3xl font-bold text-forest-dark">0</p>
+          <div class="mt-1 flex items-center justify-between text-[11px]">
+            <span id="crm-kpi-new-tickets-note" class="font-semibold text-amber-700">0 tiket baru belum ditangani</span>
+            <span class="text-muted">Periode aktif</span>
+          </div>
+        </article>
+
+        <!-- KPI 3: Tiket Belum Selesai -->
+        <article class="rounded-2xl border border-line bg-white p-5 shadow-card transition hover:shadow-md">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-muted">Tiket Belum Selesai</span>
+            <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-rose-50 text-rose-700">
+              <span class="material-symbols-outlined text-[19px]">pending_actions</span>
+            </span>
+          </div>
+          <p id="crm-kpi-unresolved-tickets" class="mt-3 font-display text-3xl font-bold text-rose-700">0</p>
+          <div class="mt-1 flex items-center justify-between text-[11px]">
+            <span id="crm-kpi-unresolved-breakdown" class="font-semibold text-rose-800">0 Baru · 0 Diproses</span>
+            <span class="text-muted">Butuh tindak lanjut</span>
+          </div>
+        </article>
+
+        <!-- KPI 4: Pencapaian SLA -->
+        <article class="rounded-2xl border border-line bg-white p-5 shadow-card transition hover:shadow-md">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-muted">Pencapaian Standar SLA</span>
+            <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700">
+              <span class="material-symbols-outlined text-[19px]">verified</span>
+            </span>
+          </div>
+          <p id="crm-kpi-sla-rate" class="mt-3 font-display text-3xl font-bold text-emerald-700">0%</p>
+          <div class="mt-1 flex items-center justify-between text-[11px]">
+            <span id="crm-kpi-sla-eval-note" class="font-semibold text-emerald-800">0 dari 0 tiket dievaluasi</span>
+            <span class="text-muted">Standar &le; 120 mnt</span>
+          </div>
+        </article>
+      </section>
+
+      <!-- Section 5: Grafik & Visualisasi -->
+      <section class="mb-6 space-y-4">
+        <!-- Row 1: Tren Keluhan & Distribusi Status -->
+        <div class="grid grid-cols-1 gap-4 lg:grid-cols-12">
+          <!-- Grafik A: Tren Keluhan -->
+          <article class="rounded-2xl border border-line bg-white p-5 shadow-card lg:col-span-8">
+            <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <h2 class="font-display text-lg font-semibold text-forest-dark">Tren Keluhan Pelanggan</h2>
+                <p class="text-xs text-muted">Frekuensi keluhan masuk dari waktu ke waktu berdasarkan periode filter aktif</p>
+              </div>
+              <span id="crm-trend-badge" class="rounded-full bg-sage px-2.5 py-1 text-[10px] font-semibold text-forest-dark">0 keluhan</span>
+            </div>
+            <div class="chart-stage chart-stage--lg"><canvas id="crm-complaint-trend-chart"></canvas></div>
+          </article>
+
+          <!-- Grafik B: Distribusi Status Tiket -->
+          <article class="rounded-2xl border border-line bg-white p-5 shadow-card lg:col-span-4">
+            <div class="mb-3 flex items-center justify-between">
+              <div>
+                <h2 class="font-display text-lg font-semibold text-forest-dark">Distribusi Status Tiket</h2>
+                <p class="text-xs text-muted">Proporsi Baru, Diproses, dan Selesai</p>
+              </div>
+            </div>
+            <div class="chart-stage chart-stage--lg"><canvas id="crm-status-chart"></canvas></div>
+            <div class="mt-3 flex items-center justify-center gap-3 text-[11px] text-muted">
+              <span class="inline-flex items-center gap-1"><span class="h-2.5 w-2.5 rounded-full bg-[#D5A43C]"></span>Baru</span>
+              <span class="inline-flex items-center gap-1"><span class="h-2.5 w-2.5 rounded-full bg-[#3B82F6]"></span>Diproses</span>
+              <span class="inline-flex items-center gap-1"><span class="h-2.5 w-2.5 rounded-full bg-[#257149]"></span>Selesai</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Row 2: Kategori Keluhan & Ringkasan SLA -->
+        <div class="grid grid-cols-1 gap-4 lg:grid-cols-12">
+          <!-- Grafik C: Kategori Keluhan -->
+          <article class="rounded-2xl border border-line bg-white p-5 shadow-card lg:col-span-6">
+            <div class="mb-3">
+              <h2 class="font-display text-lg font-semibold text-forest-dark">Kategori Keluhan Terbanyak</h2>
+              <p class="text-xs text-muted">Distribusi keluhan berdasarkan jenis masalah operasional</p>
+            </div>
+            <div class="chart-stage chart-stage--lg"><canvas id="crm-category-chart"></canvas></div>
+          </article>
+
+          <!-- Visualisasi D: Ringkasan & Kinerja SLA -->
+          <article class="rounded-2xl border border-line bg-white p-5 shadow-card lg:col-span-6">
+            <div class="mb-3 flex items-center justify-between">
+              <div>
+                <h2 class="font-display text-lg font-semibold text-forest-dark">Ringkasan SLA Layanan TUUMIS</h2>
+                <p class="text-xs text-muted">Rata-rata waktu respons &amp; penyelesaian vs target standar</p>
+              </div>
+              <span class="rounded-full bg-cream px-2.5 py-1 text-[10px] font-semibold text-forest-dark border border-line">Target SLA</span>
+            </div>
+
+            <!-- 4 Micro KPI Box SLA -->
+            <div class="mb-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+              <div class="rounded-xl border border-line bg-cream/50 p-2.5 text-center">
+                <span class="block text-[10px] text-muted font-medium">Rata-rata Respons</span>
+                <span id="crm-avg-response" class="mt-1 block font-display text-lg font-bold text-forest-dark">-</span>
+                <span class="text-[9px] text-muted">Target &le; 30 mnt</span>
+              </div>
+              <div class="rounded-xl border border-line bg-cream/50 p-2.5 text-center">
+                <span class="block text-[10px] text-muted font-medium">Rata-rata Resolusi</span>
+                <span id="crm-avg-resolution" class="mt-1 block font-display text-lg font-bold text-forest-dark">-</span>
+                <span class="text-[9px] text-muted">Target &le; 120 mnt</span>
+              </div>
+              <div class="rounded-xl border border-line bg-emerald-50/60 p-2.5 text-center">
+                <span class="block text-[10px] text-emerald-800 font-medium">Memenuhi SLA</span>
+                <span id="crm-sla-met-count" class="mt-1 block font-display text-lg font-bold text-emerald-700">0</span>
+                <span class="text-[9px] text-emerald-800/80">Sesuai target</span>
+              </div>
+              <div class="rounded-xl border border-line bg-rose-50/60 p-2.5 text-center">
+                <span class="block text-[10px] text-rose-800 font-medium">Melewati Target</span>
+                <span id="crm-sla-breached-count" class="mt-1 block font-display text-lg font-bold text-rose-700">0</span>
+                <span class="text-[9px] text-rose-800/80">Eskalasi / Terlambat</span>
+              </div>
+            </div>
+
+            <!-- Canvas Perbandingan Waktu vs Target SLA -->
+            <div class="chart-stage" style="height: 190px;"><canvas id="crm-sla-chart"></canvas></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section 6 & 7: Tabel Tiket Keluhan Terbaru & Panel Aktivitas Terbaru -->
+      <section class="grid grid-cols-1 gap-6 xl:grid-cols-12">
+        <!-- Kolom Tabel Tiket (xl:col-span-8) -->
+        <article class="overflow-hidden rounded-2xl border border-line bg-white shadow-card xl:col-span-8">
+          <div class="flex flex-wrap items-center justify-between gap-3 border-b border-line px-5 py-4">
+            <div>
+              <h2 class="font-display text-lg font-semibold text-forest-dark">Tiket Keluhan Terbaru</h2>
+              <p class="text-xs text-muted">Daftar penanganan keluhan, prioritas, PIC, dan status SLA mutakhir</p>
+            </div>
+            <span id="crm-table-badge" class="rounded-full bg-sage px-3 py-1 text-[11px] font-semibold text-forest-dark">0 tiket</span>
+          </div>
+
+          <!-- Filter Toolbar Tabel Tiket -->
+          <div class="flex flex-wrap items-center justify-between gap-3 border-b border-line/70 bg-cream/40 px-5 py-3 text-xs">
+            <div class="flex flex-wrap items-center gap-2">
+              <div class="relative">
+                <span class="material-symbols-outlined pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-[16px] text-muted">search</span>
+                <input id="crm-ticket-search" type="search" placeholder="Cari ID atau nama pelanggan..." class="h-9 w-48 rounded-xl border border-line bg-white pl-8 pr-2.5 text-xs outline-none focus:border-forest sm:w-56" />
+              </div>
+              <select id="crm-filter-status" aria-label="Filter Status Tiket" class="h-9 rounded-xl border border-line bg-white px-2.5 text-xs outline-none focus:border-forest">
+                <option value="all">Semua Status</option>
+                <option value="Baru">Baru</option>
+                <option value="Diproses">Diproses</option>
+                <option value="Selesai">Selesai</option>
+              </select>
+              <select id="crm-filter-priority" aria-label="Filter Prioritas Tiket" class="h-9 rounded-xl border border-line bg-white px-2.5 text-xs outline-none focus:border-forest">
+                <option value="all">Semua Prioritas</option>
+                <option value="Tinggi">Tinggi</option>
+                <option value="Sedang">Sedang</option>
+                <option value="Rendah">Rendah</option>
+              </select>
+              <select id="crm-filter-sla-badge" aria-label="Filter Status SLA" class="h-9 rounded-xl border border-line bg-white px-2.5 text-xs outline-none focus:border-forest">
+                <option value="all">Semua SLA</option>
+                <option value="Memenuhi SLA">Memenuhi SLA / Selesai</option>
+                <option value="Mendekati Batas">Mendekati Batas</option>
+                <option value="Melewati SLA">Melewati SLA</option>
+              </select>
+              <button id="crm-ticket-reset" type="button" class="inline-flex h-9 items-center gap-1 rounded-xl border border-line bg-white px-2.5 text-xs font-medium text-muted hover:text-ink">
+                <span class="material-symbols-outlined text-[15px]">refresh</span>Reset
+              </button>
+            </div>
+            <button id="crm-btn-goto-tickets" type="button" class="inline-flex items-center gap-1 text-[11px] font-semibold text-forest hover:underline">
+              Kelola di Ticketing Keluhan <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+            </button>
+          </div>
+
+          <!-- Table Container -->
+          <div class="overflow-x-auto">
+            <table class="min-w-[920px] w-full border-collapse text-left text-xs">
+              <thead class="bg-cream/70 text-[10px] uppercase tracking-wider text-muted">
+                <tr>
+                  <th class="px-4 py-3 font-bold">ID Tiket</th>
+                  <th class="px-3 py-3 font-bold">Masuk</th>
+                  <th class="px-4 py-3 font-bold">Pelanggan</th>
+                  <th class="px-3 py-3 font-bold">Kategori</th>
+                  <th class="px-3 py-3 font-bold text-center">Prioritas</th>
+                  <th class="px-3 py-3 font-bold">PIC</th>
+                  <th class="px-3 py-3 font-bold">Status</th>
+                  <th class="px-3 py-3 font-bold">Respons</th>
+                  <th class="px-4 py-3 font-bold">Status SLA</th>
+                  <th class="px-4 py-3 font-bold text-right">Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="crm-ticket-rows" class="divide-y divide-line/70"></tbody>
+            </table>
+          </div>
+
+          <!-- Empty State Table -->
+          <div id="crm-ticket-empty" class="hidden px-5 py-12 text-center">
+            <span class="material-symbols-outlined text-4xl text-stone-300">confirmation_number</span>
+            <p class="mt-2 text-sm font-semibold text-ink">Tidak ada data tiket keluhan yang sesuai</p>
+            <p class="mt-1 text-xs text-muted">Ubah kata kunci pencarian atau sesuaikan filter periode dan status.</p>
+          </div>
+
+          <!-- Pagination Footer -->
+          <div class="flex flex-wrap items-center justify-between gap-3 border-t border-line px-5 py-3 text-xs text-muted">
+            <span id="crm-pagination-info">Menampilkan 1-5 dari 0 tiket</span>
+            <div class="flex items-center gap-1">
+              <button id="crm-prev-page" type="button" class="inline-flex h-8 items-center gap-1 rounded-lg border border-line px-2.5 text-xs font-semibold text-ink hover:bg-cream disabled:opacity-40 disabled:cursor-not-allowed">
+                <span class="material-symbols-outlined text-[16px]">chevron_left</span>Sebelumnya
+              </button>
+              <span id="crm-page-number" class="px-2 text-xs font-bold text-forest-dark">1</span>
+              <button id="crm-next-page" type="button" class="inline-flex h-8 items-center gap-1 rounded-lg border border-line px-2.5 text-xs font-semibold text-ink hover:bg-cream disabled:opacity-40 disabled:cursor-not-allowed">
+                Berikutnya<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Kolom Panel Aktivitas Terbaru (xl:col-span-4) -->
+        <article class="flex flex-col rounded-2xl border border-line bg-white shadow-card xl:col-span-4">
+          <div class="flex items-center justify-between border-b border-line px-5 py-4">
+            <div>
+              <h2 class="font-display text-lg font-semibold text-forest-dark">Aktivitas Terbaru CRM</h2>
+              <p class="text-xs text-muted">Log peristiwa layanan &amp; retensi pelanggan</p>
+            </div>
+            <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-sage text-forest">
+              <span class="material-symbols-outlined text-[18px]">history</span>
+            </span>
+          </div>
+
+          <div id="crm-activity-list" class="flex-1 divide-y divide-line/60 overflow-y-auto max-h-[560px] p-2"></div>
+
+          <div class="border-t border-line bg-cream/40 p-3 text-center text-[11px] text-muted">
+            Aktivitas otomatis tercatat saat tiket atau pelanggan diperbarui
+          </div>
+        </article>
+      </section>
+    </section>
+
     <!-- ==================== VIEW 2: DATA PELANGGAN (CRM) ==================== -->
     <section id="view-customers" class="view-section hidden mx-auto max-w-[1600px] px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
       <div class="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
@@ -495,8 +813,26 @@
               <option value="Add-on Terlewat / Tertukar">Add-on Terlewat / Tertukar</option>
               <option value="Suhu / Kualitas Makanan">Suhu / Kualitas Makanan</option>
               <option value="Respons Chat Lambat">Respons Chat Lambat</option>
+              <option value="Pelayanan Kasir">Pelayanan Kasir</option>
             </select>
           </label>
+          <label class="block"><span class="mb-1 block text-xs font-semibold text-muted">Prioritas Layanan</span>
+            <select id="tkt-priority" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest">
+              <option value="Tinggi">Tinggi (Urgensi Dapur / Kompensasi)</option>
+              <option value="Sedang" selected>Sedang (Standar)</option>
+              <option value="Rendah">Rendah (Pertanyaan / Umpan Balik)</option>
+            </select>
+          </label>
+          <label class="block"><span class="mb-1 block text-xs font-semibold text-muted">Petugas PIC *</span>
+            <select id="tkt-pic" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest">
+              <option value="Admin WA CS" selected>Admin WA CS</option>
+              <option value="Admin Dapur Sentral">Admin Dapur Sentral</option>
+              <option value="Kasir Dine-in">Kasir Dine-in</option>
+              <option value="Supervisor Layanan">Supervisor Layanan</option>
+            </select>
+          </label>
+        </div>
+        <div class="mt-3 grid gap-4 sm:grid-cols-2">
           <label class="block"><span class="mb-1 block text-xs font-semibold text-muted">Status Waktu SLA *</span>
             <select id="tkt-sla-state" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest">
               <option value="Aman">Hijau — Dalam Batas SLA (Baru masuk)</option>
@@ -641,6 +977,126 @@
     </section>
 
     <footer class="py-6 text-center text-[10px] text-stone-400">TUUMIS Nusantara · Sistem CRM &amp; Analitik Penjualan · Yogyakarta</footer>
+  </div>
+
+  <!-- ==================== MODAL DETAIL TIKET CRM ==================== -->
+  <div id="crm-ticket-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 modal-backdrop" aria-modal="true" role="dialog">
+    <div class="relative w-full max-w-xl rounded-2xl border border-line bg-white shadow-2xl overflow-hidden animate-[rise-in_0.25s_ease-out]">
+      <!-- Header Modal -->
+      <div class="flex items-center justify-between border-b border-line bg-forest-dark px-5 py-4 text-white">
+        <div class="flex items-center gap-2.5">
+          <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-forest text-gold">
+            <span class="material-symbols-outlined text-[18px]">confirmation_number</span>
+          </span>
+          <div>
+            <h3 id="modal-tkt-id" class="font-display text-lg font-bold leading-none tracking-wide text-white">TKT-201</h3>
+            <span id="modal-tkt-category" class="mt-0.5 inline-block text-[11px] font-medium text-white/70">Kategori Keluhan</span>
+          </div>
+        </div>
+        <button id="modal-btn-close" type="button" class="rounded-lg p-1.5 text-white/70 hover:bg-white/10 hover:text-white" aria-label="Tutup modal">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <!-- Body Modal -->
+      <div class="max-h-[75vh] overflow-y-auto p-5 space-y-4 text-xs">
+        <!-- Status & SLA Badge -->
+        <div class="flex flex-wrap items-center justify-between gap-2 rounded-xl bg-cream/60 p-3 border border-line">
+          <div>
+            <span class="text-muted block text-[10px]">Status Tiket</span>
+            <span id="modal-tkt-status" class="mt-0.5 inline-flex rounded-full px-2.5 py-0.5 font-bold">Diproses</span>
+          </div>
+          <div>
+            <span class="text-muted block text-[10px]">Prioritas</span>
+            <span id="modal-tkt-priority" class="mt-0.5 inline-flex rounded-full px-2.5 py-0.5 font-bold">Tinggi</span>
+          </div>
+          <div>
+            <span class="text-muted block text-[10px]">Kondisi SLA</span>
+            <span id="modal-tkt-sla" class="mt-0.5 inline-flex items-center gap-1 font-bold">Memenuhi SLA</span>
+          </div>
+          <div>
+            <span class="text-muted block text-[10px]">Petugas PIC</span>
+            <span id="modal-tkt-pic" class="mt-0.5 block font-semibold text-forest-dark">Admin WA CS</span>
+          </div>
+        </div>
+
+        <!-- Info Pelanggan -->
+        <div class="rounded-xl border border-line p-3.5 space-y-2">
+          <h4 class="font-semibold text-forest-dark flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px] text-forest">person</span>Informasi Pelanggan
+          </h4>
+          <div class="grid grid-cols-2 gap-3 pt-1">
+            <div>
+              <span class="text-muted block text-[10px]">Nama Pelanggan:</span>
+              <p id="modal-tkt-customer" class="font-bold text-ink">Nadia Putri Maharani</p>
+            </div>
+            <div>
+              <span class="text-muted block text-[10px]">Nomor WhatsApp:</span>
+              <p id="modal-tkt-wa" class="font-mono text-ink">0812****7801</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detail Keluhan -->
+        <div class="rounded-xl border border-line p-3.5 space-y-2">
+          <h4 class="font-semibold text-forest-dark flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px] text-forest">chat_bubble</span>Kronologi Keluhan
+          </h4>
+          <p id="modal-tkt-desc" class="text-ink leading-relaxed bg-cream/40 p-3 rounded-lg border border-line/60">
+            Pesan Nasi Goreng Wok-hei + Telur Ceplok via GoFood, namun telur ceplok tertinggal.
+          </p>
+        </div>
+
+        <!-- Performa Waktu & SLA -->
+        <div class="rounded-xl border border-line p-3.5 space-y-2">
+          <h4 class="font-semibold text-forest-dark flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px] text-forest">timer</span>Waktu Layanan &amp; SLA
+          </h4>
+          <div class="grid grid-cols-3 gap-2 pt-1 text-center">
+            <div class="rounded-lg bg-cream/50 p-2 border border-line/50">
+              <span class="text-[10px] text-muted block">Waktu Masuk</span>
+              <span id="modal-tkt-created" class="mt-0.5 block font-semibold text-ink">19 Nov 12:35</span>
+            </div>
+            <div class="rounded-lg bg-cream/50 p-2 border border-line/50">
+              <span class="text-[10px] text-muted block">Waktu Respons</span>
+              <span id="modal-tkt-response" class="mt-0.5 block font-semibold text-ink">8 mnt (Target &le; 30)</span>
+            </div>
+            <div class="rounded-lg bg-cream/50 p-2 border border-line/50">
+              <span class="text-[10px] text-muted block">Waktu Selesai</span>
+              <span id="modal-tkt-resolution" class="mt-0.5 block font-semibold text-ink">45 mnt (Target &le; 120)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rencana Tindak Lanjut -->
+        <div class="rounded-xl border border-line p-3.5 space-y-2">
+          <h4 class="font-semibold text-forest-dark flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px] text-forest">assignment_turned_in</span>Tindak Lanjut &amp; Solusi Admin
+          </h4>
+          <p id="modal-tkt-followup" class="text-ink leading-relaxed bg-cream/40 p-3 rounded-lg border border-line/60">
+            Admin WA sudah meminta maaf &amp; menyiapkan pengiriman voucher kompensasi Rp5.000.
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer Modal Aksi -->
+      <div class="flex flex-wrap items-center justify-between gap-2 border-t border-line bg-cream/30 px-5 py-3.5 text-xs">
+        <div class="flex items-center gap-2">
+          <button id="modal-btn-process" type="button" class="inline-flex items-center gap-1 rounded-xl bg-amber-600 px-3 py-2 font-semibold text-white transition hover:bg-amber-700">
+            <span class="material-symbols-outlined text-[16px]">sync</span>Tandai Diproses
+          </button>
+          <button id="modal-btn-resolve" type="button" class="inline-flex items-center gap-1 rounded-xl bg-forest px-3 py-2 font-semibold text-white transition hover:bg-forest-dark">
+            <span class="material-symbols-outlined text-[16px]">task_alt</span>Tandai Selesai
+          </button>
+          <button id="modal-btn-sapa-wa" type="button" class="inline-flex items-center gap-1 rounded-xl border border-forest bg-sage px-3 py-2 font-semibold text-forest-dark transition hover:bg-forest hover:text-white">
+            <span class="material-symbols-outlined text-[16px]">chat</span>Hubungi WA
+          </button>
+        </div>
+        <button id="modal-btn-close-action" type="button" class="rounded-xl border border-line bg-white px-4 py-2 font-semibold text-muted hover:bg-cream hover:text-ink">
+          Tutup
+        </button>
+      </div>
+    </div>
   </div>
 </body>
 </html>
