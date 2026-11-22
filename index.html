@@ -123,6 +123,26 @@
           </button>
         </div>
       </div>
+
+      <div>
+        <p class="mb-2 px-3 text-[10px] font-bold uppercase tracking-[.16em] text-white/45">Ekspansi CRM &amp; Strategi</p>
+        <div class="space-y-1">
+          <button type="button" data-nav-view="menu-catalog" class="nav-item flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-xs font-medium text-white/80 transition hover:bg-white/10 hover:text-white">
+            <span class="material-symbols-outlined text-[18px]">menu_book</span>
+            <span>Katalog &amp; Pre-Order</span>
+          </button>
+
+          <button type="button" data-nav-view="ugc-campaign" class="nav-item flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-xs font-medium text-white/80 transition hover:bg-white/10 hover:text-white">
+            <span class="material-symbols-outlined text-[18px]">photo_camera</span>
+            <span>Kampanye UGC &amp; Bio</span>
+          </button>
+
+          <button type="button" data-nav-view="tows-strategy" class="nav-item flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-xs font-medium text-white/80 transition hover:bg-white/10 hover:text-white">
+            <span class="material-symbols-outlined text-[18px]">account_tree</span>
+            <span>Peta Strategi TOWS</span>
+          </button>
+        </div>
+      </div>
     </nav>
 
     <div class="border-t border-white/10 p-4">
@@ -975,6 +995,1015 @@
 
       <div id="coupon-grid" class="grid gap-4 md:grid-cols-2 xl:grid-cols-3"></div>
     </section>
+
+    <!-- ==================== VIEW 6: KATALOG MENU & PRE-ORDER (ST12) ==================== -->
+    <section id="view-menu-catalog" class="view-section hidden mx-auto max-w-[1600px] px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
+      <!-- Header Modul -->
+      <div class="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+        <div>
+          <div class="mb-2 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[.16em] text-forest">
+            <span class="h-px w-6 bg-gold"></span>Katalog Visual &amp; Layanan Cepat · Strategi ST12, WO1 &amp; WT1
+          </div>
+          <h1 class="font-display text-[28px] font-semibold text-forest-dark sm:text-4xl">Katalog Menu &amp; Pre-Order</h1>
+          <p class="mt-2 max-w-2xl text-sm text-muted">Pengelolaan katalog kuliner visual Nusantara &amp; Asian Cuisine, simulasi pemesanan pre-order awal untuk mitigasi antrean panjang saat rush hour.</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-2.5">
+          <button id="btn-toggle-menu-form" type="button" class="inline-flex h-11 items-center gap-2 rounded-xl bg-forest px-4 text-xs font-semibold text-white shadow-sm transition hover:bg-forest-dark">
+            <span class="material-symbols-outlined text-[18px]">add_circle</span>Tambah Menu Baru
+          </button>
+        </div>
+      </div>
+
+      <!-- Banner Penjelasan Simulasi & Strategi ST12 -->
+      <div class="mb-6 flex flex-col gap-2 rounded-2xl border border-forest/20 bg-gradient-to-r from-forest/5 via-sage/40 to-gold/10 p-4 sm:flex-row sm:items-center sm:justify-between">
+        <div class="flex items-start gap-3">
+          <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-forest text-gold">
+            <span class="material-symbols-outlined text-[20px]">restaurant_menu</span>
+          </span>
+          <div>
+            <p class="text-xs font-bold text-forest-dark">Strategi ST12 &amp; Simulasi Manajemen Pre-Order <span class="ml-1 rounded-full bg-gold/25 px-2 py-0.5 text-[10px] font-semibold text-amber-900">Data Simulasi</span></p>
+            <p class="text-[11px] text-muted">Memanfaatkan katalog visual untuk pemesanan terjadwal sebelum jam sibuk guna mencegah pelanggan berpindah ke kompetitor akibat antrean panjang. Pemesanan dan format pesan terintegrasi dengan Template WhatsApp.</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 text-[11px]">
+          <span class="inline-flex items-center gap-1 rounded-full bg-white px-2.5 py-1 font-semibold text-forest-dark shadow-sm border border-line">
+            <span class="h-2 w-2 rounded-full bg-emerald-500"></span>Terhubung Template WA
+          </span>
+        </div>
+      </div>
+
+      <!-- Ringkasan Katalog Menu (4 Kartu Statistik Dinamis) -->
+      <section class="mb-6 grid grid-cols-1 gap-3.5 sm:grid-cols-2 xl:grid-cols-4">
+        <article class="rounded-2xl border border-line bg-white p-5 shadow-card transition hover:shadow-md">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-muted">Total Menu Kuliner</span>
+            <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-sage text-forest">
+              <span class="material-symbols-outlined text-[19px]">restaurant</span>
+            </span>
+          </div>
+          <p id="catalog-stat-total" class="mt-3 font-display text-3xl font-bold text-forest-dark">0</p>
+          <div class="mt-1 flex items-center justify-between text-[11px]">
+            <span class="text-forest font-semibold">Tersimpan di sistem CRM</span>
+            <span class="text-muted">Simulasi</span>
+          </div>
+        </article>
+
+        <article class="rounded-2xl border border-line bg-white p-5 shadow-card transition hover:shadow-md">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-muted">Menu Tersedia (Ready)</span>
+            <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700">
+              <span class="material-symbols-outlined text-[19px]">check_circle</span>
+            </span>
+          </div>
+          <p id="catalog-stat-available" class="mt-3 font-display text-3xl font-bold text-emerald-700">0</p>
+          <div class="mt-1 flex items-center justify-between text-[11px]">
+            <span class="text-emerald-800 font-semibold">Siap dipesan / pre-order</span>
+            <span class="text-muted">Aktif</span>
+          </div>
+        </article>
+
+        <article class="rounded-2xl border border-line bg-white p-5 shadow-card transition hover:shadow-md">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-muted">Menu Habis / Nonaktif</span>
+            <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-rose-50 text-rose-700">
+              <span class="material-symbols-outlined text-[19px]">do_not_disturb_on</span>
+            </span>
+          </div>
+          <p id="catalog-stat-unavailable" class="mt-3 font-display text-3xl font-bold text-rose-700">0</p>
+          <div class="mt-1 flex items-center justify-between text-[11px]">
+            <span class="text-rose-800 font-semibold">Stok bahan habis</span>
+            <span class="text-muted">Temporer</span>
+          </div>
+        </article>
+
+        <article class="rounded-2xl border border-line bg-white p-5 shadow-card transition hover:shadow-md">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-muted">Jumlah Kategori</span>
+            <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-amber-50 text-amber-700">
+              <span class="material-symbols-outlined text-[19px]">category</span>
+            </span>
+          </div>
+          <p id="catalog-stat-categories" class="mt-3 font-display text-3xl font-bold text-forest-dark">0</p>
+          <div class="mt-1 flex items-center justify-between text-[11px]">
+            <span class="text-amber-800 font-semibold">Variasi menu sajian</span>
+            <span class="text-muted">Nusantara &amp; Asian</span>
+          </div>
+        </article>
+      </section>
+
+      <!-- Toolbar Pencarian & Filter Katalog -->
+      <div class="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-line bg-white p-4 shadow-card">
+        <div class="flex flex-wrap items-center gap-2.5">
+          <div class="relative">
+            <span class="material-symbols-outlined pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-muted">search</span>
+            <input id="catalog-search" type="search" placeholder="Cari nama menu, rempah..." class="h-10 w-64 rounded-xl border border-line bg-cream/40 pl-9 pr-3 text-xs outline-none focus:border-forest sm:w-72" />
+          </div>
+          <select id="catalog-filter-category" aria-label="Filter Kategori Menu" class="h-10 rounded-xl border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest cursor-pointer">
+            <option value="all">Semua Kategori</option>
+            <option value="Main Course">Main Course</option>
+            <option value="Rice Bowl">Rice Bowl</option>
+            <option value="Noodles">Noodles</option>
+            <option value="Snacks">Snacks</option>
+            <option value="Beverages">Beverages</option>
+          </select>
+          <select id="catalog-filter-status" aria-label="Filter Status Menu" class="h-10 rounded-xl border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest cursor-pointer">
+            <option value="all">Semua Status</option>
+            <option value="Tersedia">Tersedia (Ready)</option>
+            <option value="Tidak Tersedia">Tidak Tersedia (Habis)</option>
+          </select>
+          <button id="catalog-btn-reset-filters" type="button" class="inline-flex h-10 items-center gap-1 rounded-xl border border-line bg-white px-3 text-xs font-medium text-muted transition hover:bg-cream hover:text-ink">
+            <span class="material-symbols-outlined text-[16px]">refresh</span>Reset
+          </button>
+        </div>
+        <div class="flex items-center gap-2">
+          <span id="catalog-count-badge" class="rounded-full bg-sage px-3 py-1 text-[11px] font-semibold text-forest-dark">0 menu ditampilkan</span>
+        </div>
+      </div>
+
+      <!-- Grid Katalog Menu Visual -->
+      <div id="catalog-menu-grid" class="mb-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"></div>
+
+      <!-- Empty State Menu -->
+      <div id="catalog-empty-state" class="hidden mb-10 rounded-2xl border border-line bg-white p-12 text-center shadow-card">
+        <span class="material-symbols-outlined text-4xl text-stone-300">menu_book</span>
+        <p class="mt-2 text-sm font-semibold text-ink">Tidak ada menu yang sesuai kriteria pencarian</p>
+        <p class="mt-1 text-xs text-muted">Silakan atur ulang filter atau tambahkan menu kuliner baru.</p>
+      </div>
+
+      <!-- Bagian Pengelolaan Simulasi Pre-Order -->
+      <div class="rounded-2xl border border-line bg-white p-6 shadow-card">
+        <div class="mb-6 flex flex-col justify-between gap-4 lg:flex-row lg:items-center">
+          <div>
+            <div class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[.16em] text-forest">
+              <span class="material-symbols-outlined text-[16px]">schedule_send</span>Manajemen Antrean &amp; Mitigasi Rush Hour
+            </div>
+            <h2 class="font-display text-xl font-bold text-forest-dark sm:text-2xl">Pengelolaan Simulasi Pre-Order</h2>
+            <p class="mt-1 text-xs text-muted">Catat dan pantau jadwal pesanan awal pelanggan TUUMIS. <span class="text-amber-800 font-semibold">*Catatan: Fitur ini merupakan simulasi alur operasional pre-order dan bukan transaksi pembayaran riil.</span></p>
+          </div>
+          <button id="btn-toggle-preorder-form" type="button" class="inline-flex h-10 items-center gap-2 rounded-xl bg-forest px-4 text-xs font-semibold text-white shadow-sm transition hover:bg-forest-dark">
+            <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>Simulasi Pre-Order Baru
+          </button>
+        </div>
+
+        <!-- Form Tambah Simulasi Pre-Order (Hidden by default) -->
+        <form id="form-add-preorder" class="mb-6 hidden rounded-2xl border border-forest/30 bg-cream/30 p-5">
+          <div class="mb-4 flex items-center justify-between">
+            <h3 class="font-display text-base font-semibold text-forest-dark">Buat Simulasi Pesanan Pre-Order</h3>
+            <button type="button" id="btn-cancel-preorder-form" class="text-xs font-semibold text-muted hover:text-ink">Tutup</button>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <label class="block">
+              <span class="mb-1 block text-xs font-semibold text-muted">Nama Pelanggan *</span>
+              <input id="po-customer-name" type="text" required placeholder="Contoh: Kak Dinda Maharani" class="h-10 w-full rounded-xl border border-line bg-white px-3 text-xs outline-none focus:border-forest" />
+            </label>
+            <label class="block">
+              <span class="mb-1 block text-xs font-semibold text-muted">Pilih Menu Kuliner *</span>
+              <select id="po-menu-name" required class="h-10 w-full rounded-xl border border-line bg-white px-2.5 text-xs outline-none focus:border-forest cursor-pointer">
+                <!-- Diisi dinamis dari daftar menu aktif -->
+              </select>
+            </label>
+            <label class="block">
+              <span class="mb-1 block text-xs font-semibold text-muted">Jumlah Porsi *</span>
+              <input id="po-quantity" type="number" min="1" value="2" required class="h-10 w-full rounded-xl border border-line bg-white px-3 text-xs outline-none focus:border-forest" />
+            </label>
+            <label class="block">
+              <span class="mb-1 block text-xs font-semibold text-muted">Jadwal / Waktu Ambil *</span>
+              <input id="po-schedule" type="text" required placeholder="Hari ini, 12:30 WIB" class="h-10 w-full rounded-xl border border-line bg-white px-3 text-xs outline-none focus:border-forest" />
+            </label>
+          </div>
+          <div class="mt-3 grid gap-4 sm:grid-cols-2">
+            <label class="block">
+              <span class="mb-1 block text-xs font-semibold text-muted">Catatan Pelanggan (Level Pedas, Alergi, dsb)</span>
+              <input id="po-notes" type="text" placeholder="Contoh: Pedas sedang, sambal dipisah, tanpa timun" class="h-10 w-full rounded-xl border border-line bg-white px-3 text-xs outline-none focus:border-forest" />
+            </label>
+            <label class="block">
+              <span class="mb-1 block text-xs font-semibold text-muted">Status Awal Pemesanan</span>
+              <select id="po-status" class="h-10 w-full rounded-xl border border-line bg-white px-2.5 text-xs outline-none focus:border-forest cursor-pointer">
+                <option value="Menunggu Konfirmasi">Menunggu Konfirmasi</option>
+                <option value="Dikonfirmasi">Dikonfirmasi</option>
+                <option value="Selesai">Selesai</option>
+                <option value="Dibatalkan">Dibatalkan</option>
+              </select>
+            </label>
+          </div>
+          <div class="mt-4 flex justify-end gap-2">
+            <button type="submit" class="inline-flex h-10 items-center gap-2 rounded-xl bg-forest px-5 text-xs font-semibold text-white transition hover:bg-forest-dark">
+              <span class="material-symbols-outlined text-[17px]">save</span>Simpan Pesanan Pre-Order
+            </button>
+          </div>
+        </form>
+
+        <!-- Tabel Daftar Pre-Order -->
+        <div class="overflow-x-auto">
+          <table class="min-w-[880px] w-full border-collapse text-left text-xs">
+            <thead class="bg-cream/70 text-[10px] uppercase tracking-wider text-muted">
+              <tr>
+                <th class="px-4 py-3 font-bold">ID Pre-Order</th>
+                <th class="px-4 py-3 font-bold">Pelanggan</th>
+                <th class="px-4 py-3 font-bold">Menu &amp; Porsi</th>
+                <th class="px-4 py-3 font-bold">Jadwal Ambil</th>
+                <th class="px-4 py-3 font-bold">Catatan Khusus</th>
+                <th class="px-3 py-3 font-bold">Status Pesanan</th>
+                <th class="px-4 py-3 text-right font-bold">Aksi &amp; Template WA</th>
+              </tr>
+            </thead>
+            <tbody id="preorder-table-rows" class="divide-y divide-line/70"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Form Tambah/Edit Menu Katalog -->
+    <div id="modal-menu-form" class="fixed inset-0 z-50 hidden items-center justify-center p-4 modal-backdrop" aria-modal="true" role="dialog">
+      <div class="relative w-full max-w-lg rounded-2xl border border-line bg-white shadow-2xl overflow-hidden animate-[rise-in_0.25s_ease-out]">
+        <div class="flex items-center justify-between border-b border-line bg-forest-dark px-5 py-4 text-white">
+          <div class="flex items-center gap-2.5">
+            <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-forest text-gold">
+              <span class="material-symbols-outlined text-[18px]">restaurant_menu</span>
+            </span>
+            <div>
+              <h3 id="modal-menu-title" class="font-display text-lg font-bold leading-none tracking-wide text-white">Tambah Menu Kuliner</h3>
+              <span class="mt-0.5 inline-block text-[11px] font-medium text-white/70">Katalog Sajian TUUMIS Nusantara &amp; Asian</span>
+            </div>
+          </div>
+          <button id="btn-close-modal-menu" type="button" class="rounded-lg p-1.5 text-white/70 hover:bg-white/10 hover:text-white" aria-label="Tutup form">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+        </div>
+
+        <form id="form-catalog-menu" class="p-5 space-y-3.5 text-xs">
+          <input type="hidden" id="menu-form-mode" value="add" />
+          <input type="hidden" id="menu-form-id" value="" />
+
+          <div id="menu-form-error" class="hidden rounded-xl border border-rose-300 bg-rose-50 p-2.5 text-[11px] font-semibold text-rose-700"></div>
+
+          <div>
+            <label class="block mb-1 font-semibold text-muted">Nama Menu Kuliner *</label>
+            <input id="input-menu-name" type="text" required placeholder="Contoh: Bebek Goreng Sambal Korek" class="h-10 w-full rounded-xl border border-line bg-cream/30 px-3 text-xs outline-none focus:border-forest" />
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block mb-1 font-semibold text-muted">Kategori Sajian *</label>
+              <select id="input-menu-category" required class="h-10 w-full rounded-xl border border-line bg-cream/30 px-2.5 text-xs outline-none focus:border-forest cursor-pointer">
+                <option value="Main Course">Main Course</option>
+                <option value="Rice Bowl">Rice Bowl</option>
+                <option value="Noodles">Noodles</option>
+                <option value="Snacks">Snacks</option>
+                <option value="Beverages">Beverages</option>
+              </select>
+            </div>
+            <div>
+              <label class="block mb-1 font-semibold text-muted">Harga Menu (Rp) *</label>
+              <input id="input-menu-price" type="number" min="0" step="500" required placeholder="25000" class="h-10 w-full rounded-xl border border-line bg-cream/30 px-3 text-xs outline-none focus:border-forest" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block mb-1 font-semibold text-muted">Deskripsi Sajian &amp; Rasa</label>
+            <textarea id="input-menu-desc" rows="2" placeholder="Jelaskan cita rasa, bumbu aromatik, atau racikan wok-hei..." class="w-full rounded-xl border border-line bg-cream/30 p-2.5 text-xs outline-none focus:border-forest"></textarea>
+          </div>
+
+          <div>
+            <label class="block mb-1 font-semibold text-muted">URL Foto Menu / Pilihan Placeholder</label>
+            <input id="input-menu-img" type="url" placeholder="https://images.unsplash.com/... atau kosongkan untuk placeholder otomatis" class="h-10 w-full rounded-xl border border-line bg-cream/30 px-3 text-xs outline-none focus:border-forest" />
+          </div>
+
+          <div>
+            <label class="block mb-1 font-semibold text-muted">Status Ketersediaan Awal *</label>
+            <select id="input-menu-status" required class="h-10 w-full rounded-xl border border-line bg-cream/30 px-2.5 text-xs outline-none focus:border-forest cursor-pointer">
+              <option value="Tersedia">Tersedia (Ready Cook)</option>
+              <option value="Tidak Tersedia">Tidak Tersedia (Stok Dapur Kosong)</option>
+            </select>
+          </div>
+
+          <div class="flex items-center justify-end gap-2 border-t border-line pt-4">
+            <button type="button" id="btn-cancel-modal-menu" class="rounded-xl border border-line bg-white px-4 py-2 font-semibold text-muted hover:bg-cream hover:text-ink">Batal</button>
+            <button type="submit" class="inline-flex items-center gap-1.5 rounded-xl bg-forest px-5 py-2 font-semibold text-white transition hover:bg-forest-dark">
+              <span class="material-symbols-outlined text-[16px]">save</span>Simpan Menu
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal Form WhatsApp Pre-Order -->
+    <div id="modal-wa-preorder" class="fixed inset-0 z-50 hidden items-center justify-center p-4 modal-backdrop" aria-modal="true" role="dialog">
+      <div class="relative w-full max-w-lg rounded-2xl border border-line bg-white shadow-2xl overflow-hidden animate-[rise-in_0.25s_ease-out]">
+        <div class="flex items-center justify-between border-b border-line bg-forest-dark px-5 py-4 text-white">
+          <div class="flex items-center gap-2.5">
+            <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-forest text-gold">
+              <span class="material-symbols-outlined text-[18px]">chat</span>
+            </span>
+            <div>
+              <h3 class="font-display text-lg font-bold leading-none tracking-wide text-white">Template WhatsApp Pre-Order</h3>
+              <span class="mt-0.5 inline-block text-[11px] font-medium text-white/70">Terhubung dengan Sistem Template WA CRM</span>
+            </div>
+          </div>
+          <button id="btn-close-modal-wa-po" type="button" class="rounded-lg p-1.5 text-white/70 hover:bg-white/10 hover:text-white" aria-label="Tutup modal">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+        </div>
+
+        <div class="p-5 space-y-4 text-xs">
+          <p class="text-muted">Gunakan template resmi TUUMIS untuk konfirmasi atau kirim detail pre-order langsung ke nomor WhatsApp pelanggan atau dapur sentral.</p>
+          <div>
+            <label class="block mb-1 font-semibold text-muted">Isi Pesan Pre-Order Siap Kirim:</label>
+            <textarea id="modal-wa-po-text" rows="7" class="w-full rounded-xl border border-line bg-[#efeae2] p-3 text-xs leading-relaxed text-ink outline-none focus:border-forest"></textarea>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-between gap-2 border-t border-line pt-3">
+            <button id="btn-copy-wa-po" type="button" class="inline-flex items-center gap-1.5 rounded-xl border border-forest bg-sage px-4 py-2 font-semibold text-forest-dark transition hover:bg-forest hover:text-white">
+              <span class="material-symbols-outlined text-[16px]">content_copy</span>Salin Template Pesan
+            </button>
+            <div class="flex items-center gap-2">
+              <button id="btn-open-wa-system" type="button" class="inline-flex items-center gap-1.5 rounded-xl border border-line bg-white px-3 py-2 font-semibold text-ink transition hover:bg-cream">
+                <span class="material-symbols-outlined text-[16px]">open_in_new</span>Buka di Modul WA
+              </button>
+              <a id="btn-direct-wa-po" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-xl bg-forest px-4 py-2 font-semibold text-white transition hover:bg-forest-dark">
+                <span class="material-symbols-outlined text-[16px]">send</span>Kirim WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== VIEW 7: KAMPANYE UGC & BIO LINK (SO1) ==================== -->
+    <section id="view-ugc-campaign" class="view-section hidden mx-auto max-w-[1600px] px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
+      <!-- Header Modul -->
+      <div class="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+        <div>
+          <div class="mb-2 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[.16em] text-forest">
+            <span class="h-px w-6 bg-gold"></span>Pemasaran Partisipatif &amp; Akuisisi Member · Strategi SO1
+          </div>
+          <h1 class="font-display text-[28px] font-semibold text-forest-dark sm:text-4xl">Kampanye UGC &amp; Bio Link</h1>
+          <p class="mt-2 max-w-2xl text-sm text-muted">Dorong mahasiswa dan pelanggan membuat ulasan di media sosial melalui kampanye User-Generated Content serta kelola tautan pendaftaran member pada bio Instagram resmi TUUMIS.</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-2.5">
+          <button id="btn-open-bio-preview" type="button" class="inline-flex h-11 items-center gap-2 rounded-xl border border-forest bg-sage px-4 text-xs font-semibold text-forest-dark transition hover:bg-forest hover:text-white">
+            <span class="material-symbols-outlined text-[18px]">smartphone</span>Preview Bio Link
+          </button>
+          <button id="btn-toggle-ugc-form" type="button" class="inline-flex h-11 items-center gap-2 rounded-xl bg-forest px-4 text-xs font-semibold text-white shadow-sm transition hover:bg-forest-dark">
+            <span class="material-symbols-outlined text-[18px]">add_a_photo</span>Tambah Konten UGC
+          </button>
+        </div>
+      </div>
+
+      <!-- Banner Penjelasan Simulasi & Strategi SO1 -->
+      <div class="mb-6 flex flex-col gap-2 rounded-2xl border border-forest/20 bg-gradient-to-r from-forest/5 via-sage/40 to-amber-500/10 p-4 sm:flex-row sm:items-center sm:justify-between">
+        <div class="flex items-start gap-3">
+          <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-forest text-gold">
+            <span class="material-symbols-outlined text-[20px]">campaign</span>
+          </span>
+          <div>
+            <p class="text-xs font-bold text-forest-dark">Strategi SO1: Advokasi Mahasiswa &amp; Hubungan Bio Link <span class="ml-1 rounded-full bg-gold/25 px-2 py-0.5 text-[10px] font-semibold text-amber-900">Simulasi CRM</span></p>
+            <p class="text-[11px] text-muted">Input manual dan verifikasi ulasan Instagram/TikTok mahasiswa. Pendaftaran member via Bio Link terintegrasi langsung ke satu basis data Pelanggan CRM tanpa duplikasi nomor WhatsApp.</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 text-[11px]">
+          <span class="inline-flex items-center gap-1 rounded-full bg-white px-2.5 py-1 font-semibold text-forest-dark shadow-sm border border-line">
+            <span class="h-2 w-2 rounded-full bg-emerald-500"></span>Sinkron Database Pelanggan
+          </span>
+        </div>
+      </div>
+
+      <!-- 4 Kartu Ringkasan Statistik Kampanye -->
+      <section class="mb-6 grid grid-cols-1 gap-3.5 sm:grid-cols-2 xl:grid-cols-4">
+        <article class="rounded-2xl border border-line bg-white p-5 shadow-card transition hover:shadow-md">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-muted">Total Konten UGC</span>
+            <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-sage text-forest">
+              <span class="material-symbols-outlined text-[19px]">photo_library</span>
+            </span>
+          </div>
+          <p id="ugc-stat-total" class="mt-3 font-display text-3xl font-bold text-forest-dark">0</p>
+          <div class="mt-1 flex items-center justify-between text-[11px]">
+            <span class="text-forest font-semibold">Tersimpan di sistem CRM</span>
+            <span class="text-muted">Simulasi</span>
+          </div>
+        </article>
+
+        <article class="rounded-2xl border border-line bg-white p-5 shadow-card transition hover:shadow-md">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-muted">Peserta Unik Kampanye</span>
+            <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-amber-50 text-amber-700">
+              <span class="material-symbols-outlined text-[19px]">group</span>
+            </span>
+          </div>
+          <p id="ugc-stat-participants" class="mt-3 font-display text-3xl font-bold text-amber-700">0</p>
+          <div class="mt-1 flex items-center justify-between text-[11px]">
+            <span class="text-amber-800 font-semibold">Kreator &amp; Pelanggan</span>
+            <span class="text-muted">Mahasiswa</span>
+          </div>
+        </article>
+
+        <article class="rounded-2xl border border-line bg-white p-5 shadow-card transition hover:shadow-md">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-muted">Member dari Bio Link</span>
+            <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700">
+              <span class="material-symbols-outlined text-[19px]">how_to_reg</span>
+            </span>
+          </div>
+          <p id="ugc-stat-bio-members" class="mt-3 font-display text-3xl font-bold text-emerald-700">0</p>
+          <div class="mt-1 flex items-center justify-between text-[11px]">
+            <span class="text-emerald-800 font-semibold">Terdaftar ke Data Pelanggan</span>
+            <span class="text-muted">Konversi</span>
+          </div>
+        </article>
+
+        <article class="rounded-2xl border border-line bg-white p-5 shadow-card transition hover:shadow-md">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-muted">Status Kampanye Aktif</span>
+            <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-teal-50 text-teal-700">
+              <span class="material-symbols-outlined text-[19px]">toggle_on</span>
+            </span>
+          </div>
+          <p id="ugc-stat-status" class="mt-3 font-display text-2xl font-bold text-teal-800">Aktif</p>
+          <div class="mt-1 flex items-center justify-between text-[11px]">
+            <span id="ugc-stat-hashtag-note" class="text-teal-900 font-semibold">#TuumisExperience</span>
+            <span class="text-muted">Instagram</span>
+          </div>
+        </article>
+      </section>
+
+      <!-- Informasi Kampanye UGC & Pengelolaan Konfigurasi -->
+      <div class="mb-6 rounded-2xl border border-line bg-white p-5 shadow-card">
+        <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+          <div class="flex items-start gap-3">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-forest text-gold">
+              <span class="material-symbols-outlined text-[22px]">tag</span>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h2 id="ugc-info-title" class="font-display text-lg font-bold text-forest-dark">Tuumis Kuliner Experience Challenge</h2>
+                <span id="ugc-info-badge" class="rounded-full bg-emerald-100 px-2.5 py-0.5 text-[10px] font-bold text-emerald-800">Aktif Berjalan</span>
+              </div>
+              <p id="ugc-info-desc" class="mt-1 text-xs text-muted">Ajak mahasiswa mengunggah review menu favorit di IG Story/Reels, tag @tuumis.id dengan hashtag resmi untuk klaim voucher kompensasi atau es teh gratis.</p>
+            </div>
+          </div>
+          <button id="btn-edit-campaign-info" type="button" class="inline-flex h-9 items-center gap-1.5 rounded-xl border border-line bg-cream/40 px-3 text-xs font-semibold text-forest-dark hover:bg-forest hover:text-white transition">
+            <span class="material-symbols-outlined text-[16px]">edit</span>Edit Informasi Kampanye
+          </button>
+        </div>
+
+        <div class="mt-4 grid grid-cols-1 gap-3 rounded-xl border border-line/70 bg-cream/30 p-3.5 text-xs sm:grid-cols-3">
+          <div>
+            <span class="block text-[10px] font-bold uppercase tracking-wider text-muted">Hashtag Resmi</span>
+            <span id="ugc-info-hashtag" class="mt-0.5 font-bold text-forest-dark">#TuumisExperience</span>
+          </div>
+          <div>
+            <span class="block text-[10px] font-bold uppercase tracking-wider text-muted">Periode Kampanye</span>
+            <span id="ugc-info-period" class="mt-0.5 font-semibold text-ink">1 Nov – 30 Des 2026</span>
+          </div>
+          <div>
+            <span class="block text-[10px] font-bold uppercase tracking-wider text-muted">Instruksi Ikuti</span>
+            <span id="ugc-info-instructions" class="mt-0.5 block text-muted">1. Foto menu &gt; 2. Tag @tuumis.id &gt; 3. Cantumkan #TuumisExperience</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Edit Informasi Kampanye (Hidden by default) -->
+      <form id="form-edit-campaign" class="mb-6 hidden rounded-2xl border border-forest/30 bg-white p-5 shadow-card">
+        <div class="mb-4 flex items-center justify-between">
+          <h3 class="font-display text-base font-semibold text-forest-dark">Perbarui Konfigurasi Kampanye UGC</h3>
+          <button type="button" id="btn-cancel-campaign-edit" class="text-xs font-semibold text-muted hover:text-ink">Tutup</button>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <label class="block">
+            <span class="mb-1 block text-xs font-semibold text-muted">Nama Kampanye *</span>
+            <input id="cfg-campaign-title" type="text" required class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest" />
+          </label>
+          <label class="block">
+            <span class="mb-1 block text-xs font-semibold text-muted">Hashtag Utama *</span>
+            <input id="cfg-campaign-hashtag" type="text" required class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest" />
+          </label>
+          <label class="block">
+            <span class="mb-1 block text-xs font-semibold text-muted">Periode Kampanye *</span>
+            <input id="cfg-campaign-period" type="text" required class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest" />
+          </label>
+        </div>
+        <div class="mt-3 grid gap-4 sm:grid-cols-2">
+          <label class="block">
+            <span class="mb-1 block text-xs font-semibold text-muted">Tujuan &amp; Deskripsi Kampanye</span>
+            <input id="cfg-campaign-desc" type="text" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest" />
+          </label>
+          <label class="block">
+            <span class="mb-1 block text-xs font-semibold text-muted">Instruksi Partisipasi Pelanggan</span>
+            <input id="cfg-campaign-instructions" type="text" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest" />
+          </label>
+        </div>
+        <div class="mt-3 flex items-center justify-between">
+          <label class="inline-flex items-center gap-2 cursor-pointer">
+            <input id="cfg-campaign-active" type="checkbox" class="h-4 w-4 rounded text-forest focus:ring-forest" checked />
+            <span class="text-xs font-semibold text-forest-dark">Status Kampanye Aktif</span>
+          </label>
+          <button type="submit" class="inline-flex h-9 items-center gap-1.5 rounded-xl bg-forest px-4 text-xs font-semibold text-white transition hover:bg-forest-dark">
+            <span class="material-symbols-outlined text-[16px]">save</span>Simpan Perubahan
+          </button>
+        </div>
+      </form>
+
+      <!-- Grid 2 Kolom: Kolom Kiri Tabel UGC, Kolom Kanan Manajemen Bio Link TUUMIS -->
+      <div class="grid grid-cols-1 gap-6 lg:grid-cols-12">
+        <!-- Kolom Kiri: Tabel Konten UGC (8 Kolom) -->
+        <div class="lg:col-span-8 space-y-4">
+          <!-- Form Tambah/Edit Konten UGC (Hidden by default) -->
+          <form id="form-add-ugc" class="hidden rounded-2xl border border-forest/30 bg-white p-5 shadow-card">
+            <div class="mb-4 flex items-center justify-between">
+              <h3 id="ugc-form-heading" class="font-display text-base font-semibold text-forest-dark">Input Konten UGC Baru</h3>
+              <button type="button" id="btn-cancel-ugc-form" class="text-xs font-semibold text-muted hover:text-ink">Tutup</button>
+            </div>
+            <input type="hidden" id="ugc-edit-id" value="" />
+            <div class="grid gap-3 sm:grid-cols-3">
+              <label class="block">
+                <span class="mb-1 block text-xs font-semibold text-muted">Nama / Kode Peserta *</span>
+                <input id="ugc-input-creator" type="text" required placeholder="@nadia_kulineran" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest" />
+              </label>
+              <label class="block">
+                <span class="mb-1 block text-xs font-semibold text-muted">Platform Media Sosial *</span>
+                <select id="ugc-input-platform" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-2.5 text-xs outline-none focus:border-forest">
+                  <option value="Instagram">Instagram (Story / Reels / Feed)</option>
+                  <option value="TikTok">TikTok</option>
+                  <option value="X (Twitter)">X (Twitter)</option>
+                </select>
+              </label>
+              <label class="block">
+                <span class="mb-1 block text-xs font-semibold text-muted">Status Verifikasi</span>
+                <select id="ugc-input-status" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-2.5 text-xs outline-none focus:border-forest">
+                  <option value="Menunggu">Menunggu</option>
+                  <option value="Disetujui">Disetujui</option>
+                  <option value="Ditolak">Ditolak</option>
+                </select>
+              </label>
+            </div>
+            <div class="mt-3">
+              <label class="block">
+                <span class="mb-1 block text-xs font-semibold text-muted">Link / URL Konten (Instagram/TikTok) *</span>
+                <input id="ugc-input-url" type="url" required placeholder="https://instagram.com/p/..." class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest" />
+              </label>
+            </div>
+            <div class="mt-3">
+              <label class="block">
+                <span class="mb-1 block text-xs font-semibold text-muted">Caption / Catatan Ulasan</span>
+                <input id="ugc-input-caption" type="text" placeholder="Sensasi wok-hei nasi gorengnya gurih banget #TuumisExperience..." class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest" />
+              </label>
+            </div>
+            <div class="mt-4 flex justify-end gap-2">
+              <button type="submit" class="inline-flex h-10 items-center gap-1.5 rounded-xl bg-forest px-5 text-xs font-semibold text-white transition hover:bg-forest-dark">
+                <span class="material-symbols-outlined text-[17px]">save</span>Simpan Konten UGC
+              </button>
+            </div>
+          </form>
+
+          <!-- Tabel Verifikasi Konten UGC -->
+          <div class="overflow-hidden rounded-2xl border border-line bg-white shadow-card">
+            <div class="flex flex-wrap items-center justify-between gap-3 border-b border-line px-5 py-4">
+              <div>
+                <h3 class="font-display text-lg font-semibold text-forest-dark">Daftar Pengiriman Konten UGC</h3>
+                <p class="text-xs text-muted">Verifikasi kepatuhan hashtag &amp; kelayakan reward pelanggan</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <select id="ugc-filter-verify" aria-label="Filter Verifikasi UGC" class="h-8 rounded-lg border border-line bg-cream/40 px-2.5 text-xs outline-none focus:border-forest cursor-pointer">
+                  <option value="all">Semua Status</option>
+                  <option value="Menunggu">Menunggu</option>
+                  <option value="Disetujui">Disetujui</option>
+                  <option value="Ditolak">Ditolak</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="overflow-x-auto">
+              <table class="min-w-[760px] w-full border-collapse text-left text-xs">
+                <thead class="bg-cream/70 text-[10px] uppercase tracking-wider text-muted">
+                  <tr>
+                    <th class="px-4 py-3 font-bold">ID &amp; Tanggal</th>
+                    <th class="px-4 py-3 font-bold">Peserta / Akun</th>
+                    <th class="px-3 py-3 font-bold">Platform</th>
+                    <th class="px-4 py-3 font-bold">Caption &amp; Link</th>
+                    <th class="px-3 py-3 font-bold text-center">Verifikasi</th>
+                    <th class="px-4 py-3 text-right font-bold">Aksi Admin</th>
+                  </tr>
+                </thead>
+                <tbody id="ugc-table-rows" class="divide-y divide-line/70"></tbody>
+              </table>
+            </div>
+
+            <div id="ugc-empty-state" class="hidden p-8 text-center text-xs text-muted">
+              Tidak ada data konten UGC yang sesuai filter.
+            </div>
+          </div>
+        </div>
+
+        <!-- Kolom Kanan: Pengelolaan & Preview Bio Link TUUMIS (4 Kolom) -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="rounded-2xl border border-line bg-white p-5 shadow-card">
+            <div class="flex items-center justify-between border-b border-line pb-3">
+              <div>
+                <h3 class="font-display text-lg font-bold text-forest-dark">Pengelolaan Bio Link</h3>
+                <p class="text-[11px] text-muted">Tautan media sosial terpusat (@tuumis.id)</p>
+              </div>
+              <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-sage text-forest">
+                <span class="material-symbols-outlined text-[18px]">link</span>
+              </span>
+            </div>
+
+            <div class="mt-4 space-y-2">
+              <label class="block text-[11px] font-semibold text-muted">URL Bio Link TUUMIS:</label>
+              <div class="flex items-center gap-2">
+                <input id="input-bio-link-url" type="text" readonly value="http://localhost/Projet_MHP_TUUMIS/#bio-link" class="h-9 w-full rounded-xl border border-line bg-cream/50 px-2.5 font-mono text-[11px] text-ink outline-none select-all" />
+                <button id="btn-copy-bio-url" type="button" title="Salin URL Bio Link" class="inline-flex h-9 items-center justify-center rounded-xl bg-forest-dark px-3 text-xs font-semibold text-white hover:bg-forest">
+                  <span class="material-symbols-outlined text-[16px]">content_copy</span>
+                </button>
+              </div>
+              <p class="text-[10px] text-muted leading-tight">*Catatan: Menggunakan localhost untuk uji coba lokal, sesuaikan domain saat deployment.</p>
+            </div>
+
+            <div class="mt-4 pt-4 border-t border-line space-y-2.5">
+              <button id="btn-open-member-reg-modal" type="button" class="flex w-full items-center justify-between rounded-xl border border-forest bg-sage/60 p-3 text-left transition hover:bg-forest hover:text-white group">
+                <div class="flex items-center gap-2.5">
+                  <span class="material-symbols-outlined text-[20px] text-forest group-hover:text-gold">person_add</span>
+                  <div>
+                    <span class="block text-xs font-bold text-forest-dark group-hover:text-white">Formulir Pendaftaran Member</span>
+                    <span class="text-[10px] text-muted group-hover:text-white/80">Input pendaftaran langsung ke CRM</span>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+              </button>
+
+              <button id="btn-quick-preview-bio" type="button" class="flex w-full items-center justify-between rounded-xl border border-line bg-cream/40 p-3 text-left transition hover:bg-cream hover:text-ink">
+                <div class="flex items-center gap-2.5">
+                  <span class="material-symbols-outlined text-[20px] text-muted">smartphone</span>
+                  <div>
+                    <span class="block text-xs font-bold text-ink">Buka Pratinjau Layar Bio Link</span>
+                    <span class="text-[10px] text-muted">Simulasi tampilan smartphone pengunjung</span>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-[18px]">visibility</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Mini Smartphone Card Preview -->
+          <div class="rounded-3xl border-4 border-forest-dark/30 bg-cream p-4 shadow-xl">
+            <div class="mx-auto mb-3 h-1.5 w-16 rounded-full bg-forest-dark/20"></div>
+            <div class="text-center">
+              <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-forest text-gold shadow-md">
+                <span class="material-symbols-outlined text-3xl">skillet</span>
+              </div>
+              <h4 class="mt-2 font-display text-base font-bold text-forest-dark">TUUMIS Nusantara</h4>
+              <p class="text-[10px] text-muted font-medium">Indonesian &amp; Asian Cuisine · @tuumis.id</p>
+            </div>
+
+            <!-- Tautan Bio Aktif -->
+            <div class="mt-4 space-y-2">
+              <button type="button" onclick="openBioMemberModal()" class="w-full rounded-xl bg-forest px-3 py-2 text-center text-xs font-bold text-white shadow-sm hover:bg-forest-dark transition flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined text-[16px] text-gold">loyalty</span>Daftar Member TUUMIS (Diskon 15%)
+              </button>
+              <button type="button" onclick="switchView('menu-catalog')" class="w-full rounded-xl bg-white border border-line px-3 py-2 text-center text-xs font-semibold text-ink shadow-sm hover:bg-cream transition flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined text-[16px] text-forest">restaurant_menu</span>Lihat Katalog Menu &amp; Pre-Order
+              </button>
+              <button type="button" onclick="switchView('ugc-campaign')" class="w-full rounded-xl bg-white border border-line px-3 py-2 text-center text-xs font-semibold text-ink shadow-sm hover:bg-cream transition flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined text-[16px] text-amber-600">photo_camera</span>Info Kampanye #TuumisExperience
+              </button>
+              <a href="https://wa.me/6288228692190?text=Halo%20TUUMIS%2C%20saya%20ingin%20tanya%20menu%20dan%20layanan" target="_blank" rel="noopener noreferrer" class="w-full rounded-xl bg-white border border-line px-3 py-2 text-center text-xs font-semibold text-ink shadow-sm hover:bg-cream transition flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined text-[16px] text-emerald-600">chat</span>Hubungi TUUMIS via WhatsApp
+              </a>
+            </div>
+            <p class="mt-3 text-center text-[9px] text-stone-400">Tampilan Pratinjau Interaktif Bio Instagram</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Pratinjau Bio Link Layar Smartphone Penuh -->
+    <div id="modal-bio-preview" class="fixed inset-0 z-50 hidden items-center justify-center p-4 modal-backdrop" aria-modal="true" role="dialog">
+      <div class="relative w-full max-w-sm rounded-[32px] border-4 border-stone-800 bg-cream p-5 shadow-2xl overflow-hidden animate-[rise-in_0.25s_ease-out]">
+        <div class="absolute right-4 top-4">
+          <button id="btn-close-bio-preview" type="button" class="rounded-full bg-forest-dark/10 p-1 text-ink hover:bg-forest hover:text-white" aria-label="Tutup pratinjau">
+            <span class="material-symbols-outlined text-[18px]">close</span>
+          </button>
+        </div>
+        <div class="mx-auto mb-4 h-1.5 w-16 rounded-full bg-stone-300"></div>
+
+        <div class="text-center pt-2">
+          <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-forest text-gold shadow-md">
+            <span class="material-symbols-outlined text-4xl">skillet</span>
+          </div>
+          <h3 class="mt-3 font-display text-xl font-bold text-forest-dark">TUUMIS Nusantara</h3>
+          <p class="text-xs text-muted font-medium">Indonesian &amp; Asian Cuisine · Yogyakarta</p>
+          <span class="mt-1 inline-block rounded-full bg-gold/20 px-3 py-0.5 text-[10px] font-bold text-amber-900">#TuumisExperience</span>
+        </div>
+
+        <div class="mt-6 space-y-2.5">
+          <button type="button" id="preview-btn-member" class="w-full rounded-xl bg-forest p-3 text-center text-xs font-bold text-white shadow-sm hover:bg-forest-dark transition flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-[18px] text-gold">loyalty</span>Daftar Member TUUMIS (Diskon 15%)
+          </button>
+          <button type="button" id="preview-btn-catalog" class="w-full rounded-xl bg-white border border-line p-3 text-center text-xs font-semibold text-ink shadow-sm hover:bg-cream transition flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-[18px] text-forest">restaurant_menu</span>Lihat Katalog Menu &amp; Pre-Order
+          </button>
+          <button type="button" id="preview-btn-ugc" class="w-full rounded-xl bg-white border border-line p-3 text-center text-xs font-semibold text-ink shadow-sm hover:bg-cream transition flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-[18px] text-amber-600">photo_camera</span>Info Kampanye #TuumisExperience
+          </button>
+          <a href="https://wa.me/6288228692190?text=Halo%20TUUMIS%2C%20saya%20ingin%20tanya%20menu%20dan%20layanan" target="_blank" rel="noopener noreferrer" class="w-full rounded-xl bg-white border border-line p-3 text-center text-xs font-semibold text-ink shadow-sm hover:bg-cream transition flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-[18px] text-emerald-600">chat</span>Hubungi TUUMIS via WhatsApp
+          </a>
+        </div>
+
+        <div class="mt-6 text-center text-[10px] text-stone-400">
+          TUUMIS Nusantara · Bio Link Resmi
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Registrasi Member dari Bio Link (Integrasi ke Data Pelanggan) -->
+    <div id="modal-bio-member" class="fixed inset-0 z-50 hidden items-center justify-center p-4 modal-backdrop" aria-modal="true" role="dialog">
+      <div class="relative w-full max-w-md rounded-2xl border border-line bg-white shadow-2xl overflow-hidden animate-[rise-in_0.25s_ease-out]">
+        <div class="flex items-center justify-between border-b border-line bg-forest-dark px-5 py-4 text-white">
+          <div class="flex items-center gap-2.5">
+            <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-forest text-gold">
+              <span class="material-symbols-outlined text-[18px]">card_membership</span>
+            </span>
+            <div>
+              <h3 class="font-display text-lg font-bold leading-none tracking-wide text-white">Pendaftaran Member TUUMIS</h3>
+              <span class="mt-0.5 inline-block text-[11px] font-medium text-white/70">Terhubung Satu Database ke Data Pelanggan CRM</span>
+            </div>
+          </div>
+          <button id="btn-close-bio-member" type="button" class="rounded-lg p-1.5 text-white/70 hover:bg-white/10 hover:text-white" aria-label="Tutup form">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+        </div>
+
+        <form id="form-bio-member-reg" class="p-5 space-y-3.5 text-xs">
+          <div id="bio-member-alert" class="hidden rounded-xl border p-2.5 text-[11px] font-semibold"></div>
+
+          <div>
+            <label class="block mb-1 font-semibold text-muted">Nama Lengkap Pelanggan *</label>
+            <input id="bio-reg-name" type="text" required placeholder="Contoh: Farhan Ramadhan" class="h-10 w-full rounded-xl border border-line bg-cream/30 px-3 text-xs outline-none focus:border-forest" />
+          </div>
+
+          <div>
+            <label class="block mb-1 font-semibold text-muted">Nomor WhatsApp Aktif *</label>
+            <input id="bio-reg-wa" type="tel" required placeholder="081234567890 atau 62812..." class="h-10 w-full rounded-xl border border-line bg-cream/30 px-3 text-xs outline-none focus:border-forest" />
+            <span class="mt-1 block text-[10px] text-muted">Format: 08xx atau 628xx (minimal 9 digit). Nomor terdaftar tidak akan diduplikasi.</span>
+          </div>
+
+          <div>
+            <label class="block mb-1 font-semibold text-muted">Email Pelanggan (Opsional)</label>
+            <input id="bio-reg-email" type="email" placeholder="nama@email.com" class="h-10 w-full rounded-xl border border-line bg-cream/30 px-3 text-xs outline-none focus:border-forest" />
+          </div>
+
+          <div>
+            <label class="block mb-1 font-semibold text-muted">Kategori Segmen Pelanggan</label>
+            <select id="bio-reg-segment" class="h-10 w-full rounded-xl border border-line bg-cream/30 px-2.5 text-xs outline-none focus:border-forest cursor-pointer">
+              <option value="Mahasiswa" selected>Mahasiswa (Klaim Promo Kuliah)</option>
+              <option value="Pekerja">Pekerja / Umum</option>
+            </select>
+          </div>
+
+          <div class="rounded-xl border border-line/80 bg-sage/40 p-3 text-[11px] text-forest-dark space-y-1">
+            <p class="font-bold flex items-center gap-1"><span class="material-symbols-outlined text-[15px]">verified</span>Keuntungan Member TUUMIS:</p>
+            <ul class="list-disc pl-4 space-y-0.5 text-[10px] text-muted">
+              <li>Voucher promo selamat datang diskon 15% (MEMBER15).</li>
+              <li>Prioritas pre-order dan info menu spesial Nusantara.</li>
+            </ul>
+          </div>
+
+          <div class="flex items-center justify-end gap-2 border-t border-line pt-4">
+            <button type="button" id="btn-cancel-bio-member" class="rounded-xl border border-line bg-white px-4 py-2 font-semibold text-muted hover:bg-cream hover:text-ink">Batal</button>
+            <button type="submit" class="inline-flex items-center gap-1.5 rounded-xl bg-forest px-5 py-2 font-semibold text-white transition hover:bg-forest-dark">
+              <span class="material-symbols-outlined text-[16px]">check_circle</span>Konfirmasi Pendaftaran
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- ==================== VIEW 8: PETA STRATEGI TOWS ==================== -->
+    <section id="view-tows-strategy" class="view-section hidden mx-auto max-w-[1600px] px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
+      <!-- Header Modul -->
+      <div class="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+        <div>
+          <div class="mb-2 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[.16em] text-forest">
+            <span class="h-px w-6 bg-gold"></span>Pilar Strategis &amp; Arsitektur Bisnis CRM · Worksheet P11 &amp; P12
+          </div>
+          <h1 class="font-display text-[28px] font-semibold text-forest-dark sm:text-4xl">Peta Strategi TOWS</h1>
+          <p class="mt-2 max-w-3xl text-sm text-muted">Pemetaan strategi bisnis TUUMIS menjadi fitur CRM untuk mendukung pengelolaan pelanggan, pemasaran, pemesanan, dan peningkatan layanan.</p>
+        </div>
+      </div>
+
+      <!-- 4 Kartu Kelompok Strategi TOWS -->
+      <section class="mb-6 grid grid-cols-1 gap-3.5 sm:grid-cols-2 xl:grid-cols-4">
+        <!-- SO Group -->
+        <article class="rounded-2xl border-l-4 border-l-emerald-600 border border-line bg-white p-5 shadow-card transition hover:shadow-md cursor-pointer tows-group-card" data-filter-group="SO">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-emerald-800">Strengths – Opportunities (SO)</span>
+            <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-100 text-emerald-800">
+              <span class="material-symbols-outlined text-[18px]">trending_up</span>
+            </span>
+          </div>
+          <p class="mt-3 font-display text-3xl font-bold text-forest-dark">1 <span class="text-xs font-sans font-medium text-muted">Strategi</span></p>
+          <p class="mt-1 text-[11px] text-muted">SO1 · Kampanye UGC Instagram &amp; Bio Link Member</p>
+        </article>
+
+        <!-- WO Group -->
+        <article class="rounded-2xl border-l-4 border-l-blue-600 border border-line bg-white p-5 shadow-card transition hover:shadow-md cursor-pointer tows-group-card" data-filter-group="WO">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-blue-800">Weaknesses – Opportunities (WO)</span>
+            <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-100 text-blue-800">
+              <span class="material-symbols-outlined text-[18px]">build_circle</span>
+            </span>
+          </div>
+          <p class="mt-3 font-display text-3xl font-bold text-forest-dark">1 <span class="text-xs font-sans font-medium text-muted">Strategi</span></p>
+          <p class="mt-1 text-[11px] text-muted">WO1 · Layanan Komplain Terstruktur &amp; SLA</p>
+        </article>
+
+        <!-- ST Group -->
+        <article class="rounded-2xl border-l-4 border-l-gold border border-line bg-white p-5 shadow-card transition hover:shadow-md cursor-pointer tows-group-card" data-filter-group="ST">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-amber-800">Strengths – Threats (ST)</span>
+            <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-amber-100 text-amber-800">
+              <span class="material-symbols-outlined text-[18px]">shield</span>
+            </span>
+          </div>
+          <p class="mt-3 font-display text-3xl font-bold text-forest-dark">2 <span class="text-xs font-sans font-medium text-muted">Strategi</span></p>
+          <p class="mt-1 text-[11px] text-muted">ST1 (Kupon Loyalitas) &amp; ST12 (Katalog Pre-Order)</p>
+        </article>
+
+        <!-- WT Group -->
+        <article class="rounded-2xl border-l-4 border-l-rose-600 border border-line bg-white p-5 shadow-card transition hover:shadow-md cursor-pointer tows-group-card" data-filter-group="WT">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-rose-800">Weaknesses – Threats (WT)</span>
+            <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-rose-100 text-rose-800">
+              <span class="material-symbols-outlined text-[18px]">security_update_warning</span>
+            </span>
+          </div>
+          <p class="mt-3 font-display text-3xl font-bold text-forest-dark">1 <span class="text-xs font-sans font-medium text-muted">Strategi</span></p>
+          <p class="mt-1 text-[11px] text-muted">WT1 · Mitigasi Keterlambatan Pesanan Rush Hour</p>
+        </article>
+      </section>
+
+      <!-- Visualisasi Alur Hubungan Strategi TOWS (Flowchart / Connected Cards) -->
+      <div class="mb-6 rounded-2xl border border-line bg-white p-6 shadow-card">
+        <div class="mb-4 flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
+          <div>
+            <h2 class="font-display text-lg font-bold text-forest-dark">Visualisasi Alur Strategis TUUMIS Nusantara</h2>
+            <p class="text-xs text-muted">Alur keterhubungan: Strategi TOWS &rarr; Fitur CRM &rarr; Halaman Website &rarr; Tujuan CRM</p>
+          </div>
+          <span class="rounded-full bg-sage px-3 py-1 text-[10px] font-bold text-forest-dark border border-line">Arsitektur Terpadu</span>
+        </div>
+
+        <div class="grid grid-cols-1 gap-4 lg:grid-cols-4">
+          <!-- Tahap 1 -->
+          <div class="rounded-xl border border-emerald-200 bg-emerald-50/50 p-4">
+            <div class="flex items-center gap-2 text-xs font-bold text-emerald-800">
+              <span class="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-600 text-[11px] text-white">1</span>
+              <span>Strategi TOWS</span>
+            </div>
+            <p class="mt-2 text-[11px] text-muted">Rumusan SO1, WO1, ST1, WT1, ST12 berdasarkan analisis kekuatan, kelemahan, peluang, &amp; ancaman.</p>
+          </div>
+
+          <!-- Tahap 2 -->
+          <div class="rounded-xl border border-blue-200 bg-blue-50/50 p-4">
+            <div class="flex items-center gap-2 text-xs font-bold text-blue-800">
+              <span class="flex h-6 w-6 items-center justify-center rounded-full bg-blue-600 text-[11px] text-white">2</span>
+              <span>Fitur CRM</span>
+            </div>
+            <p class="mt-2 text-[11px] text-muted">Modul Data Pelanggan, Ticketing SLA, Katalog Pre-Order, UGC &amp; Bio Link, serta Kupon Diskon.</p>
+          </div>
+
+          <!-- Tahap 3 -->
+          <div class="rounded-xl border border-amber-200 bg-amber-50/50 p-4">
+            <div class="flex items-center gap-2 text-xs font-bold text-amber-800">
+              <span class="flex h-6 w-6 items-center justify-center rounded-full bg-amber-600 text-[11px] text-white">3</span>
+              <span>Halaman Website</span>
+            </div>
+            <p class="mt-2 text-[11px] text-muted">Antarmuka aplikasi CRM TUUMIS yang saling terintegrasi langsung via navigasi sidebar.</p>
+          </div>
+
+          <!-- Tahap 4 -->
+          <div class="rounded-xl border border-forest/30 bg-forest/5 p-4">
+            <div class="flex items-center gap-2 text-xs font-bold text-forest-dark">
+              <span class="flex h-6 w-6 items-center justify-center rounded-full bg-forest text-[11px] text-white">4</span>
+              <span>Tujuan CRM</span>
+            </div>
+            <p class="mt-2 text-[11px] text-muted">Retensi pelanggan loyal, kepuasan SLA layanan, kecepatan respons, dan keunggulan kompetitif.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Toolbar Filter & Pencarian Peta Strategi -->
+      <div class="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-line bg-white p-4 shadow-card">
+        <div class="flex flex-wrap items-center gap-2.5">
+          <span class="text-xs font-bold text-ink">Filter Strategi:</span>
+          <select id="tows-filter-category" aria-label="Filter Kategori TOWS" class="h-9 rounded-xl border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest cursor-pointer">
+            <option value="all">Semua Kategori (SO, WO, ST, WT)</option>
+            <option value="SO">SO (Strengths – Opportunities)</option>
+            <option value="WO">WO (Weaknesses – Opportunities)</option>
+            <option value="ST">ST (Strengths – Threats)</option>
+            <option value="WT">WT (Weaknesses – Threats)</option>
+          </select>
+          <select id="tows-filter-phase" aria-label="Filter Tahap Worksheet" class="h-9 rounded-xl border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest cursor-pointer">
+            <option value="all">Semua Tahap (P11 &amp; P12)</option>
+            <option value="P11">Tahap P11</option>
+            <option value="P12">Tahap P12</option>
+          </select>
+          <button id="tows-btn-reset-filters" type="button" class="inline-flex h-9 items-center gap-1 rounded-xl border border-line bg-white px-2.5 text-xs font-medium text-muted transition hover:bg-cream hover:text-ink">
+            <span class="material-symbols-outlined text-[15px]">refresh</span>Reset
+          </button>
+        </div>
+        <span id="tows-count-badge" class="rounded-full bg-sage px-3 py-1 text-[11px] font-semibold text-forest-dark">6 pemetaan strategi</span>
+      </div>
+
+      <!-- Tabel Pemetaan Strategi ke Fitur CRM -->
+      <div class="overflow-hidden rounded-2xl border border-line bg-white shadow-card mb-6">
+        <div class="flex flex-wrap items-center justify-between gap-3 border-b border-line px-5 py-4">
+          <div>
+            <h2 class="font-display text-lg font-bold text-forest-dark">Tabel Pemetaan Strategi Bisnis ke Fitur CRM</h2>
+            <p class="text-xs text-muted">Klik pada baris strategi untuk melihat substansi lengkap atau tombol aksi untuk menuju halaman modul terkait.</p>
+          </div>
+          <span class="rounded-full bg-gold/20 px-3 py-1 text-[10px] font-bold text-amber-900">Worksheet P11 &amp; P12</span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="min-w-[920px] w-full border-collapse text-left text-xs">
+            <thead class="bg-cream/70 text-[10px] uppercase tracking-wider text-muted">
+              <tr>
+                <th class="px-5 py-3.5 font-bold">Kode Strategi</th>
+                <th class="px-5 py-3.5 font-bold">Fitur CRM</th>
+                <th class="px-5 py-3.5 font-bold">Halaman Terkait</th>
+                <th class="px-3 py-3.5 font-bold text-center">Tahap</th>
+                <th class="px-4 py-3.5 font-bold">Status Implementasi</th>
+                <th class="px-5 py-3.5 text-right font-bold">Navigasi Halaman</th>
+              </tr>
+            </thead>
+            <tbody id="tows-table-rows" class="divide-y divide-line/70"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Daftar Detail Substansi Strategi Worksheet (Card List) -->
+      <div class="rounded-2xl border border-line bg-white p-6 shadow-card">
+        <h2 class="mb-4 font-display text-lg font-bold text-forest-dark">Deskripsi &amp; Substansi Resmi Strategi TUUMIS (Worksheet)</h2>
+        <div id="tows-cards-container" class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"></div>
+      </div>
+    </section>
+
+    <!-- Modal Detail Strategi TOWS -->
+    <div id="modal-tows-detail" class="fixed inset-0 z-50 hidden items-center justify-center p-4 modal-backdrop" aria-modal="true" role="dialog">
+      <div class="relative w-full max-w-lg rounded-2xl border border-line bg-white shadow-2xl overflow-hidden animate-[rise-in_0.25s_ease-out]">
+        <div class="flex items-center justify-between border-b border-line bg-forest-dark px-5 py-4 text-white">
+          <div class="flex items-center gap-2.5">
+            <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-forest text-gold">
+              <span class="material-symbols-outlined text-[18px]">account_tree</span>
+            </span>
+            <div>
+              <h3 id="modal-tows-code" class="font-display text-lg font-bold leading-none tracking-wide text-white">SO1</h3>
+              <span id="modal-tows-type" class="mt-0.5 inline-block text-[11px] font-medium text-white/70">Strengths – Opportunities</span>
+            </div>
+          </div>
+          <button id="btn-close-modal-tows" type="button" class="rounded-lg p-1.5 text-white/70 hover:bg-white/10 hover:text-white" aria-label="Tutup modal">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+        </div>
+
+        <div class="p-5 space-y-4 text-xs">
+          <div>
+            <span class="block text-[10px] font-bold uppercase tracking-wider text-muted">Substansi Strategi Worksheet:</span>
+            <p id="modal-tows-substance" class="mt-1 leading-relaxed text-ink bg-cream/40 p-3.5 rounded-xl border border-line/70 font-medium"></p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div class="rounded-xl border border-line p-3">
+              <span class="block text-[10px] font-bold uppercase tracking-wider text-muted">Fitur CRM Terhubung:</span>
+              <p id="modal-tows-feature" class="mt-1 font-semibold text-forest-dark"></p>
+            </div>
+            <div class="rounded-xl border border-line p-3">
+              <span class="block text-[10px] font-bold uppercase tracking-wider text-muted">Halaman Website:</span>
+              <p id="modal-tows-page" class="mt-1 font-semibold text-ink"></p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div class="rounded-xl border border-line p-3">
+              <span class="block text-[10px] font-bold uppercase tracking-wider text-muted">Tahap Worksheet:</span>
+              <span id="modal-tows-phase" class="mt-1 inline-block rounded-full bg-sage px-2 py-0.5 font-bold text-forest-dark"></span>
+            </div>
+            <div class="rounded-xl border border-line p-3">
+              <span class="block text-[10px] font-bold uppercase tracking-wider text-muted">Status Implementasi:</span>
+              <span id="modal-tows-status" class="mt-1 inline-block rounded-full px-2 py-0.5 font-bold"></span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between border-t border-line pt-3">
+            <button id="btn-close-modal-tows-action" type="button" class="rounded-xl border border-line bg-white px-4 py-2 font-semibold text-muted hover:bg-cream hover:text-ink">Tutup</button>
+            <button id="btn-tows-navigate-view" type="button" class="inline-flex items-center gap-1.5 rounded-xl bg-forest px-4 py-2 font-semibold text-white transition hover:bg-forest-dark">
+              Buka Halaman Fitur <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <footer class="py-6 text-center text-[10px] text-stone-400">TUUMIS Nusantara · Sistem CRM &amp; Analitik Penjualan · Yogyakarta</footer>
   </div>

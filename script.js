@@ -2602,6 +2602,468 @@ const SALES_DATA = [
   }
 ];
 
+/* ==================== DATA DEFAULT CRM TUUMIS (KATALOG, UGC, TOWS) ==================== */
+const DEFAULT_MENUS = [
+  {
+    "id": "MNU-001",
+    "name": "Nasi Goreng Kampung",
+    "category": "Main Course",
+    "price": 20000,
+    "desc": "Menu lezat khas TUUMIS kategori Menu Nasi Goreng Signature dengan bumbu gurih beraroma wok-hei.",
+    "status": "Tersedia",
+    "img": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/a30df990-5988-4d3b-a7bf-81919e91b0b9_Go-Biz_20261014_200957.jpeg",
+    "gofoodSection": "Menu Nasi Goreng Signature",
+    "isGoFoodReal": true
+  },
+  {
+    "id": "MNU-002",
+    "name": "Nasi Goreng Kecombrang",
+    "category": "Main Course",
+    "price": 32000,
+    "desc": "Menu lezat khas TUUMIS kategori Menu Nasi Goreng Signature dengan bumbu gurih beraroma wok-hei.",
+    "status": "Tersedia",
+    "img": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/262ab98e-b422-4f3f-916c-ff8e6168921f_Go-Biz_20261014_201035.jpeg",
+    "gofoodSection": "Menu Nasi Goreng Signature",
+    "isGoFoodReal": true
+  },
+  {
+    "id": "MNU-003",
+    "name": "Nasi Goreng Gulai Sapi",
+    "category": "Main Course",
+    "price": 54000,
+    "desc": "Menu lezat khas TUUMIS kategori Aneka Nasi Goreng Sapi dengan bumbu gurih beraroma wok-hei.",
+    "status": "Tersedia",
+    "img": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/fbae50df-e1ea-4bb8-8bc0-ac55ccbab8ea_Go-Biz_20261014_204330.jpeg",
+    "gofoodSection": "Aneka Nasi Goreng Sapi",
+    "isGoFoodReal": true
+  },
+  {
+    "id": "MNU-004",
+    "name": "Nasi Goreng Rawon Sapi",
+    "category": "Main Course",
+    "price": 54000,
+    "desc": "Menu lezat khas TUUMIS kategori Aneka Nasi Goreng Sapi dengan bumbu gurih beraroma wok-hei.",
+    "status": "Tersedia",
+    "img": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/05d9bedd-9973-4a9d-bfb1-bd4adda11331_Go-Biz_20261014_204402.jpeg",
+    "gofoodSection": "Aneka Nasi Goreng Sapi",
+    "isGoFoodReal": true
+  },
+  {
+    "id": "MNU-005",
+    "name": "Nasi Goreng Ayam Asam Manis",
+    "category": "Main Course",
+    "price": 46000,
+    "desc": "Menu lezat khas TUUMIS kategori Aneka Nasi Goreng Ayam dengan bumbu gurih beraroma wok-hei.",
+    "status": "Tersedia",
+    "img": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/b3b89223-b1ca-406d-bd46-28f66bd9a438_Go-Biz_20261014_202453.jpeg",
+    "gofoodSection": "Aneka Nasi Goreng Ayam",
+    "isGoFoodReal": true
+  },
+  {
+    "id": "MNU-006",
+    "name": "Nasi Goreng Ayam Blackpapper",
+    "category": "Main Course",
+    "price": 46000,
+    "desc": "Menu lezat khas TUUMIS kategori Aneka Nasi Goreng Ayam dengan bumbu gurih beraroma wok-hei.",
+    "status": "Tersedia",
+    "img": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/4e138233-29f5-4aab-aa0b-9b155ddd575e_Go-Biz_20261014_202601.jpeg",
+    "gofoodSection": "Aneka Nasi Goreng Ayam",
+    "isGoFoodReal": true
+  },
+  {
+    "id": "MNU-007",
+    "name": "Nasi Goreng Seafood Asam Manis",
+    "category": "Main Course",
+    "price": 50000,
+    "desc": "Menu lezat khas TUUMIS kategori Aneka Nasi Goreng Seafood dengan bumbu gurih beraroma wok-hei.",
+    "status": "Tersedia",
+    "img": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/2302b517-2c82-43f1-a394-92844382c4ac_Go-Biz_20261014_203049.jpeg",
+    "gofoodSection": "Aneka Nasi Goreng Seafood",
+    "isGoFoodReal": true
+  },
+  {
+    "id": "MNU-008",
+    "name": "Nasi Goreng Seafood Blackpapper",
+    "category": "Main Course",
+    "price": 50000,
+    "desc": "Menu lezat khas TUUMIS kategori Aneka Nasi Goreng Seafood dengan bumbu gurih beraroma wok-hei.",
+    "status": "Tersedia",
+    "img": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/c7fda6ef-8b5f-402d-b597-eb9a7503dd4a_Go-Biz_20261014_203134.jpeg",
+    "gofoodSection": "Aneka Nasi Goreng Seafood",
+    "isGoFoodReal": true
+  },
+  {
+    "id": "MNU-009",
+    "name": "Mie Goreng Ayam",
+    "category": "Noodles",
+    "price": 40000,
+    "desc": "Menu lezat khas TUUMIS kategori Mie Goreng dengan bumbu gurih beraroma wok-hei.",
+    "status": "Tersedia",
+    "img": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/77110256-8cf1-4d3a-aaa8-862b6ad7417b_Go-Biz_20261014_212542.jpeg",
+    "gofoodSection": "Mie Goreng",
+    "isGoFoodReal": true
+  },
+  {
+    "id": "MNU-010",
+    "name": "Mie Goreng Oriental",
+    "category": "Noodles",
+    "price": 52000,
+    "desc": "Menu lezat khas TUUMIS kategori Mie Goreng dengan bumbu gurih beraroma wok-hei.",
+    "status": "Tersedia",
+    "img": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/bbc8616f-75ab-4bd1-8d24-90664b70731d_Go-Food-Merchant_20261014_234501.jpeg",
+    "gofoodSection": "Mie Goreng",
+    "isGoFoodReal": true
+  },
+  {
+    "id": "MNU-011",
+    "name": "Kwetiau Goreng Ayam",
+    "category": "Noodles",
+    "price": 40000,
+    "desc": "Menu lezat khas TUUMIS kategori Kwetiau Goreng dengan bumbu gurih beraroma wok-hei.",
+    "status": "Tersedia",
+    "img": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/12e2887b-be70-4468-a64a-99dcae5fe736_Go-Biz_20261014_212740.jpeg",
+    "gofoodSection": "Kwetiau Goreng",
+    "isGoFoodReal": true
+  },
+  {
+    "id": "MNU-012",
+    "name": "Kwetiau Goreng Oriental",
+    "category": "Noodles",
+    "price": 48000,
+    "desc": "Menu lezat khas TUUMIS kategori Kwetiau Goreng dengan bumbu gurih beraroma wok-hei.",
+    "status": "Tersedia",
+    "img": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/e5d589e1-59b3-445f-84e6-2e14b52c8c0b_Go-Biz_20261014_213006.jpeg",
+    "gofoodSection": "Kwetiau Goreng",
+    "isGoFoodReal": true
+  },
+  {
+    "id": "MNU-013",
+    "name": "Kwetiau Siram Ayam",
+    "category": "Noodles",
+    "price": 42000,
+    "desc": "Menu lezat khas TUUMIS kategori Kwetiau Siram dengan bumbu gurih beraroma wok-hei.",
+    "status": "Tersedia",
+    "img": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/c747899a-33ad-400e-b754-6bc6c62429fd_Go-Biz_20261014_213102.jpeg",
+    "gofoodSection": "Kwetiau Siram",
+    "isGoFoodReal": true
+  },
+  {
+    "id": "MNU-014",
+    "name": "Kwetiau Siram Sapi",
+    "category": "Noodles",
+    "price": 48000,
+    "desc": "Kwetiau Siram Daging Sapi",
+    "status": "Tersedia",
+    "img": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/aea2183e-6665-4954-b0d4-1c3b67653fd3_Go-Biz_20261014_213155.jpeg",
+    "gofoodSection": "Kwetiau Siram",
+    "isGoFoodReal": true
+  },
+  {
+    "id": "MNU-015",
+    "name": "Ayam Asam Manis",
+    "category": "Main Course",
+    "price": 52000,
+    "desc": "Menu lezat khas TUUMIS kategori Tumis Ayam dengan bumbu gurih beraroma wok-hei.",
+    "status": "Tersedia",
+    "img": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/1b437cb8-c9de-4825-9f51-37edd3876fc4_Go-Biz_20261014_210247.jpeg",
+    "gofoodSection": "Tumis Ayam",
+    "isGoFoodReal": true
+  },
+  {
+    "id": "MNU-016",
+    "name": "Ayam Bawang Putih",
+    "category": "Main Course",
+    "price": 46000,
+    "desc": "Menu lezat khas TUUMIS kategori Tumis Ayam dengan bumbu gurih beraroma wok-hei.",
+    "status": "Tersedia",
+    "img": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/9a54104c-71fc-4e84-a1c6-842e9bf9ce63_Go-Biz_20261014_210322.jpeg",
+    "gofoodSection": "Tumis Ayam",
+    "isGoFoodReal": true
+  },
+  {
+    "id": "MNU-017",
+    "name": "Cumi Asam Manis",
+    "category": "Main Course",
+    "price": 60000,
+    "desc": "Menu lezat khas TUUMIS kategori Tumis Seafood dengan bumbu gurih beraroma wok-hei.",
+    "status": "Tersedia",
+    "img": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/64b8931d-8f21-4f11-a3fc-b8aba44a34f3_Go-Biz_20261014_211426.jpeg",
+    "gofoodSection": "Tumis Seafood",
+    "isGoFoodReal": true
+  },
+  {
+    "id": "MNU-018",
+    "name": "Cumi Bawang Putih",
+    "category": "Main Course",
+    "price": 54000,
+    "desc": "Menu lezat khas TUUMIS kategori Tumis Seafood dengan bumbu gurih beraroma wok-hei.",
+    "status": "Tersedia",
+    "img": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/0f368f55-c647-4872-8555-ee6f2e175a56_Go-Biz_20261014_211039.jpeg",
+    "gofoodSection": "Tumis Seafood",
+    "isGoFoodReal": true
+  },
+  {
+    "id": "MNU-019",
+    "name": "Cah Kangkung",
+    "category": "Main Course",
+    "price": 22000,
+    "desc": "Menu lezat khas TUUMIS kategori Tumis Sayur dengan bumbu gurih beraroma wok-hei.",
+    "status": "Tidak Tersedia",
+    "img": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/c71bf653-9693-4ad8-a7d9-7185a805a2e2_Go-Biz_20261014_205649.jpeg",
+    "gofoodSection": "Tumis Sayur",
+    "isGoFoodReal": true
+  },
+  {
+    "id": "MNU-020",
+    "name": "Cah Tauge",
+    "category": "Main Course",
+    "price": 22000,
+    "desc": "Menu lezat khas TUUMIS kategori Tumis Sayur dengan bumbu gurih beraroma wok-hei.",
+    "status": "Tersedia",
+    "img": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/65926d94-01b6-4f2f-aa48-bb055d177f0c_Go-Biz_20261014_205614.jpeg",
+    "gofoodSection": "Tumis Sayur",
+    "isGoFoodReal": true
+  },
+  {
+    "id": "MNU-021",
+    "name": "Bakpau Ayam Panggang",
+    "category": "Snacks",
+    "price": 32000,
+    "desc": "Menu lezat khas TUUMIS kategori Snack dengan bumbu gurih beraroma wok-hei.",
+    "status": "Tersedia",
+    "img": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/b2659a57-12fa-4a7b-aeef-8d6579e4b168_Go-Biz_20261014_214015.jpeg",
+    "gofoodSection": "Snack",
+    "isGoFoodReal": true
+  },
+  {
+    "id": "MNU-022",
+    "name": "Bakpau Telur Asin",
+    "category": "Snacks",
+    "price": 32000,
+    "desc": "Menu lezat khas TUUMIS kategori Snack dengan bumbu gurih beraroma wok-hei.",
+    "status": "Tidak Tersedia",
+    "img": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/8a067190-5597-4a9f-8185-373d48aed5b9_Go-Biz_20261014_214028.jpeg",
+    "gofoodSection": "Snack",
+    "isGoFoodReal": true
+  },
+  {
+    "id": "MNU-023",
+    "name": "Air Mineral 600ml",
+    "category": "Beverages",
+    "price": 9000,
+    "desc": "Menu lezat khas TUUMIS kategori Minuman dengan bumbu gurih beraroma wok-hei.",
+    "status": "Tersedia",
+    "img": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/5b33037f-84d1-4299-9aaf-3db30c199012_Go-Biz_20261014_214100.jpeg",
+    "gofoodSection": "Minuman",
+    "isGoFoodReal": true
+  },
+  {
+    "id": "MNU-024",
+    "name": "Coklat",
+    "category": "Beverages",
+    "price": 17000,
+    "desc": "Menu lezat khas TUUMIS kategori Minuman dengan bumbu gurih beraroma wok-hei.",
+    "status": "Tersedia",
+    "img": "https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/a5e1964e-1b34-4de2-8b33-aafbed6e5ea0_Go-Biz_20261014_214244.jpeg",
+    "gofoodSection": "Minuman",
+    "isGoFoodReal": true
+  }
+];
+
+const DEFAULT_PREORDERS = [
+  {
+    id: 'PO-101',
+    customer: 'Nadia Putri Maharani',
+    menu: 'Nasi Goreng Wok-hei Nusantara',
+    quantity: 3,
+    schedule: 'Hari Ini, 12:30 WIB',
+    notes: 'Pedas sedang, sambal dipisah, takeaway',
+    status: 'Dikonfirmasi',
+    createdAt: '2026-11-20 10:15'
+  },
+  {
+    id: 'PO-102',
+    customer: 'Dimas Arya Pratama',
+    menu: 'Rice Bowl Ayam Sambal Matah Bali',
+    quantity: 2,
+    schedule: 'Hari Ini, 13:00 WIB',
+    notes: 'Tanpa timun, extra bawang goreng',
+    status: 'Menunggu Konfirmasi',
+    createdAt: '2026-11-20 11:00'
+  },
+  {
+    id: 'PO-103',
+    customer: 'Salsabila Khairunnisa',
+    menu: 'Mie Goreng Jawa Bumbu Medok',
+    quantity: 4,
+    schedule: 'Kemarin, 17:30 WIB',
+    notes: 'Paket makan malam kantor, porsi jumbo',
+    status: 'Selesai',
+    createdAt: '2026-11-19 15:40'
+  }
+];
+
+const DEFAULT_CAMPAIGN = {
+  title: 'Tuumis Kuliner Experience Challenge',
+  desc: 'Mendorong mahasiswa dan pelanggan membuat ulasan di Instagram/TikTok serta membagikan pengalaman menikmati aroma wok-hei TUUMIS dengan reward voucher promo diskon.',
+  hashtag: '#TuumisExperience',
+  period: '1 Nov – 30 Des 2026',
+  instructions: '1. Foto/video hidangan TUUMIS > 2. Upload IG Story/Reels > 3. Tag @tuumis.id & gunakan #TuumisExperience > 4. Tunjukkan bukti ke kasir untuk klaim reward voucher diskon!',
+  active: true
+};
+
+const DEFAULT_UGC = [
+  {
+    id: 'UGC-01',
+    creator: '@nadia_kulineran',
+    platform: 'Instagram',
+    url: 'https://instagram.com/p/DB81920xyz',
+    caption: 'Sensasi aroma wok-hei di Nasi Goreng TUUMIS beneran nagih! Pas banget buat makan siang sehabis kelas praktikum #TuumisExperience',
+    date: '2026-11-18',
+    status: 'Disetujui',
+    verifiedBy: 'Admin Sosmed'
+  },
+  {
+    id: 'UGC-02',
+    creator: '@dimas_foodvlog',
+    platform: 'TikTok',
+    url: 'https://tiktok.com/@dimas_foodvlog/video/7192837492',
+    caption: 'Rice Bowl Sambal Matah TUUMIS pedesnya seger nampol, ayamnya renyah gurih pol! Wajib cobain gaes #TuumisExperience #KulinerJogja',
+    date: '2026-11-19',
+    status: 'Disetujui',
+    verifiedBy: 'Admin Sosmed'
+  },
+  {
+    id: 'UGC-03',
+    creator: '@salsabila_k',
+    platform: 'Instagram',
+    url: 'https://instagram.com/stories/salsabila_k/109283',
+    caption: 'Makan siang bareng temen sekelas di TUUMIS. Porsinya bikin kenyang dan harganya ramah dompet mahasiswa #TuumisExperience',
+    date: '2026-11-20',
+    status: 'Menunggu',
+    verifiedBy: '-'
+  },
+  {
+    id: 'UGC-04',
+    creator: '@foodie_yogyakarta',
+    platform: 'Instagram',
+    url: 'https://instagram.com/p/DB_9921abc',
+    caption: 'Menu Kwetiau Seafood mantap banget buat makan malam! @tuumis.id #TuumisExperience',
+    date: '2026-11-20',
+    status: 'Menunggu',
+    verifiedBy: '-'
+  }
+];
+
+const TOWS_STRATEGIES = [
+  {
+    code: 'SO1',
+    type: 'SO',
+    typeName: 'Strengths – Opportunities (SO)',
+    substance: 'Mendorong mahasiswa membuat ulasan di Instagram melalui kampanye UGC dan menyediakan link pendaftaran member pada bio Instagram.',
+    feature: 'Data Pelanggan / Pendaftaran Member & Kampanye UGC',
+    pageName: 'Data Pelanggan / Kampanye UGC & Bio Link',
+    targetView: 'ugc-campaign',
+    phase: 'P11 / P12',
+    defaultStatus: 'Selesai'
+  },
+  {
+    code: 'WO1',
+    type: 'WO',
+    typeName: 'Weaknesses – Opportunities (WO)',
+    substance: 'Menciptakan layanan komplain yang terstruktur dan gratis menggunakan Google Sheets untuk mencatat keluhan pelanggan.',
+    feature: 'Sistem Ticketing Keluhan & Monitoring SLA',
+    pageName: 'Ticketing Keluhan & Dashboard SLA',
+    targetView: 'tickets',
+    phase: 'P11',
+    defaultStatus: 'Selesai'
+  },
+  {
+    code: 'ST1',
+    type: 'ST',
+    typeName: 'Strengths – Threats (ST)',
+    substance: 'Membuat menu paket promosi dan program diskon atau loyalitas sederhana untuk menyaingi interaksi kompetitor.',
+    feature: 'Program Diskon / Kupon Member',
+    pageName: 'Kupon Member',
+    targetView: 'coupons',
+    phase: 'P12',
+    defaultStatus: 'Selesai'
+  },
+  {
+    code: 'WT1',
+    type: 'WT',
+    typeName: 'Weaknesses – Threats (WT)',
+    substance: 'Menangani keluhan keterlambatan pesanan dengan cepat sebelum berkembang menjadi ulasan negatif di platform online.',
+    feature: 'Ticketing Keluhan & Dashboard SLA',
+    pageName: 'Dashboard CRM / Monitoring SLA / Ticketing',
+    targetView: 'crm-dashboard',
+    phase: 'P11',
+    defaultStatus: 'Selesai'
+  },
+  {
+    code: 'ST12',
+    type: 'ST',
+    typeName: 'Strengths – Threats (ST)',
+    substance: 'Memanfaatkan katalog visual untuk pre-order agar pelanggan tidak berpindah ke pesaing karena antrean panjang.',
+    feature: 'Katalog Pre-Order & Template WhatsApp',
+    pageName: 'Katalog Menu & Pre-Order / Template WhatsApp',
+    targetView: 'menu-catalog',
+    phase: 'P11',
+    defaultStatus: 'Selesai'
+  }
+];
+
+const TOWS_MAPPINGS = [
+  {
+    code: 'SO1',
+    feature: 'Data Pelanggan / Pendaftaran Member',
+    page: 'Data Pelanggan',
+    targetView: 'customers',
+    phase: 'P11',
+    status: 'Selesai'
+  },
+  {
+    code: 'SO1',
+    feature: 'Kampanye UGC & Integrasi Bio Link',
+    page: 'Kampanye UGC & Bio Link',
+    targetView: 'ugc-campaign',
+    phase: 'P12',
+    status: 'Selesai'
+  },
+  {
+    code: 'WO1, WT1',
+    feature: 'Sistem Ticketing Keluhan',
+    page: 'Ticketing Keluhan',
+    targetView: 'tickets',
+    phase: 'P11',
+    status: 'Selesai'
+  },
+  {
+    code: 'WO1, WT1',
+    feature: 'Dashboard SLA Keluhan',
+    page: 'Dashboard CRM / Monitoring SLA',
+    targetView: 'crm-dashboard',
+    phase: 'P11',
+    status: 'Selesai'
+  },
+  {
+    code: 'WO1, ST12, WT1',
+    feature: 'Katalog Pre-Order & Template WhatsApp',
+    page: 'Katalog Menu & Pre-Order / Template WhatsApp',
+    targetView: 'menu-catalog',
+    phase: 'P11',
+    status: 'Selesai'
+  },
+  {
+    code: 'ST1',
+    feature: 'Program Diskon / Kupon Member',
+    page: 'Kupon Member',
+    targetView: 'coupons',
+    phase: 'P12',
+    status: 'Selesai'
+  }
+];
+
 /* ==================== DATA DEFAULT CRM TUUMIS ==================== */
 const DEFAULT_CUSTOMERS = [
   { id: 'CUST-001', name: 'Nadia Putri Maharani', wa: '6281234567801', email: 'nadia.putri@mhs.ac.id', joined: '2026-09-12', segment: 'Mahasiswa', status: 'Member Loyal', orders: 14, lastOrder: '2026-10-31' },
@@ -2955,7 +3417,12 @@ const STORAGE_KEYS = {
   customers: 'tuumis_crm_customers_v1',
   tickets: 'tuumis_crm_tickets_v1',
   coupons: 'tuumis_crm_coupons_v1',
-  activities: 'tuumis_crm_activities_v1'
+  activities: 'tuumis_crm_activities_v1',
+  menus: 'tuumis_crm_menus_v1',
+  preorders: 'tuumis_crm_preorders_v1',
+  ugc: 'tuumis_crm_ugc_v1',
+  campaign: 'tuumis_crm_campaign_v1',
+  towsStatus: 'tuumis_crm_tows_status_v1'
 };
 
 function normalizeTicket(t, index) {
@@ -2991,6 +3458,18 @@ let crmCustomers = loadState(STORAGE_KEYS.customers, DEFAULT_CUSTOMERS);
 let crmTickets = loadState(STORAGE_KEYS.tickets, DEFAULT_TICKETS).map((t, idx) => normalizeTicket(t, idx));
 let crmCoupons = loadState(STORAGE_KEYS.coupons, DEFAULT_COUPONS);
 let crmActivities = loadState(STORAGE_KEYS.activities, DEFAULT_ACTIVITIES);
+let crmMenus = loadState(STORAGE_KEYS.menus, DEFAULT_MENUS);
+let crmPreorders = loadState(STORAGE_KEYS.preorders, DEFAULT_PREORDERS);
+let crmUgc = loadState(STORAGE_KEYS.ugc, DEFAULT_UGC);
+let crmCampaign = loadState(STORAGE_KEYS.campaign, DEFAULT_CAMPAIGN);
+let crmTowsStatus = loadState(STORAGE_KEYS.towsStatus, {
+  'SO1_P11': 'Selesai',
+  'SO1_P12': 'Selesai',
+  'WO1_WT1_Ticket': 'Selesai',
+  'WO1_WT1_SLA': 'Selesai',
+  'WO1_ST12_WT1_Catalog': 'Selesai',
+  'ST1_Coupon': 'Selesai'
+});
 let selectedWaTemplate = WA_TEMPLATES[0];
 
 function logActivity(type, title, desc, icon = 'info', color = 'forest') {
@@ -3058,7 +3537,10 @@ const VIEW_TITLES = {
   customers: 'Data & Profil Pelanggan',
   tickets: 'Ticketing Keluhan & Monitoring SLA',
   whatsapp: 'Template WhatsApp Business',
-  coupons: 'Program Diskon & Kupon Member'
+  coupons: 'Program Diskon & Kupon Member',
+  'menu-catalog': 'Katalog Menu & Pre-Order (ST12)',
+  'ugc-campaign': 'Kampanye UGC & Bio Link (SO1)',
+  'tows-strategy': 'Peta Strategi TOWS CRM'
 };
 
 function switchView(viewName, clickedEl) {
@@ -3441,7 +3923,7 @@ function updateWaPreview() {
   const phone = (byId('wa-target-phone').value || '').replace(/\D/g, '');
   const composed = selectedWaTemplate.text.replace(/\{NAMA\}/g, name);
   byId('wa-preview-box').value = composed;
-  byId('btn-open-wa').href = `[https://wa.me/$](https://wa.me/$){phone}?text=${encodeURIComponent(composed)}`;
+  byId('btn-open-wa').href = `https://wa.me/${phone}?text=${encodeURIComponent(composed)}`;
 }
 
 /* ==================== MODUL 5: PROGRAM KUPON MEMBER ==================== */
@@ -4311,15 +4793,36 @@ function setupCrmForms() {
     crmTickets = structuredClone(DEFAULT_TICKETS).map((t, idx) => normalizeTicket(t, idx));
     crmCoupons = structuredClone(DEFAULT_COUPONS);
     crmActivities = structuredClone(DEFAULT_ACTIVITIES);
+    crmMenus = structuredClone(DEFAULT_MENUS);
+    crmPreorders = structuredClone(DEFAULT_PREORDERS);
+    crmUgc = structuredClone(DEFAULT_UGC);
+    crmCampaign = structuredClone(DEFAULT_CAMPAIGN);
+    crmTowsStatus = {
+      'SO1_P11': 'Selesai',
+      'SO1_P12': 'Selesai',
+      'WO1_WT1_Ticket': 'Selesai',
+      'WO1_WT1_SLA': 'Selesai',
+      'WO1_ST12_WT1_Catalog': 'Selesai',
+      'ST1_Coupon': 'Selesai'
+    };
     saveState(STORAGE_KEYS.customers, crmCustomers);
     saveState(STORAGE_KEYS.tickets, crmTickets);
     saveState(STORAGE_KEYS.coupons, crmCoupons);
     saveState(STORAGE_KEYS.activities, crmActivities);
+    saveState(STORAGE_KEYS.menus, crmMenus);
+    saveState(STORAGE_KEYS.preorders, crmPreorders);
+    saveState(STORAGE_KEYS.ugc, crmUgc);
+    saveState(STORAGE_KEYS.campaign, crmCampaign);
+    saveState(STORAGE_KEYS.towsStatus, crmTowsStatus);
     renderCustomers();
     renderTickets();
     renderCoupons();
+    renderCatalogMenu();
+    renderPreorders();
+    renderUgcCampaign();
+    renderTowsStrategy();
     if (typeof renderCrmDashboard === 'function') renderCrmDashboard();
-    showToast('Data simulasi CRM dikembalikan ke awal');
+    showToast('Seluruh data simulasi CRM TUUMIS dikembalikan ke awal');
   });
 }
 
@@ -4345,6 +4848,17 @@ function initializeDashboard() {
   updateWaPreview();
   renderCoupons();
 
+  // Inisialisasi 3 Halaman Baru
+  setupMenuCatalogEvents();
+  renderCatalogMenu();
+  renderPreorders();
+
+  setupUgcEvents();
+  renderUgcCampaign();
+
+  setupTowsEvents();
+  renderTowsStrategy();
+
   ['filter-category', 'filter-customer', 'filter-channel'].forEach((id) => byId(id).addEventListener('change', updateDashboard));
   byId('search-input').addEventListener('input', (event) => syncSearch(event.currentTarget));
   byId('search-input-mobile').addEventListener('input', (event) => syncSearch(event.currentTarget));
@@ -4359,9 +4873,975 @@ function initializeDashboard() {
 
   // Dukungan buka langsung via URL hash (cth: index.html#crm-dashboard)
   const initialHash = window.location.hash.replace('#', '');
-  if (['crm-dashboard', 'customers', 'tickets', 'whatsapp', 'coupons'].includes(initialHash)) {
+  if (['crm-dashboard', 'customers', 'tickets', 'whatsapp', 'coupons', 'menu-catalog', 'ugc-campaign', 'tows-strategy'].includes(initialHash)) {
     switchView(initialHash);
+  } else if (initialHash === 'bio-link') {
+    switchView('ugc-campaign');
+    setTimeout(() => openBioMemberModal(), 200);
   }
 }
 
 document.addEventListener('DOMContentLoaded', initializeDashboard);
+
+/* ==================== MODUL 6: KATALOG MENU & PRE-ORDER (ST12) ==================== */
+function getMenuPlaceholder(category) {
+  const map = {
+    'Main Course': 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=600&q=80',
+    'Rice Bowl': 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=600&q=80',
+    'Noodles': 'https://images.unsplash.com/photo-1612927601601-6638404737ce?auto=format&fit=crop&w=600&q=80',
+    'Snacks': 'https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&w=600&q=80',
+    'Beverages': 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&q=80'
+  };
+  return map[category] || 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80';
+}
+
+function renderCatalogMenu() {
+  const search = (byId('catalog-search')?.value || '').toLowerCase().trim();
+  const cat = byId('catalog-filter-category')?.value || 'all';
+  const status = byId('catalog-filter-status')?.value || 'all';
+
+  // 1. Hitung Statistik Dinamis
+  const total = crmMenus.length;
+  const available = crmMenus.filter(m => m.status === 'Tersedia').length;
+  const unavailable = total - available;
+  const categoriesCount = new Set(crmMenus.map(m => m.category)).size;
+
+  if (byId('catalog-stat-total')) byId('catalog-stat-total').textContent = INTEGER.format(total);
+  if (byId('catalog-stat-available')) byId('catalog-stat-available').textContent = INTEGER.format(available);
+  if (byId('catalog-stat-unavailable')) byId('catalog-stat-unavailable').textContent = INTEGER.format(unavailable);
+  if (byId('catalog-stat-categories')) byId('catalog-stat-categories').textContent = INTEGER.format(categoriesCount);
+
+  // 2. Filter Menu
+  const filtered = crmMenus.filter(m => {
+    const matchSearch = !search || m.name.toLowerCase().includes(search) || (m.desc && m.desc.toLowerCase().includes(search));
+    const matchCat = cat === 'all' || m.category === cat;
+    const matchStatus = status === 'all' || m.status === status;
+    return matchSearch && matchCat && matchStatus;
+  });
+
+  const grid = byId('catalog-menu-grid');
+  const empty = byId('catalog-empty-state');
+  const badge = byId('catalog-count-badge');
+
+  if (badge) badge.textContent = `${filtered.length} menu ditampilkan`;
+
+  if (filtered.length === 0) {
+    if (grid) grid.innerHTML = '';
+    if (empty) empty.classList.remove('hidden');
+    return;
+  }
+
+  if (empty) empty.classList.add('hidden');
+
+  if (grid) {
+    grid.innerHTML = filtered.map(m => {
+      const isReady = m.status === 'Tersedia';
+      const imgSrc = m.img || getMenuPlaceholder(m.category);
+
+      return `
+        <article class="flex flex-col justify-between overflow-hidden rounded-2xl border border-line bg-white shadow-card transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
+          <div class="relative aspect-video w-full overflow-hidden bg-stone-100">
+            <img src="${escapeHTML(imgSrc)}" alt="${escapeHTML(m.name)}" loading="lazy" class="h-full w-full object-cover transition-transform duration-300 hover:scale-105" onerror="this.src='${getMenuPlaceholder(m.category)}'" />
+            <div class="absolute left-3 top-3 flex items-center gap-1.5">
+              <span class="rounded-full bg-forest-dark/85 px-2.5 py-0.5 text-[10px] font-bold text-white backdrop-blur">${escapeHTML(m.category)}</span>
+              <span class="rounded-full bg-gold/90 px-2 py-0.5 text-[9px] font-bold text-forest-dark shadow-sm">Simulasi</span>
+            </div>
+            <div class="absolute right-3 top-3">
+              <span class="inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-[10px] font-bold shadow-sm ${isReady ? 'bg-emerald-500 text-white' : 'bg-rose-500 text-white'}">
+                <span class="h-1.5 w-1.5 rounded-full bg-white"></span>${escapeHTML(m.status)}
+              </span>
+            </div>
+          </div>
+
+          <div class="flex flex-1 flex-col justify-between p-4 sm:p-5">
+            <div>
+              <div class="flex items-start justify-between gap-2">
+                <h3 class="font-display text-base font-bold text-forest-dark leading-snug">${escapeHTML(m.name)}</h3>
+              </div>
+              <p class="mt-1 line-clamp-2 text-xs text-muted leading-relaxed">${escapeHTML(m.desc || 'Sajian kuliner khas TUUMIS.')}</p>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-line/70">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs text-muted">Harga Menu</span>
+                <span class="font-display text-lg font-bold text-forest-dark">${money(m.price)}</span>
+              </div>
+
+              <div class="flex flex-wrap items-center justify-between gap-1.5">
+                <button type="button" data-action="toggle-status" data-id="${escapeHTML(m.id)}" class="btn-menu-action inline-flex items-center gap-1 rounded-xl border border-line bg-cream/50 px-2.5 py-1.5 text-[11px] font-semibold text-ink transition hover:bg-forest hover:text-white">
+                  <span class="material-symbols-outlined text-[14px]">${isReady ? 'toggle_on' : 'toggle_off'}</span>
+                  <span>${isReady ? 'Habiskan' : 'Sediakan'}</span>
+                </button>
+                <div class="flex items-center gap-1">
+                  <button type="button" data-action="edit" data-id="${escapeHTML(m.id)}" class="btn-menu-action inline-flex items-center justify-center h-8 w-8 rounded-xl border border-line bg-white text-muted transition hover:bg-forest hover:text-white" title="Edit Menu">
+                    <span class="material-symbols-outlined text-[16px]">edit</span>
+                  </button>
+                  <button type="button" data-action="delete" data-id="${escapeHTML(m.id)}" class="btn-menu-action inline-flex items-center justify-center h-8 w-8 rounded-xl border border-rose-200 bg-rose-50 text-rose-700 transition hover:bg-rose-600 hover:text-white" title="Hapus Menu">
+                    <span class="material-symbols-outlined text-[16px]">delete</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      `;
+    }).join('');
+
+    // Attach Action Listeners
+    grid.querySelectorAll('.btn-menu-action').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const action = btn.dataset.action;
+        const id = btn.dataset.id;
+        const targetMenu = crmMenus.find(m => m.id === id);
+        if (!targetMenu) return;
+
+        if (action === 'toggle-status') {
+          targetMenu.status = targetMenu.status === 'Tersedia' ? 'Tidak Tersedia' : 'Tersedia';
+          saveState(STORAGE_KEYS.menus, crmMenus);
+          logActivity('menu_status_changed', 'Status Menu Berubah', `${targetMenu.name} diubah menjadi ${targetMenu.status}.`, 'restaurant_menu', 'forest');
+          renderCatalogMenu();
+          populatePreorderMenuSelect();
+          showToast(`Menu ${targetMenu.name} berstatus ${targetMenu.status}`);
+        } else if (action === 'edit') {
+          openMenuModal('edit', targetMenu);
+        } else if (action === 'delete') {
+          if (confirm(`Apakah Anda yakin ingin menghapus menu "${targetMenu.name}" dari katalog?`)) {
+            crmMenus = crmMenus.filter(m => m.id !== id);
+            saveState(STORAGE_KEYS.menus, crmMenus);
+            logActivity('menu_deleted', 'Menu Dihapus', `${targetMenu.name} dihapus dari katalog TUUMIS.`, 'delete', 'rose');
+            renderCatalogMenu();
+            populatePreorderMenuSelect();
+            showToast(`Menu "${targetMenu.name}" berhasil dihapus`);
+          }
+        }
+      });
+    });
+  }
+
+  populatePreorderMenuSelect();
+}
+
+function populatePreorderMenuSelect() {
+  const sel = byId('po-menu-name');
+  if (!sel) return;
+  const activeMenus = crmMenus.filter(m => m.status === 'Tersedia');
+  if (activeMenus.length === 0) {
+    sel.innerHTML = '<option value="">(Tidak ada menu yang tersedia)</option>';
+    return;
+  }
+  sel.innerHTML = activeMenus.map(m => `
+    <option value="${escapeHTML(m.name)}">${escapeHTML(m.name)} (${money(m.price)})</option>
+  `).join('');
+}
+
+function openMenuModal(mode = 'add', menuData = null) {
+  const modal = byId('modal-menu-form');
+  const title = byId('modal-menu-title');
+  const err = byId('menu-form-error');
+  err.classList.add('hidden');
+  err.textContent = '';
+
+  byId('menu-form-mode').value = mode;
+  byId('menu-form-id').value = menuData ? menuData.id : '';
+
+  if (mode === 'edit' && menuData) {
+    title.textContent = 'Edit Menu Kuliner';
+    byId('input-menu-name').value = menuData.name;
+    byId('input-menu-category').value = menuData.category;
+    byId('input-menu-price').value = menuData.price;
+    byId('input-menu-desc').value = menuData.desc || '';
+    byId('input-menu-img').value = menuData.img || '';
+    byId('input-menu-status').value = menuData.status;
+  } else {
+    title.textContent = 'Tambah Menu Kuliner Baru';
+    byId('form-catalog-menu').reset();
+    byId('input-menu-status').value = 'Tersedia';
+  }
+
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+}
+
+function closeMenuModal() {
+  const modal = byId('modal-menu-form');
+  modal.classList.add('hidden');
+  modal.classList.remove('flex');
+}
+
+function setupMenuCatalogEvents() {
+  // Search & Filter
+  byId('catalog-search')?.addEventListener('input', renderCatalogMenu);
+  byId('catalog-filter-category')?.addEventListener('change', renderCatalogMenu);
+  byId('catalog-filter-status')?.addEventListener('change', renderCatalogMenu);
+  byId('catalog-btn-reset-filters')?.addEventListener('click', () => {
+    if (byId('catalog-search')) byId('catalog-search').value = '';
+    if (byId('catalog-filter-category')) byId('catalog-filter-category').value = 'all';
+    if (byId('catalog-filter-status')) byId('catalog-filter-status').value = 'all';
+    renderCatalogMenu();
+  });
+
+  // Modal open/close
+  byId('btn-toggle-menu-form')?.addEventListener('click', () => openMenuModal('add'));
+  byId('btn-close-modal-menu')?.addEventListener('click', closeMenuModal);
+  byId('btn-cancel-modal-menu')?.addEventListener('click', closeMenuModal);
+
+  // Form Submit Add/Edit Menu
+  byId('form-catalog-menu')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const mode = byId('menu-form-mode').value;
+    const menuId = byId('menu-form-id').value;
+    const name = byId('input-menu-name').value.trim();
+    const category = byId('input-menu-category').value;
+    const priceRaw = byId('input-menu-price').value;
+    const price = Number(priceRaw);
+    const desc = byId('input-menu-desc').value.trim();
+    const img = byId('input-menu-img').value.trim();
+    const status = byId('input-menu-status').value;
+
+    const err = byId('menu-form-error');
+
+    if (!name) {
+      err.textContent = 'Nama menu wajib diisi.';
+      err.classList.remove('hidden');
+      return;
+    }
+
+    if (isNaN(price) || price < 0) {
+      err.textContent = 'Harga harus berupa angka dan tidak boleh bernilai negatif.';
+      err.classList.remove('hidden');
+      return;
+    }
+
+    if (mode === 'edit' && menuId) {
+      const target = crmMenus.find(m => m.id === menuId);
+      if (target) {
+        target.name = name;
+        target.category = category;
+        target.price = price;
+        target.desc = desc;
+        target.img = img || getMenuPlaceholder(category);
+        target.status = status;
+        saveState(STORAGE_KEYS.menus, crmMenus);
+        logActivity('menu_updated', 'Menu Diperbarui', `${name} berhasil diperbarui di katalog.`, 'edit_note', 'forest');
+        showToast(`Menu "${name}" berhasil diperbarui`);
+      }
+    } else {
+      const nextNum = String(crmMenus.length + 1).padStart(3, '0');
+      const newMenu = {
+        id: `MNU-${nextNum}`,
+        name,
+        category,
+        price,
+        desc,
+        img: img || getMenuPlaceholder(category),
+        status,
+        isSimulation: true
+      };
+      crmMenus.unshift(newMenu);
+      saveState(STORAGE_KEYS.menus, crmMenus);
+      logActivity('menu_added', 'Menu Baru Ditambahkan', `${name} (${category}) ditambahkan ke katalog.`, 'add_circle', 'forest');
+      showToast(`Menu baru "${name}" berhasil ditambahkan`);
+    }
+
+    closeMenuModal();
+    renderCatalogMenu();
+  });
+
+  // Pre-Order Form Toggle
+  byId('btn-toggle-preorder-form')?.addEventListener('click', () => {
+    byId('form-add-preorder')?.classList.toggle('hidden');
+  });
+  byId('btn-cancel-preorder-form')?.addEventListener('click', () => {
+    byId('form-add-preorder')?.classList.add('hidden');
+  });
+
+  // Form Submit Pre-Order
+  byId('form-add-preorder')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const customer = byId('po-customer-name').value.trim();
+    const menu = byId('po-menu-name').value;
+    const quantity = Number(byId('po-quantity').value) || 1;
+    const schedule = byId('po-schedule').value.trim();
+    const notes = byId('po-notes').value.trim() || 'Tidak ada catatan';
+    const status = byId('po-status').value;
+
+    const nextId = `PO-${101 + crmPreorders.length}`;
+    const newPO = {
+      id: nextId,
+      customer,
+      menu,
+      quantity,
+      schedule,
+      notes,
+      status,
+      createdAt: '2026-11-20 ' + new Intl.DateTimeFormat('id-ID', { hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date())
+    };
+
+    crmPreorders.unshift(newPO);
+    saveState(STORAGE_KEYS.preorders, crmPreorders);
+    logActivity('preorder_created', 'Pre-Order Baru Diterima', `Pre-Order ${nextId} (${customer} - ${menu} x${quantity}) dicatat.`, 'schedule_send', 'forest');
+
+    renderPreorders();
+    e.target.reset();
+    byId('form-add-preorder').classList.add('hidden');
+    showToast(`Simulasi Pre-Order ${nextId} berhasil dibuat`);
+  });
+
+  // Modal WA Pre-Order Event Listeners
+  byId('btn-close-modal-wa-po')?.addEventListener('click', () => {
+    byId('modal-wa-preorder').classList.add('hidden');
+    byId('modal-wa-preorder').classList.remove('flex');
+  });
+
+  byId('btn-copy-wa-po')?.addEventListener('click', () => {
+    const text = byId('modal-wa-po-text').value;
+    navigator.clipboard?.writeText(text);
+    showToast('Template pesan Pre-Order berhasil disalin');
+  });
+
+  byId('btn-open-wa-system')?.addEventListener('click', () => {
+    byId('modal-wa-preorder').classList.add('hidden');
+    byId('modal-wa-preorder').classList.remove('flex');
+    switchView('whatsapp');
+    const poTpl = WA_TEMPLATES.find(t => t.id === 'wa-preorder');
+    if (poTpl) {
+      selectedWaTemplate = poTpl;
+      renderWaTemplates();
+      updateWaPreview();
+    }
+  });
+}
+
+function renderPreorders() {
+  const tbody = byId('preorder-table-rows');
+  if (!tbody) return;
+
+  if (crmPreorders.length === 0) {
+    tbody.innerHTML = `
+      <tr>
+        <td colspan="7" class="p-6 text-center text-xs text-muted">Belum ada simulasi pesanan pre-order yang dicatat.</td>
+      </tr>
+    `;
+    return;
+  }
+
+  const statusBadge = (s) => {
+    if (s === 'Menunggu Konfirmasi') return 'bg-amber-100 text-amber-800 border-amber-200';
+    if (s === 'Dikonfirmasi') return 'bg-blue-100 text-blue-800 border-blue-200';
+    if (s === 'Selesai') return 'bg-emerald-100 text-emerald-800 border-emerald-200';
+    return 'bg-rose-100 text-rose-800 border-rose-200';
+  };
+
+  tbody.innerHTML = crmPreorders.map(po => `
+    <tr class="transition hover:bg-cream/40">
+      <td class="px-4 py-3 font-bold text-forest-dark whitespace-nowrap">${escapeHTML(po.id)}</td>
+      <td class="px-4 py-3 font-semibold text-ink whitespace-nowrap">${escapeHTML(po.customer)}</td>
+      <td class="px-4 py-3">
+        <span class="block font-semibold text-forest-dark">${escapeHTML(po.menu)}</span>
+        <span class="block text-[11px] text-muted">${po.quantity} Porsi</span>
+      </td>
+      <td class="px-4 py-3 text-muted whitespace-nowrap">${escapeHTML(po.schedule)}</td>
+      <td class="px-4 py-3 text-ink max-w-xs truncate" title="${escapeHTML(po.notes)}">${escapeHTML(po.notes)}</td>
+      <td class="px-3 py-3 whitespace-nowrap">
+        <select data-poid="${escapeHTML(po.id)}" class="po-status-select h-7 rounded-lg border border-line bg-white px-2 text-[10px] font-semibold outline-none focus:border-forest cursor-pointer">
+          <option value="Menunggu Konfirmasi" ${po.status === 'Menunggu Konfirmasi' ? 'selected' : ''}>Menunggu Konfirmasi</option>
+          <option value="Dikonfirmasi" ${po.status === 'Dikonfirmasi' ? 'selected' : ''}>Dikonfirmasi</option>
+          <option value="Selesai" ${po.status === 'Selesai' ? 'selected' : ''}>Selesai</option>
+          <option value="Dibatalkan" ${po.status === 'Dibatalkan' ? 'selected' : ''}>Dibatalkan</option>
+        </select>
+      </td>
+      <td class="px-4 py-3 text-right whitespace-nowrap">
+        <div class="flex items-center justify-end gap-1.5">
+          <button type="button" data-poid="${escapeHTML(po.id)}" class="btn-po-wa inline-flex items-center gap-1 rounded-lg border border-forest bg-sage/60 px-2 py-1 text-[11px] font-semibold text-forest-dark transition hover:bg-forest hover:text-white">
+            <span class="material-symbols-outlined text-[14px]">chat</span>Pesan WA
+          </button>
+          <button type="button" data-poid="${escapeHTML(po.id)}" class="btn-po-del inline-flex items-center justify-center h-7 w-7 rounded-lg border border-rose-200 bg-rose-50 text-rose-700 transition hover:bg-rose-600 hover:text-white" title="Hapus Pre-Order">
+            <span class="material-symbols-outlined text-[14px]">delete</span>
+          </button>
+        </div>
+      </td>
+    </tr>
+  `).join('');
+
+  // Status Change listener
+  tbody.querySelectorAll('.po-status-select').forEach(sel => {
+    sel.addEventListener('change', () => {
+      const id = sel.dataset.poid;
+      const target = crmPreorders.find(item => item.id === id);
+      if (target) {
+        target.status = sel.value;
+        saveState(STORAGE_KEYS.preorders, crmPreorders);
+        logActivity('preorder_status', 'Status Pre-Order Berubah', `Pre-Order ${id} diubah ke ${target.status}.`, 'sync', 'blue');
+        showToast(`Status ${id} diperbarui: ${target.status}`);
+      }
+    });
+  });
+
+  // Action Buttons
+  tbody.querySelectorAll('.btn-po-wa').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.poid;
+      const target = crmPreorders.find(item => item.id === id);
+      if (target) openPreorderWaModal(target);
+    });
+  });
+
+  tbody.querySelectorAll('.btn-po-del').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.poid;
+      if (confirm(`Hapus data pre-order ${id}?`)) {
+        crmPreorders = crmPreorders.filter(item => item.id !== id);
+        saveState(STORAGE_KEYS.preorders, crmPreorders);
+        renderPreorders();
+        showToast(`Pre-Order ${id} dihapus`);
+      }
+    });
+  });
+}
+
+function openPreorderWaModal(po) {
+  const modal = byId('modal-wa-preorder');
+  const textarea = byId('modal-wa-po-text');
+  const directBtn = byId('btn-direct-wa-po');
+
+  const message = `Halo TUUMIS, saya ingin melakukan pre-order:
+
+Nama Menu: ${po.menu}
+Jumlah: ${po.quantity} Porsi
+Jadwal: ${po.schedule}
+Catatan: ${po.notes}
+
+Mohon informasi lebih lanjut mengenai pesanan saya. Terima kasih.`;
+
+  textarea.value = message;
+  directBtn.href = `https://wa.me/6288228692190?text=${encodeURIComponent(message)}`;
+
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+}
+
+/* ==================== MODUL 7: KAMPANYE UGC & BIO LINK (SO1) ==================== */
+function renderUgcCampaign() {
+  // 1. Render Campaign Info
+  if (byId('ugc-info-title')) byId('ugc-info-title').textContent = crmCampaign.title;
+  if (byId('ugc-info-desc')) byId('ugc-info-desc').textContent = crmCampaign.desc;
+  if (byId('ugc-info-hashtag')) byId('ugc-info-hashtag').textContent = crmCampaign.hashtag;
+  if (byId('ugc-info-period')) byId('ugc-info-period').textContent = crmCampaign.period;
+  if (byId('ugc-info-instructions')) byId('ugc-info-instructions').textContent = crmCampaign.instructions;
+
+  const badge = byId('ugc-info-badge');
+  if (badge) {
+    badge.textContent = crmCampaign.active ? 'Aktif Berjalan' : 'Nonaktif';
+    badge.className = `rounded-full px-2.5 py-0.5 text-[10px] font-bold ${crmCampaign.active ? 'bg-emerald-100 text-emerald-800' : 'bg-stone-200 text-stone-700'}`;
+  }
+
+  // 2. Render 4 Stat Cards
+  const totalUgc = crmUgc.length;
+  const uniqueParticipants = new Set(crmUgc.map(u => u.creator.toLowerCase())).size;
+  const bioMembersCount = crmCustomers.filter(c => c.joined && c.joined >= '2026-11-01').length;
+
+  if (byId('ugc-stat-total')) byId('ugc-stat-total').textContent = INTEGER.format(totalUgc);
+  if (byId('ugc-stat-participants')) byId('ugc-stat-participants').textContent = INTEGER.format(uniqueParticipants);
+  if (byId('ugc-stat-bio-members')) byId('ugc-stat-bio-members').textContent = INTEGER.format(bioMembersCount);
+  if (byId('ugc-stat-status')) byId('ugc-stat-status').textContent = crmCampaign.active ? 'Aktif' : 'Nonaktif';
+  if (byId('ugc-stat-hashtag-note')) byId('ugc-stat-hashtag-note').textContent = crmCampaign.hashtag;
+
+  // 3. Render UGC Table
+  const filterVerify = byId('ugc-filter-verify')?.value || 'all';
+  const filtered = crmUgc.filter(u => filterVerify === 'all' || u.status === filterVerify);
+
+  const tbody = byId('ugc-table-rows');
+  const empty = byId('ugc-empty-state');
+
+  if (filtered.length === 0) {
+    if (tbody) tbody.innerHTML = '';
+    if (empty) empty.classList.remove('hidden');
+    return;
+  }
+
+  if (empty) empty.classList.add('hidden');
+
+  const statusBadge = (s) => {
+    if (s === 'Disetujui') return 'bg-emerald-100 text-emerald-800 border-emerald-200';
+    if (s === 'Ditolak') return 'bg-rose-100 text-rose-800 border-rose-200';
+    return 'bg-amber-100 text-amber-800 border-amber-200';
+  };
+
+  if (tbody) {
+    tbody.innerHTML = filtered.map(u => `
+      <tr class="transition hover:bg-cream/40">
+        <td class="px-4 py-3 whitespace-nowrap">
+          <span class="block font-bold text-forest-dark">${escapeHTML(u.id)}</span>
+          <span class="block text-[10px] text-muted">${escapeHTML(u.date)}</span>
+        </td>
+        <td class="px-4 py-3 font-semibold text-ink whitespace-nowrap">${escapeHTML(u.creator)}</td>
+        <td class="px-3 py-3 whitespace-nowrap">
+          <span class="inline-flex items-center gap-1 text-[11px] font-medium text-forest-dark">
+            <span class="material-symbols-outlined text-[15px]">${u.platform === 'TikTok' ? 'music_note' : 'photo_camera'}</span>
+            ${escapeHTML(u.platform)}
+          </span>
+        </td>
+        <td class="px-4 py-3 max-w-xs">
+          <p class="truncate text-xs text-ink" title="${escapeHTML(u.caption)}">${escapeHTML(u.caption)}</p>
+          <a href="${escapeHTML(u.url)}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[10px] font-bold text-forest hover:underline">
+            Buka Konten <span class="material-symbols-outlined text-[12px]">open_in_new</span>
+          </a>
+        </td>
+        <td class="px-3 py-3 text-center whitespace-nowrap">
+          <select data-ugcid="${escapeHTML(u.id)}" class="ugc-status-select h-7 rounded-lg border border-line bg-white px-2 text-[10px] font-semibold outline-none focus:border-forest cursor-pointer">
+            <option value="Menunggu" ${u.status === 'Menunggu' ? 'selected' : ''}>Menunggu</option>
+            <option value="Disetujui" ${u.status === 'Disetujui' ? 'selected' : ''}>Disetujui</option>
+            <option value="Ditolak" ${u.status === 'Ditolak' ? 'selected' : ''}>Ditolak</option>
+          </select>
+        </td>
+        <td class="px-4 py-3 text-right whitespace-nowrap">
+          <div class="flex items-center justify-end gap-1">
+            <button type="button" data-ugcid="${escapeHTML(u.id)}" class="btn-ugc-edit inline-flex items-center justify-center h-7 w-7 rounded-lg border border-line bg-white text-muted hover:bg-forest hover:text-white" title="Edit Konten">
+              <span class="material-symbols-outlined text-[14px]">edit</span>
+            </button>
+            <button type="button" data-ugcid="${escapeHTML(u.id)}" class="btn-ugc-del inline-flex items-center justify-center h-7 w-7 rounded-lg border border-rose-200 bg-rose-50 text-rose-700 hover:bg-rose-600 hover:text-white" title="Hapus Konten">
+              <span class="material-symbols-outlined text-[14px]">delete</span>
+            </button>
+          </div>
+        </td>
+      </tr>
+    `).join('');
+
+    tbody.querySelectorAll('.ugc-status-select').forEach(sel => {
+      sel.addEventListener('change', () => {
+        const id = sel.dataset.ugcid;
+        const target = crmUgc.find(item => item.id === id);
+        if (target) {
+          target.status = sel.value;
+          saveState(STORAGE_KEYS.ugc, crmUgc);
+          logActivity('ugc_status_changed', 'Status UGC Diperbarui', `Konten ${id} (${target.creator}) diubah ke status ${target.status}.`, 'verified', 'forest');
+          showToast(`Status verifikasi ${id}: ${target.status}`);
+        }
+      });
+    });
+
+    tbody.querySelectorAll('.btn-ugc-edit').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.dataset.ugcid;
+        const target = crmUgc.find(item => item.id === id);
+        if (target) openUgcForm('edit', target);
+      });
+    });
+
+    tbody.querySelectorAll('.btn-ugc-del').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.dataset.ugcid;
+        if (confirm(`Apakah Anda yakin ingin menghapus konten UGC ${id}?`)) {
+          crmUgc = crmUgc.filter(item => item.id !== id);
+          saveState(STORAGE_KEYS.ugc, crmUgc);
+          renderUgcCampaign();
+          showToast(`Konten UGC ${id} berhasil dihapus`);
+        }
+      });
+    });
+  }
+}
+
+function openUgcForm(mode = 'add', data = null) {
+  const form = byId('form-add-ugc');
+  const heading = byId('ugc-form-heading');
+  byId('ugc-edit-id').value = data ? data.id : '';
+
+  if (mode === 'edit' && data) {
+    heading.textContent = `Edit Konten UGC (${data.id})`;
+    byId('ugc-input-creator').value = data.creator;
+    byId('ugc-input-platform').value = data.platform;
+    byId('ugc-input-url').value = data.url;
+    byId('ugc-input-caption').value = data.caption || '';
+    byId('ugc-input-status').value = data.status;
+  } else {
+    heading.textContent = 'Input Konten UGC Baru';
+    form.reset();
+    byId('ugc-input-status').value = 'Menunggu';
+  }
+
+  form.classList.remove('hidden');
+  form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function openBioMemberModal() {
+  const modal = byId('modal-bio-member');
+  byId('form-bio-member-reg').reset();
+  byId('bio-member-alert').classList.add('hidden');
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+}
+
+function setupUgcEvents() {
+  // Campaign Info Edit
+  byId('btn-edit-campaign-info')?.addEventListener('click', () => {
+    byId('cfg-campaign-title').value = crmCampaign.title;
+    byId('cfg-campaign-hashtag').value = crmCampaign.hashtag;
+    byId('cfg-campaign-period').value = crmCampaign.period;
+    byId('cfg-campaign-desc').value = crmCampaign.desc;
+    byId('cfg-campaign-instructions').value = crmCampaign.instructions;
+    byId('cfg-campaign-active').checked = crmCampaign.active;
+    byId('form-edit-campaign')?.classList.remove('hidden');
+  });
+
+  byId('btn-cancel-campaign-edit')?.addEventListener('click', () => {
+    byId('form-edit-campaign')?.classList.add('hidden');
+  });
+
+  byId('form-edit-campaign')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    crmCampaign.title = byId('cfg-campaign-title').value.trim();
+    crmCampaign.hashtag = byId('cfg-campaign-hashtag').value.trim();
+    crmCampaign.period = byId('cfg-campaign-period').value.trim();
+    crmCampaign.desc = byId('cfg-campaign-desc').value.trim();
+    crmCampaign.instructions = byId('cfg-campaign-instructions').value.trim();
+    crmCampaign.active = byId('cfg-campaign-active').checked;
+
+    saveState(STORAGE_KEYS.campaign, crmCampaign);
+    logActivity('campaign_updated', 'Konfigurasi Kampanye UGC Diperbarui', `Informasi kampanye ${crmCampaign.title} berhasil diperbarui.`, 'campaign', 'forest');
+    byId('form-edit-campaign').classList.add('hidden');
+    renderUgcCampaign();
+    showToast('Informasi kampanye UGC berhasil diperbarui');
+  });
+
+  // UGC Content Form Events
+  byId('btn-toggle-ugc-form')?.addEventListener('click', () => openUgcForm('add'));
+  byId('btn-cancel-ugc-form')?.addEventListener('click', () => byId('form-add-ugc').classList.add('hidden'));
+
+  byId('form-add-ugc')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const editId = byId('ugc-edit-id').value;
+    const creator = byId('ugc-input-creator').value.trim();
+    const platform = byId('ugc-input-platform').value;
+    const url = byId('ugc-input-url').value.trim();
+    const caption = byId('ugc-input-caption').value.trim();
+    const status = byId('ugc-input-status').value;
+
+    if (editId) {
+      const target = crmUgc.find(u => u.id === editId);
+      if (target) {
+        target.creator = creator;
+        target.platform = platform;
+        target.url = url;
+        target.caption = caption;
+        target.status = status;
+        saveState(STORAGE_KEYS.ugc, crmUgc);
+        showToast(`Konten UGC ${editId} diperbarui`);
+      }
+    } else {
+      const nextId = `UGC-${String(crmUgc.length + 1).padStart(2, '0')}`;
+      const newUgc = {
+        id: nextId,
+        creator,
+        platform,
+        url,
+        caption,
+        date: new Intl.DateTimeFormat('en-CA').format(new Date()),
+        status,
+        verifiedBy: '-'
+      };
+      crmUgc.unshift(newUgc);
+      saveState(STORAGE_KEYS.ugc, crmUgc);
+      logActivity('ugc_submitted', 'Konten UGC Baru Masuk', `Pengiriman konten dari ${creator} (${platform}).`, 'photo_camera', 'forest');
+      showToast(`Konten UGC ${nextId} berhasil dicatat`);
+    }
+
+    byId('form-add-ugc').classList.add('hidden');
+    renderUgcCampaign();
+  });
+
+  byId('ugc-filter-verify')?.addEventListener('change', renderUgcCampaign);
+
+  // Bio Link URL copy
+  byId('btn-copy-bio-url')?.addEventListener('click', () => {
+    const input = byId('input-bio-link-url');
+    navigator.clipboard?.writeText(input.value);
+    showToast('Tautan Bio Link berhasil disalin');
+  });
+
+  // Bio Link Preview Modals
+  byId('btn-open-bio-preview')?.addEventListener('click', () => {
+    byId('modal-bio-preview').classList.remove('hidden');
+    byId('modal-bio-preview').classList.add('flex');
+  });
+  byId('btn-quick-preview-bio')?.addEventListener('click', () => {
+    byId('modal-bio-preview').classList.remove('hidden');
+    byId('modal-bio-preview').classList.add('flex');
+  });
+  byId('btn-close-bio-preview')?.addEventListener('click', () => {
+    byId('modal-bio-preview').classList.add('hidden');
+    byId('modal-bio-preview').classList.remove('flex');
+  });
+
+  byId('preview-btn-member')?.addEventListener('click', () => {
+    byId('modal-bio-preview').classList.add('hidden');
+    byId('modal-bio-preview').classList.remove('flex');
+    openBioMemberModal();
+  });
+  byId('preview-btn-catalog')?.addEventListener('click', () => {
+    byId('modal-bio-preview').classList.add('hidden');
+    byId('modal-bio-preview').classList.remove('flex');
+    switchView('menu-catalog');
+  });
+  byId('preview-btn-ugc')?.addEventListener('click', () => {
+    byId('modal-bio-preview').classList.add('hidden');
+    byId('modal-bio-preview').classList.remove('flex');
+    switchView('ugc-campaign');
+  });
+
+  // Bio Member Registration Modal
+  byId('btn-open-member-reg-modal')?.addEventListener('click', openBioMemberModal);
+  byId('btn-close-bio-member')?.addEventListener('click', () => {
+    byId('modal-bio-member').classList.add('hidden');
+    byId('modal-bio-member').classList.remove('flex');
+  });
+  byId('btn-cancel-bio-member')?.addEventListener('click', () => {
+    byId('modal-bio-member').classList.add('hidden');
+    byId('modal-bio-member').classList.remove('flex');
+  });
+
+  // Form Submit Member Registration (Sinkronisasi ke Data Pelanggan)
+  byId('form-bio-member-reg')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const alertBox = byId('bio-member-alert');
+    alertBox.classList.add('hidden');
+
+    const name = byId('bio-reg-name').value.trim();
+    let wa = byId('bio-reg-wa').value.trim().replace(/\D/g, '');
+    const email = byId('bio-reg-email').value.trim();
+    const segment = byId('bio-reg-segment').value;
+
+    if (!name) {
+      alertBox.textContent = 'Nama lengkap wajib diisi.';
+      alertBox.className = 'rounded-xl border border-rose-300 bg-rose-50 p-2.5 text-[11px] font-semibold text-rose-700';
+      alertBox.classList.remove('hidden');
+      return;
+    }
+
+    if (!wa || wa.length < 9) {
+      alertBox.textContent = 'Nomor WhatsApp wajib diisi minimal 9 digit angka valid.';
+      alertBox.className = 'rounded-xl border border-rose-300 bg-rose-50 p-2.5 text-[11px] font-semibold text-rose-700';
+      alertBox.classList.remove('hidden');
+      return;
+    }
+
+    if (wa.startsWith('0')) {
+      wa = '62' + wa.slice(1);
+    }
+
+    // Cek Duplikasi Nomor WhatsApp di crmCustomers
+    const existing = crmCustomers.find(c => c.wa.replace(/\D/g, '') === wa);
+    if (existing) {
+      alertBox.innerHTML = `Nomor WhatsApp <strong>${escapeHTML(wa)}</strong> sudah terdaftar atas nama <strong>${escapeHTML(existing.name)}</strong> (${existing.id}). Tidak ada duplikasi data.`;
+      alertBox.className = 'rounded-xl border border-amber-300 bg-amber-50 p-2.5 text-[11px] font-semibold text-amber-800';
+      alertBox.classList.remove('hidden');
+      return;
+    }
+
+    // Registrasi Pelanggan Baru ke Sumber Data Tunggal CRM
+    const nextNum = String(crmCustomers.length + 1).padStart(3, '0');
+    const today = new Intl.DateTimeFormat('en-CA').format(new Date());
+    const newCustomer = {
+      id: `CUST-${nextNum}`,
+      name,
+      wa,
+      email: email || `${name.toLowerCase().replace(/\s+/g, '.')}@member.tuumis.id`,
+      joined: today,
+      segment,
+      status: 'Member Loyal',
+      orders: 1,
+      lastOrder: today
+    };
+
+    crmCustomers.unshift(newCustomer);
+    saveState(STORAGE_KEYS.customers, crmCustomers);
+
+    logActivity('customer_registered', 'Member Baru dari Bio Link', `${name} mendaftar via Bio Link Instagram sebagai Member Loyal.`, 'person_add', 'forest');
+
+    renderCustomers();
+    renderUgcCampaign();
+    if (typeof renderCrmDashboard === 'function') renderCrmDashboard();
+
+    alertBox.innerHTML = `Selamat! Pendaftaran member atas nama <strong>${escapeHTML(name)}</strong> (ID: ${newCustomer.id}) berhasil disinkronkan ke basis data pelanggan CRM TUUMIS. Voucher MEMBER15 aktif!`;
+    alertBox.className = 'rounded-xl border border-emerald-300 bg-emerald-50 p-2.5 text-[11px] font-semibold text-emerald-800';
+    alertBox.classList.remove('hidden');
+
+    showToast(`Member baru ${name} (${newCustomer.id}) berhasil didaftarkan`);
+    setTimeout(() => {
+      byId('modal-bio-member').classList.add('hidden');
+      byId('modal-bio-member').classList.remove('flex');
+    }, 1800);
+  });
+}
+
+/* ==================== MODUL 8: PETA STRATEGI TOWS ==================== */
+function renderTowsStrategy() {
+  const catFilter = byId('tows-filter-category')?.value || 'all';
+  const phaseFilter = byId('tows-filter-phase')?.value || 'all';
+
+  // 1. Filter Pemetaan Tabel
+  const filtered = TOWS_MAPPINGS.filter(m => {
+    const matchCat = catFilter === 'all' || m.code.includes(catFilter);
+    const matchPhase = phaseFilter === 'all' || m.phase === phaseFilter;
+    return matchCat && matchPhase;
+  });
+
+  const tbody = byId('tows-table-rows');
+  const countBadge = byId('tows-count-badge');
+  if (countBadge) countBadge.textContent = `${filtered.length} pemetaan strategi`;
+
+  const statusBadge = (s) => {
+    if (s === 'Selesai') return 'bg-emerald-100 text-emerald-800 border-emerald-300';
+    if (s === 'Sedang Dikerjakan') return 'bg-amber-100 text-amber-800 border-amber-300';
+    return 'bg-stone-200 text-stone-700 border-stone-300';
+  };
+
+  if (tbody) {
+    tbody.innerHTML = filtered.map(item => {
+      const statusKey = `${item.code.replace(/[^A-Za-z0-9]/g, '_')}_${item.phase}`;
+      const currentStatus = crmTowsStatus[statusKey] || item.status || 'Selesai';
+
+      return `
+        <tr class="transition hover:bg-cream/40">
+          <td class="px-5 py-3.5 whitespace-nowrap">
+            <span class="inline-flex rounded-lg bg-forest/10 px-2.5 py-1 font-bold text-forest-dark border border-forest/20">${escapeHTML(item.code)}</span>
+          </td>
+          <td class="px-5 py-3.5 font-bold text-ink">${escapeHTML(item.feature)}</td>
+          <td class="px-5 py-3.5 text-muted">${escapeHTML(item.page)}</td>
+          <td class="px-3 py-3.5 text-center whitespace-nowrap">
+            <span class="inline-flex rounded-full bg-sage px-2.5 py-0.5 text-[10px] font-bold text-forest-dark border border-line">${escapeHTML(item.phase)}</span>
+          </td>
+          <td class="px-4 py-3.5 whitespace-nowrap">
+            <select data-status-key="${escapeHTML(statusKey)}" class="tows-status-select h-7 rounded-lg border border-line bg-white px-2 text-[10px] font-bold outline-none focus:border-forest cursor-pointer">
+              <option value="Selesai" ${currentStatus === 'Selesai' ? 'selected' : ''}>Selesai</option>
+              <option value="Sedang Dikerjakan" ${currentStatus === 'Sedang Dikerjakan' ? 'selected' : ''}>Sedang Dikerjakan</option>
+              <option value="Belum Dikerjakan" ${currentStatus === 'Belum Dikerjakan' ? 'selected' : ''}>Belum Dikerjakan</option>
+            </select>
+          </td>
+          <td class="px-5 py-3.5 text-right whitespace-nowrap">
+            <div class="flex items-center justify-end gap-1.5">
+              <button type="button" data-view="${escapeHTML(item.targetView)}" class="btn-tows-goto inline-flex items-center gap-1 rounded-xl bg-forest px-3 py-1.5 text-[11px] font-semibold text-white shadow-sm hover:bg-forest-dark transition">
+                <span>Buka Fitur</span>
+                <span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      `;
+    }).join('');
+
+    tbody.querySelectorAll('.tows-status-select').forEach(sel => {
+      sel.addEventListener('change', () => {
+        const key = sel.dataset.statusKey;
+        crmTowsStatus[key] = sel.value;
+        saveState(STORAGE_KEYS.towsStatus, crmTowsStatus);
+        showToast(`Status implementasi strategi diperbarui: ${sel.value}`);
+      });
+    });
+
+    tbody.querySelectorAll('.btn-tows-goto').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const view = btn.dataset.view;
+        if (view) switchView(view);
+      });
+    });
+  }
+
+  // 2. Render Cards Detail Strategi Worksheet
+  const cardsContainer = byId('tows-cards-container');
+  if (cardsContainer) {
+    cardsContainer.innerHTML = TOWS_STRATEGIES.map(strat => {
+      const colorBorder = strat.type === 'SO' ? 'border-l-emerald-600' : strat.type === 'WO' ? 'border-l-blue-600' : strat.type === 'ST' ? 'border-l-gold' : 'border-l-rose-600';
+      return `
+        <article class="flex flex-col justify-between rounded-2xl border-l-4 ${colorBorder} border border-line bg-white p-5 shadow-card transition hover:shadow-md">
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-display text-lg font-bold text-forest-dark">${escapeHTML(strat.code)}</span>
+              <span class="rounded-full bg-cream px-2 py-0.5 text-[10px] font-bold text-forest-dark border border-line">${escapeHTML(strat.phase)}</span>
+            </div>
+            <p class="mt-2 text-xs font-semibold text-forest-dark leading-relaxed">${escapeHTML(strat.substance)}</p>
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-line/60">
+            <span class="block text-[10px] font-bold uppercase tracking-wider text-muted">Fitur Terhubung:</span>
+            <p class="text-xs font-medium text-ink">${escapeHTML(strat.feature)}</p>
+            <div class="mt-3 flex items-center justify-between">
+              <button type="button" data-strat-code="${escapeHTML(strat.code)}" class="btn-strat-detail text-xs font-bold text-forest hover:underline flex items-center gap-1">
+                <span>Lihat Detail</span><span class="material-symbols-outlined text-[14px]">visibility</span>
+              </button>
+              <button type="button" onclick="switchView('${strat.targetView}')" class="inline-flex items-center gap-1 text-[11px] font-semibold text-muted hover:text-forest-dark">
+                Menuju Halaman <span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+        </article>
+      `;
+    }).join('');
+
+    cardsContainer.querySelectorAll('.btn-strat-detail').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const code = btn.dataset.stratCode;
+        const target = TOWS_STRATEGIES.find(s => s.code === code);
+        if (target) openTowsModal(target);
+      });
+    });
+  }
+}
+
+let activeTowsModalView = null;
+
+function openTowsModal(strat) {
+  const modal = byId('modal-tows-detail');
+  byId('modal-tows-code').textContent = strat.code;
+  byId('modal-tows-type').textContent = strat.typeName;
+  byId('modal-tows-substance').textContent = strat.substance;
+  byId('modal-tows-feature').textContent = strat.feature;
+  byId('modal-tows-page').textContent = strat.pageName;
+  byId('modal-tows-phase').textContent = strat.phase;
+
+  const statusEl = byId('modal-tows-status');
+  statusEl.textContent = 'Selesai Diimplementasikan';
+  statusEl.className = 'mt-1 inline-block rounded-full bg-emerald-100 text-emerald-800 px-2 py-0.5 font-bold';
+
+  activeTowsModalView = strat.targetView;
+
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+}
+
+function setupTowsEvents() {
+  byId('tows-filter-category')?.addEventListener('change', renderTowsStrategy);
+  byId('tows-filter-phase')?.addEventListener('change', renderTowsStrategy);
+  byId('tows-btn-reset-filters')?.addEventListener('click', () => {
+    if (byId('tows-filter-category')) byId('tows-filter-category').value = 'all';
+    if (byId('tows-filter-phase')) byId('tows-filter-phase').value = 'all';
+    renderTowsStrategy();
+  });
+
+  // Group cards quick filter
+  document.querySelectorAll('.tows-group-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const grp = card.dataset.filterGroup;
+      if (byId('tows-filter-category')) {
+        byId('tows-filter-category').value = grp;
+        renderTowsStrategy();
+        showToast(`Memfilter strategi kategori ${grp}`);
+      }
+    });
+  });
+
+  byId('btn-close-modal-tows')?.addEventListener('click', () => {
+    byId('modal-tows-detail').classList.add('hidden');
+    byId('modal-tows-detail').classList.remove('flex');
+  });
+  byId('btn-close-modal-tows-action')?.addEventListener('click', () => {
+    byId('modal-tows-detail').classList.add('hidden');
+    byId('modal-tows-detail').classList.remove('flex');
+  });
+
+  byId('btn-tows-navigate-view')?.addEventListener('click', () => {
+    byId('modal-tows-detail').classList.add('hidden');
+    byId('modal-tows-detail').classList.remove('flex');
+    if (activeTowsModalView) switchView(activeTowsModalView);
+  });
+}
