@@ -47,7 +47,7 @@
   </div>
 
   <!-- Overlay Sidebar Mobile -->
-  <div id="sidebar-overlay" aria-hidden="true" class="fixed inset-0 z-30 bg-black/40 backdrop-blur-[1px] lg:hidden"></div>
+  <div id="sidebar-overlay" aria-hidden="true" class="fixed inset-0 z-30 hidden bg-black/40 backdrop-blur-[1px] lg:hidden"></div>
 
   <!-- ==================== SIDEBAR KIRI ==================== -->
   <aside id="sidebar" class="fixed inset-y-0 left-0 z-40 flex w-64 -translate-x-full flex-col bg-forest-dark text-white transition-transform duration-200 lg:translate-x-0">
@@ -408,8 +408,8 @@
             <select id="crm-filter-period" aria-label="Filter Periode CRM" class="bg-transparent font-semibold text-forest-dark outline-none cursor-pointer">
               <option value="today">Hari Ini (19 Nov)</option>
               <option value="7days">7 Hari Terakhir</option>
-              <option value="thisMonth" selected>Bulan Ini (Nov 2026)</option>
-              <option value="all">Semua Periode</option>
+              <option value="thisMonth">Bulan Ini (Nov 2026)</option>
+              <option value="all" selected>Semua Periode</option>
             </select>
           </div>
           <button id="crm-btn-reset-filters" type="button" title="Atur ulang filter dashboard" class="inline-flex h-10 items-center gap-1.5 rounded-xl border border-line bg-white px-3 text-xs font-semibold text-muted shadow-card transition hover:bg-sage hover:text-forest-dark">
@@ -806,7 +806,7 @@
         <div>
           <div class="mb-2 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[.16em] text-forest"><span class="h-px w-6 bg-gold"></span>Basis Data Pelanggan · CRM TUUMIS</div>
           <h1 class="font-display text-[28px] font-semibold text-forest-dark sm:text-4xl">Data &amp; Profil Pelanggan</h1>
-          <p class="mt-2 max-w-2xl text-sm text-muted">Kelola database terpusat pelanggan TUUMIS (ID, kontak WhatsApp, segmen, status membership, dan riwayat frekuensi pesanan).</p>
+          <p class="mt-2 max-w-2xl text-sm text-muted">Kelola database terpusat pelanggan TUUMIS (ID, kontak WhatsApp, segmen, status membership, dan riwayat frekuensi pesanan). <span class="font-medium text-forest-dark">Nomor WA disamarkan otomatis sesuai UU PDP No. 27 Tahun 2022.</span></p>
         </div>
         <button id="toggle-customer-form" type="button" class="inline-flex h-11 items-center gap-2 rounded-xl bg-forest px-4 text-xs font-semibold text-white shadow-sm transition hover:bg-forest-dark">
           <span class="material-symbols-outlined text-[18px]">person_add</span>Tambah Pelanggan Baru
@@ -961,10 +961,21 @@
           </label>
         </div>
         <div class="mt-3 grid gap-4 sm:grid-cols-2">
-          <div class="rounded-xl border border-emerald-200 bg-emerald-50/60 p-3" id="tkt-sla-info">
-            Target dihitung otomatis dari prioritas <strong class="text-forest-dark">Sedang</strong>: respons ≤ <strong class="text-forest-dark">30 mnt</strong> &amp; penyelesaian ≤ <strong class="text-forest-dark">240 mnt</strong>. Waktu masuk memakai jam nyata &amp; kondisi SLA (hijau/kuning/merah) diperbarui otomatis.
-          </div>
+          <label class="block"><span class="mb-1 block text-xs font-semibold text-muted">Kanal Asal Keluhan (Omni-Channel) *</span>
+            <select id="tkt-channel" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest">
+              <option value="WhatsApp Business" selected>WhatsApp Business</option>
+              <option value="Instagram">Instagram (Komentar / DM)</option>
+              <option value="Google Maps">Google Maps (Ulasan Publik)</option>
+              <option value="GoFood">GoFood</option>
+              <option value="GrabFood">GrabFood</option>
+              <option value="ShopeeFood">ShopeeFood</option>
+              <option value="Dine-in / Takeaway">Dine-in / Takeaway</option>
+            </select>
+          </label>
           <label class="block"><span class="mb-1 block text-xs font-semibold text-muted">Rencana Tindak Lanjut *</span><input id="tkt-followup" type="text" required placeholder="Contoh: Kirim voucher Rp5.000 via WA" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-sm outline-none focus:border-forest" /></label>
+        </div>
+        <div class="mt-3 rounded-xl border border-emerald-200 bg-emerald-50/60 p-3 text-xs" id="tkt-sla-info">
+          Target dihitung otomatis dari prioritas <strong class="text-forest-dark">Sedang</strong>: respons ≤ <strong class="text-forest-dark">30 mnt</strong> &amp; penyelesaian ≤ <strong class="text-forest-dark">240 mnt</strong>. Waktu masuk memakai jam nyata &amp; kondisi SLA (hijau/kuning/merah) diperbarui otomatis.
         </div>
         <div class="mt-3">
           <label class="block"><span class="mb-1 block text-xs font-semibold text-muted">Detail Keluhan</span><input id="tkt-desc" type="text" required placeholder="Jelaskan kronologi singkat keluhan pelanggan..." class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-sm outline-none focus:border-forest" /></label>
@@ -1027,8 +1038,8 @@
             <p class="mt-1 text-xs text-muted">Isi nama pelanggan untuk mengganti variabel otomatis sebelum menyalin atau mengirim.</p>
 
             <div class="mt-4 grid gap-3 sm:grid-cols-2">
-              <label class="block"><span class="mb-1 block text-[11px] font-semibold text-muted">Nama Pelanggan</span><input id="wa-target-name" type="text" value="Kak Devita" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest" /></label>
-              <label class="block"><span class="mb-1 block text-[11px] font-semibold text-muted">Nomor WA Tujuan</span><input id="wa-target-phone" type="tel" value="6288228692190" placeholder="62812..." class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest" /></label>
+              <label class="block"><span class="mb-1 block text-[11px] font-semibold text-muted">Nama Pelanggan</span><input id="wa-target-name" type="text" value="Kak Nadia" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest" /></label>
+              <label class="block"><span class="mb-1 block text-[11px] font-semibold text-muted">Nomor WA Tujuan</span><input id="wa-target-phone" type="tel" value="6281200000000" placeholder="62812..." class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-xs outline-none focus:border-forest" /></label>
             </div>
 
             <div class="mt-4">
@@ -1040,7 +1051,7 @@
               <button id="btn-copy-wa" type="button" class="inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-xl border border-forest bg-sage px-4 text-xs font-semibold text-forest-dark transition hover:bg-forest hover:text-white">
                 <span class="material-symbols-outlined text-[17px]">content_copy</span>Salin Pesan
               </button>
-              <a id="btn-open-wa" href="https://wa.me/6288228692190" target="_blank" rel="noopener noreferrer" class="inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-xl bg-forest px-4 text-xs font-semibold text-white shadow-sm transition hover:bg-forest-dark">
+              <a id="btn-open-wa" href="https://wa.me/6281200000000" target="_blank" rel="noopener noreferrer" class="inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-xl bg-forest px-4 text-xs font-semibold text-white shadow-sm transition hover:bg-forest-dark">
                 <span class="material-symbols-outlined text-[17px]">send</span>Buka WhatsApp
               </a>
             </div>
@@ -1146,7 +1157,7 @@
           </span>
           <div>
             <p class="text-xs font-bold text-forest-dark">Strategi ST12 &amp; Simulasi Manajemen Pre-Order <span class="ml-1 rounded-full bg-gold/25 px-2 py-0.5 text-[10px] font-semibold text-amber-900">Data Simulasi</span></p>
-            <p class="text-[11px] text-muted">Memanfaatkan katalog visual untuk pemesanan terjadwal sebelum jam sibuk guna mencegah pelanggan berpindah ke kompetitor akibat antrean panjang. Pemesanan dan format pesan terintegrasi dengan Template WhatsApp.</p>
+            <p class="text-[11px] text-muted">Memanfaatkan katalog visual untuk pemesanan terjadwal sebelum jam sibuk guna mencegah pelanggan berpindah ke kompetitor akibat antrean panjang. <strong class="text-forest-dark">Catatan harga:</strong> daftar di bawah merujuk katalog GoFood TUUMIS; tersedia pula menu hemat <em>dine-in</em> mahasiswa mulai Rp9.000 (UTS 2c M2).</p>
           </div>
         </div>
         <div class="flex items-center gap-2 text-[11px]">
@@ -1628,6 +1639,92 @@
         </div>
       </form>
 
+      <!-- Panel Social CRM & Social Listening (Worksheet P9 9.2 & 9.3) -->
+      <section class="mb-6 grid grid-cols-1 gap-6 lg:grid-cols-12">
+        <!-- 5 Kata Kunci Social Listening (WS P9 9.2) -->
+        <article class="rounded-2xl border border-line bg-white p-5 shadow-card lg:col-span-7">
+          <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <div class="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-forest">
+                <span class="material-symbols-outlined text-[15px]">hearing</span>Social Listening Monitor · WS P9 9.2
+              </div>
+              <h2 class="font-display text-lg font-bold text-forest-dark">Pemantauan 5 Kata Kunci &amp; Sentimen Publik</h2>
+            </div>
+            <span class="rounded-full bg-sage px-2.5 py-1 text-[10px] font-bold text-forest-dark border border-line">Instagram · Google Maps</span>
+          </div>
+          <p class="mb-3 text-xs text-muted">Pantau percakapan merek, menu, dan harga. Temuan keluhan publik dapat langsung dieskalasi menjadi tiket CRM sesuai aturan SLA P9 9.3.</p>
+          <div id="social-listening-list" class="space-y-2"></div>
+        </article>
+
+        <!-- KPI Social CRM & Kalkulator ER Instagram (WS P9 9.3) -->
+        <article class="flex flex-col justify-between rounded-2xl border border-line bg-white p-5 shadow-card lg:col-span-5 space-y-4">
+          <div>
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-forest">
+                <span class="material-symbols-outlined text-[15px]">insights</span>KPI Social CRM · WS P9 9.3
+              </div>
+              <span class="rounded-full bg-amber-50 px-2.5 py-0.5 text-[10px] font-bold text-amber-800 border border-amber-200">Target SMART 3 Bulan</span>
+            </div>
+            <h2 class="mt-0.5 font-display text-lg font-bold text-forest-dark">Tracker ER Instagram &amp; Akuisisi Member</h2>
+
+            <!-- Progress Member Baru (Target 75 Member) -->
+            <div class="mt-3 rounded-xl border border-line bg-cream/50 p-3">
+              <div class="flex items-center justify-between text-xs">
+                <span class="font-bold text-ink">Akuisisi Member CRM</span>
+                <span id="social-member-progress-text" class="font-bold text-forest-dark">20 / 75 member (27%)</span>
+              </div>
+              <div class="mt-1.5 h-2 w-full overflow-hidden rounded-full bg-stone-200">
+                <div id="social-member-progress-bar" class="h-full rounded-full bg-forest transition-all duration-300" style="width: 27%"></div>
+              </div>
+              <p class="mt-1 text-[10px] text-muted">Sinkron otomatis dengan jumlah pelanggan di database CRM (Target P9 9.3: 75 member baru).</p>
+            </div>
+
+            <!-- Kalkulator & Tracker ER Instagram -->
+            <div class="mt-3 rounded-xl border border-forest/20 bg-sage/40 p-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-forest-dark">Engagement Rate (ER) Instagram</span>
+                <span id="social-er-badge" class="rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-800">2,49% (Baseline)</span>
+              </div>
+              <div class="mt-2 grid grid-cols-2 gap-2 text-xs">
+                <label class="block">
+                  <span class="block text-[10px] font-semibold text-muted">Pengikut IG</span>
+                  <input id="er-input-followers" type="number" min="1" value="1762" class="mt-0.5 h-8 w-full rounded-lg border border-line bg-white px-2.5 text-xs font-semibold outline-none focus:border-forest" />
+                </label>
+                <label class="block">
+                  <span class="block text-[10px] font-semibold text-muted">Rata-rata Interaksi</span>
+                  <input id="er-input-interactions" type="number" min="0" value="44" class="mt-0.5 h-8 w-full rounded-lg border border-line bg-white px-2.5 text-xs font-semibold outline-none focus:border-forest" />
+                </label>
+              </div>
+              <div class="mt-2 flex items-center justify-between gap-2">
+                <span class="text-[10px] text-muted">Target: <strong class="text-forest-dark">3,50%</strong> · Kompetitor: <strong>5,48%</strong></span>
+                <button id="btn-calc-er" type="button" class="inline-flex h-7 items-center gap-1 rounded-lg bg-forest px-2.5 text-[10px] font-semibold text-white transition hover:bg-forest-dark">
+                  <span class="material-symbols-outlined text-[13px]">calculate</span>Hitung ER
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 Pilar Konten WS P9 9.3 -->
+          <div class="rounded-xl border border-line bg-cream/30 p-3">
+            <span class="block text-[10px] font-bold uppercase tracking-wider text-muted mb-2">Proporsi 3 Pilar Konten (WS P9 9.3)</span>
+            <div class="grid grid-cols-3 gap-2 text-center text-[10px]">
+              <div class="rounded-lg bg-white border border-line p-2">
+                <span class="block font-display text-base font-bold text-forest-dark">30%</span>
+                <span class="text-muted">Edukasi &amp; Produk</span>
+              </div>
+              <div class="rounded-lg bg-white border border-forest/40 p-2">
+                <span class="block font-display text-base font-bold text-forest">40%</span>
+                <span class="font-semibold text-forest-dark">Komunitas / UGC</span>
+              </div>
+              <div class="rounded-lg bg-white border border-line p-2">
+                <span class="block font-display text-base font-bold text-amber-700">30%</span>
+                <span class="text-muted">Promo &amp; Kuis</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
       <!-- Grid 2 Kolom: Kolom Kiri Tabel UGC, Kolom Kanan Manajemen Bio Link TUUMIS -->
       <div class="grid grid-cols-1 gap-6 lg:grid-cols-12">
         <!-- Kolom Kiri: Tabel Konten UGC (8 Kolom) -->
@@ -1790,7 +1887,7 @@
               <button type="button" onclick="switchView('ugc-campaign')" class="w-full rounded-xl bg-white border border-line px-3 py-2 text-center text-xs font-semibold text-ink shadow-sm hover:bg-cream transition flex items-center justify-center gap-2">
                 <span class="material-symbols-outlined text-[16px] text-amber-600">photo_camera</span>Info Kampanye #TuumisExperience
               </button>
-              <a href="https://wa.me/6288228692190?text=Halo%20TUUMIS%2C%20saya%20ingin%20tanya%20menu%20dan%20layanan" target="_blank" rel="noopener noreferrer" class="w-full rounded-xl bg-white border border-line px-3 py-2 text-center text-xs font-semibold text-ink shadow-sm hover:bg-cream transition flex items-center justify-center gap-2">
+              <a href="https://wa.me/6281200000000?text=Halo%20TUUMIS%2C%20saya%20ingin%20tanya%20menu%20dan%20layanan" target="_blank" rel="noopener noreferrer" class="w-full rounded-xl bg-white border border-line px-3 py-2 text-center text-xs font-semibold text-ink shadow-sm hover:bg-cream transition flex items-center justify-center gap-2">
                 <span class="material-symbols-outlined text-[16px] text-emerald-600">chat</span>Hubungi TUUMIS via WhatsApp
               </a>
             </div>
@@ -1829,7 +1926,7 @@
           <button type="button" id="preview-btn-ugc" class="w-full rounded-xl bg-white border border-line p-3 text-center text-xs font-semibold text-ink shadow-sm hover:bg-cream transition flex items-center justify-center gap-2">
             <span class="material-symbols-outlined text-[18px] text-amber-600">photo_camera</span>Info Kampanye #TuumisExperience
           </button>
-          <a href="https://wa.me/6288228692190?text=Halo%20TUUMIS%2C%20saya%20ingin%20tanya%20menu%20dan%20layanan" target="_blank" rel="noopener noreferrer" class="w-full rounded-xl bg-white border border-line p-3 text-center text-xs font-semibold text-ink shadow-sm hover:bg-cream transition flex items-center justify-center gap-2">
+          <a href="https://wa.me/6281200000000?text=Halo%20TUUMIS%2C%20saya%20ingin%20tanya%20menu%20dan%20layanan" target="_blank" rel="noopener noreferrer" class="w-full rounded-xl bg-white border border-line p-3 text-center text-xs font-semibold text-ink shadow-sm hover:bg-cream transition flex items-center justify-center gap-2">
             <span class="material-symbols-outlined text-[18px] text-emerald-600">chat</span>Hubungi TUUMIS via WhatsApp
           </a>
         </div>
@@ -2171,6 +2268,10 @@
             <span class="text-muted block text-[10px]">Petugas PIC</span>
             <span id="modal-tkt-pic" class="mt-0.5 block font-semibold text-forest-dark">Admin WA CS</span>
           </div>
+          <div>
+            <span class="text-muted block text-[10px]">Kanal Asal</span>
+            <span id="modal-tkt-channel" class="mt-0.5 inline-flex rounded-full bg-sage px-2 py-0.5 text-[10px] font-bold text-forest-dark">WhatsApp Business</span>
+          </div>
         </div>
 
         <!-- Info Pelanggan -->
@@ -2261,28 +2362,58 @@
           </div>
         </div>
 
-        <!-- Konfirmasi Layanan: FCR & Kepuasan Pelanggan (KPI-04 & KPI-06) -->
-        <div id="modal-tkt-service-card" class="rounded-xl border border-emerald-200 bg-emerald-50/50 p-3.5 space-y-2">
+        <!-- Penutupan Keluhan Publik Medsos (WS P9 9.3) -->
+        <div id="modal-tkt-public-card" class="hidden rounded-xl border border-blue-200 bg-blue-50/50 p-3.5 space-y-2">
           <h4 class="font-semibold text-forest-dark flex items-center gap-1.5">
-            <span class="material-symbols-outlined text-[16px] text-emerald-700">fact_check</span>Konfirmasi Layanan (FCR &amp; Kepuasan Pelanggan)
+            <span class="material-symbols-outlined text-[16px] text-blue-700">public</span>Penutupan Keluhan Publik (Aturan Social CRM P9 9.3)
           </h4>
-          <div class="grid grid-cols-2 gap-3 pt-1">
-            <label class="block"><span class="text-muted block text-[10px] mb-1">FCR — tuntas pada kontak pertama?</span>
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <label class="flex-1 min-w-[180px]"><span class="text-muted block text-[10px] mb-1">Status Komentar Penutup di Instagram / Google Maps</span>
+              <select id="modal-tkt-public-reply" class="h-9 w-full rounded-lg border border-line bg-white px-2.5 text-xs outline-none focus:border-forest">
+                <option value="Belum">Belum diberi komentar penutup publik</option>
+                <option value="Sudah">Sudah ditutup di komentar publik</option>
+              </select>
+            </label>
+            <button id="modal-btn-copy-public-reply" type="button" class="mt-4 inline-flex h-9 items-center gap-1.5 rounded-lg border border-blue-300 bg-white px-3 text-[11px] font-semibold text-blue-800 transition hover:bg-blue-600 hover:text-white">
+              <span class="material-symbols-outlined text-[14px]">content_copy</span>Salin Balasan Penutup
+            </button>
+          </div>
+          <p class="text-[10px] text-muted">Template standar P9 9.3: <em>"Sudah ditangani via DM, terima kasih masukannya."</em></p>
+        </div>
+
+        <!-- Konfirmasi Layanan: FCR, Kepuasan Pelanggan & Analisis Akar Penyebab (UTS 4b) -->
+        <div id="modal-tkt-service-card" class="rounded-xl border border-emerald-200 bg-emerald-50/50 p-3.5 space-y-2.5">
+          <h4 class="font-semibold text-forest-dark flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px] text-emerald-700">fact_check</span>Konfirmasi Layanan &amp; Analisis Penyebab (UTS 4b)
+          </h4>
+          <div class="grid grid-cols-1 gap-3 pt-1 sm:grid-cols-3">
+            <label class="block"><span class="text-muted block text-[10px] mb-1">FCR — tuntas kontak pertama?</span>
               <select id="modal-tkt-fcr" class="h-9 w-full rounded-lg border border-line bg-white px-2.5 text-xs outline-none focus:border-forest">
                 <option value="">— Pilih —</option>
                 <option value="Ya">Ya (First Contact Resolution)</option>
                 <option value="Tidak">Tidak (terjadi eskalasi)</option>
               </select>
             </label>
-            <label class="block"><span class="text-muted block text-[10px] mb-1">Konfirmasi kepuasan pelanggan</span>
+            <label class="block"><span class="text-muted block text-[10px] mb-1">Konfirmasi kepuasan (CSat)</span>
               <select id="modal-tkt-satisfaction" class="h-9 w-full rounded-lg border border-line bg-white px-2.5 text-xs outline-none focus:border-forest">
                 <option value="">— Belum dikonfirmasi —</option>
                 <option value="Puas">Puas</option>
                 <option value="Belum Puas">Belum Puas</option>
               </select>
             </label>
+            <label class="block"><span class="text-muted block text-[10px] mb-1">Akar Penyebab (Root Cause)</span>
+              <select id="modal-tkt-rootcause" class="h-9 w-full rounded-lg border border-line bg-white px-2.5 text-xs outline-none focus:border-forest">
+                <option value="">— Belum dianalisis —</option>
+                <option value="Kepadatan Dapur (Rush Hour)">Kepadatan Dapur (Rush Hour)</option>
+                <option value="Human Error / Cek Add-on">Human Error / Cek Add-on</option>
+                <option value="Keterlambatan Respons Admin">Keterlambatan Respons Admin</option>
+                <option value="Kemasan / Pengiriman Kurir">Kemasan / Pengiriman Kurir</option>
+                <option value="Kesalahan Input Kasir">Kesalahan Input Kasir</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
+            </label>
           </div>
-          <p class="text-[10px] text-muted">Data ini menghitung KPI-04 (FCR ≥ 70%) dan KPI-06 (CSat ≥ 80%) pada Dashboard CRM.</p>
+          <p class="text-[10px] text-muted">Menghitung KPI-04 (FCR ≥ 70%), KPI-06 (CSat ≥ 80%), serta melengkapi tahap 7 alur tiket UTS 4b (analisis penyebab).</p>
         </div>
 
         <!-- Rencana Tindak Lanjut -->
@@ -2388,6 +2519,44 @@
             </table>
           </div>
         </div>
+
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <div class="rounded-xl border border-line p-3.5 space-y-2">
+            <h4 class="font-semibold text-forest-dark flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px] text-forest">schedule_send</span>Riwayat Pre-Order — <span id="cust-detail-po-count">0</span>
+            </h4>
+            <div class="overflow-x-auto">
+              <table class="w-full border-collapse text-left text-[11px]">
+                <thead class="bg-cream/70 text-[10px] uppercase tracking-wider text-muted">
+                  <tr>
+                    <th class="px-2.5 py-2 font-bold">Menu</th>
+                    <th class="px-2.5 py-2 font-bold">Jadwal</th>
+                    <th class="px-2.5 py-2 font-bold">Status</th>
+                  </tr>
+                </thead>
+                <tbody id="cust-detail-po-rows" class="divide-y divide-line/70"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="rounded-xl border border-line p-3.5 space-y-2">
+            <h4 class="font-semibold text-forest-dark flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px] text-amber-700">loyalty</span>Riwayat Kupon Ditukar — <span id="cust-detail-cpn-count">0</span>
+            </h4>
+            <div class="overflow-x-auto">
+              <table class="w-full border-collapse text-left text-[11px]">
+                <thead class="bg-cream/70 text-[10px] uppercase tracking-wider text-muted">
+                  <tr>
+                    <th class="px-2.5 py-2 font-bold">Kode</th>
+                    <th class="px-2.5 py-2 font-bold">Tanggal</th>
+                    <th class="px-2.5 py-2 text-right font-bold">Nominal</th>
+                  </tr>
+                </thead>
+                <tbody id="cust-detail-cpn-rows" class="divide-y divide-line/70"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="flex flex-wrap items-center justify-between gap-2 border-t border-line bg-cream/30 px-5 py-3.5 text-xs">
@@ -2417,6 +2586,7 @@
         </button>
       </div>
       <form id="form-coupon-redemption" class="p-5 space-y-3 text-xs">
+        <input type="hidden" id="red-coupon-code-input" value="" />
         <p id="red-coupon-info" class="rounded-lg bg-sage/50 px-3 py-2 font-semibold text-forest-dark">-</p>
         <label class="block"><span class="mb-1 block font-semibold text-muted">Nama Pelanggan Penukar *</span>
           <input id="red-customer-name" type="text" required list="red-customer-list" placeholder="Pilih atau ketik nama pelanggan" class="h-10 w-full rounded-xl border border-line bg-cream/40 px-3 text-sm outline-none focus:border-forest" />

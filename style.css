@@ -7,6 +7,7 @@ body { min-width: 320px; }
 ::-webkit-scrollbar-track { background: #fff8f1; }
 ::-webkit-scrollbar-thumb { background: #c8c0b3; border: 2px solid #fff8f1; border-radius: 999px; }
 ::-webkit-scrollbar-thumb:hover { background: #8f998d; }
+#sidebar-overlay { display: none; }
 #sidebar-overlay.is-visible { display: block; opacity: 1; }
 @keyframes rise-in { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
 main > section, .view-section { animation: rise-in .38s ease-out both; }

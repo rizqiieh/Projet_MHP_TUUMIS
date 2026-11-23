@@ -2874,7 +2874,7 @@ const DEFAULT_PREORDERS = [
   {
     id: 'PO-101',
     customer: 'Nadia Putri Maharani',
-    menu: 'Nasi Goreng Wok-hei Nusantara',
+    menu: 'Nasi Goreng Kampung',
     quantity: 3,
     schedule: 'Hari Ini, 12:30 WIB',
     notes: 'Pedas sedang, sambal dipisah, takeaway',
@@ -2884,7 +2884,7 @@ const DEFAULT_PREORDERS = [
   {
     id: 'PO-102',
     customer: 'Dimas Arya Pratama',
-    menu: 'Rice Bowl Ayam Sambal Matah Bali',
+    menu: 'Nasi Goreng Kecombrang',
     quantity: 2,
     schedule: 'Hari Ini, 13:00 WIB',
     notes: 'Tanpa timun, extra bawang goreng',
@@ -2894,7 +2894,7 @@ const DEFAULT_PREORDERS = [
   {
     id: 'PO-103',
     customer: 'Salsabila Khairunnisa',
-    menu: 'Mie Goreng Jawa Bumbu Medok',
+    menu: 'Mie Goreng Ayam',
     quantity: 4,
     schedule: 'Kemarin, 17:30 WIB',
     notes: 'Paket makan malam kantor, porsi jumbo',
@@ -3015,6 +3015,7 @@ const TOWS_STRATEGIES = [
 
 const TOWS_MAPPINGS = [
   {
+    id: 'SO1_P11',
     code: 'SO1',
     feature: 'Data Pelanggan / Pendaftaran Member',
     page: 'Data Pelanggan',
@@ -3023,6 +3024,7 @@ const TOWS_MAPPINGS = [
     status: 'Selesai'
   },
   {
+    id: 'SO1_P12',
     code: 'SO1',
     feature: 'Kampanye UGC & Integrasi Bio Link',
     page: 'Kampanye UGC & Bio Link',
@@ -3031,6 +3033,7 @@ const TOWS_MAPPINGS = [
     status: 'Selesai'
   },
   {
+    id: 'WO1_WT1_Ticket',
     code: 'WO1, WT1',
     feature: 'Sistem Ticketing Keluhan',
     page: 'Ticketing Keluhan',
@@ -3039,6 +3042,7 @@ const TOWS_MAPPINGS = [
     status: 'Selesai'
   },
   {
+    id: 'WO1_WT1_SLA',
     code: 'WO1, WT1',
     feature: 'Dashboard SLA Keluhan',
     page: 'Dashboard CRM / Monitoring SLA',
@@ -3047,6 +3051,7 @@ const TOWS_MAPPINGS = [
     status: 'Selesai'
   },
   {
+    id: 'WO1_ST12_WT1_Catalog',
     code: 'WO1, ST12, WT1',
     feature: 'Katalog Pre-Order & Template WhatsApp',
     page: 'Katalog Menu & Pre-Order / Template WhatsApp',
@@ -3055,12 +3060,52 @@ const TOWS_MAPPINGS = [
     status: 'Selesai'
   },
   {
+    id: 'ST1_Coupon',
     code: 'ST1',
     feature: 'Program Diskon / Kupon Member',
     page: 'Kupon Member',
     targetView: 'coupons',
     phase: 'P12',
     status: 'Selesai'
+  }
+];
+
+/* ==================== DATA SOCIAL LISTENING (WS P9 9.2) ==================== */
+const SOCIAL_LISTENING_KEYWORDS = [
+  {
+    keyword: 'TUUMIS',
+    channel: 'Instagram',
+    sentiment: 'Positif',
+    mentions: 64,
+    summary: 'Pujian konsisten pada cita rasa wok-hei dan estetika foto menu; sebagian menanyakan antrean saat jam makan malam.'
+  },
+  {
+    keyword: 'tuumis.id',
+    channel: 'Instagram',
+    sentiment: 'Netral',
+    mentions: 38,
+    summary: 'Tag akun di IG Story mahasiswa & pertanyaan ketersediaan opsi add-on yang sempat terlewat dibalas admin.'
+  },
+  {
+    keyword: 'TUUMIS Yogyakarta',
+    channel: 'Google Maps',
+    sentiment: 'Positif',
+    mentions: 45,
+    summary: 'Rating 4,0/5,0 (361 ulasan): porsi besar dan tempat nyaman untuk mahasiswa, namun muncul keluhan waktu antre rush hour.'
+  },
+  {
+    keyword: 'Menu TUUMIS',
+    channel: 'Instagram',
+    sentiment: 'Netral',
+    mentions: 29,
+    summary: 'Pelanggan sering mencari informasi daftar menu lengkap, varian nasi goreng signature, dan opsi pre-order.'
+  },
+  {
+    keyword: 'Harga TUUMIS',
+    channel: 'Google Maps',
+    sentiment: 'Positif',
+    mentions: 31,
+    summary: 'Apresiasi tinggi terhadap harga entry-level dine-in Rp9.000 yang sangat ramah mahasiswa di akhir bulan (UTS 2c M2).'
   }
 ];
 
@@ -3093,17 +3138,20 @@ const DEFAULT_TICKETS = [
     id: 'TKT-201',
     customerId: 'CUST-001',
     customer: 'Nadia Putri Maharani',
+    channel: 'GoFood',
+    publicReplyClosed: 'Tidak Perlu',
+    rootCause: 'Human Error / Cek Add-on',
     category: 'Add-on Terlewat / Tertukar',
     priority: 'Tinggi',
     pic: 'Admin WA CS',
-    desc: 'Pesan Nasi Goreng Wok-hei + Telur Ceplok via GoFood, namun telur ceplok tertinggal.',
+    desc: 'Pesan Nasi Goreng Kampung + Telur Ceplok via GoFood, namun telur ceplok tertinggal.',
     createdAt: '2026-11-19 12:35',
-    targetResponseMin: 30,
+    targetResponseMin: 15,
     targetResolutionMin: 120,
     responseTimeMin: 38,
     resolutionTimeMin: null,
     resolvedAt: null,
-    elapsed: '38 mnt (Batas 30 mnt)',
+    elapsed: '38 mnt (Batas 15 mnt)',
     slaState: 'Melewati SLA',
     status: 'Diproses',
     followup: 'Admin WA sudah meminta maaf & menyiapkan pengiriman voucher kompensasi Rp5.000.'
@@ -3112,17 +3160,20 @@ const DEFAULT_TICKETS = [
     id: 'TKT-202',
     customerId: 'CUST-002',
     customer: 'Dimas Arya Pratama',
+    channel: 'Dine-in / Takeaway',
+    publicReplyClosed: 'Tidak Perlu',
+    rootCause: 'Kepadatan Dapur (Rush Hour)',
     category: 'Antrean Rush Hour',
     priority: 'Tinggi',
     pic: 'Admin Dapur Sentral',
     desc: 'Menunggu pesanan takeaway lebih dari 25 menit saat jam makan siang.',
     createdAt: '2026-11-19 12:50',
-    targetResponseMin: 30,
+    targetResponseMin: 15,
     targetResolutionMin: 120,
     responseTimeMin: null,
     resolutionTimeMin: null,
     resolvedAt: null,
-    elapsed: '24 mnt (Batas 30 mnt)',
+    elapsed: '13 mnt (Batas 15 mnt)',
     slaState: 'Mendekati Batas',
     status: 'Baru',
     followup: 'Prioritaskan antrean dapur nomor #14 & kirim update estimasi siap dalam 3 menit.'
@@ -3131,13 +3182,16 @@ const DEFAULT_TICKETS = [
     id: 'TKT-203',
     customerId: 'CUST-003',
     customer: 'Salsabila Khairunnisa',
+    channel: 'WhatsApp Business',
+    publicReplyClosed: 'Tidak Perlu',
+    rootCause: 'Keterlambatan Respons Admin',
     category: 'Respons Chat Lambat',
     priority: 'Sedang',
     pic: 'Admin WA CS',
     desc: 'Menanyakan ketersediaan paket katering Jumat melalui WhatsApp Business.',
     createdAt: '2026-11-19 10:15',
     targetResponseMin: 30,
-    targetResolutionMin: 120,
+    targetResolutionMin: 240,
     responseTimeMin: 11,
     resolutionTimeMin: null,
     resolvedAt: null,
@@ -3150,32 +3204,38 @@ const DEFAULT_TICKETS = [
     id: 'TKT-204',
     customerId: 'CUST-005',
     customer: 'Aulia Rahmawati',
+    channel: 'Instagram',
+    publicReplyClosed: 'Sudah',
+    rootCause: 'Kemasan / Pengiriman Kurir',
     category: 'Suhu / Kualitas Makanan',
     priority: 'Sedang',
     pic: 'Supervisor Layanan',
-    desc: 'Kemasan paper bowl sedikit penyok saat diterima kurir.',
+    desc: 'Kemasan paper bowl sedikit penyok saat diterima kurir (keluhan masuk via komentar IG & diarahkan ke DM).',
     createdAt: '2026-11-18 17:20',
     targetResponseMin: 30,
-    targetResolutionMin: 120,
+    targetResolutionMin: 240,
     responseTimeMin: 8,
     resolutionTimeMin: 18,
     resolvedAt: '2026-11-18 17:38',
     elapsed: 'Selesai dalam 18 mnt',
     slaState: 'Selesai',
     status: 'Selesai',
-    followup: 'Evaluasi seal kemasan dapur & pelanggan telah menerima kode kupon PEMULIHAN10.'
+    followup: 'Evaluasi seal kemasan dapur, kirim kode PEMULIHAN10, dan beri komentar penutup publik di IG.'
   },
   {
     id: 'TKT-205',
     customerId: 'CUST-004',
     customer: 'Bagas Kurniawan',
+    channel: 'Google Maps',
+    publicReplyClosed: 'Belum',
+    rootCause: 'Kepadatan Dapur (Rush Hour)',
     category: 'Antrean Rush Hour',
     priority: 'Sedang',
     pic: 'Kasir Dine-in',
-    desc: 'Pesanan Dine-in meja #6 terlewat dari display antrean dapur saat malam minggu.',
+    desc: 'Pesanan Dine-in meja #6 terlewat dari display antrean dapur saat malam minggu (diulas di Google Maps).',
     createdAt: '2026-11-17 19:10',
     targetResponseMin: 30,
-    targetResolutionMin: 120,
+    targetResolutionMin: 240,
     responseTimeMin: 14,
     resolutionTimeMin: 45,
     resolvedAt: '2026-11-17 19:55',
@@ -3188,12 +3248,15 @@ const DEFAULT_TICKETS = [
     id: 'TKT-206',
     customerId: 'CUST-007',
     customer: 'Fitri Handayani',
+    channel: 'GrabFood',
+    publicReplyClosed: 'Tidak Perlu',
+    rootCause: 'Kemasan / Pengiriman Kurir',
     category: 'Suhu / Kualitas Makanan',
     priority: 'Tinggi',
     pic: 'Admin Dapur Sentral',
-    desc: 'Kwetiau goreng kuah agak dingin saat tiba via pengiriman instan ojol.',
+    desc: 'Kwetiau goreng agak dingin saat tiba via pengiriman instan ojol.',
     createdAt: '2026-11-15 19:40',
-    targetResponseMin: 30,
+    targetResponseMin: 15,
     targetResolutionMin: 120,
     responseTimeMin: 12,
     resolutionTimeMin: 65,
@@ -3207,13 +3270,16 @@ const DEFAULT_TICKETS = [
     id: 'TKT-207',
     customerId: 'CUST-006',
     customer: 'Reza Firmansyah',
+    channel: 'Instagram',
+    publicReplyClosed: 'Sudah',
+    rootCause: 'Keterlambatan Respons Admin',
     category: 'Respons Chat Lambat',
     priority: 'Rendah',
     pic: 'Admin WA CS',
     desc: 'Chat menanyakan promo mahasiswa akhir bulan baru dibalas setelah 22 menit.',
     createdAt: '2026-11-12 11:30',
-    targetResponseMin: 30,
-    targetResolutionMin: 120,
+    targetResponseMin: 60,
+    targetResolutionMin: 1440,
     responseTimeMin: 22,
     resolutionTimeMin: 75,
     resolvedAt: '2026-11-12 12:45',
@@ -3226,12 +3292,15 @@ const DEFAULT_TICKETS = [
     id: 'TKT-208',
     customerId: 'CUST-001',
     customer: 'Nadia Putri Maharani',
+    channel: 'ShopeeFood',
+    publicReplyClosed: 'Tidak Perlu',
+    rootCause: 'Human Error / Cek Add-on',
     category: 'Add-on Terlewat / Tertukar',
     priority: 'Tinggi',
     pic: 'Admin Dapur Sentral',
-    desc: 'Nasi Gila level pedas ekstra tidak sesuai pesanan, terkirim level sedang.',
+    desc: 'Nasi Goreng Kecombrang level pedas ekstra tidak sesuai pesanan, terkirim level sedang.',
     createdAt: '2026-11-08 14:15',
-    targetResponseMin: 30,
+    targetResponseMin: 15,
     targetResolutionMin: 120,
     responseTimeMin: 10,
     resolutionTimeMin: 50,
@@ -3245,17 +3314,20 @@ const DEFAULT_TICKETS = [
     id: 'TKT-209',
     customerId: 'CUST-002',
     customer: 'Dimas Arya Pratama',
+    channel: 'Google Maps',
+    publicReplyClosed: 'Sudah',
+    rootCause: 'Kepadatan Dapur (Rush Hour)',
     category: 'Antrean Rush Hour',
     priority: 'Sedang',
     pic: 'Kasir Dine-in',
     desc: 'Waktu tunggu takeaway mencapai 40 menit saat hujan lebat dan antrean ojol menumpuk.',
     createdAt: '2026-11-04 18:25',
     targetResponseMin: 30,
-    targetResolutionMin: 120,
+    targetResolutionMin: 240,
     responseTimeMin: 36,
-    resolutionTimeMin: 145,
-    resolvedAt: '2026-11-04 20:50',
-    elapsed: 'Selesai 145 mnt (Melewati SLA)',
+    resolutionTimeMin: 265,
+    resolvedAt: '2026-11-04 22:50',
+    elapsed: 'Selesai 265 mnt (Melewati SLA)',
     slaState: 'Melewati SLA',
     status: 'Selesai',
     followup: 'Eskalasi ke Supervisor. Pelanggan menerima voucher kompensasi Rp10.000 (PEMULIHAN10).'
@@ -3264,13 +3336,16 @@ const DEFAULT_TICKETS = [
     id: 'TKT-210',
     customerId: 'CUST-003',
     customer: 'Salsabila Khairunnisa',
+    channel: 'Dine-in / Takeaway',
+    publicReplyClosed: 'Tidak Perlu',
+    rootCause: 'Kesalahan Input Kasir',
     category: 'Pelayanan Kasir',
     priority: 'Rendah',
     pic: 'Supervisor Layanan',
     desc: 'Salah input nama member di struk kasir saat menggunakan metode pembayaran QRIS.',
     createdAt: '2026-10-29 16:50',
-    targetResponseMin: 30,
-    targetResolutionMin: 120,
+    targetResponseMin: 60,
+    targetResolutionMin: 1440,
     responseTimeMin: 15,
     resolutionTimeMin: 40,
     resolvedAt: '2026-10-29 17:30',
@@ -3449,15 +3524,16 @@ const charts = {};
 let visibleRows = SALES_DATA;
 
 const STORAGE_KEYS = {
-  customers: 'tuumis_crm_customers_v2',
-  tickets: 'tuumis_crm_tickets_v2',
-  coupons: 'tuumis_crm_coupons_v2',
-  activities: 'tuumis_crm_activities_v2',
-  menus: 'tuumis_crm_menus_v2',
-  preorders: 'tuumis_crm_preorders_v2',
-  ugc: 'tuumis_crm_ugc_v2',
-  campaign: 'tuumis_crm_campaign_v2',
-  towsStatus: 'tuumis_crm_tows_status_v2'
+  customers: 'tuumis_crm_customers_v3',
+  tickets: 'tuumis_crm_tickets_v3',
+  coupons: 'tuumis_crm_coupons_v3',
+  activities: 'tuumis_crm_activities_v3',
+  menus: 'tuumis_crm_menus_v3',
+  preorders: 'tuumis_crm_preorders_v3',
+  ugc: 'tuumis_crm_ugc_v3',
+  campaign: 'tuumis_crm_campaign_v3',
+  towsStatus: 'tuumis_crm_tows_status_v3',
+  socialEr: 'tuumis_crm_social_er_v3'
 };
 
 /* ==================== WAKTU NYATA & SLA OTOMATIS ==================== */
@@ -3543,6 +3619,9 @@ function normalizeTicket(t, index) {
     id: t.id || `TKT-${201 + index}`,
     customerId: t.customerId || null,
     customer: t.customer || 'Pelanggan TUUMIS',
+    channel: t.channel || 'WhatsApp Business',
+    publicReplyClosed: t.publicReplyClosed || ((t.channel === 'Instagram' || t.channel === 'Google Maps') ? 'Belum' : 'Tidak Perlu'),
+    rootCause: t.rootCause || '',
     category: t.category || 'Antrean Rush Hour',
     priority: t.priority || 'Sedang',
     pic: t.pic || 'Admin WA CS',
@@ -3581,6 +3660,7 @@ let crmTowsStatus = loadState(STORAGE_KEYS.towsStatus, {
   'WO1_ST12_WT1_Catalog': 'Selesai',
   'ST1_Coupon': 'Selesai'
 });
+let crmSocialEr = loadState(STORAGE_KEYS.socialEr, { followers: 1762, interactions: 44 });
 let selectedWaTemplate = WA_TEMPLATES[0];
 
 function logActivity(type, title, desc, icon = 'info', color = 'forest') {
@@ -3898,7 +3978,7 @@ function renderCustomers() {
         <span class="block font-semibold text-ink">${escapeHTML(c.name)}</span>
         <span class="block text-[10px] text-muted">${escapeHTML(c.email || '-')}</span>
       </td>
-      <td class="whitespace-nowrap px-4 py-3.5 font-mono text-[11px]">${escapeHTML(c.wa)}</td>
+      <td class="whitespace-nowrap px-4 py-3.5 font-mono text-[11px]" title="Disamarkan sesuai UU PDP No. 27/2022">${escapeHTML(maskPhone(c.wa))}</td>
       <td class="whitespace-nowrap px-4 py-3.5">${escapeHTML(c.segment)}</td>
       <td class="whitespace-nowrap px-4 py-3.5">
         <span class="inline-flex rounded-full border px-2.5 py-0.5 text-[10px] font-semibold ${statusBadge(c.status)}">${escapeHTML(c.status)}</span>
@@ -3926,8 +4006,9 @@ function renderCustomers() {
   `;}).join('');
 
   bindCustomerRowEvents();
-  // Jaga agar dropdown pelanggan pada form tiket selalu sinkron dengan database
+  // Jaga agar dropdown pelanggan & progress Social CRM selalu sinkron dengan database
   populateTicketCustomerSelect();
+  if (typeof renderSocialCrmPanel === 'function') renderSocialCrmPanel();
 }
 
 function bindCustomerRowEvents() {
@@ -3997,7 +4078,7 @@ function openCustomerDetail(customerId) {
 
   byId('cust-detail-id').textContent = c.id;
   byId('cust-detail-name').textContent = c.name;
-  byId('cust-detail-wa').textContent = c.wa;
+  byId('cust-detail-wa').textContent = maskPhone(c.wa);
   byId('cust-detail-email').textContent = c.email || '-';
   byId('cust-detail-segment').textContent = `${c.segment} · ${c.status}`;
   byId('cust-detail-joined').textContent = c.joined || '-';
@@ -4028,6 +4109,47 @@ function openCustomerDetail(customerId) {
           <td class="px-3 py-2"><span class="inline-flex rounded-full border px-2 py-0.5 text-[10px] font-semibold ${slaClass}">${escapeHTML(slaLabel)}</span></td>
         </tr>`;
     }).join('');
+  }
+
+  // Riwayat Pre-Order (Single Customer View - UTS 3a)
+  const linkedPreorders = crmPreorders.filter((po) => (po.customer || '').toLowerCase() === (c.name || '').toLowerCase());
+  if (byId('cust-detail-po-count')) byId('cust-detail-po-count').textContent = `${linkedPreorders.length} pesanan`;
+  const poRowsEl = byId('cust-detail-po-rows');
+  if (poRowsEl) {
+    if (!linkedPreorders.length) {
+      poRowsEl.innerHTML = '<tr><td colspan="3" class="px-2.5 py-3 text-center text-muted">Belum ada riwayat pre-order.</td></tr>';
+    } else {
+      poRowsEl.innerHTML = linkedPreorders.map((po) => `
+        <tr>
+          <td class="px-2.5 py-2 font-semibold text-forest-dark">${escapeHTML(po.menu)} (${po.quantity}x)</td>
+          <td class="px-2.5 py-2 text-muted">${escapeHTML(po.schedule)}</td>
+          <td class="px-2.5 py-2"><span class="rounded-full bg-sage px-2 py-0.5 text-[10px] font-semibold text-forest-dark">${escapeHTML(po.status)}</span></td>
+        </tr>`).join('');
+    }
+  }
+
+  // Riwayat Penukaran Kupon (Single Customer View - UTS 3a)
+  const linkedRedemptions = [];
+  crmCoupons.forEach((cpn) => {
+    (cpn.redemptions || []).forEach((r) => {
+      if ((r.name || '').toLowerCase() === (c.name || '').toLowerCase()) {
+        linkedRedemptions.push({ code: cpn.code, date: r.date, amount: r.amount });
+      }
+    });
+  });
+  if (byId('cust-detail-cpn-count')) byId('cust-detail-cpn-count').textContent = `${linkedRedemptions.length} klaim`;
+  const cpnRowsEl = byId('cust-detail-cpn-rows');
+  if (cpnRowsEl) {
+    if (!linkedRedemptions.length) {
+      cpnRowsEl.innerHTML = '<tr><td colspan="3" class="px-2.5 py-3 text-center text-muted">Belum ada penukaran kupon.</td></tr>';
+    } else {
+      cpnRowsEl.innerHTML = linkedRedemptions.map((r) => `
+        <tr>
+          <td class="px-2.5 py-2 font-mono font-bold text-forest-dark">${escapeHTML(r.code)}</td>
+          <td class="px-2.5 py-2 text-muted">${escapeHTML(r.date)}</td>
+          <td class="px-2.5 py-2 text-right font-semibold">${money(r.amount)}</td>
+        </tr>`).join('');
+    }
   }
 
   byId('btn-cust-detail-wa').onclick = () => {
@@ -4111,6 +4233,13 @@ function renderTickets() {
       <td class="whitespace-nowrap px-5 py-3.5 font-bold text-forest-dark">${escapeHTML(t.id)}</td>
       <td class="max-w-xs px-4 py-3.5">
         <span class="block font-semibold text-ink">${escapeHTML(t.customer)} · <span class="text-forest">${escapeHTML(t.category)}</span></span>
+        <div class="mt-1 flex flex-wrap items-center gap-1">
+          <span class="inline-flex rounded-full bg-sage px-2 py-0.5 text-[9px] font-bold text-forest-dark">${escapeHTML(t.channel || 'WhatsApp Business')}</span>
+          ${((t.channel === 'Instagram' || t.channel === 'Google Maps') && t.publicReplyClosed !== 'Sudah')
+            ? '<span class="inline-flex rounded-full border border-blue-200 bg-blue-50 px-2 py-0.5 text-[9px] font-bold text-blue-800">Perlu Komentar Penutup Publik</span>'
+            : ''}
+          ${t.rootCause ? `<span class="inline-flex rounded-full bg-cream px-2 py-0.5 text-[9px] font-medium text-muted">Akar: ${escapeHTML(t.rootCause)}</span>` : ''}
+        </div>
         <span class="mt-0.5 block text-[11px] leading-4 text-muted">${escapeHTML(t.desc)}</span>
       </td>
       <td class="whitespace-nowrap px-4 py-3.5">
@@ -4331,14 +4460,15 @@ function openRedemptionModal(code) {
     showToast(`Kupon ${c.code} sedang nonaktif — aktifkan dulu sebelum mencatat penukaran`);
     return;
   }
-  byId('red-coupon-code').value = c.code;
+  byId('red-coupon-code').textContent = c.code;
+  byId('red-coupon-code-input').value = c.code;
   byId('red-coupon-info').textContent = `${c.discount} · Minimal ${money(c.minOrder)}`;
   byId('red-customer-name').value = '';
   byId('red-amount').value = c.minOrder || 0;
   byId('red-form-error').classList.add('hidden');
   const dataList = byId('red-customer-list');
   if (dataList) {
-    dataList.innerHTML = crmCustomers.map((cust) => `<option value="${escapeHTML(cust.name)}">${escapeHTML(cust.id)} · ${escapeHTML(cust.wa)}</option>`).join('');
+    dataList.innerHTML = crmCustomers.map((cust) => `<option value="${escapeHTML(cust.name)}">${escapeHTML(cust.id)} · ${escapeHTML(maskPhone(cust.wa))}</option>`).join('');
   }
   const modal = byId('modal-coupon-redemption');
   modal.classList.remove('hidden');
@@ -4439,7 +4569,7 @@ function calculateSlaMetrics(tickets = crmTickets || []) {
   };
 }
 
-function filterCrmTicketsByPeriod(period = 'thisMonth') {
+function filterCrmTicketsByPeriod(period = 'all') {
   const today = todayStr();
   const monthPrefix = today.slice(0, 7);
   const weekAgo = new Date(Date.now() - 7 * 86400000);
@@ -4632,11 +4762,18 @@ function updateCrmCharts(tickets) {
   charts.crmCategory.data.datasets[0].data = sortedCats.map(c => c[1]);
   charts.crmCategory.update('none');
 
-  // D. Ringkasan SLA
+  // D. Ringkasan SLA (target dinamis mengikuti rata-rata SLA_POLICY tiket aktif)
   const metrics = calculateSlaMetrics(tickets);
   const avgRespNum = metrics.avgResponse ? parseFloat(metrics.avgResponse) : 0;
   const avgResolNum = metrics.avgResolution ? parseFloat(metrics.avgResolution) : 0;
+  const avgTargetResp = tickets.length
+    ? Math.round(tickets.reduce((acc, t) => acc + Number(t.targetResponseMin || 30), 0) / tickets.length)
+    : 30;
+  const avgTargetResol = tickets.length
+    ? Math.round(tickets.reduce((acc, t) => acc + Number(t.targetResolutionMin || 240), 0) / tickets.length)
+    : 240;
   charts.crmSla.data.datasets[0].data = [avgRespNum, avgResolNum];
+  charts.crmSla.data.datasets[1].data = [avgTargetResp, avgTargetResol];
   charts.crmSla.update('none');
 }
 
@@ -4732,7 +4869,7 @@ function renderCrmTicketsTable(periodTickets) {
           <span class="block font-semibold text-ink">${escapeHTML(t.customer)}</span>
           <span class="block text-[10px] font-mono text-muted">${escapeHTML(maskedWa)}</span>
         </td>
-        <td class="whitespace-nowrap px-3 py-3.5 text-ink">${escapeHTML(t.category)}</td>
+        <td class="whitespace-nowrap px-3 py-3.5"><span class="block text-ink">${escapeHTML(t.category)}</span><span class="block text-[10px] text-forest">${escapeHTML(t.channel || 'WhatsApp Business')}</span></td>
         <td class="whitespace-nowrap px-3 py-3.5 text-center">
           <span class="inline-flex rounded-full border px-2 py-0.5 text-[10px] font-semibold ${priorityBadge(t.priority)}">${escapeHTML(t.priority || 'Sedang')}</span>
         </td>
@@ -4848,6 +4985,7 @@ function openTicketDetail(ticketId) {
   }
 
   byId('modal-tkt-pic').textContent = t.pic || 'Admin WA CS';
+  if (byId('modal-tkt-channel')) byId('modal-tkt-channel').textContent = t.channel || 'WhatsApp Business';
   byId('modal-tkt-customer').textContent = t.customer;
 
   const cust = crmCustomers.find(c => c.name === t.customer || c.id === t.customerId);
@@ -4888,12 +5026,23 @@ function openTicketDetail(ticketId) {
   }
   byId('modal-tkt-note-input').value = '';
 
-  // Konfirmasi layanan (FCR & kepuasan) — ditampilkan untuk tiket yang sudah selesai
+  // Penutupan keluhan publik medsos (WS P9 9.3) — tampil untuk Instagram & Google Maps
+  const isPublicChannel = t.channel === 'Instagram' || t.channel === 'Google Maps';
+  const pubCard = byId('modal-tkt-public-card');
+  if (pubCard) {
+    pubCard.classList.toggle('hidden', !isPublicChannel);
+    if (isPublicChannel) {
+      byId('modal-tkt-public-reply').value = t.publicReplyClosed === 'Sudah' ? 'Sudah' : 'Belum';
+    }
+  }
+
+  // Konfirmasi layanan (FCR, kepuasan, & analisis akar penyebab UTS 4b)
   const svcCard = byId('modal-tkt-service-card');
   svcCard.classList.toggle('hidden', t.status !== 'Selesai');
   if (t.status === 'Selesai') {
     byId('modal-tkt-fcr').value = t.firstContact || '';
     byId('modal-tkt-satisfaction').value = t.satisfaction || '';
+    if (byId('modal-tkt-rootcause')) byId('modal-tkt-rootcause').value = t.rootCause || '';
   }
 
   byId('modal-btn-process').classList.toggle('hidden', t.status !== 'Baru');
@@ -4911,7 +5060,7 @@ function closeTicketDetail() {
 }
 
 function renderCrmDashboard() {
-  const period = byId('crm-filter-period')?.value || 'thisMonth';
+  const period = byId('crm-filter-period')?.value || 'all';
   const periodTickets = filterCrmTicketsByPeriod(period);
   const metrics = calculateSlaMetrics(periodTickets);
 
@@ -5088,7 +5237,7 @@ function setupCrmDashboardEvents() {
   });
 
   byId('crm-btn-reset-filters')?.addEventListener('click', () => {
-    byId('crm-filter-period').value = 'thisMonth';
+    byId('crm-filter-period').value = 'all';
     if (byId('crm-ticket-search')) byId('crm-ticket-search').value = '';
     if (byId('crm-filter-status')) byId('crm-filter-status').value = 'all';
     if (byId('crm-filter-priority')) byId('crm-filter-priority').value = 'all';
@@ -5112,7 +5261,7 @@ function setupCrmDashboardEvents() {
 
   const updateTableOnly = () => {
     crmCurrentPage = 1;
-    const period = byId('crm-filter-period')?.value || 'thisMonth';
+    const period = byId('crm-filter-period')?.value || 'all';
     renderCrmTicketsTable(filterCrmTicketsByPeriod(period));
   };
 
@@ -5127,21 +5276,21 @@ function setupCrmDashboardEvents() {
     byId('crm-filter-priority').value = 'all';
     byId('crm-filter-sla-badge').value = 'all';
     crmCurrentPage = 1;
-    const period = byId('crm-filter-period')?.value || 'thisMonth';
+    const period = byId('crm-filter-period')?.value || 'all';
     renderCrmTicketsTable(filterCrmTicketsByPeriod(period));
   });
 
   byId('crm-prev-page')?.addEventListener('click', () => {
     if (crmCurrentPage > 1) {
       crmCurrentPage--;
-      const period = byId('crm-filter-period')?.value || 'thisMonth';
+      const period = byId('crm-filter-period')?.value || 'all';
       renderCrmTicketsTable(filterCrmTicketsByPeriod(period));
     }
   });
 
   byId('crm-next-page')?.addEventListener('click', () => {
     crmCurrentPage++;
-    const period = byId('crm-filter-period')?.value || 'thisMonth';
+    const period = byId('crm-filter-period')?.value || 'all';
     renderCrmTicketsTable(filterCrmTicketsByPeriod(period));
   });
 
@@ -5265,6 +5414,32 @@ function setupCrmDashboardEvents() {
     showToast(`Kepuasan pelanggan ${t.id} diset: ${t.satisfaction || 'belum dikonfirmasi'}`);
   });
 
+  byId('modal-tkt-rootcause')?.addEventListener('change', () => {
+    const t = crmTickets.find(item => item.id === currentDetailTicketId);
+    if (!t) return;
+    t.rootCause = byId('modal-tkt-rootcause').value || '';
+    saveState(STORAGE_KEYS.tickets, crmTickets);
+    logActivity('root_cause_logged', 'Analisis Penyebab Dicatat', `Akar penyebab ${t.id}: ${t.rootCause || '-'} (UTS 4b).`, 'fact_check', 'forest');
+    renderTickets();
+    showToast(`Akar penyebab ${t.id} disimpan: ${t.rootCause || 'dikosongkan'}`);
+  });
+
+  byId('modal-tkt-public-reply')?.addEventListener('change', () => {
+    const t = crmTickets.find(item => item.id === currentDetailTicketId);
+    if (!t) return;
+    t.publicReplyClosed = byId('modal-tkt-public-reply').value;
+    saveState(STORAGE_KEYS.tickets, crmTickets);
+    logActivity('public_reply_updated', 'Penutupan Keluhan Publik', `Status komentar penutup ${t.id} (${t.channel}): ${t.publicReplyClosed}.`, 'public', 'blue');
+    renderTickets();
+    showToast(`Status komentar penutup publik ${t.id}: ${t.publicReplyClosed}`);
+  });
+
+  byId('modal-btn-copy-public-reply')?.addEventListener('click', () => {
+    const closingText = 'Sudah ditangani via DM, terima kasih masukannya.';
+    navigator.clipboard?.writeText(closingText);
+    showToast('Komentar penutup standar P9 9.3 disalin ke clipboard');
+  });
+
   // Hapus tiket keluhan
   byId('modal-btn-delete-ticket')?.addEventListener('click', () => {
     const t = crmTickets.find(item => item.id === currentDetailTicketId);
@@ -5285,7 +5460,7 @@ function setupCrmDashboardEvents() {
     const t = crmTickets.find(item => item.id === currentDetailTicketId);
     if (t) {
       const cust = crmCustomers.find(c => c.name === t.customer || c.id === t.customerId);
-      const phone = cust ? cust.wa : '6288228692190';
+      const phone = cust ? cust.wa : '6281200000000';
       byId('wa-target-name').value = `Kak ${t.customer.split(' ')[0]}`;
       byId('wa-target-phone').value = phone;
       updateWaPreview();
@@ -5425,6 +5600,7 @@ function setupCrmForms() {
     e.preventDefault();
     const priority = byId('tkt-priority')?.value || 'Sedang';
     const pic = byId('tkt-pic')?.value || 'Admin WA CS';
+    const channel = byId('tkt-channel')?.value || 'WhatsApp Business';
     const category = byId('tkt-category').value;
     const desc = byId('tkt-desc').value.trim();
     const followup = byId('tkt-followup').value.trim();
@@ -5450,6 +5626,9 @@ function setupCrmForms() {
       id: nextId,
       customerId,
       customer,
+      channel,
+      publicReplyClosed: (channel === 'Instagram' || channel === 'Google Maps') ? 'Belum' : 'Tidak Perlu',
+      rootCause: '',
       category,
       priority,
       pic,
@@ -5559,7 +5738,7 @@ function setupCrmForms() {
   });
   byId('form-coupon-redemption')?.addEventListener('submit', (e) => {
     e.preventDefault();
-    const code = byId('red-coupon-code').value;
+    const code = byId('red-coupon-code-input').value;
     const target = crmCoupons.find((c) => c.code === code);
     const errBox = byId('red-form-error');
     errBox.classList.add('hidden');
@@ -5616,6 +5795,8 @@ function setupCrmForms() {
     saveState(STORAGE_KEYS.menus, crmMenus);
     saveState(STORAGE_KEYS.preorders, crmPreorders);
     saveState(STORAGE_KEYS.ugc, crmUgc);
+    crmSocialEr = { followers: 1762, interactions: 44 };
+    saveState(STORAGE_KEYS.socialEr, crmSocialEr);
     saveState(STORAGE_KEYS.campaign, crmCampaign);
     saveState(STORAGE_KEYS.towsStatus, crmTowsStatus);
     renderCustomers();
@@ -5654,6 +5835,12 @@ function initializeDashboard() {
 
   // Label periode filter dinamis mengikuti tanggal berjalan
   updateCrmPeriodLabels();
+
+  // URL Bio Link dinamis mengikuti lokasi halaman (kompatibel lokal maupun GitHub Pages)
+  const bioUrlInput = byId('input-bio-link-url');
+  if (bioUrlInput) {
+    bioUrlInput.value = `${window.location.href.split('#')[0]}#bio-link`;
+  }
 
   // Jam nyata: kondisi SLA tiket berjalan diperbarui otomatis tiap 60 detik
   setInterval(() => {
@@ -6129,7 +6316,7 @@ Catatan: ${po.notes}
 Mohon informasi lebih lanjut mengenai pesanan saya. Terima kasih.`;
 
   textarea.value = message;
-  directBtn.href = `https://wa.me/6288228692190?text=${encodeURIComponent(message)}`;
+  directBtn.href = `https://wa.me/6281200000000?text=${encodeURIComponent(message)}`;
 
   modal.classList.remove('hidden');
   modal.classList.add('flex');
@@ -6160,6 +6347,9 @@ function renderUgcCampaign() {
   if (byId('ugc-stat-bio-members')) byId('ugc-stat-bio-members').textContent = INTEGER.format(bioMembersCount);
   if (byId('ugc-stat-status')) byId('ugc-stat-status').textContent = crmCampaign.active ? 'Aktif' : 'Nonaktif';
   if (byId('ugc-stat-hashtag-note')) byId('ugc-stat-hashtag-note').textContent = crmCampaign.hashtag;
+
+  // 2.5 Render Social CRM KPIs & Social Listening (Worksheet P9 9.2 & 9.3)
+  renderSocialCrmPanel();
 
   // 3. Render UGC Table
   const filterVerify = byId('ugc-filter-verify')?.value || 'all';
@@ -6255,6 +6445,73 @@ function renderUgcCampaign() {
       });
     });
   }
+}
+
+function renderSocialCrmPanel() {
+  // 1. Progress Akuisisi Member Baru (Target P9 9.3: 75 member dalam 3 bulan)
+  const totalMembers = crmCustomers.length;
+  const memberTarget = 75;
+  const pct = Math.min(100, Math.round((totalMembers / memberTarget) * 100));
+  if (byId('social-member-progress-text')) {
+    byId('social-member-progress-text').textContent = `${totalMembers} / ${memberTarget} member (${pct}%)`;
+  }
+  if (byId('social-member-progress-bar')) {
+    byId('social-member-progress-bar').style.width = `${pct}%`;
+  }
+
+  // 2. Engagement Rate (ER) Instagram Calculator (Baseline 2,49% -> Target 3,50%)
+  const followers = Math.max(1, Number(crmSocialEr.followers || 1762));
+  const interactions = Math.max(0, Number(crmSocialEr.interactions || 44));
+  const erVal = (interactions / followers) * 100;
+  if (byId('er-input-followers') && document.activeElement !== byId('er-input-followers')) {
+    byId('er-input-followers').value = followers;
+  }
+  if (byId('er-input-interactions') && document.activeElement !== byId('er-input-interactions')) {
+    byId('er-input-interactions').value = interactions;
+  }
+  const erBadge = byId('social-er-badge');
+  if (erBadge) {
+    const formatted = erVal.toFixed(2).replace('.', ',');
+    const achieved = erVal >= 3.5;
+    erBadge.textContent = `${formatted}% (${achieved ? 'Target Tercapai' : 'Menuju 3,50%'})`;
+    erBadge.className = `rounded-full px-2 py-0.5 text-[10px] font-bold ${achieved ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800'}`;
+  }
+
+  // 3. 5 Kata Kunci Social Listening (WS P9 9.2)
+  const listEl = byId('social-listening-list');
+  if (!listEl) return;
+  listEl.innerHTML = SOCIAL_LISTENING_KEYWORDS.map((item) => {
+    const sentClass = item.sentiment === 'Positif'
+      ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+      : 'bg-amber-50 text-amber-800 border-amber-200';
+    return `
+      <div class="flex flex-col justify-between gap-2 rounded-xl border border-line bg-cream/40 p-3 sm:flex-row sm:items-center">
+        <div class="min-w-0 flex-1">
+          <div class="flex flex-wrap items-center gap-1.5">
+            <span class="rounded-md bg-forest px-2 py-0.5 font-mono text-[10px] font-bold text-white">${escapeHTML(item.keyword)}</span>
+            <span class="rounded-full border px-2 py-0.5 text-[9px] font-bold ${sentClass}">${escapeHTML(item.sentiment)}</span>
+            <span class="text-[10px] text-muted">${escapeHTML(item.channel)} · ${item.mentions} sebutan</span>
+          </div>
+          <p class="mt-1 text-[11px] leading-snug text-ink">${escapeHTML(item.summary)}</p>
+        </div>
+        <button type="button" data-listen-kw="${escapeHTML(item.keyword)}" data-listen-ch="${escapeHTML(item.channel)}" class="btn-listening-ticket shrink-0 inline-flex h-8 items-center gap-1 rounded-lg border border-forest/40 bg-white px-2.5 text-[10px] font-semibold text-forest-dark transition hover:bg-forest hover:text-white">
+          <span class="material-symbols-outlined text-[14px]">add_alert</span>Catat Tiket
+        </button>
+      </div>`;
+  }).join('');
+
+  listEl.querySelectorAll('.btn-listening-ticket').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      switchView('tickets');
+      populateTicketCustomerSelect();
+      updateTicketSlaInfo();
+      byId('form-add-ticket').classList.remove('hidden');
+      if (byId('tkt-channel')) byId('tkt-channel').value = btn.dataset.listenCh || 'Instagram';
+      if (byId('tkt-desc')) byId('tkt-desc').value = `Temuan social listening kata kunci "${btn.dataset.listenKw}" di ${btn.dataset.listenCh}: `;
+      byId('tkt-desc')?.focus();
+      showToast(`Form tiket dibuka dari temuan "${btn.dataset.listenKw}"`);
+    });
+  });
 }
 
 function openUgcForm(mode = 'add', data = null) {
@@ -6367,6 +6624,17 @@ function setupUgcEvents() {
 
   byId('ugc-filter-verify')?.addEventListener('change', renderUgcCampaign);
 
+  // Kalkulator ER Instagram (WS P9 9.3)
+  byId('btn-calc-er')?.addEventListener('click', () => {
+    const followers = Math.max(1, Number(byId('er-input-followers')?.value || 1762));
+    const interactions = Math.max(0, Number(byId('er-input-interactions')?.value || 44));
+    crmSocialEr = { followers, interactions };
+    saveState(STORAGE_KEYS.socialEr, crmSocialEr);
+    renderSocialCrmPanel();
+    const erText = ((interactions / followers) * 100).toFixed(2).replace('.', ',');
+    showToast(`ER Instagram dihitung ulang: ${erText}%`);
+  });
+
   // Bio Link URL copy
   byId('btn-copy-bio-url')?.addEventListener('click', () => {
     const input = byId('input-bio-link-url');
@@ -6453,8 +6721,8 @@ function setupUgcEvents() {
       return;
     }
 
-    // Registrasi Pelanggan Baru ke Sumber Data Tunggal CRM
-    const nextNum = String(crmCustomers.length + 1).padStart(3, '0');
+    // Registrasi Pelanggan Baru ke Sumber Data Tunggal CRM (ID anti-duplikat)
+    const nextNum = String(crmCustomers.reduce((max, c) => Math.max(max, Number((c.id || '').replace('CUST-', '')) || 0), 0) + 1).padStart(3, '0');
     const today = new Intl.DateTimeFormat('en-CA').format(new Date());
     const newCustomer = {
       id: `CUST-${nextNum}`,
@@ -6513,7 +6781,7 @@ function renderTowsStrategy() {
 
   if (tbody) {
     tbody.innerHTML = filtered.map(item => {
-      const statusKey = `${item.code.replace(/[^A-Za-z0-9]/g, '_')}_${item.phase}`;
+      const statusKey = item.id || `${item.code.replace(/[^A-Za-z0-9]/g, '_')}_${item.phase}`;
       const currentStatus = crmTowsStatus[statusKey] || item.status || 'Selesai';
 
       return `
